@@ -131,16 +131,28 @@ export function SetScreen({
         </View>
       )}
 
-      {state.reps.length > 0 ? (
-        <Pressable
-          accessibilityLabel={t('common.back')}
-          accessibilityRole="button"
-          onPress={onUndo}
-          style={({ pressed }) => [styles.undo, pressed && styles.pressed]}
-        >
-          <Text style={styles.undoLabel}>{t('common.back')}</Text>
-        </Pressable>
-      ) : null}
+      {/*
+        The undo control keeps its space even when there is nothing to undo.
+        Removing it from the tree shifts the action buttons up by its height
+        the moment the first rep lands — and this screen is operated outdoors,
+        one-handed, often without looking. A button that moves after the first
+        tap produces wrong reps, which is worse than a dead control.
+      */}
+      <Pressable
+        accessibilityElementsHidden={state.reps.length === 0}
+        accessibilityLabel={t('common.back')}
+        accessibilityRole="button"
+        disabled={state.reps.length === 0}
+        importantForAccessibility={state.reps.length === 0 ? 'no-hide-descendants' : 'auto'}
+        onPress={onUndo}
+        style={({ pressed }) => [
+          styles.undo,
+          state.reps.length === 0 && styles.undoHidden,
+          pressed && styles.pressed,
+        ]}
+      >
+        <Text style={styles.undoLabel}>{t('common.back')}</Text>
+      </Pressable>
     </View>
   );
 }
@@ -268,6 +280,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     paddingHorizontal: 16,
     marginTop: 8,
+  },
+  /** Occupies its space but is invisible and untappable until there is a rep to undo. */
+  undoHidden: {
+    opacity: 0,
   },
   undoLabel: {
     fontSize: 15,
