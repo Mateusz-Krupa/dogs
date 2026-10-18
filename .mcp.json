@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "qdrant-code": {
+      "command": "/Users/mateuszkrupa/.nvm/versions/node/v22.22.3/bin/node",
+      "args": [
+        "/Users/mateuszkrupa/global-qdrant-repo/dist/index.js",
+        "--workspace-root", "/Users/mateuszkrupa/pettrainer",
+        "--collection", "code_chunks_pettrainer",
+        "--repo", "pettrainer",
+        "--path", "/Users/mateuszkrupa/pettrainer"
+      ]
+    }
+  }
+}
