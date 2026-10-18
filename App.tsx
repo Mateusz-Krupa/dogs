@@ -1,62 +1,141 @@
 import { useCallback, useReducer, useState } from 'react';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
-import { SIT } from './src/content/exercises/sit';
-import { ENVIRONMENTS } from './src/content/environments';
+import { CATALOGUE, exerciseById } from './src/content/catalogue';
+import { ENVIRONMENTS, STARTING_ENVIRONMENT_ID } from './src/content/environments';
+import { ExerciseList, type ExerciseProgress } from './src/features/catalogue/ExerciseList';
+import { SetScreen } from './src/features/session/SetScreen';
 import { getLocale } from './src/i18n';
 import { initialSetState, setReducer } from './src/features/session/setMachine';
-import { SetScreen } from './src/features/session/SetScreen';
-import { nextStepIndex, type RepOutcome } from './src/domain/verdict';
+import { type RepOutcome } from './src/domain/verdict';
 
 /**
- * Temporary harness so the training loop can be seen end to end.
+ * Temporary shell until navigation and persistence land.
  *
- * Navigation, dog selection and persistence are not wired yet; this renders the
- * one screen that matters with real content, real reducer and real verdict
- * rules, so the loop can be exercised by hand.
+ * Deliberately: after a set the app *offers* a next step and never takes it.
+ * Applying the verdict automatically would decide for the owner, which is the
+ * one thing this product promised not to do.
  */
 export default function App() {
-  const [stepIndex, setStepIndex] = useState(0);
+  const [openId, setOpenId] = useState<string | null>(null);
+  const [progress, setProgress] = useState<Record<string, ExerciseProgress>>({});
   const [state, dispatch] = useReducer(setReducer, undefined, initialSetState);
 
   const locale = getLocale();
-  const step = SIT.steps[stepIndex]!;
-  const text = locale === 'en' ? step.en : step.pl;
-  const environment = ENVIRONMENTS[0]!;
-  const environmentName = locale === 'en' ? environment.names.en : environment.names.pl;
+  const entry = openId ? exerciseById(openId) : undefined;
+
+  const open = useCallback((id: string) => {
+    setOpenId(id);
+    dispatch({ type: 'reset' });
+  }, []);
+
+  const close = useCallback(() => {
+    setOpenId(null);
+    dispatch({ type: 'reset' });
+  }, []);
 
   const record = useCallback((outcome: RepOutcome) => {
     dispatch({ type: 'record', outcome });
   }, []);
 
-  /** Applies the verdict to the ladder position, then starts a fresh set. */
-  const finish = useCallback(() => {
-    if (state.verdict) {
-      setStepIndex((current) => nextStepIndex(current, SIT.steps.length - 1, state.verdict!));
-    }
-    dispatch({ type: 'reset' });
-  }, [state.verdict]);
+  /** Stores a position for this exercise and starts a fresh set. */
+  const goTo = useCallback(
+    (stepOrdinal: number) => {
+      if (!entry) return;
+      setProgress((current) => ({
+        ...current,
+        [entry.id]: {
+          stepOrdinal,
+          environmentId: current[entry.id]?.environmentId ?? STARTING_ENVIRONMENT_ID,
+        },
+      }));
+      dispatch({ type: 'reset' });
+    },
+    [entry]
+  );
+
+  if (!entry) {
+    const firstUntouched = CATALOGUE.find((candidate) => progress[candidate.id] === undefined);
+    return (
+      <SafeAreaView style={styles.safe}>
+        <ExerciseList
+          dogName={locale === 'en' ? 'Your dog' : 'Twój pies'}
+          onOpen={open}
+          progress={progress}
+          recommendedId={firstUntouched?.id ?? CATALOGUE[0]!.id}
+        />
+        <StatusBar style="auto" />
+      </SafeAreaView>
+    );
+  }
+
+  const current = progress[entry.id];
+  const stepOrdinal = current?.stepOrdinal ?? 1;
+  const step = entry.steps[stepOrdinal - 1]!;
+  const text = locale === 'en' ? step.en : step.pl;
+  const names = locale === 'en' ? entry.names.en : entry.names.pl;
+  const environment = ENVIRONMENTS.find(
+    (rung) => rung.id === (current?.environmentId ?? STARTING_ENVIRONMENT_ID)
+  )!;
+  const environmentName = locale === 'en' ? environment.names.en : environment.names.pl;
+
+  const canAdvance = stepOrdinal < entry.steps.length;
+  const canGoBack = stepOrdinal > 1;
 
   return (
     <SafeAreaView style={styles.safe}>
-      <View style={styles.context}>
-        <Text style={styles.exercise}>
-          {locale === 'en' ? SIT.names.en.name : SIT.names.pl.name}
-        </Text>
-        <Text style={styles.meta}>
-          {environmentName} · {locale === 'en' ? 'step' : 'krok'} {step.ordinal}/{SIT.steps.length}
+      <View style={styles.bar}>
+        <Pressable accessibilityRole="button" onPress={close} style={styles.barBack}>
+          <Text style={styles.barBackText}>{locale === 'en' ? '‹ All exercises' : '‹ Wszystkie ćwiczenia'}</Text>
+        </Pressable>
+        <Text style={styles.barTitle}>{names.name}</Text>
+        <Text style={styles.barMeta}>
+          {environmentName} · {locale === 'en' ? 'step' : 'krok'} {stepOrdinal}/{entry.steps.length}
         </Text>
       </View>
 
       <SetScreen
-        stepInstruction={text.instruction}
-        stepCriterion={text.criterion}
-        state={state}
+        onFinish={() => dispatch({ type: 'reset' })}
         onRecord={record}
         onUndo={() => dispatch({ type: 'undo' })}
-        onFinish={finish}
+        state={state}
+        stepCriterion={text.criterion}
+        stepInstruction={text.instruction}
       />
+
+      {state.verdict ? (
+        <View style={styles.choices}>
+          <Text style={styles.choicesLabel}>
+            {locale === 'en' ? 'Your call — nothing is locked.' : 'Twoja decyzja — nic nie jest zablokowane.'}
+          </Text>
+          <View style={styles.choiceRow}>
+            {canGoBack ? (
+              <Pressable
+                accessibilityRole="button"
+                onPress={() => goTo(stepOrdinal - 1)}
+                style={styles.choice}
+              >
+                <Text style={styles.choiceText}>{locale === 'en' ? 'Easier step' : 'Łatwiejszy krok'}</Text>
+              </Pressable>
+            ) : null}
+            <Pressable accessibilityRole="button" onPress={() => goTo(stepOrdinal)} style={styles.choice}>
+              <Text style={styles.choiceText}>{locale === 'en' ? 'Same again' : 'Jeszcze raz to samo'}</Text>
+            </Pressable>
+            {canAdvance ? (
+              <Pressable
+                accessibilityRole="button"
+                onPress={() => goTo(stepOrdinal + 1)}
+                style={[styles.choice, styles.choicePrimary]}
+              >
+                <Text style={[styles.choiceText, styles.choicePrimaryText]}>
+                  {locale === 'en' ? 'Next step' : 'Następny krok'}
+                </Text>
+              </Pressable>
+            ) : null}
+          </View>
+        </View>
+      ) : null}
 
       <StatusBar style="auto" />
     </SafeAreaView>
@@ -64,25 +143,27 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  safe: {
+  safe: { flex: 1, backgroundColor: '#f1f3ee' },
+  bar: { paddingHorizontal: 20, paddingTop: 12, paddingBottom: 6, gap: 2 },
+  barBack: { minHeight: 32, justifyContent: 'center' },
+  barBackText: { fontSize: 14, color: '#2e6f4e', fontWeight: '600' },
+  barTitle: { fontSize: 22, fontWeight: '700', color: '#14181a', letterSpacing: -0.3 },
+  barMeta: { fontSize: 13, color: '#6b746e' },
+  choices: { paddingHorizontal: 20, paddingBottom: 16, gap: 8 },
+  choicesLabel: { fontSize: 12, color: '#6b746e' },
+  choiceRow: { flexDirection: 'row', gap: 8 },
+  choice: {
     flex: 1,
-    backgroundColor: '#f1f3ee',
+    minHeight: 52,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#dce0d7',
+    backgroundColor: '#ffffff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 8,
   },
-  context: {
-    paddingHorizontal: 20,
-    paddingTop: 16,
-    paddingBottom: 4,
-    gap: 2,
-  },
-  exercise: {
-    fontSize: 13,
-    fontWeight: '700',
-    letterSpacing: 1.2,
-    textTransform: 'uppercase',
-    color: '#2e6f4e',
-  },
-  meta: {
-    fontSize: 13,
-    color: '#6b746e',
-  },
+  choicePrimary: { backgroundColor: '#2e6f4e', borderColor: '#2e6f4e' },
+  choiceText: { fontSize: 14, fontWeight: '600', color: '#14181a', textAlign: 'center' },
+  choicePrimaryText: { color: '#ffffff' },
 });
