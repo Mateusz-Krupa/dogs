@@ -1,0 +1,54 @@
+import type { LocaleCatalogue } from './pl';
+
+/**
+ * English UI strings. Typed as `LocaleCatalogue`, so TypeScript rejects a key
+ * that exists only here or one missing from this file.
+ */
+export const en: LocaleCatalogue = {
+  common: {
+    appName: 'pettrainer',
+    cancel: 'Cancel',
+    back: 'Back',
+    next: 'Next',
+    done: 'Done',
+    retry: 'Try again',
+  },
+  session: {
+    title: 'Training set',
+    startSet: 'Start the set',
+    hit: 'Got it',
+    miss: 'Missed',
+    repCounter: 'Rep {{done}} of {{total}}',
+    endSet: 'End the set',
+    setComplete: 'Set complete',
+  },
+  verdict: {
+    push: {
+      label: 'Push',
+      explanation: 'Five out of five. Your dog has this level — make it harder.',
+    },
+    stick: {
+      label: 'Stick',
+      explanation: 'Good, but not solid yet. Repeat at the same level.',
+    },
+    drop: {
+      label: 'Drop',
+      explanation: 'Too hard. Go back a step — this is a correction, not a failure.',
+    },
+  },
+  today: {
+    title: 'Today',
+    recommended: 'Recommended exercise',
+    chooseAnother: 'Choose another exercise',
+    noDogYet: 'Add a dog to start training.',
+  },
+  dog: {
+    name: 'Dog name',
+    bornOn: 'Date of birth',
+    addDog: 'Add a dog',
+  },
+  errors: {
+    generic: 'Something went wrong. Try again.',
+    notFound: 'That item could not be found.',
+  },
+};
