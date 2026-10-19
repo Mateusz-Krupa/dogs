@@ -1,21 +1,26 @@
-import {
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-  type StyleProp,
-  type ViewStyle,
-} from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { SET_SIZE, type RepOutcome } from '../../domain/verdict';
+import { DogPose, type Pose } from '../../ui/DogPose';
 import { t } from '../../i18n';
 import type { SetState } from './setMachine';
 
-/** Props of the training-set screen. All state and effects belong to the caller. */
+const INK = '#14181a';
+const MUTED = '#6b746e';
+const GREEN = '#2e6f4e';
+const AMBER = '#91661a';
+const BRICK = '#a8402c';
+const SURFACE = '#ffffff';
+const GROUND = '#f1f3ee';
+const LINE = '#e3e7df';
+
 export interface SetScreenProps {
-  /** What the owner is working on right now, already localised by the caller. */
+  readonly pose: Pose;
+  readonly stepOrdinal: number;
+  readonly stepCount: number;
+  /** Localised by the caller. */
   readonly stepInstruction: string;
-  /** What counts as a correct rep, already localised. */
+  /** What counts as a correct rep. Localised by the caller. */
   readonly stepCriterion: string;
   readonly state: SetState;
   readonly onRecord: (outcome: RepOutcome) => void;
@@ -23,23 +28,31 @@ export interface SetScreenProps {
   readonly onFinish: () => void;
 }
 
-/** Fill of a pip: green for a hit, muted grey for a miss or cancellation. */
-function pipFill(outcome: RepOutcome | undefined): StyleProp<ViewStyle> {
-  if (outcome === undefined) {
-    return styles.pipEmpty;
-  }
-  return outcome === 'hit' ? styles.pipHit : styles.pipMiss;
+const VERDICT_COLOR = { push: GREEN, stick: AMBER, drop: BRICK } as const;
+
+/** A segment per step, so the owner can see how far into the exercise they are. */
+function StepRail({ ordinal, count }: { ordinal: number; count: number }) {
+  return (
+    <View accessibilityLabel={`${ordinal}/${count}`} style={styles.rail}>
+      {Array.from({ length: count }, (_, i) => (
+        <View key={i} style={[styles.railSeg, i < ordinal && styles.railSegDone]} />
+      ))}
+    </View>
+  );
 }
 
 /**
- * The screen used outdoors: five reps of one step, one large button per outcome.
- * Presentational only — it holds no state and decides nothing; the verdict comes
- * in through `state` and every interaction is reported to the caller.
+ * The set screen: the one view used outdoors, one-handed, on a lead.
  *
- * Touch targets are deliberately large because the screen is operated one-handed
- * while holding a lead, often without looking.
+ * Everything the thumb needs sits at the bottom and never moves; everything the
+ * eye needs sits above it. The criterion gets its own block rather than a
+ * caption, because it is the rule the owner scores against — if it reads as a
+ * footnote, the scores stop meaning anything.
  */
 export function SetScreen({
+  pose,
+  stepOrdinal,
+  stepCount,
   stepInstruction,
   stepCriterion,
   state,
@@ -47,246 +60,209 @@ export function SetScreen({
   onUndo,
   onFinish,
 }: SetScreenProps) {
-  const complete = state.reps.length >= SET_SIZE;
+  const full = state.reps.length >= SET_SIZE;
   const verdict = state.verdict;
 
   return (
     <View style={styles.screen}>
-      <View style={styles.header}>
-        <Text style={styles.instruction}>{stepInstruction}</Text>
-        <Text style={styles.criterion}>{stepCriterion}</Text>
-      </View>
+      <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
+        <StepRail count={stepCount} ordinal={stepOrdinal} />
 
-      <View style={styles.pipRow} accessible={false}>
-        {Array.from({ length: SET_SIZE }, (_unused, index) => (
-          <View
-            key={index}
-            style={[styles.pip, pipFill(state.reps[index])]}
-          />
-        ))}
-      </View>
-
-      <Text style={styles.progress}>
-        {t('session.repCounter', { done: state.reps.length, total: SET_SIZE })}
-      </Text>
-
-      <View style={styles.spacer} />
-
-      {verdict === null ? (
-        <View style={styles.actions}>
-          <Pressable
-            accessibilityLabel={t('session.hit')}
-            accessibilityRole="button"
-            accessibilityState={{ disabled: complete }}
-            disabled={complete}
-            onPress={() => {
-              onRecord('hit');
-            }}
-            style={({ pressed }) => [
-              styles.actionButton,
-              styles.hitButton,
-              pressed && styles.pressed,
-              complete && styles.disabled,
-            ]}
-          >
-            <Text style={styles.actionLabel}>{t('session.hit')}</Text>
-          </Pressable>
-
-          <Pressable
-            accessibilityLabel={t('session.miss')}
-            accessibilityRole="button"
-            accessibilityState={{ disabled: complete }}
-            disabled={complete}
-            onPress={() => {
-              onRecord('miss');
-            }}
-            style={({ pressed }) => [
-              styles.actionButton,
-              styles.missButton,
-              pressed && styles.pressed,
-              complete && styles.disabled,
-            ]}
-          >
-            <Text style={styles.actionLabel}>{t('session.miss')}</Text>
-          </Pressable>
+        <View style={styles.card}>
+          <View style={styles.art}>
+            <DogPose accent={GREEN} color="#2f3a35" pose={pose} size={120} />
+          </View>
+          <Text style={styles.instruction}>{stepInstruction}</Text>
         </View>
-      ) : (
-        <View style={styles.verdictPanel}>
-          <Text style={styles.verdictLabel}>{t(`verdict.${verdict}.label`)}</Text>
-          <Text style={styles.verdictExplanation}>
-            {t(`verdict.${verdict}.explanation`)}
+
+        <View style={styles.criterion}>
+          <Text style={styles.criterionLabel}>{t('session.criterionLabel').toUpperCase()}</Text>
+          <Text style={styles.criterionText}>{stepCriterion}</Text>
+        </View>
+      </ScrollView>
+
+      <View style={styles.dock}>
+        <View style={styles.pips}>
+          {Array.from({ length: SET_SIZE }, (_, i) => {
+            const outcome = state.reps[i];
+            return (
+              <View
+                key={i}
+                style={[
+                  styles.pip,
+                  outcome === 'hit' && styles.pipHit,
+                  (outcome === 'miss' || outcome === 'cancelled') && styles.pipMiss,
+                ]}
+              />
+            );
+          })}
+          <Text style={styles.pipCount}>
+            {t('session.repCounter', { done: state.reps.length, total: SET_SIZE })}
           </Text>
-          <Pressable
-            accessibilityLabel={t('session.setComplete')}
-            accessibilityRole="button"
-            onPress={onFinish}
-            style={({ pressed }) => [
-              styles.actionButton,
-              styles.finishButton,
-              pressed && styles.pressed,
-            ]}
-          >
-            <Text style={styles.actionLabel}>{t('session.setComplete')}</Text>
-          </Pressable>
         </View>
-      )}
 
-      {/*
-        The undo control keeps its space even when there is nothing to undo.
-        Removing it from the tree shifts the action buttons up by its height
-        the moment the first rep lands — and this screen is operated outdoors,
-        one-handed, often without looking. A button that moves after the first
-        tap produces wrong reps, which is worse than a dead control.
-      */}
-      <Pressable
-        accessibilityElementsHidden={state.reps.length === 0}
-        accessibilityLabel={t('common.back')}
-        accessibilityRole="button"
-        disabled={state.reps.length === 0}
-        importantForAccessibility={state.reps.length === 0 ? 'no-hide-descendants' : 'auto'}
-        onPress={onUndo}
-        style={({ pressed }) => [
-          styles.undo,
-          state.reps.length === 0 && styles.undoHidden,
-          pressed && styles.pressed,
-        ]}
-      >
-        <Text style={styles.undoLabel}>{t('common.back')}</Text>
-      </Pressable>
+        {verdict ? (
+          <View style={[styles.verdict, { borderColor: VERDICT_COLOR[verdict] }]}>
+            <Text style={[styles.verdictLabel, { color: VERDICT_COLOR[verdict] }]}>
+              {t(`verdict.${verdict}.label`)}
+            </Text>
+            <Text style={styles.verdictText}>{t(`verdict.${verdict}.explanation`)}</Text>
+            <Pressable
+              accessibilityLabel={t('session.setComplete')}
+              accessibilityRole="button"
+              onPress={onFinish}
+              style={({ pressed }) => [styles.primary, pressed && styles.pressed]}
+            >
+              <Text style={styles.primaryLabel}>{t('session.setComplete')}</Text>
+            </Pressable>
+          </View>
+        ) : (
+          <View style={styles.actions}>
+            <Pressable
+              accessibilityLabel={t('session.hit')}
+              accessibilityRole="button"
+              disabled={full}
+              onPress={() => onRecord('hit')}
+              style={({ pressed }) => [styles.hit, full && styles.disabled, pressed && styles.pressed]}
+            >
+              <Text style={styles.hitLabel}>{t('session.hit')}</Text>
+            </Pressable>
+            <Pressable
+              accessibilityLabel={t('session.miss')}
+              accessibilityRole="button"
+              disabled={full}
+              onPress={() => onRecord('miss')}
+              style={({ pressed }) => [styles.miss, full && styles.disabled, pressed && styles.pressed]}
+            >
+              <Text style={styles.missLabel}>{t('session.miss')}</Text>
+            </Pressable>
+          </View>
+        )}
+
+        {/* Keeps its space always: a control that appears after the first tap
+            would shift the buttons under a thumb that is not looking. */}
+        <Pressable
+          accessibilityElementsHidden={state.reps.length === 0}
+          accessibilityLabel={t('common.back')}
+          accessibilityRole="button"
+          disabled={state.reps.length === 0}
+          onPress={onUndo}
+          style={({ pressed }) => [
+            styles.undo,
+            state.reps.length === 0 && styles.undoHidden,
+            pressed && styles.pressed,
+          ]}
+        >
+          <Text style={styles.undoLabel}>↺ {t('common.back')}</Text>
+        </Pressable>
+      </View>
     </View>
   );
 }
 
-/** Green of a recorded hit: the hit button and filled hit pips. */
-const COLOR_HIT = '#2e6f4e';
-
-/** Muted tone for misses, cancellations and low-emphasis text. */
-const COLOR_MUTED = '#6b746e';
-
-/** Screen background. */
-const COLOR_BACKGROUND = '#f1f3ee';
-
-/** Main text colour. */
-const COLOR_TEXT = '#14181a';
-
-/** Borders and empty pips. */
-const COLOR_OUTLINE = '#dce0d7';
-
-/** Labels drawn on a filled button. */
-const COLOR_ON_COLOR = '#ffffff';
-
 const styles = StyleSheet.create({
-  screen: {
-    flex: 1,
-    backgroundColor: COLOR_BACKGROUND,
-    paddingHorizontal: 24,
-    paddingTop: 24,
+  screen: { flex: 1, backgroundColor: GROUND },
+  scroll: {
+    paddingHorizontal: 18,
+    paddingTop: 8,
     paddingBottom: 16,
+    width: '100%',
+    maxWidth: 560,
+    alignSelf: 'center',
+    gap: 14,
   },
-  header: {
-    gap: 6,
-  },
-  instruction: {
-    fontSize: 24,
-    fontWeight: '700',
-    color: COLOR_TEXT,
-  },
-  criterion: {
-    fontSize: 15,
-    color: COLOR_MUTED,
-  },
-  pipRow: {
-    flexDirection: 'row',
+
+  rail: { flexDirection: 'row', gap: 4, marginTop: 4 },
+  railSeg: { flex: 1, height: 6, borderRadius: 3, backgroundColor: '#ccd4ca' },
+  railSegDone: { backgroundColor: GREEN },
+
+  card: {
+    backgroundColor: SURFACE,
+    borderRadius: 18,
+    borderWidth: 1,
+    borderColor: LINE,
+    padding: 18,
+    alignItems: 'center',
     gap: 10,
-    marginTop: 24,
   },
+  art: { alignItems: 'center', justifyContent: 'center' },
+  instruction: { fontSize: 17, lineHeight: 25, color: INK, textAlign: 'center' },
+
+  criterion: {
+    borderLeftWidth: 3,
+    borderLeftColor: GREEN,
+    backgroundColor: '#e8f0ea',
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 13,
+    gap: 3,
+  },
+  criterionLabel: { fontSize: 10, fontWeight: '700', letterSpacing: 1.1, color: GREEN },
+  criterionText: { fontSize: 14, lineHeight: 20, color: '#294036' },
+
+  dock: {
+    width: '100%',
+    maxWidth: 560,
+    alignSelf: 'center',
+    paddingHorizontal: 18,
+    paddingBottom: 10,
+    gap: 10,
+  },
+  pips: { flexDirection: 'row', alignItems: 'center', gap: 7 },
   pip: {
-    width: 44,
-    height: 44,
-    borderRadius: 8,
+    width: 30,
+    height: 30,
+    borderRadius: 9,
     borderWidth: 2,
-    borderColor: COLOR_OUTLINE,
-  },
-  pipHit: {
-    backgroundColor: COLOR_HIT,
-    borderColor: COLOR_HIT,
-  },
-  pipMiss: {
-    backgroundColor: COLOR_MUTED,
-    borderColor: COLOR_MUTED,
-  },
-  pipEmpty: {
+    borderColor: '#d5dbd1',
     backgroundColor: 'transparent',
   },
-  progress: {
-    marginTop: 12,
-    fontSize: 15,
-    color: COLOR_MUTED,
-  },
-  spacer: {
-    flex: 1,
-  },
-  actions: {
-    gap: 12,
-  },
-  actionButton: {
-    minHeight: 64,
-    borderRadius: 12,
+  pipHit: { backgroundColor: GREEN, borderColor: GREEN },
+  pipMiss: { backgroundColor: '#c7cdc4', borderColor: '#c7cdc4' },
+  pipCount: { marginLeft: 'auto', fontSize: 13, color: MUTED },
+
+  actions: { gap: 10 },
+  hit: {
+    minHeight: 66,
+    borderRadius: 16,
+    backgroundColor: GREEN,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 16,
   },
-  hitButton: {
-    backgroundColor: COLOR_HIT,
+  hitLabel: { fontSize: 19, fontWeight: '700', color: '#ffffff' },
+  miss: {
+    minHeight: 58,
+    borderRadius: 16,
+    backgroundColor: SURFACE,
+    borderWidth: 2,
+    borderColor: '#d5dbd1',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  missButton: {
-    backgroundColor: COLOR_MUTED,
-  },
-  finishButton: {
-    backgroundColor: COLOR_HIT,
-    marginTop: 12,
-  },
-  actionLabel: {
-    fontSize: 20,
-    fontWeight: '700',
-    color: COLOR_ON_COLOR,
-  },
-  pressed: {
-    opacity: 0.85,
-  },
-  disabled: {
-    opacity: 0.4,
-  },
-  verdictPanel: {
-    backgroundColor: COLOR_BACKGROUND,
-    borderWidth: 1,
-    borderColor: COLOR_OUTLINE,
-    borderRadius: 12,
-    padding: 16,
+  missLabel: { fontSize: 17, fontWeight: '600', color: MUTED },
+  disabled: { opacity: 0.4 },
+  pressed: { opacity: 0.75 },
+
+  verdict: {
+    borderWidth: 2,
+    borderRadius: 16,
+    backgroundColor: SURFACE,
+    padding: 14,
     gap: 6,
   },
-  verdictLabel: {
-    fontSize: 22,
-    fontWeight: '700',
-    color: COLOR_TEXT,
-  },
-  verdictExplanation: {
-    fontSize: 15,
-    color: COLOR_MUTED,
-  },
-  undo: {
-    minHeight: 44,
-    alignSelf: 'center',
+  verdictLabel: { fontSize: 20, fontWeight: '700' },
+  verdictText: { fontSize: 14, lineHeight: 20, color: MUTED },
+  primary: {
+    marginTop: 6,
+    minHeight: 54,
+    borderRadius: 14,
+    backgroundColor: INK,
+    alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 16,
-    marginTop: 8,
   },
-  /** Occupies its space but is invisible and untappable until there is a rep to undo. */
-  undoHidden: {
-    opacity: 0,
-  },
-  undoLabel: {
-    fontSize: 15,
-    color: COLOR_MUTED,
-  },
+  primaryLabel: { fontSize: 16, fontWeight: '700', color: '#ffffff' },
+
+  undo: { minHeight: 40, alignSelf: 'center', justifyContent: 'center', paddingHorizontal: 16 },
+  undoHidden: { opacity: 0 },
+  undoLabel: { fontSize: 14, color: MUTED },
 });

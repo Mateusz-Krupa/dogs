@@ -99,9 +99,12 @@ export default function App() {
         onFinish={() => dispatch({ type: 'reset' })}
         onRecord={record}
         onUndo={() => dispatch({ type: 'undo' })}
+        pose={entry.pose}
         state={state}
+        stepCount={entry.steps.length}
         stepCriterion={text.criterion}
         stepInstruction={text.instruction}
+        stepOrdinal={stepOrdinal}
       />
 
       {state.verdict ? (
@@ -144,12 +147,27 @@ export default function App() {
 
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: '#f1f3ee' },
-  bar: { paddingHorizontal: 20, paddingTop: 12, paddingBottom: 6, gap: 2 },
+  bar: {
+    width: '100%',
+    maxWidth: 560,
+    alignSelf: 'center',
+    paddingHorizontal: 18,
+    paddingTop: 12,
+    paddingBottom: 6,
+    gap: 2,
+  },
   barBack: { minHeight: 32, justifyContent: 'center' },
   barBackText: { fontSize: 14, color: '#2e6f4e', fontWeight: '600' },
   barTitle: { fontSize: 22, fontWeight: '700', color: '#14181a', letterSpacing: -0.3 },
   barMeta: { fontSize: 13, color: '#6b746e' },
-  choices: { paddingHorizontal: 20, paddingBottom: 16, gap: 8 },
+  choices: {
+    width: '100%',
+    maxWidth: 560,
+    alignSelf: 'center',
+    paddingHorizontal: 18,
+    paddingBottom: 16,
+    gap: 8,
+  },
   choicesLabel: { fontSize: 12, color: '#6b746e' },
   choiceRow: { flexDirection: 'row', gap: 8 },
   choice: {

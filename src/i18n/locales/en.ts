@@ -21,6 +21,7 @@ export const en: LocaleCatalogue = {
     repCounter: 'Rep {{done}} of {{total}}',
     endSet: 'End the set',
     setComplete: 'Set complete',
+    criterionLabel: 'What counts as a hit',
   },
   verdict: {
     push: {

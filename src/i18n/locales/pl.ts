@@ -19,6 +19,7 @@ export const pl = {
     repCounter: 'Powtórzenie {{done}} z {{total}}',
     endSet: 'Zakończ serię',
     setComplete: 'Seria zakończona',
+    criterionLabel: 'Co liczy się jako trafienie',
   },
   verdict: {
     push: {
