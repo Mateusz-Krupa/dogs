@@ -503,8 +503,369 @@ const MAT: ExerciseSeed = {
   ],
 };
 
+const NAME: ExerciseSeed = {
+  id: 'name',
+  category: 'foundation',
+  sortOrder: 0,
+  requires: [],
+  names: {
+    pl: {
+      name: 'imię',
+      description:
+        'Pies odwraca się do Ciebie, słysząc swoje imię. To fundament pod wszystko inne — bez tego każda komenda zaczyna się od walki o uwagę. Imię to prośba o spojrzenie, nie nagana; jeśli używasz go przy upominaniu, przestaje działać.',
+    },
+    en: {
+      name: 'name',
+      description:
+        'The dog turns to you on hearing their name. Everything else is built on it. A name is a request for attention, never a telling-off — use it to scold and it stops working.',
+    },
+  },
+  steps: [
+    {
+      ordinal: 1,
+      pl: {
+        instruction:
+          'Gdy pies jest spokojny i nie patrzy na Ciebie, powiedz raz jego imię zwykłym, pogodnym głosem. Gdy się odwróci — nagródź natychmiast. Jeśli nie zareaguje, nie powtarzaj: odczekaj i spróbuj za chwilę.',
+        criterion: 'Pies odwraca głowę w Twoją stronę po jednym wypowiedzeniu imienia.',
+      },
+      en: {
+        instruction:
+          'When the dog is calm and not looking at you, say their name once in an ordinary, cheerful voice. Pay the moment they turn. If nothing happens, do not repeat it — wait and try again later.',
+        criterion: 'The dog turns their head toward you after one call.',
+      },
+    },
+    {
+      ordinal: 2,
+      pl: {
+        instruction: 'To samo, gdy pies jest lekko zajęty — węszy po podłodze albo ogląda coś za oknem.',
+        criterion: 'Pies odrywa się od zajęcia i patrzy po jednym wypowiedzeniu imienia.',
+      },
+      en: {
+        instruction: 'The same while the dog is mildly busy — sniffing the floor or watching something outside.',
+        criterion: 'The dog disengages and looks after one call.',
+      },
+    },
+    {
+      ordinal: 3,
+      pl: {
+        instruction: 'Z innego pokoju, poza zasięgiem wzroku.',
+        criterion: 'Pies przychodzi lub wyraźnie reaguje, nie widząc Cię.',
+      },
+      en: {
+        instruction: 'From another room, out of sight.',
+        criterion: 'The dog comes or clearly responds without seeing you.',
+      },
+    },
+    {
+      ordinal: 4,
+      pl: {
+        instruction: 'W ogrodzie albo na spokojnej ulicy, gdzie jest co wąchać.',
+        criterion: 'Pies odwraca się po jednym wypowiedzeniu imienia na dworze.',
+      },
+      en: {
+        instruction: 'In the garden or on a quiet street, where there is something to smell.',
+        criterion: 'The dog turns after one call outdoors.',
+      },
+    },
+  ],
+};
+
+const WAIT: ExerciseSeed = {
+  id: 'wait',
+  category: 'impulse_control',
+  sortOrder: 8,
+  requires: ['sit'],
+  names: {
+    pl: {
+      name: 'czekaj',
+      description:
+        'Pies wstrzymuje się przed progiem, miską albo otwartym bagażnikiem, dopóki nie pozwolisz. To nie to samo co „zostań" — tu chodzi o krótkie wstrzymanie przed czymś, nie o trzymanie pozycji.',
+    },
+    en: {
+      name: 'wait',
+      description:
+        'The dog holds back at a doorway, a bowl or an open boot until released. Not the same as stay: this is a short pause before something, not holding a position.',
+    },
+  },
+  steps: [
+    {
+      ordinal: 1,
+      pl: {
+        instruction:
+          'Przy zamkniętych drzwiach poproś o siad i zacznij powoli naciskać klamkę. Gdy pies wstanie — puść klamkę bez słowa. Gdy zostanie — otwórz na centymetr i nagródź.',
+        criterion: 'Pies zostaje w siadzie, gdy dotykasz klamki.',
+      },
+      en: {
+        instruction:
+          'At a closed door, ask for a sit and slowly start pressing the handle. If the dog gets up, let go without a word. If they hold, open a centimetre and pay.',
+        criterion: 'The dog stays sitting while you touch the handle.',
+      },
+    },
+    {
+      ordinal: 2,
+      pl: {
+        instruction: 'Uchyl drzwi na dłoń. Każde wstanie zamyka drzwi — bez komentarza, bez „nie".',
+        criterion: 'Pies zostaje przy drzwiach uchylonych na szerokość dłoni.',
+      },
+      en: {
+        instruction: 'Open the door a hand’s width. Any getting up closes it again — no comment, no “no”.',
+        criterion: 'The dog holds with the door open a hand’s width.',
+      },
+    },
+    {
+      ordinal: 3,
+      pl: {
+        instruction: 'Otwórz całe drzwi. Dopiero po chwili zwolnij psa słowem „koniec" i pozwól wyjść.',
+        criterion: 'Pies czeka przy całkowicie otwartych drzwiach do zwolnienia.',
+      },
+      en: {
+        instruction: 'Open the door fully. After a beat, release with “okay” and let them through.',
+        criterion: 'The dog waits at a fully open door until released.',
+      },
+    },
+    {
+      ordinal: 4,
+      pl: {
+        instruction:
+          'To samo z miską: trzymaj ją w rękach i opuszczaj powoli. Ruch psa w stronę miski podnosi ją z powrotem.',
+        criterion: 'Miska dotyka podłogi, a pies nie rusza się, dopóki nie pozwolisz.',
+      },
+      en: {
+        instruction:
+          'The same with a food bowl: hold it and lower it slowly. Any move toward it lifts the bowl back up.',
+        criterion: 'The bowl reaches the floor and the dog does not move until released.',
+      },
+    },
+  ],
+};
+
+const LEASH: ExerciseSeed = {
+  id: 'leash',
+  category: 'impulse_control',
+  sortOrder: 9,
+  requires: ['name'],
+  names: {
+    pl: {
+      name: 'luźna smycz',
+      description:
+        'Smycz wisi luźno w kształcie litery U. To nie jest „noga" — pies nie musi iść w konkretnej pozycji, ma tylko nie ciągnąć. Jedyna reguła: ciągnięcie nigdy nie może zadziałać, bo jeśli raz zadziała, uczy się na całe życie.',
+    },
+    en: {
+      name: 'loose lead',
+      description:
+        'The lead hangs in a U. This is not heel — the dog need not hold a position, only stop pulling. One rule: pulling must never work, because a single success teaches it for good.',
+    },
+  },
+  steps: [
+    {
+      ordinal: 1,
+      pl: {
+        instruction:
+          'W domu, ze smyczą, zrób trzy kroki. Dopóki smycz wisi luźno — nagradzaj co kilka kroków, podając smakołyk przy swojej nodze.',
+        criterion: 'Trzy kroki z luźną smyczą.',
+      },
+      en: {
+        instruction:
+          'Indoors on the lead, take three steps. While the lead stays loose, pay every few steps, delivering the treat at your leg.',
+        criterion: 'Three steps with a loose lead.',
+      },
+    },
+    {
+      ordinal: 2,
+      pl: {
+        instruction:
+          'Gdy smycz się napnie, zatrzymaj się i stój. Nie szarp i nie ciągnij do siebie. Ruszasz dopiero, gdy smycz znów zwiotczeje.',
+        criterion: 'Pies sam rozluźnia smycz i ruszacie dalej.',
+      },
+      en: {
+        instruction:
+          'When the lead goes tight, stop and stand still. No jerking, no reeling in. You move again only once it slackens.',
+        criterion: 'The dog releases the tension themselves and you move on.',
+      },
+    },
+    {
+      ordinal: 3,
+      pl: {
+        instruction: 'Dziesięć kroków w ogrodzie albo na podjeździe.',
+        criterion: 'Dziesięć kroków bez napięcia smyczy.',
+      },
+      en: {
+        instruction: 'Ten steps in the garden or on the driveway.',
+        criterion: 'Ten steps with no tension on the lead.',
+      },
+    },
+    {
+      ordinal: 4,
+      pl: {
+        instruction:
+          'Spokojna ulica, krótki odcinek. Pozwól psu wąchać — wąchanie jest nagrodą, a spacer bez wąchania to dla psa kara.',
+        criterion: 'Dwadzieścia kroków na ulicy z luźną smyczą.',
+      },
+      en: {
+        instruction:
+          'A quiet street, a short stretch. Let the dog sniff — sniffing is the reward, and a walk without it is a punishment from the dog’s side.',
+        criterion: 'Twenty steps on the street with a loose lead.',
+      },
+    },
+  ],
+};
+
+const DROP: ExerciseSeed = {
+  id: 'drop',
+  category: 'impulse_control',
+  sortOrder: 10,
+  requires: ['leave'],
+  names: {
+    pl: {
+      name: 'puść',
+      description:
+        'Pies oddaje to, co już ma w pysku. Osobna komenda od „zostaw" i ważniejsza, niż się wydaje: to ona ratuje psa, który podniósł coś niebezpiecznego. Nigdy nie wyrywaj siłą — od tego zaczyna się pilnowanie zasobów.',
+    },
+    en: {
+      name: 'drop it',
+      description:
+        'The dog gives up what is already in their mouth. A separate cue from leave it, and the one that matters when they pick up something dangerous. Never prise it out — that is how resource guarding starts.',
+    },
+  },
+  steps: [
+    {
+      ordinal: 1,
+      pl: {
+        instruction:
+          'Daj psu coś nudnego do trzymania. Podsuń pod nos smakołyk wyraźnie lepszy niż to, co ma. Gdy otworzy pysk — chwal i daj smakołyk, a potem oddaj mu zabawkę z powrotem.',
+        criterion: 'Pies wypuszcza przedmiot z pyska.',
+      },
+      en: {
+        instruction:
+          'Give the dog something dull to hold. Offer a treat clearly better than what they have. When the mouth opens, praise, pay, then give the toy straight back.',
+        criterion: 'The dog releases the item.',
+      },
+    },
+    {
+      ordinal: 2,
+      pl: {
+        instruction:
+          'Oddawanie zabawki po każdym powtórzeniu jest najważniejszą częścią. Pies musi się nauczyć, że „puść" nie oznacza straty.',
+        criterion: 'Pies wypuszcza i od razu chętnie bierze zabawkę ponownie.',
+      },
+      en: {
+        instruction:
+          'Giving the toy back every single time is the important part. The dog has to learn that “drop” does not mean loss.',
+        criterion: 'The dog releases and willingly takes the toy again.',
+      },
+    },
+    {
+      ordinal: 3,
+      pl: {
+        instruction: 'Dodaj słowo „puść" tuż przed podaniem smakołyka.',
+        criterion: 'Pies wypuszcza po usłyszeniu komendy.',
+      },
+      en: {
+        instruction: 'Add the cue “drop it” just before offering the treat.',
+        criterion: 'The dog releases on hearing the cue.',
+      },
+    },
+    {
+      ordinal: 4,
+      pl: {
+        instruction: 'Spróbuj z czymś, co pies lubi bardziej. Jeśli nie puszcza — wróć do nudniejszego przedmiotu.',
+        criterion: 'Pies wypuszcza ulubioną zabawkę na samo słowo.',
+      },
+      en: {
+        instruction: 'Try something the dog likes more. If they will not let go, go back to a duller item.',
+        criterion: 'The dog releases a favourite toy on the word alone.',
+      },
+    },
+  ],
+};
+
+const HANDLING: ExerciseSeed = {
+  id: 'handling',
+  category: 'foundation',
+  sortOrder: 11,
+  requires: [],
+  names: {
+    pl: {
+      name: 'obsługa',
+      description:
+        'Pies spokojnie znosi dotykanie łap, uszu, pyska i sierści. Najbardziej niedoceniane ćwiczenie w całym wychowaniu: decyduje o tym, czy wizyta u weterynarza i obcinanie pazurów będą rutyną, czy walką przez następne piętnaście lat.',
+    },
+    en: {
+      name: 'handling',
+      description:
+        'The dog accepts having paws, ears, mouth and coat touched. The most underrated exercise there is: it decides whether vet visits and nail trims are routine or a fight for the next fifteen years.',
+    },
+  },
+  steps: [
+    {
+      ordinal: 1,
+      pl: {
+        instruction:
+          'Dotknij ramienia psa na sekundę i od razu nagródź. Jeśli pies się odsuwa — skróć dotyk, nie przytrzymuj.',
+        criterion: 'Pies pozwala dotknąć ramienia i nie odsuwa się.',
+      },
+      en: {
+        instruction:
+          'Touch the dog’s shoulder for a second and pay immediately. If they move away, shorten the touch — never hold them in place.',
+        criterion: 'The dog accepts a shoulder touch without moving away.',
+      },
+    },
+    {
+      ordinal: 2,
+      pl: {
+        instruction: 'Przesuń dłoń na łapę. Dotknij, policz do jednego, nagródź.',
+        criterion: 'Pies pozwala dotknąć łapy.',
+      },
+      en: {
+        instruction: 'Move to a paw. Touch, count one, pay.',
+        criterion: 'The dog accepts a paw touch.',
+      },
+    },
+    {
+      ordinal: 3,
+      pl: {
+        instruction: 'Podnieś łapę na sekundę i odłóż. Potem drugą. Nagradzaj każdą.',
+        criterion: 'Pies pozwala podnieść i odłożyć łapę.',
+      },
+      en: {
+        instruction: 'Lift a paw for a second and set it down. Then another. Pay each one.',
+        criterion: 'The dog lets you lift and lower a paw.',
+      },
+    },
+    {
+      ordinal: 4,
+      pl: {
+        instruction: 'Unieś ucho i zajrzyj do środka. Potem odchyl wargę i obejrzyj zęby.',
+        criterion: 'Pies spokojnie znosi obejrzenie ucha i zębów.',
+      },
+      en: {
+        instruction: 'Lift an ear and look inside. Then lift a lip and look at the teeth.',
+        criterion: 'The dog calmly accepts an ear and teeth check.',
+      },
+    },
+    {
+      ordinal: 5,
+      pl: {
+        instruction:
+          'Dotknij pazura nożyczkami albo obcinaczką, nie obcinając. Nagródź. Samo narzędzie ma przewidywać coś dobrego.',
+        criterion: 'Pies spokojnie znosi dotknięcie pazura narzędziem.',
+      },
+      en: {
+        instruction:
+          'Touch a nail with the clippers without cutting. Pay. The tool itself has to predict something good.',
+        criterion: 'The dog calmly accepts the clippers touching a nail.',
+      },
+    },
+  ],
+};
+
 /** Every exercise the app ships, in teaching order. */
 export const CATALOGUE: readonly CatalogueEntry[] = [
+  {
+    ...NAME,
+    pose: 'look',
+    tagline: { pl: 'Fundament pod wszystko', en: 'Everything is built on it' },
+  },
   {
     ...SIT,
     pose: 'sit',
@@ -539,6 +900,26 @@ export const CATALOGUE: readonly CatalogueEntry[] = [
     ...MAT,
     pose: 'mat',
     tagline: { pl: 'Rozwiązuje gości i obiad', en: 'Solves visitors and dinner' },
+  },
+  {
+    ...WAIT,
+    pose: 'stay',
+    tagline: { pl: 'Nie wyrywaj się przez próg', en: 'No bolting through doors' },
+  },
+  {
+    ...LEASH,
+    pose: 'come',
+    tagline: { pl: 'Spacer bez ciągnięcia', en: 'A walk without the pulling' },
+  },
+  {
+    ...DROP,
+    pose: 'leave',
+    tagline: { pl: 'Oddaj to, co już masz', en: 'Give back what you took' },
+  },
+  {
+    ...HANDLING,
+    pose: 'stand',
+    tagline: { pl: 'Żeby weterynarz nie był walką', en: 'So the vet is not a fight' },
   },
 ];
 
