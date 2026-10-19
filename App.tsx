@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 
 import { CATALOGUE, exerciseById } from './src/content/catalogue';
 import { ENVIRONMENTS, STARTING_ENVIRONMENT_ID } from './src/content/environments';
+import { mistakesFor } from './src/content/mistakes';
 import { ExerciseList, type ExerciseProgress } from './src/features/catalogue/ExerciseList';
 import { SetScreen } from './src/features/session/SetScreen';
 import { getLocale } from './src/i18n';
@@ -96,6 +97,9 @@ export default function App() {
       </View>
 
       <SetScreen
+        description={names.description}
+        exerciseId={entry.id}
+        mistakes={mistakesFor(entry.id)}
         onFinish={() => dispatch({ type: 'reset' })}
         onRecord={record}
         onUndo={() => dispatch({ type: 'undo' })}
