@@ -163,6 +163,9 @@ export default function App() {
         stepCount={entry.steps.length}
         stepCriterion={text.criterion}
         stepInstruction={text.instruction}
+        stepNote={text.note}
+        stepReps={text.reps}
+        stepSetup={text.setup}
         stepOrdinal={stepOrdinal}
       />
 

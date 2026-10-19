@@ -32,6 +32,10 @@ export interface SetScreenProps {
   readonly stepCount: number;
   /** Localised by the caller. */
   readonly stepInstruction: string;
+  /** Structured form. When present it replaces the prose instruction. */
+  readonly stepSetup?: readonly string[];
+  readonly stepReps?: readonly string[];
+  readonly stepNote?: string;
   /** What counts as a correct rep. Localised by the caller. */
   readonly stepCriterion: string;
   readonly state: SetState;
@@ -93,6 +97,9 @@ export function SetScreen({
   stepOrdinal,
   stepCount,
   stepInstruction,
+  stepSetup,
+  stepReps,
+  stepNote,
   stepCriterion,
   state,
   onRecord,
@@ -139,6 +146,37 @@ export function SetScreen({
           </View>
           <Text style={styles.instruction}>{stepInstruction}</Text>
         </View>
+
+        {stepSetup && stepSetup.length > 0 ? (
+          <View style={styles.listBlock}>
+            <Text style={styles.listLabel}>{t('session.setup').toUpperCase()}</Text>
+            {stepSetup.map((line) => (
+              <View key={line} style={styles.bulletRow}>
+                <Text style={styles.bullet}>•</Text>
+                <Text style={styles.bulletText}>{line}</Text>
+              </View>
+            ))}
+          </View>
+        ) : null}
+
+        {stepReps && stepReps.length > 0 ? (
+          <View style={styles.listBlock}>
+            <Text style={styles.listLabel}>{t('session.oneRep').toUpperCase()}</Text>
+            {stepReps.map((line, i) => (
+              <View key={line} style={styles.bulletRow}>
+                <Text style={styles.number}>{i + 1}</Text>
+                <Text style={styles.bulletText}>{line}</Text>
+              </View>
+            ))}
+          </View>
+        ) : null}
+
+        {stepNote ? (
+          <View style={styles.noteBlock}>
+            <Text style={styles.noteLabel}>{t('session.note').toUpperCase()}</Text>
+            <Text style={styles.noteText}>{stepNote}</Text>
+          </View>
+        ) : null}
 
         <GearRow gear={gear} />
 
@@ -344,6 +382,38 @@ const styles = StyleSheet.create({
   },
   art: { alignItems: 'center', justifyContent: 'center' },
   instruction: { fontSize: 17, lineHeight: 25, color: INK, textAlign: 'center' },
+
+  listBlock: {
+    backgroundColor: SURFACE,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: LINE,
+    padding: 13,
+    gap: 7,
+  },
+  listLabel: { fontSize: 10, fontWeight: '700', letterSpacing: 1.1, color: MUTED },
+  bulletRow: { flexDirection: 'row', gap: 10, alignItems: 'flex-start' },
+  bullet: { fontSize: 15, lineHeight: 21, color: GREEN, width: 14, textAlign: 'center' },
+  number: {
+    fontSize: 12,
+    lineHeight: 21,
+    fontWeight: '700',
+    color: GREEN,
+    width: 14,
+    textAlign: 'center',
+  },
+  bulletText: { flex: 1, fontSize: 15, lineHeight: 21, color: INK },
+
+  noteBlock: {
+    backgroundColor: '#f6f1e4',
+    borderRadius: 12,
+    borderLeftWidth: 3,
+    borderLeftColor: AMBER,
+    padding: 12,
+    gap: 3,
+  },
+  noteLabel: { fontSize: 10, fontWeight: '700', letterSpacing: 1.1, color: AMBER },
+  noteText: { fontSize: 13.5, lineHeight: 20, color: '#4a3c1d' },
 
   criterion: {
     borderLeftWidth: 3,

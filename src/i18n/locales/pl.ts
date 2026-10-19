@@ -30,6 +30,9 @@ export const pl = {
     masteredHere: 'Opanowane tutaj',
     fullyMastered: 'Opanowane wszędzie',
     rungs: 'Miejsce {{n}} z {{total}}',
+    setup: 'Przygotowanie',
+    oneRep: 'Jedno powtórzenie',
+    note: 'Uwaga',
     newPlaceTitle: 'Nowe miejsce — kroki cofnięte celowo',
     newPlaceBody:
       'Dla psa ta sama komenda w nowym otoczeniu to w praktyce nowe zadanie. Wracamy kawałek, żeby odbudować ją tutaj — pójdzie szybciej niż za pierwszym razem.',
