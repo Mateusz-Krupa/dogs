@@ -12,6 +12,7 @@ import { SetScreen } from './src/features/session/SetScreen';
 import { getLocale } from './src/i18n';
 import { initialSetState, setReducer } from './src/features/session/setMachine';
 import { type RepOutcome } from './src/domain/verdict';
+import { move, nextEnvironment, previousEnvironment } from './src/domain/progression';
 
 /**
  * Temporary shell until navigation and persistence land.
@@ -52,17 +53,21 @@ export default function App() {
     dispatch({ type: 'record', outcome });
   }, []);
 
-  /** Stores a position for this exercise and starts a fresh set. */
+  /**
+   * Applies a move along whichever axis it belongs to, then starts a fresh set.
+   * The rules live in `domain/progression`, not here — this only stores the
+   * result, so the UI cannot quietly invent a different progression.
+   */
   const goTo = useCallback(
-    (stepOrdinal: number) => {
+    (delta: -1 | 0 | 1) => {
       if (!entry) return;
-      setProgress((current) => ({
-        ...current,
-        [entry.id]: {
-          stepOrdinal,
-          environmentId: current[entry.id]?.environmentId ?? STARTING_ENVIRONMENT_ID,
-        },
-      }));
+      setProgress((current) => {
+        const here = current[entry.id] ?? {
+          stepOrdinal: 1,
+          environmentId: STARTING_ENVIRONMENT_ID,
+        };
+        return { ...current, [entry.id]: move(here, entry.steps.length, delta) };
+      });
       dispatch({ type: 'reset' });
     },
     [entry]
@@ -141,7 +146,9 @@ export default function App() {
         exerciseId={entry.id}
         gear={entry.gear}
         mistakes={mistakesFor(entry.id)}
-        onChoose={(delta) => goTo(stepOrdinal + delta)}
+        canGoEasierPlace={previousEnvironment(environment.id) !== undefined}
+        canGoHarderPlace={nextEnvironment(environment.id) !== undefined}
+        onChoose={goTo}
         onRecord={record}
         onUndo={() => dispatch({ type: 'undo' })}
         pose={entry.pose}

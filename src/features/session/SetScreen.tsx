@@ -39,6 +39,9 @@ export interface SetScreenProps {
   readonly onUndo: () => void;
   /** Where to go after the set: -1 easier, 0 the same again, +1 harder. */
   readonly onChoose: (delta: -1 | 0 | 1) => void;
+  /** Whether a harder / easier rung exists to roll onto at the ladder ends. */
+  readonly canGoHarderPlace: boolean;
+  readonly canGoEasierPlace: boolean;
 }
 
 /**
@@ -89,6 +92,8 @@ export function SetScreen({
   onRecord,
   onUndo,
   onChoose,
+  canGoHarderPlace,
+  canGoEasierPlace,
 }: SetScreenProps) {
   const [openMistake, setOpenMistake] = useState<number | null>(null);
   const [showAbout, setShowAbout] = useState(false);
@@ -203,15 +208,25 @@ export function SetScreen({
             <View style={styles.choiceRow}>
               {([-1, 0, 1] as const).map((delta) => {
                 const available =
-                  delta === -1 ? stepOrdinal > 1 : delta === 1 ? stepOrdinal < stepCount : true;
+                  delta === -1
+                    ? stepOrdinal > 1 || canGoEasierPlace
+                    : delta === 1
+                      ? stepOrdinal < stepCount || canGoHarderPlace
+                      : true;
                 if (!available) return null;
                 const marked = delta === suggestedDelta(verdict);
+                const crossesEnvironment =
+                  (delta === 1 && stepOrdinal >= stepCount) || (delta === -1 && stepOrdinal <= 1);
                 const label =
-                  delta === -1
-                    ? t('session.easierStep')
-                    : delta === 0
-                      ? t('session.sameAgain')
-                      : t('session.nextStep');
+                  delta === 0
+                    ? t('session.sameAgain')
+                    : delta === 1
+                      ? crossesEnvironment
+                        ? t('session.harderPlace')
+                        : t('session.nextStep')
+                      : crossesEnvironment
+                        ? t('session.easierPlace')
+                        : t('session.easierStep');
                 return (
                   <Pressable
                     accessibilityLabel={marked ? `${label} — ${t('session.suggested')}` : label}

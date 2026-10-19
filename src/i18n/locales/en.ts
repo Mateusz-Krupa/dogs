@@ -27,6 +27,11 @@ export const en: LocaleCatalogue = {
     sameAgain: 'Same again',
     nextStep: 'Next step',
     suggested: 'suggested',
+    harderPlace: 'Harder place',
+    easierPlace: 'Easier place',
+    masteredHere: 'Solid here',
+    fullyMastered: 'Solid everywhere',
+    rungs: 'Place {{n}} of {{total}}',
   },
   gear: {
     title: 'What you need',

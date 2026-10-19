@@ -3,6 +3,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { CATALOGUE, type CatalogueEntry } from '../../content/catalogue';
 import { ENVIRONMENTS } from '../../content/environments';
 import { NOSEWORK } from '../../content/nosework';
+import { isFullyGeneralized, isLadderComplete, rungsCleared } from '../../domain/progression';
 import { DogPose } from '../../ui/DogPose';
 import { GearRow } from '../../ui/GearRow';
 import { getLocale, t } from '../../i18n';
@@ -73,8 +74,12 @@ function ExerciseCard({
       : environment.names.pl
     : undefined;
 
-  const done = progress ? progress.stepOrdinal - 1 : 0;
-  const pct = Math.max(0, Math.min(1, done / entry.steps.length));
+  const ladderDone = progress ? isLadderComplete(progress, entry.steps.length) : false;
+  const everywhere = progress ? isFullyGeneralized(progress, entry.steps.length) : false;
+  const cleared = progress ? rungsCleared(progress, entry.steps.length) : 0;
+  const pct = progress
+    ? Math.max(0, Math.min(1, progress.stepOrdinal / entry.steps.length))
+    : 0;
 
   return (
     <Pressable
@@ -91,7 +96,15 @@ function ExerciseCard({
       <View style={styles.body}>
         <View style={styles.titleRow}>
           <Text style={styles.name}>{names.name}</Text>
-          {recommended ? (
+          {everywhere ? (
+            <View style={[styles.chip, styles.chipDone]}>
+              <Text style={[styles.chipText, styles.chipTextDone]}>✓ {t('session.fullyMastered')}</Text>
+            </View>
+          ) : ladderDone ? (
+            <View style={[styles.chip, styles.chipDone]}>
+              <Text style={[styles.chipText, styles.chipTextDone]}>✓ {t('session.masteredHere')}</Text>
+            </View>
+          ) : recommended ? (
             <View style={styles.chip}>
               <Text style={styles.chipText}>{locale === 'en' ? 'next up' : 'na teraz'}</Text>
             </View>
@@ -105,16 +118,28 @@ function ExerciseCard({
         {/* A zero-length bar reads as a stray rule across the card, so an
             untouched exercise shows its step count instead of empty track. */}
         {progress ? (
-          <View style={styles.track}>
-            <View style={[styles.trackFill, { width: `${Math.max(pct, 0.06) * 100}%` }]} />
+          <View style={styles.tracks}>
+            <View style={styles.track}>
+              <View style={[styles.trackFill, { width: `${Math.max(pct, 0.06) * 100}%` }]} />
+            </View>
+            {/* The second axis. A dog is not done when the steps are done —
+                it is done when the cue survives somewhere difficult. */}
+            <View style={styles.rungDots}>
+              {ENVIRONMENTS.slice(0, 8).map((rung, i) => (
+                <View key={rung.id} style={[styles.rungDot, i < cleared && styles.rungDotDone]} />
+              ))}
+              <Text style={styles.rungText}>
+                {t('session.rungs', { n: cleared, total: ENVIRONMENTS.length })}
+              </Text>
+            </View>
           </View>
         ) : null}
 
         <View style={styles.metaRow}>
           <Text style={styles.meta}>
             {progress
-              ? `${locale === 'en' ? 'Step' : 'Krok'} ${progress.stepOrdinal} / ${entry.steps.length}${
-                  environmentName ? ` · ${environmentName}` : ''
+              ? `${locale === 'en' ? 'Step' : 'Krok'} ${progress.stepOrdinal}/${entry.steps.length} · ${
+                  environmentName ?? ''
                 }`
               : `${entry.steps.length} ${locale === 'en' ? 'steps' : 'kroków'}`}
           </Text>
@@ -323,6 +348,13 @@ const styles = StyleSheet.create({
     lineHeight: 19,
     color: MUTED,
   },
+  tracks: { gap: 5, marginTop: 2 },
+  rungDots: { flexDirection: 'row', alignItems: 'center', gap: 3 },
+  rungDot: { width: 7, height: 7, borderRadius: 3.5, backgroundColor: '#e0e5dc' },
+  rungDotDone: { backgroundColor: BLUE },
+  rungText: { marginLeft: 6, fontSize: 11, color: MUTED },
+  chipDone: { backgroundColor: '#dfeae2' },
+  chipTextDone: { color: GREEN },
   track: {
     height: 5,
     borderRadius: 999,

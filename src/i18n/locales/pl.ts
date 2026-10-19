@@ -25,6 +25,11 @@ export const pl = {
     sameAgain: 'Jeszcze raz to samo',
     nextStep: 'Następny krok',
     suggested: 'sugerowane',
+    harderPlace: 'Trudniejsze miejsce',
+    easierPlace: 'Łatwiejsze miejsce',
+    masteredHere: 'Opanowane tutaj',
+    fullyMastered: 'Opanowane wszędzie',
+    rungs: 'Miejsce {{n}} z {{total}}',
   },
   gear: {
     title: 'Czego potrzebujesz',
