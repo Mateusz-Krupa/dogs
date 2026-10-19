@@ -1,0 +1,81 @@
+{
+  "id": "leash",
+  "category": "impulse_control",
+  "sortOrder": 9,
+  "pose": "come",
+  "requires": [
+    "name"
+  ],
+  "gear": [
+    "treats",
+    "lead"
+  ],
+  "names": {
+    "pl": {
+      "name": "luźna smycz",
+      "description": "Smycz wisi luźno w kształcie litery U. To nie jest „noga\" — pies nie musi iść w konkretnej pozycji, ma tylko nie ciągnąć. Jedyna reguła: ciągnięcie nigdy nie może zadziałać, bo jeśli raz zadziała, uczy się na całe życie."
+    },
+    "en": {
+      "name": "loose lead",
+      "description": "The lead hangs in a U. This is not heel — the dog need not hold a position, only stop pulling. One rule: pulling must never work, because a single success teaches it for good."
+    }
+  },
+  "tagline": {
+    "pl": "Spacer bez ciągnięcia",
+    "en": "A walk without the pulling"
+  },
+  "steps": [
+    {
+      "ordinal": 1,
+      "pl": {
+        "title": "",
+        "instruction": "W domu, ze smyczą, zrób trzy kroki. Dopóki smycz wisi luźno — nagradzaj co kilka kroków, podając smakołyk przy swojej nodze.",
+        "criterion": "Trzy kroki z luźną smyczą."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Indoors on the lead, take three steps. While the lead stays loose, pay every few steps, delivering the treat at your leg.",
+        "criterion": "Three steps with a loose lead."
+      }
+    },
+    {
+      "ordinal": 2,
+      "pl": {
+        "title": "",
+        "instruction": "Gdy smycz się napnie, zatrzymaj się i stój. Nie szarp i nie ciągnij do siebie. Ruszasz dopiero, gdy smycz znów zwiotczeje.",
+        "criterion": "Pies sam rozluźnia smycz i ruszacie dalej."
+      },
+      "en": {
+        "title": "",
+        "instruction": "When the lead goes tight, stop and stand still. No jerking, no reeling in. You move again only once it slackens.",
+        "criterion": "The dog releases the tension themselves and you move on."
+      }
+    },
+    {
+      "ordinal": 3,
+      "pl": {
+        "title": "",
+        "instruction": "Dziesięć kroków w ogrodzie albo na podjeździe.",
+        "criterion": "Dziesięć kroków bez napięcia smyczy."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Ten steps in the garden or on the driveway.",
+        "criterion": "Ten steps with no tension on the lead."
+      }
+    },
+    {
+      "ordinal": 4,
+      "pl": {
+        "title": "",
+        "instruction": "Spokojna ulica, krótki odcinek. Pozwól psu wąchać — wąchanie jest nagrodą, a spacer bez wąchania to dla psa kara.",
+        "criterion": "Dwadzieścia kroków na ulicy z luźną smyczą."
+      },
+      "en": {
+        "title": "",
+        "instruction": "A quiet street, a short stretch. Let the dog sniff — sniffing is the reward, and a walk without it is a punishment from the dog’s side.",
+        "criterion": "Twenty steps on the street with a loose lead."
+      }
+    }
+  ]
+}

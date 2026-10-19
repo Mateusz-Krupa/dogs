@@ -1,0 +1,82 @@
+{
+  "id": "come",
+  "category": "impulse_control",
+  "sortOrder": 5,
+  "pose": "come",
+  "requires": [
+    "look"
+  ],
+  "gear": [
+    "treats",
+    "longline",
+    "helper"
+  ],
+  "names": {
+    "pl": {
+      "name": "do mnie",
+      "description": "Pies biegnie do Ciebie na wezwanie. Jedyna komenda, która ratuje życie — i jedyna, którą najłatwiej zepsuć na zawsze. Zasada bez wyjątku: powrót nigdy nie może skończyć się czymś nieprzyjemnym."
+    },
+    "en": {
+      "name": "come",
+      "description": "The dog runs to you when called. The one cue that saves lives, and the easiest one to ruin permanently. One rule, no exceptions: coming back must never cost the dog anything."
+    }
+  },
+  "tagline": {
+    "pl": "Ta jedna ratuje życie",
+    "en": "The one that saves lives"
+  },
+  "steps": [
+    {
+      "ordinal": 1,
+      "pl": {
+        "title": "",
+        "instruction": "W domu, z odległości dwóch kroków, powiedz imię psa i „do mnie\" radosnym tonem. Gdy przyjdzie — nagródź hojnie i pozwól mu odejść z powrotem do swoich spraw.",
+        "criterion": "Pies przychodzi w ciągu trzech sekund."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Indoors, from two steps away, say the dog’s name and “come” in a bright voice. When they arrive, pay generously and let them go back to what they were doing.",
+        "criterion": "The dog comes within three seconds."
+      }
+    },
+    {
+      "ordinal": 2,
+      "pl": {
+        "title": "",
+        "instruction": "Pięć kroków, z innego pokoju, gdy pies Cię nie widzi.",
+        "criterion": "Pies przybiega z innego pokoju."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Five steps, from another room, out of sight.",
+        "criterion": "The dog comes from another room."
+      }
+    },
+    {
+      "ordinal": 3,
+      "pl": {
+        "title": "",
+        "instruction": "Złap psa za obrożę przy nagradzaniu i od razu puść. Pies musi nauczyć się, że sięgnięcie po obrożę nie oznacza końca zabawy.",
+        "criterion": "Pies przychodzi i spokojnie znosi dotknięcie obroży."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Take hold of the collar as you pay, then release immediately. The dog has to learn that a hand on the collar does not mean the fun is over.",
+        "criterion": "The dog comes and accepts the collar touch calmly."
+      }
+    },
+    {
+      "ordinal": 4,
+      "pl": {
+        "title": "",
+        "instruction": "W ogrodzie, na długiej lince. Nigdy nie wołaj, jeśli nie masz jak dokończyć — przywołanie bez reakcji uczy, że „do mnie\" jest opcjonalne.",
+        "criterion": "Pies przybiega z pięciu metrów na lince."
+      },
+      "en": {
+        "title": "",
+        "instruction": "In the garden on a long line. Never call if you cannot follow through — a recall that goes unanswered teaches that “come” is optional.",
+        "criterion": "The dog comes from five metres on the line."
+      }
+    }
+  ]
+}

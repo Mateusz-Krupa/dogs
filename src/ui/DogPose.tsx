@@ -75,33 +75,20 @@ export function DogPose({ pose, size = 72, color = INK, accent = ACCENT }: DogPo
       ) : null}
 
       {pose === 'sit' && <Head x={64} y={34} color={color} />}
-      {pose === 'look' && (
-        <G>
-          <Head x={62} y={28} tilt={-32} color={color} />
-          {/* gaze, so this does not read as another plain sit on a list */}
-          <Path d="M 78 14 L 90 8" stroke={accent} strokeWidth={4} strokeLinecap="round" />
-          <Path d="M 80 22 L 93 19" stroke={accent} strokeWidth={4} strokeLinecap="round" />
-        </G>
-      )}
-      {pose === 'leave' && (
-        <G>
-          <Head x={64} y={34} tilt={-12} color={color} />
-          <Circle cx={22} cy={GROUND - 6} r={7} fill={accent} fillOpacity={0.9} />
-        </G>
-      )}
-      {pose === 'stay' && (
-        <G>
-          <Head x={62} y={34} color={color} />
-          {/* open palm, held up */}
-          <Rect x={80} y={26} width={15} height={24} rx={7.5} fill={accent} />
-          <Rect x={85} y={48} width={5} height={14} rx={2.5} fill={accent} />
-        </G>
-      )}
+      {/* A head tilted this far up reads as "looking at you" on its own. The
+          green gaze strokes that used to be here were a second, competing mark
+          and nobody could tell what they meant. */}
+      {pose === 'look' && <Head x={62} y={26} tilt={-38} color={color} />}
+      {/* The item being left alone is StepDiagram's crossed-out mark, not part
+          of the dog. */}
+      {pose === 'leave' && <Head x={64} y={34} tilt={-22} color={color} />}
+      {/* No palm. A held position is shown by StepDiagram's pause bars. */}
+      {pose === 'stay' && <Head x={62} y={34} color={color} />}
 
       {(pose === 'down' || pose === 'mat') && (
         <G>
           {pose === 'mat' && (
-            <Rect x={14} y={GROUND - 9} width={76} height={11} rx={5.5} fill={accent} fillOpacity={0.85} />
+            <Rect x={14} y={GROUND - 9} width={76} height={11} rx={5.5} fill={color} fillOpacity={0.28} />
           )}
           {/* body low, elbows and chest down */}
           <Path

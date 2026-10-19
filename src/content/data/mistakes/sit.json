@@ -1,0 +1,38 @@
+[
+  {
+    "pl": {
+      "symptom": "Pies podskakuje do smakołyka zamiast siadać",
+      "why": "Ręka jest za wysoko. Pies idzie za nosem — jeśli nos musi iść w górę ponad wygodny zasięg, ciało rusza za nim.",
+      "fix": "Opuść rękę tak nisko, żeby pies tylko wyciągał szyję, bez odrywania przednich łap."
+    },
+    "en": {
+      "symptom": "The dog jumps for the treat instead of sitting",
+      "why": "Your hand is too high. The dog follows their nose — if the nose has to go above comfortable reach, the body follows.",
+      "fix": "Lower your hand until they only stretch the neck, with the front feet staying down."
+    }
+  },
+  {
+    "pl": {
+      "symptom": "Pies cofa się zamiast siadać",
+      "why": "Ręka wędruje do tyłu nad głową psa, więc pies odsuwa się, żeby zachować równowagę.",
+      "fix": "Trzymaj rękę nieruchomo, dokładnie nad nosem. Możesz stanąć tak, żeby pies miał ścianę za sobą."
+    },
+    "en": {
+      "symptom": "The dog backs up instead of sitting",
+      "why": "Your hand is drifting backwards over their head, so they step back to keep their balance.",
+      "fix": "Keep your hand still, directly above the nose. Working with a wall behind the dog helps."
+    }
+  },
+  {
+    "pl": {
+      "symptom": "Skanduję komendę: „siad, siad, SIAD!\"",
+      "why": "To najczęstszy błąd początkujących. Pies uczy się, że komenda brzmi „siadsiadSIAD\" i że pierwsze wypowiedzenie nic nie znaczy.",
+      "fix": "Słowo raz, potem cisza i sekunda przerwy. Jeśli pies nie siada, to znaczy, że za wcześnie na samo słowo — wróć o krok."
+    },
+    "en": {
+      "symptom": "I chant the cue: “sit, sit, SIT!”",
+      "why": "The classic beginner mistake. The dog learns the cue is “sitsitSIT” and that the first one means nothing.",
+      "fix": "Say it once, then be quiet for a second. If no sit comes, the word arrived too early — go back a step."
+    }
+  }
+]

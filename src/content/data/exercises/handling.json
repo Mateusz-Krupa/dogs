@@ -1,0 +1,92 @@
+{
+  "id": "handling",
+  "category": "foundation",
+  "sortOrder": 11,
+  "pose": "stand",
+  "requires": [],
+  "gear": [
+    "treats",
+    "clippers"
+  ],
+  "names": {
+    "pl": {
+      "name": "obsługa",
+      "description": "Pies spokojnie znosi dotykanie łap, uszu, pyska i sierści. Najbardziej niedoceniane ćwiczenie w całym wychowaniu: decyduje o tym, czy wizyta u weterynarza i obcinanie pazurów będą rutyną, czy walką przez następne piętnaście lat."
+    },
+    "en": {
+      "name": "handling",
+      "description": "The dog accepts having paws, ears, mouth and coat touched. The most underrated exercise there is: it decides whether vet visits and nail trims are routine or a fight for the next fifteen years."
+    }
+  },
+  "tagline": {
+    "pl": "Żeby weterynarz nie był walką",
+    "en": "So the vet is not a fight"
+  },
+  "steps": [
+    {
+      "ordinal": 1,
+      "pl": {
+        "title": "",
+        "instruction": "Dotknij ramienia psa na sekundę i od razu nagródź. Jeśli pies się odsuwa — skróć dotyk, nie przytrzymuj.",
+        "criterion": "Pies pozwala dotknąć ramienia i nie odsuwa się."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Touch the dog’s shoulder for a second and pay immediately. If they move away, shorten the touch — never hold them in place.",
+        "criterion": "The dog accepts a shoulder touch without moving away."
+      }
+    },
+    {
+      "ordinal": 2,
+      "pl": {
+        "title": "",
+        "instruction": "Przesuń dłoń na łapę. Dotknij, policz do jednego, nagródź.",
+        "criterion": "Pies pozwala dotknąć łapy."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Move to a paw. Touch, count one, pay.",
+        "criterion": "The dog accepts a paw touch."
+      }
+    },
+    {
+      "ordinal": 3,
+      "pl": {
+        "title": "",
+        "instruction": "Podnieś łapę na sekundę i odłóż. Potem drugą. Nagradzaj każdą.",
+        "criterion": "Pies pozwala podnieść i odłożyć łapę."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Lift a paw for a second and set it down. Then another. Pay each one.",
+        "criterion": "The dog lets you lift and lower a paw."
+      }
+    },
+    {
+      "ordinal": 4,
+      "pl": {
+        "title": "",
+        "instruction": "Unieś ucho i zajrzyj do środka. Potem odchyl wargę i obejrzyj zęby.",
+        "criterion": "Pies spokojnie znosi obejrzenie ucha i zębów."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Lift an ear and look inside. Then lift a lip and look at the teeth.",
+        "criterion": "The dog calmly accepts an ear and teeth check."
+      }
+    },
+    {
+      "ordinal": 5,
+      "pl": {
+        "title": "",
+        "instruction": "Dotknij pazura nożyczkami albo obcinaczką, nie obcinając. Nagródź. Samo narzędzie ma przewidywać coś dobrego.",
+        "criterion": "Pies spokojnie znosi dotknięcie pazura narzędziem."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Touch a nail with the clippers without cutting. Pay. The tool itself has to predict something good.",
+        "criterion": "The dog calmly accepts the clippers touching a nail."
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "leave",
+  "category": "impulse_control",
+  "sortOrder": 6,
+  "pose": "leave",
+  "requires": [
+    "look"
+  ],
+  "gear": [
+    "treats"
+  ],
+  "names": {
+    "pl": {
+      "name": "zostaw",
+      "description": "Pies nie bierze i nie dotyka tego, co wskażesz. Polskie szkoły używają też „nie rusz\" — wybierz jedno słowo i trzymaj się go. To ćwiczenie dotyczy rzeczy, których pies jeszcze nie ma w pysku; na oddanie tego, co już wziął, jest osobna komenda."
+    },
+    "en": {
+      "name": "leave it",
+      "description": "The dog does not take or touch the thing you name. This covers things not yet in the mouth — getting something back out of it is a different cue."
+    }
+  },
+  "tagline": {
+    "pl": "Nie bierz tego z chodnika",
+    "en": "Not off the pavement"
+  },
+  "steps": [
+    {
+      "ordinal": 1,
+      "pl": {
+        "title": "",
+        "instruction": "Zamknij smakołyk w dłoni i podsuń psu. Czekaj. Pies będzie lizał i trącał — nie mów nic. W sekundzie, w której się odsunie, chwal i nagródź z DRUGIEJ ręki.",
+        "criterion": "Pies odsuwa nos od zamkniętej dłoni choć na chwilę."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Close a treat in your fist and offer it. Wait. The dog will lick and nudge — say nothing. The second they back off, praise and pay from your OTHER hand.",
+        "criterion": "The dog moves their nose away from the closed fist, even briefly."
+      }
+    },
+    {
+      "ordinal": 2,
+      "pl": {
+        "title": "",
+        "instruction": "Czekaj, aż pies odsunie się i spojrzy na Ciebie, zanim nagrodzisz.",
+        "criterion": "Pies odsuwa się i nawiązuje kontakt wzrokowy."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Wait for the dog to back off and look at you before paying.",
+        "criterion": "The dog backs off and makes eye contact."
+      }
+    },
+    {
+      "ordinal": 3,
+      "pl": {
+        "title": "",
+        "instruction": "Otwórz dłoń. Jeśli pies sięga — zamknij ją. Płać za wycofanie się przy otwartej dłoni.",
+        "criterion": "Pies nie sięga po smakołyk na otwartej dłoni."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Open your hand. If the dog lunges, close it. Pay for backing off from the open palm.",
+        "criterion": "The dog does not reach for the treat on an open palm."
+      }
+    },
+    {
+      "ordinal": 4,
+      "pl": {
+        "title": "",
+        "instruction": "Połóż smakołyk na podłodze i przykryj stopą. Ta sama zasada: płacisz za odsunięcie się.",
+        "criterion": "Pies odsuwa się od smakołyka na podłodze."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Put the treat on the floor and cover it with your foot. Same rule: pay for backing off.",
+        "criterion": "The dog backs away from the treat on the floor."
+      }
+    },
+    {
+      "ordinal": 5,
+      "pl": {
+        "title": "",
+        "instruction": "Dopiero teraz dodaj słowo „zostaw\", mówiąc je tuż przed podsunięciem smakołyka.",
+        "criterion": "Pies nie sięga po usłyszeniu „zostaw\"."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Only now add the word “leave it”, said just before you present the treat.",
+        "criterion": "The dog does not reach after hearing the cue."
+      }
+    }
+  ]
+}

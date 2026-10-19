@@ -1,0 +1,82 @@
+{
+  "id": "wait",
+  "category": "impulse_control",
+  "sortOrder": 8,
+  "pose": "stay",
+  "requires": [
+    "sit"
+  ],
+  "gear": [
+    "treats",
+    "door",
+    "bowl"
+  ],
+  "names": {
+    "pl": {
+      "name": "czekaj",
+      "description": "Pies wstrzymuje się przed progiem, miską albo otwartym bagażnikiem, dopóki nie pozwolisz. To nie to samo co „zostań\" — tu chodzi o krótkie wstrzymanie przed czymś, nie o trzymanie pozycji."
+    },
+    "en": {
+      "name": "wait",
+      "description": "The dog holds back at a doorway, a bowl or an open boot until released. Not the same as stay: this is a short pause before something, not holding a position."
+    }
+  },
+  "tagline": {
+    "pl": "Nie wyrywaj się przez próg",
+    "en": "No bolting through doors"
+  },
+  "steps": [
+    {
+      "ordinal": 1,
+      "pl": {
+        "title": "",
+        "instruction": "Przy zamkniętych drzwiach poproś o siad i zacznij powoli naciskać klamkę. Gdy pies wstanie — puść klamkę bez słowa. Gdy zostanie — otwórz na centymetr i nagródź.",
+        "criterion": "Pies zostaje w siadzie, gdy dotykasz klamki."
+      },
+      "en": {
+        "title": "",
+        "instruction": "At a closed door, ask for a sit and slowly start pressing the handle. If the dog gets up, let go without a word. If they hold, open a centimetre and pay.",
+        "criterion": "The dog stays sitting while you touch the handle."
+      }
+    },
+    {
+      "ordinal": 2,
+      "pl": {
+        "title": "",
+        "instruction": "Uchyl drzwi na dłoń. Każde wstanie zamyka drzwi — bez komentarza, bez „nie\".",
+        "criterion": "Pies zostaje przy drzwiach uchylonych na szerokość dłoni."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Open the door a hand’s width. Any getting up closes it again — no comment, no “no”.",
+        "criterion": "The dog holds with the door open a hand’s width."
+      }
+    },
+    {
+      "ordinal": 3,
+      "pl": {
+        "title": "",
+        "instruction": "Otwórz całe drzwi. Dopiero po chwili zwolnij psa słowem „koniec\" i pozwól wyjść.",
+        "criterion": "Pies czeka przy całkowicie otwartych drzwiach do zwolnienia."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Open the door fully. After a beat, release with “okay” and let them through.",
+        "criterion": "The dog waits at a fully open door until released."
+      }
+    },
+    {
+      "ordinal": 4,
+      "pl": {
+        "title": "",
+        "instruction": "To samo z miską: trzymaj ją w rękach i opuszczaj powoli. Ruch psa w stronę miski podnosi ją z powrotem.",
+        "criterion": "Miska dotyka podłogi, a pies nie rusza się, dopóki nie pozwolisz."
+      },
+      "en": {
+        "title": "",
+        "instruction": "The same with a food bowl: hold it and lower it slowly. Any move toward it lifts the bowl back up.",
+        "criterion": "The bowl reaches the floor and the dog does not move until released."
+      }
+    }
+  ]
+}

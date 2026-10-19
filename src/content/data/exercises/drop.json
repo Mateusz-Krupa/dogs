@@ -1,0 +1,81 @@
+{
+  "id": "drop",
+  "category": "impulse_control",
+  "sortOrder": 10,
+  "pose": "leave",
+  "requires": [
+    "leave"
+  ],
+  "gear": [
+    "treats",
+    "toy"
+  ],
+  "names": {
+    "pl": {
+      "name": "puść",
+      "description": "Pies oddaje to, co już ma w pysku. Osobna komenda od „zostaw\" i ważniejsza, niż się wydaje: to ona ratuje psa, który podniósł coś niebezpiecznego. Nigdy nie wyrywaj siłą — od tego zaczyna się pilnowanie zasobów."
+    },
+    "en": {
+      "name": "drop it",
+      "description": "The dog gives up what is already in their mouth. A separate cue from leave it, and the one that matters when they pick up something dangerous. Never prise it out — that is how resource guarding starts."
+    }
+  },
+  "tagline": {
+    "pl": "Oddaj to, co już masz",
+    "en": "Give back what you took"
+  },
+  "steps": [
+    {
+      "ordinal": 1,
+      "pl": {
+        "title": "",
+        "instruction": "Daj psu coś nudnego do trzymania. Podsuń pod nos smakołyk wyraźnie lepszy niż to, co ma. Gdy otworzy pysk — chwal i daj smakołyk, a potem oddaj mu zabawkę z powrotem.",
+        "criterion": "Pies wypuszcza przedmiot z pyska."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Give the dog something dull to hold. Offer a treat clearly better than what they have. When the mouth opens, praise, pay, then give the toy straight back.",
+        "criterion": "The dog releases the item."
+      }
+    },
+    {
+      "ordinal": 2,
+      "pl": {
+        "title": "",
+        "instruction": "Oddawanie zabawki po każdym powtórzeniu jest najważniejszą częścią. Pies musi się nauczyć, że „puść\" nie oznacza straty.",
+        "criterion": "Pies wypuszcza i od razu chętnie bierze zabawkę ponownie."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Giving the toy back every single time is the important part. The dog has to learn that “drop” does not mean loss.",
+        "criterion": "The dog releases and willingly takes the toy again."
+      }
+    },
+    {
+      "ordinal": 3,
+      "pl": {
+        "title": "",
+        "instruction": "Dodaj słowo „puść\" tuż przed podaniem smakołyka.",
+        "criterion": "Pies wypuszcza po usłyszeniu komendy."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Add the cue “drop it” just before offering the treat.",
+        "criterion": "The dog releases on hearing the cue."
+      }
+    },
+    {
+      "ordinal": 4,
+      "pl": {
+        "title": "",
+        "instruction": "Spróbuj z czymś, co pies lubi bardziej. Jeśli nie puszcza — wróć do nudniejszego przedmiotu.",
+        "criterion": "Pies wypuszcza ulubioną zabawkę na samo słowo."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Try something the dog likes more. If they will not let go, go back to a duller item.",
+        "criterion": "The dog releases a favourite toy on the word alone."
+      }
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "id": "snuffle",
+  "pose": "sniff",
+  "sortOrder": 2,
+  "names": {
+    "pl": {
+      "name": "mata węchowa",
+      "description": "Jedzenie schowane w gęstej tkaninie. Nie musisz jej kupować — zrolowany ręcznik działa tak samo. Dobre na deszczowy dzień i na psa, który nie może jeszcze dużo chodzić."
+    },
+    "en": {
+      "name": "snuffle mat",
+      "description": "Food hidden in thick fabric. You do not need to buy one — a rolled towel works the same. Good for a rainy day and for a dog that cannot yet walk far."
+    }
+  },
+  "tagline": {
+    "pl": "Dziesięć minut i pies śpi",
+    "en": "Ten minutes and they sleep"
+  },
+  "levels": [
+    {
+      "ordinal": 1,
+      "minutes": 4,
+      "gear": [
+        "treats",
+        "towel"
+      ],
+      "pl": {
+        "title": "Zrolowany ręcznik",
+        "setup": "Rozłóż ręcznik, rozsyp na nim karmę, zroluj luźno.",
+        "how": "Postaw przed psem i pozwól rozwiązać. Nie rozwijaj za niego, nawet jeśli długo mu idzie.",
+        "watchFor": "Pies rozwija ręcznik nosem i łapami. Frustracja wygląda jak szarpanie i gryzienie — wtedy zroluj luźniej."
+      },
+      "en": {
+        "title": "A rolled towel",
+        "setup": "Lay a towel flat, scatter kibble on it, roll it up loosely.",
+        "how": "Put it down and let them solve it. Do not unroll it for them, however long it takes.",
+        "watchFor": "The dog unrolls it with nose and paws. Frustration looks like tugging and biting — roll it looser next time."
+      }
+    },
+    {
+      "ordinal": 2,
+      "minutes": 6,
+      "gear": [
+        "treats",
+        "towel"
+      ],
+      "pl": {
+        "title": "Ciasno zwinięty",
+        "setup": "Ten sam ręcznik, ale zwinięty ciaśniej i zawiązany na luźny węzeł.",
+        "how": "Jak wyżej. Trudność rośnie przez opór materiału, nie przez ilość jedzenia.",
+        "watchFor": "Dłuższa praca i więcej kombinowania. Pies powinien kończyć zmęczony, nie poirytowany."
+      },
+      "en": {
+        "title": "Rolled tight",
+        "setup": "The same towel, rolled tighter and tied in a loose knot.",
+        "how": "As above. The difficulty comes from the fabric, not from more food.",
+        "watchFor": "Longer work and more problem-solving. They should finish tired, not irritated."
+      }
+    },
+    {
+      "ordinal": 3,
+      "minutes": 8,
+      "gear": [
+        "treats",
+        "box"
+      ],
+      "pl": {
+        "title": "Pudło z gazetami",
+        "setup": "Karton, kilka zgniecionych gazet, karma schowana między nimi.",
+        "how": "Postaw i odejdź. Bałagan jest częścią ćwiczenia — posprzątasz potem.",
+        "watchFor": "Pies wyciąga gazety i szuka pod spodem. Jeśli od razu je gazety, wróć do ręcznika."
+      },
+      "en": {
+        "title": "A box of newspaper",
+        "setup": "A cardboard box, a few crumpled sheets of newspaper, kibble tucked between them.",
+        "how": "Put it down and walk away. The mess is part of the exercise — tidy up afterwards.",
+        "watchFor": "The dog pulls paper out and searches underneath. If they just eat the paper, go back to the towel."
+      }
+    }
+  ]
+}

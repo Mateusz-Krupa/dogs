@@ -1,0 +1,81 @@
+{
+  "id": "cups",
+  "pose": "sniff",
+  "sortOrder": 3,
+  "names": {
+    "pl": {
+      "name": "kubki",
+      "description": "Smakołyk pod jednym z kilku kubków. Pierwsza gra, w której pies musi świadomie **wybrać**, a nie tylko znaleźć — i pierwsza, w której zobaczysz, że naprawdę używa nosa, a nie pamięci."
+    },
+    "en": {
+      "name": "the cups",
+      "description": "A treat under one of several cups. The first game where the dog has to **choose** rather than simply find — and the first where you will see them genuinely use their nose rather than their memory."
+    }
+  },
+  "tagline": {
+    "pl": "Pierwszy świadomy wybór",
+    "en": "Their first real choice"
+  },
+  "levels": [
+    {
+      "ordinal": 1,
+      "minutes": 3,
+      "gear": [
+        "treats",
+        "cups"
+      ],
+      "pl": {
+        "title": "Dwa kubki, pies patrzy",
+        "setup": "Dwa identyczne kubki odwrócone dnem do góry, w odległości pół metra.",
+        "how": "Pozwól psu zobaczyć, pod który chowasz smakołyk. Powiedz „szukaj\". Gdy trąci właściwy — podnieś i pozwól zjeść.",
+        "watchFor": "Pies trąca nosem albo łapą jeden kubek. Trącanie obu po kolei też jest w porządku na tym poziomie."
+      },
+      "en": {
+        "title": "Two cups, dog watching",
+        "setup": "Two identical cups upside down, half a metre apart.",
+        "how": "Let the dog see which one you hide the treat under. Say “find it”. When they nudge the right one, lift it and let them eat.",
+        "watchFor": "A nudge with nose or paw. Checking both in turn is fine at this level."
+      }
+    },
+    {
+      "ordinal": 2,
+      "minutes": 4,
+      "gear": [
+        "treats",
+        "cups"
+      ],
+      "pl": {
+        "title": "Trzy kubki, pies nie patrzy",
+        "setup": "Trzy kubki. Pies czeka w drugim pokoju albo za rogiem.",
+        "how": "Schowaj smakołyk, przyprowadź psa, powiedz „szukaj\". Teraz nos jest jedynym źródłem informacji.",
+        "watchFor": "Pies sprawdza kubki po kolei nosem. To moment, w którym widać, że pracuje węchem, a nie zgaduje."
+      },
+      "en": {
+        "title": "Three cups, dog out of the room",
+        "setup": "Three cups. The dog waits in another room or round a corner.",
+        "how": "Hide the treat, bring the dog in, say “find it”. Now the nose is the only source of information.",
+        "watchFor": "The dog checks the cups in turn with their nose. This is where you can see scent working rather than guessing."
+      }
+    },
+    {
+      "ordinal": 3,
+      "minutes": 5,
+      "gear": [
+        "treats",
+        "cups"
+      ],
+      "pl": {
+        "title": "Pięć kubków, przestawione",
+        "setup": "Pięć kubków w nieregularnym układzie. Po schowaniu poprzestawiaj kilka z nich.",
+        "how": "Przestawianie usuwa resztki pamięci wzrokowej — zostaje czysta praca nosem.",
+        "watchFor": "Pies idzie prosto do właściwego kubka, pomijając część pozostałych. To znaczy, że zapach prowadzi."
+      },
+      "en": {
+        "title": "Five cups, shuffled",
+        "setup": "Five cups in an irregular layout. After hiding, move a few of them around.",
+        "how": "Shuffling removes whatever visual memory was left — what remains is pure scent work.",
+        "watchFor": "The dog goes straight to the right cup, skipping some of the others. That means scent is leading."
+      }
+    }
+  ]
+}

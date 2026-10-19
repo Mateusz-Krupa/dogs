@@ -1,0 +1,81 @@
+{
+  "id": "mat",
+  "category": "impulse_control",
+  "sortOrder": 7,
+  "pose": "mat",
+  "requires": [
+    "down"
+  ],
+  "gear": [
+    "treats",
+    "mat"
+  ],
+  "names": {
+    "pl": {
+      "name": "na miejsce",
+      "description": "Pies idzie na swoje posłanie i tam zostaje. Najbardziej praktyczna komenda w domu: rozwiązuje gości w drzwiach, obiad przy stole i kuriera jednym ruchem."
+    },
+    "en": {
+      "name": "place",
+      "description": "The dog goes to their bed or mat and stays there. The most practical cue in the house: it solves visitors, dinner and the doorbell in one move."
+    }
+  },
+  "tagline": {
+    "pl": "Rozwiązuje gości i obiad",
+    "en": "Solves visitors and dinner"
+  },
+  "steps": [
+    {
+      "ordinal": 1,
+      "pl": {
+        "title": "",
+        "instruction": "Rzuć smakołyk na matę. Gdy pies na nią wejdzie — chwal i daj drugi smakołyk, już na macie.",
+        "criterion": "Cztery łapy na macie."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Toss a treat onto the mat. When the dog steps on, praise and feed a second treat on the mat.",
+        "criterion": "All four feet on the mat."
+      }
+    },
+    {
+      "ordinal": 2,
+      "pl": {
+        "title": "",
+        "instruction": "Czekaj, aż pies położy się na macie sam. Nie proś — płać za decyzję.",
+        "criterion": "Pies kładzie się na macie bez komendy."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Wait for the dog to lie down on the mat by themselves. Do not ask — pay the decision.",
+        "criterion": "The dog lies down on the mat without being cued."
+      }
+    },
+    {
+      "ordinal": 3,
+      "pl": {
+        "title": "",
+        "instruction": "Odejdź o krok i wróć, nagradzając psa leżącego na macie.",
+        "criterion": "Pies zostaje na macie przez jeden Twój krok."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Step away and return, paying the dog while they are still on the mat.",
+        "criterion": "The dog stays on the mat through one step away."
+      }
+    },
+    {
+      "ordinal": 4,
+      "pl": {
+        "title": "",
+        "instruction": "Dodaj słowo „na miejsce\", mówiąc je, gdy pies już idzie w stronę maty.",
+        "criterion": "Pies idzie na matę po usłyszeniu komendy."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Add the cue “place”, said as the dog is already heading for the mat.",
+        "criterion": "The dog goes to the mat on hearing the cue."
+      }
+    }
+  ]
+}

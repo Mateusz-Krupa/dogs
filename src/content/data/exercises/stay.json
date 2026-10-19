@@ -1,0 +1,94 @@
+{
+  "id": "stay",
+  "category": "impulse_control",
+  "sortOrder": 4,
+  "pose": "stay",
+  "requires": [
+    "sit",
+    "down"
+  ],
+  "gear": [
+    "treats"
+  ],
+  "names": {
+    "pl": {
+      "name": "zostań",
+      "description": "Pies trzyma pozycję, dopóki go nie zwolnisz — mimo że Ty się ruszasz. Rośnie po jednej osi naraz: najpierw czas, potem dystans, na końcu rozproszenia. Nigdy dwie naraz."
+    },
+    "en": {
+      "name": "stay",
+      "description": "The dog holds position until released, even while you move. It grows along one axis at a time: duration first, then distance, then distraction. Never two at once."
+    }
+  },
+  "tagline": {
+    "pl": "Czas, potem dystans, potem hałas",
+    "en": "Duration, then distance, then noise"
+  },
+  "steps": [
+    {
+      "ordinal": 1,
+      "pl": {
+        "title": "",
+        "instruction": "Poproś o siad. Odlicz trzy sekundy, nagródź, zwolnij słowem „koniec\".",
+        "criterion": "Trzy sekundy w siadzie bez wstawania."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Ask for a sit. Count three seconds, pay, then release with “okay”.",
+        "criterion": "Three seconds in the sit without getting up."
+      }
+    },
+    {
+      "ordinal": 2,
+      "pl": {
+        "title": "",
+        "instruction": "Dziesięć sekund. Stój nieruchomo, nie oddalaj się jeszcze.",
+        "criterion": "Dziesięć sekund bez wstawania."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Ten seconds. Stand still — do not add distance yet.",
+        "criterion": "Ten seconds without getting up."
+      }
+    },
+    {
+      "ordinal": 3,
+      "pl": {
+        "title": "",
+        "instruction": "Wróć do trzech sekund, ale zrób jeden krok w bok i wróć. Podnosząc dystans, skracasz czas — to nie jest cofanie się, tylko reguła.",
+        "criterion": "Pies zostaje przez jeden Twój krok w bok."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Go back to three seconds but take one step sideways and return. When you raise distance you shorten duration — that is the rule, not a setback.",
+        "criterion": "The dog holds while you take one step sideways."
+      }
+    },
+    {
+      "ordinal": 4,
+      "pl": {
+        "title": "",
+        "instruction": "Trzy kroki w tył i powrót, wciąż trzy sekundy.",
+        "criterion": "Pies zostaje przez trzy Twoje kroki i powrót."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Three steps back and return, still three seconds.",
+        "criterion": "The dog holds through three steps and your return."
+      }
+    },
+    {
+      "ordinal": 5,
+      "pl": {
+        "title": "",
+        "instruction": "Połącz: dziesięć sekund i trzy kroki. Jeśli się sypie, zdejmij jedną z osi, nie obie.",
+        "criterion": "Dziesięć sekund przy trzech krokach dystansu."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Combine: ten seconds at three steps. If it falls apart, drop one axis, not both.",
+        "criterion": "Ten seconds at three steps of distance."
+      }
+    }
+  ]
+}
