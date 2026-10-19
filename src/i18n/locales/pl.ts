@@ -20,6 +20,11 @@ export const pl = {
     endSet: 'Zakończ serię',
     setComplete: 'Seria zakończona',
     criterionLabel: 'Co liczy się jako trafienie',
+    yourCall: 'Twoja decyzja — nic nie jest zablokowane',
+    easierStep: 'Łatwiejszy krok',
+    sameAgain: 'Jeszcze raz to samo',
+    nextStep: 'Następny krok',
+    suggested: 'sugerowane',
   },
   gear: {
     title: 'Czego potrzebujesz',

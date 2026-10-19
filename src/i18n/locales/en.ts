@@ -22,6 +22,11 @@ export const en: LocaleCatalogue = {
     endSet: 'End the set',
     setComplete: 'Set complete',
     criterionLabel: 'What counts as a hit',
+    yourCall: 'Your call — nothing is locked',
+    easierStep: 'Easier step',
+    sameAgain: 'Same again',
+    nextStep: 'Next step',
+    suggested: 'suggested',
   },
   gear: {
     title: 'What you need',

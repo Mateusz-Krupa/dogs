@@ -141,7 +141,7 @@ export default function App() {
         exerciseId={entry.id}
         gear={entry.gear}
         mistakes={mistakesFor(entry.id)}
-        onFinish={() => dispatch({ type: 'reset' })}
+        onChoose={(delta) => goTo(stepOrdinal + delta)}
         onRecord={record}
         onUndo={() => dispatch({ type: 'undo' })}
         pose={entry.pose}
@@ -152,38 +152,6 @@ export default function App() {
         stepOrdinal={stepOrdinal}
       />
 
-      {state.verdict ? (
-        <View style={styles.choices}>
-          <Text style={styles.choicesLabel}>
-            {locale === 'en' ? 'Your call — nothing is locked.' : 'Twoja decyzja — nic nie jest zablokowane.'}
-          </Text>
-          <View style={styles.choiceRow}>
-            {canGoBack ? (
-              <Pressable
-                accessibilityRole="button"
-                onPress={() => goTo(stepOrdinal - 1)}
-                style={styles.choice}
-              >
-                <Text style={styles.choiceText}>{locale === 'en' ? 'Easier step' : 'Łatwiejszy krok'}</Text>
-              </Pressable>
-            ) : null}
-            <Pressable accessibilityRole="button" onPress={() => goTo(stepOrdinal)} style={styles.choice}>
-              <Text style={styles.choiceText}>{locale === 'en' ? 'Same again' : 'Jeszcze raz to samo'}</Text>
-            </Pressable>
-            {canAdvance ? (
-              <Pressable
-                accessibilityRole="button"
-                onPress={() => goTo(stepOrdinal + 1)}
-                style={[styles.choice, styles.choicePrimary]}
-              >
-                <Text style={[styles.choiceText, styles.choicePrimaryText]}>
-                  {locale === 'en' ? 'Next step' : 'Następny krok'}
-                </Text>
-              </Pressable>
-            ) : null}
-          </View>
-        </View>
-      ) : null}
 
       <StatusBar style="auto" />
     </SafeAreaView>

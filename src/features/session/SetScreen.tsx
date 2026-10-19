@@ -2,7 +2,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { useState } from 'react';
 
-import { SET_SIZE, type RepOutcome } from '../../domain/verdict';
+import { SET_SIZE, type RepOutcome, type Verdict } from '../../domain/verdict';
 import type { Mistake } from '../../content/mistakes';
 import { GearRow } from '../../ui/GearRow';
 import type { GearId } from '../../ui/Gear';
@@ -37,7 +37,21 @@ export interface SetScreenProps {
   readonly state: SetState;
   readonly onRecord: (outcome: RepOutcome) => void;
   readonly onUndo: () => void;
-  readonly onFinish: () => void;
+  /** Where to go after the set: -1 easier, 0 the same again, +1 harder. */
+  readonly onChoose: (delta: -1 | 0 | 1) => void;
+}
+
+/**
+ * What the verdict suggests, as a step delta.
+ *
+ * Only a suggestion: the matching button is marked, every button stays live.
+ * The app recommends and the owner decides — they are the one who can see
+ * whether the dog is tired, bored or simply having an off day.
+ */
+function suggestedDelta(verdict: Verdict): -1 | 0 | 1 {
+  if (verdict === 'push') return 1;
+  if (verdict === 'drop') return -1;
+  return 0;
 }
 
 const VERDICT_COLOR = { push: GREEN, stick: AMBER, drop: BRICK } as const;
@@ -74,7 +88,7 @@ export function SetScreen({
   state,
   onRecord,
   onUndo,
-  onFinish,
+  onChoose,
 }: SetScreenProps) {
   const [openMistake, setOpenMistake] = useState<number | null>(null);
   const [showAbout, setShowAbout] = useState(false);
@@ -184,14 +198,37 @@ export function SetScreen({
               {t(`verdict.${verdict}.label`)}
             </Text>
             <Text style={styles.verdictText}>{t(`verdict.${verdict}.explanation`)}</Text>
-            <Pressable
-              accessibilityLabel={t('session.setComplete')}
-              accessibilityRole="button"
-              onPress={onFinish}
-              style={({ pressed }) => [styles.primary, pressed && styles.pressed]}
-            >
-              <Text style={styles.primaryLabel}>{t('session.setComplete')}</Text>
-            </Pressable>
+
+            <Text style={styles.yourCall}>{t('session.yourCall')}</Text>
+            <View style={styles.choiceRow}>
+              {([-1, 0, 1] as const).map((delta) => {
+                const available =
+                  delta === -1 ? stepOrdinal > 1 : delta === 1 ? stepOrdinal < stepCount : true;
+                if (!available) return null;
+                const marked = delta === suggestedDelta(verdict);
+                const label =
+                  delta === -1
+                    ? t('session.easierStep')
+                    : delta === 0
+                      ? t('session.sameAgain')
+                      : t('session.nextStep');
+                return (
+                  <Pressable
+                    accessibilityLabel={marked ? `${label} — ${t('session.suggested')}` : label}
+                    accessibilityRole="button"
+                    key={delta}
+                    onPress={() => onChoose(delta)}
+                    style={({ pressed }) => [
+                      styles.choice,
+                      marked && { backgroundColor: VERDICT_COLOR[verdict], borderColor: VERDICT_COLOR[verdict] },
+                      pressed && styles.pressed,
+                    ]}
+                  >
+                    <Text style={[styles.choiceLabel, marked && styles.choiceLabelMarked]}>{label}</Text>
+                  </Pressable>
+                );
+              })}
+            </View>
           </View>
         ) : (
           <View style={styles.actions}>
@@ -375,15 +412,21 @@ const styles = StyleSheet.create({
   },
   verdictLabel: { fontSize: 20, fontWeight: '700' },
   verdictText: { fontSize: 14, lineHeight: 20, color: MUTED },
-  primary: {
-    marginTop: 6,
-    minHeight: 54,
-    borderRadius: 14,
-    backgroundColor: INK,
+  yourCall: { fontSize: 12, color: MUTED, marginTop: 4 },
+  choiceRow: { flexDirection: 'row', gap: 8 },
+  choice: {
+    flex: 1,
+    minHeight: 56,
+    borderRadius: 13,
+    borderWidth: 2,
+    borderColor: '#d5dbd1',
+    backgroundColor: SURFACE,
     alignItems: 'center',
     justifyContent: 'center',
+    paddingHorizontal: 6,
   },
-  primaryLabel: { fontSize: 16, fontWeight: '700', color: '#ffffff' },
+  choiceLabel: { fontSize: 13.5, fontWeight: '600', color: INK, textAlign: 'center' },
+  choiceLabelMarked: { color: '#ffffff' },
 
   undo: { minHeight: 40, alignSelf: 'center', justifyContent: 'center', paddingHorizontal: 16 },
   undoHidden: { opacity: 0 },
