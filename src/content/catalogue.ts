@@ -13,6 +13,7 @@
 import type { GearId } from '../ui/Gear';
 import type { Pose } from '../ui/DogPose';
 import { SIT, type ExerciseSeed } from './exercises/sit';
+import { STEPS } from './exercises/steps';
 
 /** An exercise plus the illustration that represents it. */
 export interface CatalogueEntry extends ExerciseSeed {
@@ -44,68 +45,7 @@ const LOOK: ExerciseSeed = {
         'The dog makes and holds eye contact on request. It sounds trivial and it is the most useful thing you own outdoors: a dog looking at you is not looking at the other dog across the road.',
     },
   },
-  steps: [
-    {
-      ordinal: 1,
-      pl: {
-        instruction:
-          'Trzymaj smakołyk przy swoim oku. W momencie, w którym pies spojrzy Ci w oczy — chwal i nagródź. Nie mów jeszcze nic.',
-        criterion: 'Pies przenosi wzrok ze smakołyka na Twoje oczy.',
-      },
-      en: {
-        instruction:
-          'Hold a treat beside your own eye. The instant the dog meets your eyes, praise and pay. Say nothing yet.',
-        criterion: 'The dog shifts their gaze from the treat to your eyes.',
-      },
-    },
-    {
-      ordinal: 2,
-      pl: {
-        instruction: 'To samo, ale czekaj na dwie sekundy kontaktu, zanim nagrodzisz.',
-        criterion: 'Dwie sekundy nieprzerwanego kontaktu wzrokowego.',
-      },
-      en: {
-        instruction: 'The same, but wait for two seconds of contact before paying.',
-        criterion: 'Two unbroken seconds of eye contact.',
-      },
-    },
-    {
-      ordinal: 3,
-      pl: {
-        instruction:
-          'Schowaj smakołyk do kieszeni. Czekaj, aż pies sam spojrzy Ci w oczy — i wtedy płać. To moment, w którym patrzenie staje się pomysłem psa, nie Twoim.',
-        criterion: 'Pies sam nawiązuje kontakt wzrokowy, bez smakołyka w polu widzenia.',
-      },
-      en: {
-        instruction:
-          'Put the treat in your pocket. Wait for the dog to offer eye contact on their own, then pay. This is where looking at you becomes the dog’s idea rather than yours.',
-        criterion: 'The dog offers eye contact with no treat in sight.',
-      },
-    },
-    {
-      ordinal: 4,
-      pl: {
-        instruction: 'Powiedz „patrz" tuż zanim pies i tak by spojrzał. Słowo wchodzi na gotowe zachowanie.',
-        criterion: 'Pies patrzy w ciągu dwóch sekund po słowie.',
-      },
-      en: {
-        instruction:
-          'Say “look” just before the dog would have looked anyway. The word attaches to a behaviour that already exists.',
-        criterion: 'The dog looks within two seconds of the word.',
-      },
-    },
-    {
-      ordinal: 5,
-      pl: {
-        instruction: 'Poproś o „patrz", gdy pies jest lekko czymś zajęty — węszy, rozgląda się.',
-        criterion: 'Pies odrywa się od tego, co robił, i patrzy.',
-      },
-      en: {
-        instruction: 'Ask for “look” while the dog is mildly busy — sniffing, glancing around.',
-        criterion: 'The dog disengages from what they were doing and looks.',
-      },
-    },
-  ],
+  steps: STEPS.look!,
 };
 
 const DOWN: ExerciseSeed = {
@@ -125,93 +65,7 @@ const DOWN: ExerciseSeed = {
         'Elbows and chest on the ground, held until released. The position a dog can actually hold for a long time, which makes it the one worth having in a café or a waiting room.',
     },
   },
-  steps: [
-    {
-      ordinal: 1,
-      pl: {
-        instruction:
-          'Z psem w siadzie poprowadź smakołyk od nosa prosto w dół, do podłogi między jego przednimi łapami. Płać za każde opuszczenie głowy, nawet jeśli nie położy się do końca.',
-        criterion: 'Głowa schodzi wyraźnie w dół za smakołykiem.',
-      },
-      en: {
-        instruction:
-          'With the dog sitting, draw a treat from their nose straight down to the floor between their front paws. Pay any clear lowering of the head, even without a full down.',
-        criterion: 'The head follows the treat clearly downward.',
-      },
-    },
-    {
-      ordinal: 2,
-      pl: {
-        instruction: 'Po dojściu do podłogi poprowadź smakołyk powoli do siebie. Łokcie powinny pójść w dół.',
-        criterion: 'Co najmniej jeden łokieć dotyka podłogi.',
-      },
-      en: {
-        instruction: 'Once at the floor, draw the treat slowly toward you. The elbows should follow down.',
-        criterion: 'At least one elbow touches the floor.',
-      },
-    },
-    {
-      ordinal: 3,
-      pl: {
-        instruction:
-          'Czekaj na pełne położenie: łokcie i klatka na ziemi. Jeśli pies wstaje, zabierz smakołyk bez słowa i zacznij powtórzenie od nowa.',
-        criterion: 'Łokcie i klatka na ziemi.',
-      },
-      en: {
-        instruction:
-          'Hold out for the full down: elbows and chest on the ground. If the dog stands up, take the treat away without a word and restart the repetition.',
-        criterion: 'Elbows and chest on the ground.',
-      },
-    },
-    {
-      ordinal: 4,
-      pl: {
-        instruction: 'Zrób ten sam ruch pustą ręką, nagródź z drugiej ręki.',
-        criterion: 'Pies kładzie się na ruch pustej ręki.',
-      },
-      en: {
-        instruction: 'Make the same motion with an empty hand and pay from the other one.',
-        criterion: 'The dog lies down to the empty-hand motion.',
-      },
-    },
-    {
-      ordinal: 5,
-      pl: {
-        instruction: 'Powiedz „leżeć", odczekaj sekundę, dopiero potem gest. Zawsze w tej kolejności.',
-        criterion: 'Pies kładzie się po sekwencji słowo-pauza-gest.',
-      },
-      en: {
-        instruction: 'Say “down”, wait a second, then give the signal. Always in that order.',
-        criterion: 'The dog lies down after the word-pause-signal sequence.',
-      },
-    },
-    {
-      ordinal: 6,
-      pl: {
-        instruction:
-          'Powiedz „leżeć" i czekaj trzy sekundy bez gestu. Siad po geście nie liczy się jako trafienie.',
-        criterion: 'Pies kładzie się po samym słowie, w ciągu trzech sekund.',
-      },
-      en: {
-        instruction:
-          'Say “down” and wait three seconds with no signal. A down that needed the signal does not count.',
-        criterion: 'The dog lies down to the word alone, within three seconds.',
-      },
-    },
-    {
-      ordinal: 7,
-      pl: {
-        instruction:
-          'Sprawdź podłoże. Wielu psów nie chce kłaść się na zimnym kafelku albo śliskim panelu — jeśli na dywanie idzie, a na kuchennej podłodze nie, to nie jest nieposłuszeństwo.',
-        criterion: 'Pies kładzie się na samo słowo na dwóch różnych podłożach.',
-      },
-      en: {
-        instruction:
-          'Check the surface. Plenty of dogs will not lie on cold tile or slippery laminate — if it works on a rug and fails in the kitchen, that is not disobedience.',
-        criterion: 'The dog lies down to the word alone on two different surfaces.',
-      },
-    },
-  ],
+  steps: STEPS.down!,
 };
 
 const STAY: ExerciseSeed = {
@@ -523,54 +377,7 @@ const NAME: ExerciseSeed = {
         'The dog turns to you on hearing their name. Everything else is built on it. A name is a request for attention, never a telling-off — use it to scold and it stops working.',
     },
   },
-  steps: [
-    {
-      ordinal: 1,
-      pl: {
-        instruction:
-          'Gdy pies jest spokojny i nie patrzy na Ciebie, powiedz raz jego imię zwykłym, pogodnym głosem. Gdy się odwróci — nagródź natychmiast. Jeśli nie zareaguje, nie powtarzaj: odczekaj i spróbuj za chwilę.',
-        criterion: 'Pies odwraca głowę w Twoją stronę po jednym wypowiedzeniu imienia.',
-      },
-      en: {
-        instruction:
-          'When the dog is calm and not looking at you, say their name once in an ordinary, cheerful voice. Pay the moment they turn. If nothing happens, do not repeat it — wait and try again later.',
-        criterion: 'The dog turns their head toward you after one call.',
-      },
-    },
-    {
-      ordinal: 2,
-      pl: {
-        instruction: 'To samo, gdy pies jest lekko zajęty — węszy po podłodze albo ogląda coś za oknem.',
-        criterion: 'Pies odrywa się od zajęcia i patrzy po jednym wypowiedzeniu imienia.',
-      },
-      en: {
-        instruction: 'The same while the dog is mildly busy — sniffing the floor or watching something outside.',
-        criterion: 'The dog disengages and looks after one call.',
-      },
-    },
-    {
-      ordinal: 3,
-      pl: {
-        instruction: 'Z innego pokoju, poza zasięgiem wzroku.',
-        criterion: 'Pies przychodzi lub wyraźnie reaguje, nie widząc Cię.',
-      },
-      en: {
-        instruction: 'From another room, out of sight.',
-        criterion: 'The dog comes or clearly responds without seeing you.',
-      },
-    },
-    {
-      ordinal: 4,
-      pl: {
-        instruction: 'W ogrodzie albo na spokojnej ulicy, gdzie jest co wąchać.',
-        criterion: 'Pies odwraca się po jednym wypowiedzeniu imienia na dworze.',
-      },
-      en: {
-        instruction: 'In the garden or on a quiet street, where there is something to smell.',
-        criterion: 'The dog turns after one call outdoors.',
-      },
-    },
-  ],
+  steps: STEPS.name!,
 };
 
 const WAIT: ExerciseSeed = {
