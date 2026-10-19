@@ -10,6 +10,7 @@
  * warns about. They never lock anything.
  */
 
+import type { GearId } from '../ui/Gear';
 import type { Pose } from '../ui/DogPose';
 import { SIT, type ExerciseSeed } from './exercises/sit';
 
@@ -22,6 +23,8 @@ export interface CatalogueEntry extends ExerciseSeed {
    * read, and a paragraph on it reads as noise.
    */
   readonly tagline: { readonly pl: string; readonly en: string };
+  /** What to have to hand before starting. Shown as icons on the exercise screen. */
+  readonly gear: readonly GearId[];
 }
 
 const LOOK: ExerciseSeed = {
@@ -865,61 +868,73 @@ export const CATALOGUE: readonly CatalogueEntry[] = [
     ...NAME,
     pose: 'look',
     tagline: { pl: 'Fundament pod wszystko', en: 'Everything is built on it' },
+    gear: ['treats'],
   },
   {
     ...SIT,
     pose: 'sit',
     tagline: { pl: 'Od tego się zaczyna', en: 'Where everyone starts' },
+    gear: ['treats'],
   },
   {
     ...LOOK,
     pose: 'look',
     tagline: { pl: 'Uwaga na Ciebie, nie na psa obok', en: 'Eyes on you, not the other dog' },
+    gear: ['treats'],
   },
   {
     ...DOWN,
     pose: 'down',
     tagline: { pl: 'Pozycja na dłużej', en: 'The one they can hold' },
+    gear: ['treats', 'mat'],
   },
   {
     ...STAY,
     pose: 'stay',
     tagline: { pl: 'Czas, potem dystans, potem hałas', en: 'Duration, then distance, then noise' },
+    gear: ['treats'],
   },
   {
     ...COME,
     pose: 'come',
     tagline: { pl: 'Ta jedna ratuje życie', en: 'The one that saves lives' },
+    gear: ['treats', 'longline', 'helper'],
   },
   {
     ...LEAVE,
     pose: 'leave',
     tagline: { pl: 'Nie bierz tego z chodnika', en: 'Not off the pavement' },
+    gear: ['treats'],
   },
   {
     ...MAT,
     pose: 'mat',
     tagline: { pl: 'Rozwiązuje gości i obiad', en: 'Solves visitors and dinner' },
+    gear: ['treats', 'mat'],
   },
   {
     ...WAIT,
     pose: 'stay',
     tagline: { pl: 'Nie wyrywaj się przez próg', en: 'No bolting through doors' },
+    gear: ['treats', 'door', 'bowl'],
   },
   {
     ...LEASH,
     pose: 'come',
     tagline: { pl: 'Spacer bez ciągnięcia', en: 'A walk without the pulling' },
+    gear: ['treats', 'lead'],
   },
   {
     ...DROP,
     pose: 'leave',
     tagline: { pl: 'Oddaj to, co już masz', en: 'Give back what you took' },
+    gear: ['treats', 'toy'],
   },
   {
     ...HANDLING,
     pose: 'stand',
     tagline: { pl: 'Żeby weterynarz nie był walką', en: 'So the vet is not a fight' },
+    gear: ['treats', 'clippers'],
   },
 ];
 

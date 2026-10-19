@@ -3,6 +3,8 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import type { NoseworkActivity } from '../../content/nosework';
 import { DogPose } from '../../ui/DogPose';
+import { GearRow } from '../../ui/GearRow';
+import { SetupScene } from '../../ui/SetupScene';
 import { getLocale, t } from '../../i18n';
 
 const INK = '#14181a';
@@ -71,8 +73,13 @@ export function NoseworkScreen({ activity, levelDone, onDone }: NoseworkScreenPr
 
         <Text style={styles.levelTitle}>{copy.title}</Text>
 
+        <GearRow color={BLUE} gear={level.gear} />
+
         <View style={styles.block}>
           <Text style={styles.blockLabel}>{t('nosework.setup').toUpperCase()}</Text>
+          <View style={styles.setupArt}>
+            <SetupScene activity={activity.id} level={level.ordinal} />
+          </View>
           <Text style={styles.blockText}>{copy.setup}</Text>
         </View>
 
@@ -153,6 +160,7 @@ const styles = StyleSheet.create({
     gap: 4,
   },
   blockLabel: { fontSize: 10, fontWeight: '700', letterSpacing: 1.1, color: MUTED },
+  setupArt: { alignItems: 'center', paddingVertical: 6 },
   blockText: { fontSize: 14.5, lineHeight: 21, color: INK },
   watch: { backgroundColor: '#eef3ec', borderColor: '#d8e4d6' },
   watchLabel: { color: GREEN },

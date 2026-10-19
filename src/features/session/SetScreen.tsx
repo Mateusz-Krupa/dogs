@@ -4,6 +4,8 @@ import { useState } from 'react';
 
 import { SET_SIZE, type RepOutcome } from '../../domain/verdict';
 import type { Mistake } from '../../content/mistakes';
+import { GearRow } from '../../ui/GearRow';
+import type { GearId } from '../../ui/Gear';
 import { HandMotion, MOTION_BY_EXERCISE } from '../../ui/HandMotion';
 import type { Pose } from '../../ui/DogPose';
 import { getLocale, t } from '../../i18n';
@@ -24,6 +26,7 @@ export interface SetScreenProps {
   /** The full description, shown under the step. Localised by the caller. */
   readonly description: string;
   readonly mistakes: readonly Mistake[];
+  readonly gear: readonly GearId[];
   readonly stepOrdinal: number;
   readonly stepCount: number;
   /** Localised by the caller. */
@@ -62,6 +65,7 @@ export function SetScreen({
   pose,
   description,
   mistakes,
+  gear,
   stepOrdinal,
   stepCount,
   stepInstruction,
@@ -89,6 +93,8 @@ export function SetScreen({
           </View>
           <Text style={styles.instruction}>{stepInstruction}</Text>
         </View>
+
+        <GearRow gear={gear} />
 
         <View style={styles.criterion}>
           <Text style={styles.criterionLabel}>{t('session.criterionLabel').toUpperCase()}</Text>

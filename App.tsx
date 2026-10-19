@@ -139,6 +139,7 @@ export default function App() {
       <SetScreen
         description={names.description}
         exerciseId={entry.id}
+        gear={entry.gear}
         mistakes={mistakesFor(entry.id)}
         onFinish={() => dispatch({ type: 'reset' })}
         onRecord={record}

@@ -25,6 +25,7 @@
  * hard looks like a dog wandering off, not a dog failing.
  */
 
+import type { GearId } from '../ui/Gear';
 import type { Pose } from '../ui/DogPose';
 
 /** One stage of a scent game. */
@@ -32,6 +33,8 @@ export interface NoseworkLevel {
   readonly ordinal: number;
   /** Suggested length in minutes. Scent work is tiring; short is correct. */
   readonly minutes: number;
+  /** What to have ready before the dog is involved. */
+  readonly gear: readonly GearId[];
   readonly pl: {
     readonly title: string;
     /** How to set it up before the dog is involved. */
@@ -82,6 +85,7 @@ const SCATTER: NoseworkActivity = {
     {
       ordinal: 1,
       minutes: 3,
+      gear: ['treats', 'mat'],
       pl: {
         title: 'Na dywanie',
         setup: 'Odlicz garść karmy z dziennej porcji. Wybierz dywan albo matę — na gładkiej podłodze jedzenie się rozjedzie i będzie za łatwo.',
@@ -100,6 +104,7 @@ const SCATTER: NoseworkActivity = {
     {
       ordinal: 2,
       minutes: 5,
+      gear: ['treats', 'grass'],
       pl: {
         title: 'W trawie',
         setup: 'Kawałek trawy w ogrodzie albo na spokojnym skwerze, wysokość mniej więcej do kostki.',
@@ -116,6 +121,7 @@ const SCATTER: NoseworkActivity = {
     {
       ordinal: 3,
       minutes: 8,
+      gear: ['treats', 'mat'],
       pl: {
         title: 'Po spacerze, na wyciszenie',
         setup: 'Przygotuj rozsypkę przed wyjściem, żeby po powrocie nie było przerwy.',
@@ -153,6 +159,7 @@ const SNUFFLE: NoseworkActivity = {
     {
       ordinal: 1,
       minutes: 4,
+      gear: ['treats', 'towel'],
       pl: {
         title: 'Zrolowany ręcznik',
         setup: 'Rozłóż ręcznik, rozsyp na nim karmę, zroluj luźno.',
@@ -169,6 +176,7 @@ const SNUFFLE: NoseworkActivity = {
     {
       ordinal: 2,
       minutes: 6,
+      gear: ['treats', 'towel'],
       pl: {
         title: 'Ciasno zwinięty',
         setup: 'Ten sam ręcznik, ale zwinięty ciaśniej i zawiązany na luźny węzeł.',
@@ -185,6 +193,7 @@ const SNUFFLE: NoseworkActivity = {
     {
       ordinal: 3,
       minutes: 8,
+      gear: ['treats', 'box'],
       pl: {
         title: 'Pudło z gazetami',
         setup: 'Karton, kilka zgniecionych gazet, karma schowana między nimi.',
@@ -222,6 +231,7 @@ const CUPS: NoseworkActivity = {
     {
       ordinal: 1,
       minutes: 3,
+      gear: ['treats', 'cups'],
       pl: {
         title: 'Dwa kubki, pies patrzy',
         setup: 'Dwa identyczne kubki odwrócone dnem do góry, w odległości pół metra.',
@@ -238,6 +248,7 @@ const CUPS: NoseworkActivity = {
     {
       ordinal: 2,
       minutes: 4,
+      gear: ['treats', 'cups'],
       pl: {
         title: 'Trzy kubki, pies nie patrzy',
         setup: 'Trzy kubki. Pies czeka w drugim pokoju albo za rogiem.',
@@ -254,6 +265,7 @@ const CUPS: NoseworkActivity = {
     {
       ordinal: 3,
       minutes: 5,
+      gear: ['treats', 'cups'],
       pl: {
         title: 'Pięć kubków, przestawione',
         setup: 'Pięć kubków w nieregularnym układzie. Po schowaniu poprzestawiaj kilka z nich.',
@@ -291,6 +303,7 @@ const FIND_TOY: NoseworkActivity = {
     {
       ordinal: 1,
       minutes: 4,
+      gear: ['toy'],
       pl: {
         title: 'Widoczna, metr dalej',
         setup: 'Weź zabawkę, którą pies lubi i którą często trzyma w pysku — ta jest już nią nasiąknięta.',
@@ -307,6 +320,7 @@ const FIND_TOY: NoseworkActivity = {
     {
       ordinal: 2,
       minutes: 5,
+      gear: ['toy'],
       pl: {
         title: 'Za zasłoną',
         setup: 'Pies poza pokojem. Schowaj zabawkę za kanapą, pod poduszką, za nogą stołu.',
@@ -323,6 +337,7 @@ const FIND_TOY: NoseworkActivity = {
     {
       ordinal: 3,
       minutes: 7,
+      gear: ['toy'],
       pl: {
         title: 'Inny pokój',
         setup: 'Schowaj zabawkę w pomieszczeniu, w którym psa nie było.',
@@ -360,6 +375,7 @@ const FIND_PERSON: NoseworkActivity = {
     {
       ordinal: 1,
       minutes: 4,
+      gear: ['treats', 'helper'],
       pl: {
         title: 'Za rogiem',
         setup: 'Potrzebujesz drugiej osoby, która przytrzyma psa, albo psa, który już umie „czekaj".',
@@ -376,6 +392,7 @@ const FIND_PERSON: NoseworkActivity = {
     {
       ordinal: 2,
       minutes: 5,
+      gear: ['treats'],
       pl: {
         title: 'Inny pokój, bez podglądania',
         setup: 'Pies zostaje, Ty wychodzisz niewidoczny.',
@@ -392,6 +409,7 @@ const FIND_PERSON: NoseworkActivity = {
     {
       ordinal: 3,
       minutes: 6,
+      gear: ['treats'],
       pl: {
         title: 'W ogrodzie, bez wołania',
         setup: 'Ogrodzony teren. Schowaj się za drzewem albo rogiem budynku.',
@@ -431,6 +449,7 @@ const TRACK: NoseworkActivity = {
     {
       ordinal: 1,
       minutes: 5,
+      gear: ['treats', 'grass', 'helper'],
       pl: {
         title: 'Dziesięć kroków w trawie',
         setup: 'Wilgotna trawa trzyma zapach najlepiej — rano albo po deszczu. Pies czeka przywiązany albo z drugą osobą.',
@@ -447,6 +466,7 @@ const TRACK: NoseworkActivity = {
     {
       ordinal: 2,
       minutes: 8,
+      gear: ['treats', 'grass', 'helper'],
       pl: {
         title: 'Dwadzieścia kroków, odczekane',
         setup: 'Ten sam układ, ale po położeniu śladu odczekaj dziesięć minut.',
@@ -463,6 +483,7 @@ const TRACK: NoseworkActivity = {
     {
       ordinal: 3,
       minutes: 10,
+      gear: ['treats', 'grass', 'helper'],
       pl: {
         title: 'Ślad z zakrętem',
         setup: 'Trzydzieści kroków z jednym zakrętem pod kątem prostym. Karma w kilku miejscach wzdłuż trasy, nie tylko na końcu.',
