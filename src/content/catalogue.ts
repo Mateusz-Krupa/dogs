@@ -16,6 +16,12 @@ import { SIT, type ExerciseSeed } from './exercises/sit';
 /** An exercise plus the illustration that represents it. */
 export interface CatalogueEntry extends ExerciseSeed {
   readonly pose: Pose;
+  /**
+   * Four or five words for the list card. The full description is written for
+   * the exercise screen, where there is room to read; a card is scanned, not
+   * read, and a paragraph on it reads as noise.
+   */
+  readonly tagline: { readonly pl: string; readonly en: string };
 }
 
 const LOOK: ExerciseSeed = {
@@ -499,13 +505,41 @@ const MAT: ExerciseSeed = {
 
 /** Every exercise the app ships, in teaching order. */
 export const CATALOGUE: readonly CatalogueEntry[] = [
-  { ...SIT, pose: 'sit' },
-  { ...LOOK, pose: 'look' },
-  { ...DOWN, pose: 'down' },
-  { ...STAY, pose: 'stay' },
-  { ...COME, pose: 'come' },
-  { ...LEAVE, pose: 'leave' },
-  { ...MAT, pose: 'mat' },
+  {
+    ...SIT,
+    pose: 'sit',
+    tagline: { pl: 'Od tego się zaczyna', en: 'Where everyone starts' },
+  },
+  {
+    ...LOOK,
+    pose: 'look',
+    tagline: { pl: 'Uwaga na Ciebie, nie na psa obok', en: 'Eyes on you, not the other dog' },
+  },
+  {
+    ...DOWN,
+    pose: 'down',
+    tagline: { pl: 'Pozycja na dłużej', en: 'The one they can hold' },
+  },
+  {
+    ...STAY,
+    pose: 'stay',
+    tagline: { pl: 'Czas, potem dystans, potem hałas', en: 'Duration, then distance, then noise' },
+  },
+  {
+    ...COME,
+    pose: 'come',
+    tagline: { pl: 'Ta jedna ratuje życie', en: 'The one that saves lives' },
+  },
+  {
+    ...LEAVE,
+    pose: 'leave',
+    tagline: { pl: 'Nie bierz tego z chodnika', en: 'Not off the pavement' },
+  },
+  {
+    ...MAT,
+    pose: 'mat',
+    tagline: { pl: 'Rozwiązuje gości i obiad', en: 'Solves visitors and dinner' },
+  },
 ];
 
 /** Look up one exercise by id. */

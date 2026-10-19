@@ -79,7 +79,7 @@ function ExerciseCard({
       style={({ pressed }) => [styles.card, recommended && styles.cardRecommended, pressed && styles.cardPressed]}
     >
       <View style={styles.art}>
-        <DogPose pose={entry.pose} size={84} color={INK} tint={recommended ? '#d7e8dc' : '#e6ebe4'} />
+        <DogPose accent={GREEN} color={recommended ? '#2f3a35' : '#6f7a74'} pose={entry.pose} size={72} />
       </View>
 
       <View style={styles.body}>
@@ -92,22 +92,24 @@ function ExerciseCard({
           ) : null}
         </View>
 
-        <Text numberOfLines={2} style={styles.description}>
-          {names.description}
+        <Text numberOfLines={1} style={styles.tagline}>
+          {locale === 'en' ? entry.tagline.en : entry.tagline.pl}
         </Text>
 
-        <View style={styles.track}>
-          <View style={[styles.trackFill, { width: `${pct * 100}%` }]} />
-        </View>
+        {/* A zero-length bar reads as a stray rule across the card, so an
+            untouched exercise shows its step count instead of empty track. */}
+        {progress ? (
+          <View style={styles.track}>
+            <View style={[styles.trackFill, { width: `${Math.max(pct, 0.06) * 100}%` }]} />
+          </View>
+        ) : null}
 
         <Text style={styles.meta}>
           {progress
-            ? `${locale === 'en' ? 'step' : 'krok'} ${progress.stepOrdinal}/${entry.steps.length}${
+            ? `${locale === 'en' ? 'Step' : 'Krok'} ${progress.stepOrdinal} / ${entry.steps.length}${
                 environmentName ? ` · ${environmentName}` : ''
               }`
-            : `${entry.steps.length} ${locale === 'en' ? 'steps' : 'kroków'} · ${
-                locale === 'en' ? 'not started' : 'jeszcze nietknięte'
-              }`}
+            : `${entry.steps.length} ${locale === 'en' ? 'steps' : 'kroków'}`}
         </Text>
 
         {missing.length > 0 ? (
@@ -161,6 +163,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     paddingTop: 20,
     paddingBottom: 36,
+    width: '100%',
+    maxWidth: 560,
+    alignSelf: 'center',
   },
   eyebrow: {
     fontSize: 12,
@@ -237,9 +242,9 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     color: GREEN,
   },
-  description: {
-    fontSize: 13,
-    lineHeight: 18,
+  tagline: {
+    fontSize: 14,
+    lineHeight: 19,
     color: MUTED,
   },
   track: {
