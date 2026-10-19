@@ -8,6 +8,7 @@ import { GearRow } from '../../ui/GearRow';
 import type { GearId } from '../../ui/Gear';
 import { HandMotion, MOTION_BY_EXERCISE } from '../../ui/HandMotion';
 import { LureAnimation, type LureKind } from '../../ui/LureAnimation';
+import { hasLureAnimation, lureStageFor } from '../../ui/lureStages';
 import type { Pose } from '../../ui/DogPose';
 import { getLocale, t } from '../../i18n';
 import type { SetState } from './setMachine';
@@ -117,8 +118,11 @@ export function SetScreen({
   const motion = MOTION_BY_EXERCISE[exerciseId] ?? 'lure-up';
   // Only the two luring exercises have an animation so far; everything else
   // keeps the still diagram rather than showing a worse moving one.
-  const animated: LureKind | null =
-    exerciseId === 'sit' ? 'sit' : exerciseId === 'down' ? 'down' : null;
+  const animated: LureKind | null = hasLureAnimation(exerciseId) ? (exerciseId as LureKind) : null;
+  // The hand changes job as the ladder progresses — food, then empty, then
+  // nothing. Playing the food lure on a verbal step would contradict the
+  // instruction printed right below it.
+  const stage = animated ? lureStageFor(exerciseId, stepOrdinal) : null;
 
   return (
     <View style={styles.screen}>
@@ -139,7 +143,7 @@ export function SetScreen({
         <View style={styles.card}>
           <View style={styles.art}>
             {animated ? (
-              <LureAnimation kind={animated} size={190} />
+              <LureAnimation kind={animated} size={190} stage={stage ?? 'lure'} />
             ) : (
               <HandMotion motion={motion} pose={pose} size={148} />
             )}
