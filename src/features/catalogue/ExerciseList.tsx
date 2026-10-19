@@ -2,8 +2,9 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { CATALOGUE, type CatalogueEntry } from '../../content/catalogue';
 import { ENVIRONMENTS } from '../../content/environments';
+import { NOSEWORK } from '../../content/nosework';
 import { DogPose } from '../../ui/DogPose';
-import { getLocale } from '../../i18n';
+import { getLocale, t } from '../../i18n';
 
 const INK = '#14181a';
 const MUTED = '#6b746e';
@@ -11,6 +12,7 @@ const GREEN = '#2e6f4e';
 const SURFACE = '#ffffff';
 const GROUND = '#f1f3ee';
 const LINE = '#e3e7df';
+const BLUE = '#2a4a6b';
 
 /** Where a dog is on one exercise. Absent means never trained. */
 export interface ExerciseProgress {
@@ -22,9 +24,12 @@ export interface ExerciseListProps {
   readonly dogName: string;
   /** Keyed by exercise id. */
   readonly progress: Readonly<Record<string, ExerciseProgress>>;
+  /** Highest nosework level reached, keyed by activity id. */
+  readonly noseworkProgress: Readonly<Record<string, number>>;
   /** Exercise the app suggests working on next. */
   readonly recommendedId: string;
   readonly onOpen: (exerciseId: string) => void;
+  readonly onOpenNosework: (activityId: string) => void;
 }
 
 /** Prerequisites that are not yet started, for the advisory note. */
@@ -125,7 +130,14 @@ function ExerciseCard({
 }
 
 /** The browsable curriculum: every exercise, always openable. */
-export function ExerciseList({ dogName, progress, recommendedId, onOpen }: ExerciseListProps) {
+export function ExerciseList({
+  dogName,
+  progress,
+  noseworkProgress,
+  recommendedId,
+  onOpen,
+  onOpenNosework,
+}: ExerciseListProps) {
   const locale = getLocale();
 
   return (
@@ -149,6 +161,42 @@ export function ExerciseList({ dogName, progress, recommendedId, onOpen }: Exerc
             recommended={entry.id === recommendedId}
           />
         ))}
+      </View>
+
+      <View style={styles.sectionHead}>
+        <Text style={styles.sectionTitle}>{t('nosework.title')}</Text>
+        <Text style={styles.sectionSub}>{t('nosework.subtitle')}</Text>
+      </View>
+
+      <View style={styles.list}>
+        {NOSEWORK.map((activity) => {
+          const names = locale === 'en' ? activity.names.en : activity.names.pl;
+          const doneLevel = noseworkProgress[activity.id] ?? 0;
+          return (
+            <Pressable
+              accessibilityLabel={names.name}
+              accessibilityRole="button"
+              key={activity.id}
+              onPress={() => onOpenNosework(activity.id)}
+              style={({ pressed }) => [styles.card, styles.cardNose, pressed && styles.cardPressed]}
+            >
+              <View style={styles.art}>
+                <DogPose accent={BLUE} color="#6f7a74" pose={activity.pose} size={72} />
+              </View>
+              <View style={styles.body}>
+                <Text style={styles.name}>{names.name}</Text>
+                <Text numberOfLines={1} style={styles.tagline}>
+                  {locale === 'en' ? activity.tagline.en : activity.tagline.pl}
+                </Text>
+                <Text style={styles.meta}>
+                  {doneLevel > 0
+                    ? t('nosework.level', { n: doneLevel, total: activity.levels.length })
+                    : `${activity.levels.length} ${locale === 'en' ? 'levels' : 'poziomy'}`}
+                </Text>
+              </View>
+            </Pressable>
+          );
+        })}
       </View>
     </ScrollView>
   );
@@ -191,6 +239,23 @@ const styles = StyleSheet.create({
   list: {
     marginTop: 22,
     gap: 12,
+  },
+  sectionHead: {
+    marginTop: 30,
+    gap: 2,
+  },
+  sectionTitle: {
+    fontSize: 22,
+    fontWeight: '700',
+    color: INK,
+    letterSpacing: -0.3,
+  },
+  sectionSub: {
+    fontSize: 13,
+    color: MUTED,
+  },
+  cardNose: {
+    borderColor: '#d9e2ea',
   },
   card: {
     flexDirection: 'row',

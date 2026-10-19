@@ -21,6 +21,18 @@ export const pl = {
     setComplete: 'Seria zakończona',
     criterionLabel: 'Co liczy się jako trafienie',
   },
+  nosework: {
+    title: 'Praca nosem',
+    subtitle: 'Bez oceniania — pies rozwiązuje to sam',
+    level: 'Poziom {{n}} z {{total}}',
+    setup: 'Przygotowanie',
+    how: 'Jak to zrobić',
+    watchFor: 'Na co patrzeć',
+    minutes: '{{n}} min',
+    done: 'Zrobione',
+    notScored:
+      'Tu nie ma trafień i pudeł. Węszenie nagradza się samo, a ocenianie go kusi, żeby psu pomagać — a cała wartość jest w tym, że rozwiązuje to sam.',
+  },
   verdict: {
     push: {
       label: 'Podnieś poprzeczkę',

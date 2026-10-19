@@ -5,6 +5,8 @@ import { StatusBar } from 'expo-status-bar';
 import { CATALOGUE, exerciseById } from './src/content/catalogue';
 import { ENVIRONMENTS, STARTING_ENVIRONMENT_ID } from './src/content/environments';
 import { mistakesFor } from './src/content/mistakes';
+import { noseworkById } from './src/content/nosework';
+import { NoseworkScreen } from './src/features/nosework/NoseworkScreen';
 import { ExerciseList, type ExerciseProgress } from './src/features/catalogue/ExerciseList';
 import { SetScreen } from './src/features/session/SetScreen';
 import { getLocale } from './src/i18n';
@@ -20,19 +22,29 @@ import { type RepOutcome } from './src/domain/verdict';
  */
 export default function App() {
   const [openId, setOpenId] = useState<string | null>(null);
+  const [openNoseId, setOpenNoseId] = useState<string | null>(null);
   const [progress, setProgress] = useState<Record<string, ExerciseProgress>>({});
+  const [nosework, setNosework] = useState<Record<string, number>>({});
   const [state, dispatch] = useReducer(setReducer, undefined, initialSetState);
 
   const locale = getLocale();
   const entry = openId ? exerciseById(openId) : undefined;
+  const activity = openNoseId ? noseworkById(openNoseId) : undefined;
 
   const open = useCallback((id: string) => {
     setOpenId(id);
+    setOpenNoseId(null);
     dispatch({ type: 'reset' });
+  }, []);
+
+  const openNose = useCallback((id: string) => {
+    setOpenNoseId(id);
+    setOpenId(null);
   }, []);
 
   const close = useCallback(() => {
     setOpenId(null);
+    setOpenNoseId(null);
     dispatch({ type: 'reset' });
   }, []);
 
@@ -56,13 +68,41 @@ export default function App() {
     [entry]
   );
 
+  if (activity) {
+    return (
+      <SafeAreaView style={styles.safe}>
+        <View style={styles.bar}>
+          <Pressable accessibilityRole="button" onPress={close} style={styles.barBack}>
+            <Text style={styles.barBackText}>
+              {locale === 'en' ? '‹ All exercises' : '‹ Wszystkie ćwiczenia'}
+            </Text>
+          </Pressable>
+        </View>
+        <NoseworkScreen
+          activity={activity}
+          levelDone={nosework[activity.id] ?? 0}
+          onDone={(ordinal) => {
+            setNosework((current) => ({
+              ...current,
+              [activity.id]: Math.max(current[activity.id] ?? 0, ordinal),
+            }));
+            close();
+          }}
+        />
+        <StatusBar style="auto" />
+      </SafeAreaView>
+    );
+  }
+
   if (!entry) {
     const firstUntouched = CATALOGUE.find((candidate) => progress[candidate.id] === undefined);
     return (
       <SafeAreaView style={styles.safe}>
         <ExerciseList
           dogName={locale === 'en' ? 'Your dog' : 'Twój pies'}
+          noseworkProgress={nosework}
           onOpen={open}
+          onOpenNosework={openNose}
           progress={progress}
           recommendedId={firstUntouched?.id ?? CATALOGUE[0]!.id}
         />

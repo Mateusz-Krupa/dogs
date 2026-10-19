@@ -11,7 +11,17 @@ import Svg, { Circle, G, Path, Rect } from 'react-native-svg';
  * Canvas is 100×100 with the ground at y=82.
  */
 
-export type Pose = 'sit' | 'down' | 'stand' | 'stay' | 'come' | 'look' | 'mat' | 'leave';
+export type Pose =
+  | 'sit'
+  | 'down'
+  | 'stand'
+  | 'stay'
+  | 'come'
+  | 'look'
+  | 'mat'
+  | 'leave'
+  | 'sniff'
+  | 'search';
 
 export interface DogPoseProps {
   readonly pose: Pose;
@@ -110,6 +120,24 @@ export function DogPose({ pose, size = 72, color = INK, accent = ACCENT }: DogPo
           <Path d={`M 30 46 L 74 46 L 74 ${GROUND} L 66 ${GROUND} L 66 56 L 40 56 L 40 ${GROUND} L 32 ${GROUND} Z`} fill={color} />
           <Tail d={`M 30 44 Q 18 38 24 28`} color={color} />
           <Head x={80} y={40} color={color} />
+        </G>
+      )}
+
+      {(pose === 'sniff' || pose === 'search') && (
+        <G>
+          {/* standing, head low to the ground, working */}
+          <Path d={`M 32 48 L 72 46 L 72 ${GROUND} L 64 ${GROUND} L 64 56 L 40 57 L 40 ${GROUND} L 32 ${GROUND} Z`} fill={color} />
+          <Tail
+            d={pose === 'search' ? `M 32 46 Q 18 36 26 26` : `M 32 46 Q 18 42 22 32`}
+            color={color}
+          />
+          <Head x={80} y={64} tilt={34} color={color} />
+          {/* scent, rising from the ground where the nose is */}
+          <Circle cx={88} cy={GROUND - 4} r={3} fill={accent} fillOpacity={0.9} />
+          <Circle cx={80} cy={GROUND - 1} r={2.2} fill={accent} fillOpacity={0.6} />
+          {pose === 'search' ? (
+            <Circle cx={70} cy={GROUND - 3} r={1.8} fill={accent} fillOpacity={0.4} />
+          ) : null}
         </G>
       )}
 

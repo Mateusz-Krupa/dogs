@@ -23,6 +23,18 @@ export const en: LocaleCatalogue = {
     setComplete: 'Set complete',
     criterionLabel: 'What counts as a hit',
   },
+  nosework: {
+    title: 'Nosework',
+    subtitle: 'Not scored — the dog solves this alone',
+    level: 'Level {{n}} of {{total}}',
+    setup: 'Set up',
+    how: 'How to do it',
+    watchFor: 'What to watch for',
+    minutes: '{{n}} min',
+    done: 'Done',
+    notScored:
+      'No hits and misses here. Sniffing pays for itself, and scoring it tempts you to help — and the whole value is that the dog works it out alone.',
+  },
   verdict: {
     push: {
       label: 'Push',
