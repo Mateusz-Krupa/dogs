@@ -30,6 +30,12 @@ export const pl = {
     masteredHere: 'Opanowane tutaj',
     fullyMastered: 'Opanowane wszędzie',
     rungs: 'Miejsce {{n}} z {{total}}',
+    newPlaceTitle: 'Nowe miejsce — kroki cofnięte celowo',
+    newPlaceBody:
+      'Dla psa ta sama komenda w nowym otoczeniu to w praktyce nowe zadanie. Wracamy kawałek, żeby odbudować ją tutaj — pójdzie szybciej niż za pierwszym razem.',
+    easierPlaceTitle: 'Łatwiejsze miejsce — kroki podniesione',
+    easierPlaceBody:
+      'W prostszym otoczeniu pies radzi sobie z trudniejszym krokiem. To nie jest cofnięcie się, tylko zdjęcie jednej zmiennej.',
   },
   gear: {
     title: 'Czego potrzebujesz',

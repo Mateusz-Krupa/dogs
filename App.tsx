@@ -26,6 +26,7 @@ export default function App() {
   const [openNoseId, setOpenNoseId] = useState<string | null>(null);
   const [progress, setProgress] = useState<Record<string, ExerciseProgress>>({});
   const [nosework, setNosework] = useState<Record<string, number>>({});
+  const [placeChange, setPlaceChange] = useState<'harder' | 'easier' | null>(null);
   const [state, dispatch] = useReducer(setReducer, undefined, initialSetState);
 
   const locale = getLocale();
@@ -33,6 +34,7 @@ export default function App() {
   const activity = openNoseId ? noseworkById(openNoseId) : undefined;
 
   const open = useCallback((id: string) => {
+    setPlaceChange(null);
     setOpenId(id);
     setOpenNoseId(null);
     dispatch({ type: 'reset' });
@@ -66,7 +68,11 @@ export default function App() {
           stepOrdinal: 1,
           environmentId: STARTING_ENVIRONMENT_ID,
         };
-        return { ...current, [entry.id]: move(here, entry.steps.length, delta) };
+        const after = move(here, entry.steps.length, delta);
+        setPlaceChange(
+          after.environmentId === here.environmentId ? null : delta === 1 ? 'harder' : 'easier'
+        );
+        return { ...current, [entry.id]: after };
       });
       dispatch({ type: 'reset' });
     },
@@ -147,6 +153,7 @@ export default function App() {
         gear={entry.gear}
         mistakes={mistakesFor(entry.id)}
         canGoEasierPlace={previousEnvironment(environment.id) !== undefined}
+        placeChange={placeChange}
         canGoHarderPlace={nextEnvironment(environment.id) !== undefined}
         onChoose={goTo}
         onRecord={record}

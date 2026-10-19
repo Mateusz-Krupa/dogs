@@ -42,6 +42,12 @@ export interface SetScreenProps {
   /** Whether a harder / easier rung exists to roll onto at the ladder ends. */
   readonly canGoHarderPlace: boolean;
   readonly canGoEasierPlace: boolean;
+  /**
+   * Set when the position just arrived from an environment change. The step
+   * number drops when you move to a harder place, which reads as going
+   * backwards unless the app says why, right then.
+   */
+  readonly placeChange: 'harder' | 'easier' | null;
 }
 
 /**
@@ -94,6 +100,7 @@ export function SetScreen({
   onChoose,
   canGoHarderPlace,
   canGoEasierPlace,
+  placeChange,
 }: SetScreenProps) {
   const [openMistake, setOpenMistake] = useState<number | null>(null);
   const [showAbout, setShowAbout] = useState(false);
@@ -110,6 +117,17 @@ export function SetScreen({
     <View style={styles.screen}>
       <ScrollView contentContainerStyle={styles.scroll} showsVerticalScrollIndicator={false}>
         <StepRail count={stepCount} ordinal={stepOrdinal} />
+
+        {placeChange ? (
+          <View style={styles.placeNote}>
+            <Text style={styles.placeNoteTitle}>
+              {placeChange === 'harder' ? t('session.newPlaceTitle') : t('session.easierPlaceTitle')}
+            </Text>
+            <Text style={styles.placeNoteBody}>
+              {placeChange === 'harder' ? t('session.newPlaceBody') : t('session.easierPlaceBody')}
+            </Text>
+          </View>
+        ) : null}
 
         <View style={styles.card}>
           <View style={styles.art}>
@@ -301,6 +319,16 @@ const styles = StyleSheet.create({
     gap: 14,
   },
 
+  placeNote: {
+    backgroundColor: '#e7edf3',
+    borderRadius: 12,
+    borderLeftWidth: 3,
+    borderLeftColor: '#2a4a6b',
+    padding: 12,
+    gap: 3,
+  },
+  placeNoteTitle: { fontSize: 13.5, fontWeight: '700', color: '#24384a' },
+  placeNoteBody: { fontSize: 13, lineHeight: 19, color: '#3b4f5f' },
   rail: { flexDirection: 'row', gap: 4, marginTop: 4 },
   railSeg: { flex: 1, height: 6, borderRadius: 3, backgroundColor: '#ccd4ca' },
   railSegDone: { backgroundColor: GREEN },

@@ -32,6 +32,12 @@ export const en: LocaleCatalogue = {
     masteredHere: 'Solid here',
     fullyMastered: 'Solid everywhere',
     rungs: 'Place {{n}} of {{total}}',
+    newPlaceTitle: 'New place — steps dropped back on purpose',
+    newPlaceBody:
+      'To a dog, the same cue in a new place is effectively a new task. You go back a little to rebuild it here, and it goes faster than the first time.',
+    easierPlaceTitle: 'Easier place — steps raised',
+    easierPlaceBody:
+      'In a simpler setting the dog can handle a harder step. This is not a setback, it is taking one variable away.',
   },
   gear: {
     title: 'What you need',
