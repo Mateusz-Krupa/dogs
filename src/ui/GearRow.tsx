@@ -7,6 +7,28 @@ export interface GearRowProps {
   readonly gear: readonly GearId[];
   /** Tint for the icons and the heading. */
   readonly color?: string;
+  /**
+   * Icons only, no heading and no labels — for list cards, which are scanned
+   * rather than read. Three small icons say "you'll need a lead" at a glance;
+   * three labelled pills turn the card into a paragraph.
+   */
+  readonly compact?: boolean;
+}
+
+/** Icons alone, with the names folded into one accessibility label. */
+function CompactGear({ gear, color }: { gear: readonly GearId[]; color: string }) {
+  return (
+    <View
+      accessibilityLabel={`${t('gear.title')}: ${gear.map((id) => t(`gear.${id}`)).join(', ')}`}
+      style={styles.compactRow}
+    >
+      {gear.map((id) => (
+        <View key={id} style={styles.compactItem}>
+          <GearIcon color={color} gear={id} size={17} />
+        </View>
+      ))}
+    </View>
+  );
 }
 
 /**
@@ -16,8 +38,9 @@ export interface GearRowProps {
  * glance from across the room while you are still deciding whether you have
  * time to train at all.
  */
-export function GearRow({ gear, color = '#4a554f' }: GearRowProps) {
+export function GearRow({ gear, color = '#4a554f', compact = false }: GearRowProps) {
   if (gear.length === 0) return null;
+  if (compact) return <CompactGear color={color} gear={gear} />;
 
   return (
     <View style={styles.wrap}>
@@ -51,4 +74,14 @@ const styles = StyleSheet.create({
     paddingRight: 13,
   },
   label: { fontSize: 13, color: '#3a433f' },
+
+  compactRow: { flexDirection: 'row', gap: 5 },
+  compactItem: {
+    width: 26,
+    height: 26,
+    borderRadius: 8,
+    backgroundColor: '#f1f3ee',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });

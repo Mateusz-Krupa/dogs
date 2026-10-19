@@ -4,6 +4,7 @@ import { CATALOGUE, type CatalogueEntry } from '../../content/catalogue';
 import { ENVIRONMENTS } from '../../content/environments';
 import { NOSEWORK } from '../../content/nosework';
 import { DogPose } from '../../ui/DogPose';
+import { GearRow } from '../../ui/GearRow';
 import { getLocale, t } from '../../i18n';
 
 const INK = '#14181a';
@@ -109,13 +110,16 @@ function ExerciseCard({
           </View>
         ) : null}
 
-        <Text style={styles.meta}>
-          {progress
-            ? `${locale === 'en' ? 'Step' : 'Krok'} ${progress.stepOrdinal} / ${entry.steps.length}${
-                environmentName ? ` · ${environmentName}` : ''
-              }`
-            : `${entry.steps.length} ${locale === 'en' ? 'steps' : 'kroków'}`}
-        </Text>
+        <View style={styles.metaRow}>
+          <Text style={styles.meta}>
+            {progress
+              ? `${locale === 'en' ? 'Step' : 'Krok'} ${progress.stepOrdinal} / ${entry.steps.length}${
+                  environmentName ? ` · ${environmentName}` : ''
+                }`
+              : `${entry.steps.length} ${locale === 'en' ? 'steps' : 'kroków'}`}
+          </Text>
+          <GearRow compact gear={entry.gear} />
+        </View>
 
         {missing.length > 0 ? (
           <Text style={styles.hint}>
@@ -188,11 +192,18 @@ export function ExerciseList({
                 <Text numberOfLines={1} style={styles.tagline}>
                   {locale === 'en' ? activity.tagline.en : activity.tagline.pl}
                 </Text>
-                <Text style={styles.meta}>
-                  {doneLevel > 0
-                    ? t('nosework.level', { n: doneLevel, total: activity.levels.length })
-                    : `${activity.levels.length} ${locale === 'en' ? 'levels' : 'poziomy'}`}
-                </Text>
+                <View style={styles.metaRow}>
+                  <Text style={styles.meta}>
+                    {doneLevel > 0
+                      ? t('nosework.level', { n: doneLevel, total: activity.levels.length })
+                      : `${activity.levels.length} ${locale === 'en' ? 'levels' : 'poziomy'}`}
+                  </Text>
+                  <GearRow
+                    color={BLUE}
+                    compact
+                    gear={activity.levels[Math.min(doneLevel, activity.levels.length - 1)]!.gear}
+                  />
+                </View>
               </View>
             </Pressable>
           );
@@ -323,6 +334,12 @@ const styles = StyleSheet.create({
     height: 5,
     borderRadius: 999,
     backgroundColor: GREEN,
+  },
+  metaRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 8,
   },
   meta: {
     fontSize: 12,
