@@ -7,6 +7,7 @@ import type { Mistake } from '../../content/mistakes';
 import { GearRow } from '../../ui/GearRow';
 import type { GearId } from '../../ui/Gear';
 import { HandMotion, MOTION_BY_EXERCISE } from '../../ui/HandMotion';
+import { LureAnimation, type LureKind } from '../../ui/LureAnimation';
 import type { Pose } from '../../ui/DogPose';
 import { getLocale, t } from '../../i18n';
 import type { SetState } from './setMachine';
@@ -81,6 +82,10 @@ export function SetScreen({
   const verdict = state.verdict;
   const locale = getLocale();
   const motion = MOTION_BY_EXERCISE[exerciseId] ?? 'lure-up';
+  // Only the two luring exercises have an animation so far; everything else
+  // keeps the still diagram rather than showing a worse moving one.
+  const animated: LureKind | null =
+    exerciseId === 'sit' ? 'sit' : exerciseId === 'down' ? 'down' : null;
 
   return (
     <View style={styles.screen}>
@@ -89,7 +94,11 @@ export function SetScreen({
 
         <View style={styles.card}>
           <View style={styles.art}>
-            <HandMotion motion={motion} pose={pose} size={148} />
+            {animated ? (
+              <LureAnimation kind={animated} size={190} />
+            ) : (
+              <HandMotion motion={motion} pose={pose} size={148} />
+            )}
           </View>
           <Text style={styles.instruction}>{stepInstruction}</Text>
         </View>
