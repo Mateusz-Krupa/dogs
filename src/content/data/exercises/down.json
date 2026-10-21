@@ -27,6 +27,7 @@
   "steps": [
     {
       "ordinal": 1,
+      "motion": "down",
       "pl": {
         "title": "",
         "instruction": "Smakołyk prosto w dół, między przednie łapy.",
@@ -60,6 +61,7 @@
     },
     {
       "ordinal": 2,
+      "motion": "draw",
       "pl": {
         "title": "",
         "instruction": "Po dojściu do podłogi — powoli do siebie.",
@@ -91,6 +93,7 @@
     },
     {
       "ordinal": 3,
+      "motion": "draw",
       "pl": {
         "title": "",
         "instruction": "Pełne położenie — łokcie i klatka na ziemi.",
@@ -122,6 +125,7 @@
     },
     {
       "ordinal": 4,
+      "motion": "draw",
       "pl": {
         "title": "",
         "instruction": "Pusta ręka prowadzi, nagroda z drugiej.",
@@ -151,6 +155,8 @@
     },
     {
       "ordinal": 5,
+      "motion": "draw",
+      "sound": true,
       "pl": {
         "title": "",
         "instruction": "Słowo, pauza, gest — zawsze w tej kolejności.",
@@ -182,6 +188,7 @@
     },
     {
       "ordinal": 6,
+      "motion": "down",
       "pl": {
         "title": "",
         "instruction": "Samo słowo. Położenie po geście to pudło.",
@@ -211,6 +218,7 @@
     },
     {
       "ordinal": 7,
+      "motion": "down",
       "pl": {
         "title": "",
         "instruction": "Sprawdź dwa różne podłoża.",

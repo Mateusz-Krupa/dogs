@@ -57,9 +57,14 @@ function Tail({ d, color }: { d: string; color: string }) {
   return <Path d={d} fill="none" stroke={color} strokeWidth={6} strokeLinecap="round" />;
 }
 
-export function DogPose({ pose, size = 72, color = INK, accent = ACCENT }: DogPoseProps) {
+/**
+ * A pose as a plain group: 100×100 coordinates, ground at y=82, no <Svg>
+ * wrapper. `ProblemScene` translates and scales this inside a larger drawing,
+ * which nested <Svg> cannot do reliably on iOS.
+ */
+export function DogPoseGlyph({ pose, color = INK, accent = ACCENT }: Omit<DogPoseProps, 'size'>) {
   return (
-    <Svg width={size} height={size} viewBox="0 0 100 100">
+    <G>
       {/* ground */}
       <Rect x={8} y={GROUND} width={84} height={3.5} rx={1.75} fill={color} fillOpacity={0.18} />
 
@@ -130,14 +135,23 @@ export function DogPose({ pose, size = 72, color = INK, accent = ACCENT }: DogPo
 
       {pose === 'come' && (
         <G>
-          {/* mid-stride, legs split */}
-          <Path d={`M 26 48 L 68 44 L 72 54 L 34 58 Z`} fill={color} />
-          <Path d={`M 30 56 L 20 ${GROUND} L 28 ${GROUND} L 38 58 Z`} fill={color} />
-          <Path d={`M 62 52 L 74 ${GROUND} L 82 ${GROUND} L 70 50 Z`} fill={color} />
-          <Tail d={`M 26 46 Q 12 38 18 28`} color={color} />
-          <Head x={76} y={38} tilt={-8} color={color} />
+          {/* one solid body, head to chest, so the dog does not fall apart at
+              small sizes; legs reach forward and back — mid-stride toward you */}
+          <Path d={`M 24 52 Q 26 42 40 40 L 62 38 Q 74 37 76 46 L 72 56 L 30 58 Z`} fill={color} />
+          <Path d={`M 60 52 L 74 70 L 80 82 L 73 82 L 63 68 L 55 58 Z`} fill={color} />
+          <Path d={`M 34 54 L 22 70 L 15 82 L 22 82 L 31 68 L 40 58 Z`} fill={color} />
+          <Tail d={`M 24 48 Q 10 42 16 30`} color={color} />
+          <Head x={78} y={36} tilt={-10} color={color} />
         </G>
       )}
+    </G>
+  );
+}
+
+export function DogPose({ pose, size = 72, color = INK, accent = ACCENT }: DogPoseProps) {
+  return (
+    <Svg width={size} height={size} viewBox="0 0 100 100">
+      <DogPoseGlyph pose={pose} color={color} accent={accent} />
     </Svg>
   );
 }

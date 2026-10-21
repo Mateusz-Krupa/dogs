@@ -18,6 +18,7 @@
 
 import type { ExerciseCategory } from '../db/schema';
 import type {
+  BehaviourIssue,
   CatalogueEntry,
   EnvironmentSeed,
   ExerciseSeed,
@@ -26,6 +27,7 @@ import type {
   StepSeed,
 } from './schema';
 import {
+  parseBehaviourIssue,
   parseCatalogueEntry,
   parseEnvironmentSet,
   parseMistakes,
@@ -66,6 +68,17 @@ import stayMistakes from './data/mistakes/stay.json';
 import waitMistakes from './data/mistakes/wait.json';
 
 import environmentsJson from './data/environments.json';
+
+import barkDoorJson from './data/behaviour/bark-door.json';
+import barkWindowJson from './data/behaviour/bark-window.json';
+import boltingJson from './data/behaviour/bolting.json';
+import jumpingJson from './data/behaviour/jumping.json';
+import nippingJson from './data/behaviour/nipping.json';
+import noiseJson from './data/behaviour/noise.json';
+import reactivityJson from './data/behaviour/reactivity.json';
+import stealingJson from './data/behaviour/stealing.json';
+import trafficJson from './data/behaviour/traffic.json';
+import aloneJson from './data/behaviour/alone.json';
 
 /** The file the data came from, so a validation error can name it. */
 type Source = string;
@@ -184,4 +197,62 @@ export const MISTAKES: Readonly<Record<string, readonly Mistake[]>> = Object.fro
 /** Mistakes for one exercise, or an empty list. */
 export function mistakesFor(exerciseId: string): readonly Mistake[] {
   return MISTAKES[exerciseId] ?? [];
+}
+
+/**
+ * Every behaviour problem the app ships. Order is what the owner browses:
+ * the loud things first, the quiet suffering of being alone last.
+ */
+const BEHAVIOUR_FILES: readonly (readonly [source: Source, raw: unknown])[] = [
+  ['behaviour/bark-door.json', barkDoorJson],
+  ['behaviour/bark-window.json', barkWindowJson],
+  ['behaviour/jumping.json', jumpingJson],
+  ['behaviour/nipping.json', nippingJson],
+  ['behaviour/stealing.json', stealingJson],
+  ['behaviour/bolting.json', boltingJson],
+  ['behaviour/reactivity.json', reactivityJson],
+  ['behaviour/traffic.json', trafficJson],
+  ['behaviour/noise.json', noiseJson],
+  ['behaviour/alone.json', aloneJson],
+];
+
+export const BEHAVIOUR: readonly BehaviourIssue[] = BEHAVIOUR_FILES.map(([source, raw]) =>
+  parseBehaviourIssue(raw, source),
+);
+
+const BEHAVIOUR_BY_ID = new Map<string, BehaviourIssue>(BEHAVIOUR.map((issue) => [issue.id, issue]));
+
+/** Look up one behaviour problem by id. */
+export function behaviourById(id: string): BehaviourIssue | undefined {
+  return BEHAVIOUR_BY_ID.get(id);
+}
+
+/**
+ * Every `practices` id on a behaviour card must name a real exercise — a
+ * broken chip is a broken promise, not a soft link. Returns the problem
+ * descriptions so the startup pass can throw with them and tests can check
+ * the pass itself.
+ */
+export function practicesProblems(
+  issues: readonly BehaviourIssue[],
+  knownExerciseIds: ReadonlySet<string>,
+): readonly string[] {
+  const problems: string[] = [];
+  for (const issue of issues) {
+    for (const practice of issue.practices) {
+      if (!knownExerciseIds.has(practice)) {
+        problems.push(`behaviour/${issue.id} points at unknown exercise '${practice}'`);
+      }
+    }
+  }
+  return problems;
+}
+
+// Fail at startup, naming both sides of the broken reference.
+const PRACTICE_PROBLEMS = practicesProblems(
+  BEHAVIOUR,
+  new Set(CATALOGUE.map((entry) => entry.id)),
+);
+if (PRACTICE_PROBLEMS.length > 0) {
+  throw new TypeError(`content: ${PRACTICE_PROBLEMS.join('; ')}`);
 }

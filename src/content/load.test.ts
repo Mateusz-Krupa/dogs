@@ -1,12 +1,15 @@
 import type { GearId } from '../ui/Gear';
 import {
+  BEHAVIOUR,
   CATALOGUE,
   ENVIRONMENTS,
   MISTAKES,
   NOSEWORK,
   SIT,
   STARTING_ENVIRONMENT_ID,
+  behaviourById,
   exerciseById,
+  practicesProblems,
   mistakesFor,
 } from './load';
 
@@ -213,5 +216,93 @@ describe('content parity with the TypeScript that came before', () => {
 
   it('keeps all twenty-three rungs', () => {
     expect(ENVIRONMENTS.length).toBe(23);
+  });
+});
+
+describe('behaviour problems', () => {
+  it('ships ten cards in browse order', () => {
+    expect(BEHAVIOUR.map((issue) => issue.id)).toEqual([
+      'bark-door',
+      'bark-window',
+      'jumping',
+      'nipping',
+      'stealing',
+      'bolting',
+      'reactivity',
+      'traffic',
+      'noise',
+      'alone',
+    ]);
+  });
+
+  it('writes every card in both locales', () => {
+    for (const issue of BEHAVIOUR) {
+      for (const locale of ['pl', 'en'] as const) {
+        expect(issue.names[locale].name.trim().length).toBeGreaterThan(0);
+        expect(issue.names[locale].tagline.trim().length).toBeGreaterThan(0);
+        expect(issue.recognizes[locale].trim().length).toBeGreaterThan(0);
+        expect(issue.urgent[locale].trim().length).toBeGreaterThan(0);
+        expect(issue.avoid[locale].length).toBeGreaterThanOrEqual(2);
+        expect(issue.now[locale].length).toBeGreaterThanOrEqual(2);
+        expect(issue.work[locale].length).toBeGreaterThanOrEqual(2);
+        expect(issue.professional[locale].trim().length).toBeGreaterThan(0);
+      }
+    }
+  });
+
+  it('looks each one up by id', () => {
+    expect(behaviourById('traffic')?.sortOrder).toBe(8);
+    expect(behaviourById('nope')).toBeUndefined();
+  });
+
+  it('points every practice link at an exercise that exists', () => {
+    for (const issue of BEHAVIOUR) {
+      for (const id of issue.practices) expect(exerciseById(id)).toBeDefined();
+    }
+  });
+});
+
+describe('diagram bindings per lesson', () => {
+  const byId = (id: string) => exerciseById(id)!;
+
+  it('draws the down-and-toward shape for the steps that pull the dog down', () => {
+    expect(byId('down').steps.map((step) => step.motion)).toEqual([
+      'down',
+      'draw',
+      'draw',
+      'draw',
+      'draw',
+      'down',
+      'down',
+    ]);
+  });
+
+  it('pays loose-lead steps at the leg, never out in front', () => {
+    const steps = byId('leash').steps;
+    expect(steps.map((step) => step.motion)).toEqual(['leg', 'hold', 'leg', 'leg']);
+    expect(steps[1]!.pose).toBe('stand');
+    expect(steps[3]!.pose).toBe('sniff');
+  });
+
+  it('shows the mat under the steps about the mat', () => {
+    const steps = byId('mat').steps;
+    expect(steps[0]!.motion).toBe('toss');
+    expect(steps[0]!.pose).toBe('stand');
+    expect(steps[3]!.motion).toBe('toss');
+  });
+
+  it('marks the drop steps that say the word with a sound mark', () => {
+    const steps = byId('drop').steps;
+    expect(steps[2]!.sound).toBe(true);
+    expect(steps[3]!.sound).toBe(true);
+    expect(steps[0]!.sound).toBeUndefined();
+  });
+
+  it('flags a practice link that names no exercise', () => {
+    const fake = [{ id: 'x', practices: ['sit', 'ghost'] }] as never;
+    expect(practicesProblems(fake, new Set(['sit', 'look']))).toEqual([
+      "behaviour/x points at unknown exercise 'ghost'",
+    ]);
+    expect(practicesProblems(BEHAVIOUR, new Set(CATALOGUE.map((entry) => entry.id)))).toEqual([]);
   });
 });

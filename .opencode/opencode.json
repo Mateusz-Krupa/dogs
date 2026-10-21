@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "openai/gpt-6.1-sol",
+  "default_agent": "planner",
+  "agents": {
+    "plan": {
+      "model": "openai/gpt-6.1-sol"
+    },
+    "build": {
+      "model": "swissquant-local/vision-flash"
+    }
+  }
+}

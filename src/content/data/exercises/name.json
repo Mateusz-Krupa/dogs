@@ -24,6 +24,7 @@
   "steps": [
     {
       "ordinal": 1,
+      "motion": "hold",
       "pl": {
         "title": "",
         "instruction": "Imię jest prośbą o spojrzenie, nie wezwaniem.",
@@ -57,6 +58,8 @@
     },
     {
       "ordinal": 2,
+      "motion": "hold",
+      "pose": "sniff",
       "pl": {
         "title": "",
         "instruction": "To samo, gdy pies jest lekko czymś zajęty.",
@@ -90,6 +93,7 @@
     },
     {
       "ordinal": 3,
+      "motion": "hold",
       "pl": {
         "title": "",
         "instruction": "Z innego pokoju, poza zasięgiem wzroku.",
@@ -121,6 +125,8 @@
     },
     {
       "ordinal": 4,
+      "motion": "hold",
+      "pose": "sniff",
       "pl": {
         "title": "",
         "instruction": "Na dworze, gdzie jest co wąchać.",

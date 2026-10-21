@@ -27,66 +27,167 @@
   "steps": [
     {
       "ordinal": 1,
+      "motion": "hold",
       "pl": {
         "title": "",
-        "instruction": "Poproś o siad. Odlicz trzy sekundy, nagródź, zwolnij słowem „koniec\".",
+        "instruction": "Trzy sekundy, nagroda i zwolnienie słowem „koniec\".",
+        "setup": [
+          "Cichy pokój",
+          "Smakołyki w ręce"
+        ],
+        "reps": [
+          "Poproś o „siad\"",
+          "Odlicz trzy sekundy",
+          "Nagródź",
+          "Zwolnij słowem „koniec\" i pozwól wstać"
+        ],
+        "note": "Zwolnienie jest częścią pozycji, nie ucieczką od niej. Pies wstaje dopiero, gdy Ty na to pozwalasz — inaczej „zostań\" znika w połowie ćwiczenia.",
         "criterion": "Trzy sekundy w siadzie bez wstawania."
       },
       "en": {
         "title": "",
-        "instruction": "Ask for a sit. Count three seconds, pay, then release with “okay”.",
+        "instruction": "Three seconds, a treat, then release with “okay”.",
+        "setup": [
+          "A quiet room",
+          "Treats in your hand"
+        ],
+        "reps": [
+          "Ask for a sit",
+          "Count three seconds",
+          "Pay",
+          "Release with the word “okay” and let the dog up"
+        ],
+        "note": "The release is part of the position, not an escape from it. The dog gets up only when you allow it — otherwise “stay” quietly disappears halfway through.",
         "criterion": "Three seconds in the sit without getting up."
       }
     },
     {
       "ordinal": 2,
+      "motion": "hold",
       "pl": {
         "title": "",
-        "instruction": "Dziesięć sekund. Stój nieruchomo, nie oddalaj się jeszcze.",
+        "instruction": "Dziesięć sekund. Stój nieruchomo — dystans jeszcze nie wchodzi.",
+        "setup": [
+          "To samo miejsce co w kroku 1"
+        ],
+        "reps": [
+          "Poproś o pozycję",
+          "Odlicz dziesięć sekund, nie ruszając się",
+          "Nagródź i zwolnij"
+        ],
         "criterion": "Dziesięć sekund bez wstawania."
       },
       "en": {
         "title": "",
-        "instruction": "Ten seconds. Stand still — do not add distance yet.",
+        "instruction": "Ten seconds. Stand still — distance is not in play yet.",
+        "setup": [
+          "The same place as step 1"
+        ],
+        "reps": [
+          "Ask for the position",
+          "Count ten seconds without moving",
+          "Pay and release"
+        ],
         "criterion": "Ten seconds without getting up."
       }
     },
     {
       "ordinal": 3,
+      "motion": "return",
       "pl": {
         "title": "",
-        "instruction": "Wróć do trzech sekund, ale zrób jeden krok w bok i wróć. Podnosząc dystans, skracasz czas — to nie jest cofanie się, tylko reguła.",
+        "instruction": "Więcej dystansu = mniej czasu: trzy sekundy i jeden krok w bok.",
+        "setup": [
+          "Dziesięć sekund już wychodzi",
+          "Masz miejsce na jeden krok"
+        ],
+        "reps": [
+          "Poproś o pozycję",
+          "Zrób jeden krok w bok",
+          "Wróć na miejsce",
+          "Nagródź, gdy pies wciąż siedzi"
+        ],
         "criterion": "Pies zostaje przez jeden Twój krok w bok."
       },
       "en": {
         "title": "",
-        "instruction": "Go back to three seconds but take one step sideways and return. When you raise distance you shorten duration — that is the rule, not a setback.",
+        "instruction": "More distance, less duration — three seconds plus one step sideways.",
+        "setup": [
+          "Ten seconds already works",
+          "Room for one step"
+        ],
+        "reps": [
+          "Ask for the position",
+          "Take one step sideways",
+          "Return to where you were",
+          "Pay while the dog is still holding"
+        ],
         "criterion": "The dog holds while you take one step sideways."
       }
     },
     {
       "ordinal": 4,
+      "motion": "return",
       "pl": {
         "title": "",
-        "instruction": "Trzy kroki w tył i powrót, wciąż trzy sekundy.",
+        "instruction": "Trzy kroki w tył i powrót. Wciąż trzy sekundy.",
+        "setup": [
+          "Wolna przestrzeń za Tobą",
+          "Pies widzi Cię całą sylwetką"
+        ],
+        "reps": [
+          "Poproś o pozycję",
+          "Cofnij się o trzy kroki",
+          "Wróć do psa",
+          "Nagródź i zwolnij"
+        ],
         "criterion": "Pies zostaje przez trzy Twoje kroki i powrót."
       },
       "en": {
         "title": "",
-        "instruction": "Three steps back and return, still three seconds.",
+        "instruction": "Three steps back and return. Still three seconds.",
+        "setup": [
+          "Clear space behind you",
+          "The dog can see your whole body"
+        ],
+        "reps": [
+          "Ask for the position",
+          "Back up three steps",
+          "Return to the dog",
+          "Pay and release"
+        ],
         "criterion": "The dog holds through three steps and your return."
       }
     },
     {
       "ordinal": 5,
+      "motion": "return",
       "pl": {
         "title": "",
-        "instruction": "Połącz: dziesięć sekund i trzy kroki. Jeśli się sypie, zdejmij jedną z osi, nie obie.",
+        "instruction": "Dziesięć sekund przy trzech krokach. Jak się sypie — zdejmij jedną oś, nie obie.",
+        "setup": [
+          "Obie osie osobno już działają"
+        ],
+        "reps": [
+          "Poproś o pozycję",
+          "Cofnij się o trzy kroki",
+          "Zostań tak do dziesięciu sekund",
+          "Wróć, nagródź i zwolnij"
+        ],
         "criterion": "Dziesięć sekund przy trzech krokach dystansu."
       },
       "en": {
         "title": "",
-        "instruction": "Combine: ten seconds at three steps. If it falls apart, drop one axis, not both.",
+        "instruction": "Combine both axes: ten seconds at three steps. If it falls apart, drop one axis, not both.",
+        "setup": [
+          "Each axis already works on its own"
+        ],
+        "reps": [
+          "Ask for the position",
+          "Take three steps back",
+          "Hold until the ten seconds are up",
+          "Return, pay and release"
+        ],
         "criterion": "Ten seconds at three steps of distance."
       }
     }

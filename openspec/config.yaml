@@ -1,0 +1,45 @@
+schema: spec-driven
+
+context: |
+  pettrainer is one phone-first Expo + React Native application repository.
+  Strict TypeScript, npm, Node v22.22.3 from .nvmrc, expo-sqlite for local data,
+  i18n-js and expo-localization for Polish and English. Offline-first, no account.
+  src/domain is pure training logic; src/db owns schema/migrations; src/content
+  owns exercise data/schemas; src/features owns feature orchestration; src/ui
+  owns shared native UI; src/i18n owns UI translations.
+  Mastery belongs to (dog x exercise x environment), never one completion boolean.
+  Progress has installation micro-steps and environment generalization axes.
+  Sets have exactly 5 reps. 5/5 = push; 3 or 4/5 = stick; 0 to 2/5 = drop.
+  Cancelled reps are failures; incomplete sets are not completed sets.
+  Verdicts are derived from raw Rep rows and are never stored.
+  No locked content, aversive advice, or error markers. Bite-history aggression,
+  escalating guarding, possible pain, and severe separation anxiety route to a
+  vet/certified behaviourist, not a DIY troubleshooting fix.
+  Read AGENTS.md and openspec/workflow.md. Retrieve project-scoped memory before
+  planning/applying and reflect before archive. Memory promotion needs approval.
+  Plan with openai/gpt-6.1-sol; implement with swissquant-local/vision-flash
+  (Flash-Next NVFP4). Do not silently switch models or reasoning variants.
+
+rules:
+  proposal:
+    - State user value, scope, non-goals, and affected capabilities.
+    - Check active changes/specs and retrieve pettrainer memory before proposing.
+    - Preserve offline operation, raw history, welfare, and unrestricted access.
+    - Do not turn a tooling change into an unrequested application feature.
+  specs:
+    - Use testable requirements and WHEN/THEN scenarios, including edge cases.
+    - Cover affected verdict thresholds, per-context progress, and incomplete sets.
+    - Include offline, data-preservation, PL/EN, and welfare cases when relevant.
+  design:
+    - Prefer the smallest change and existing domain/UI/content/DB patterns.
+    - Keep domain logic pure and avoid duplicating verdict/progression rules in UI.
+    - Explain migration, session-interruption, and native-platform risks if affected.
+    - Record meaningful trade-offs without copying the retrieved context pack.
+  tasks:
+    - Use small checkable tasks mapped to acceptance criteria and concrete files.
+    - Include a Delegation Plan before verification; explain any sequential work.
+    - Route planning/review to GPT-6.1 Sol and implementation to Flash Next.
+    - Include an independent reviewer gate before implementation and a final review.
+    - Require user approval of the proposal and selection of review-driven fixes.
+    - Include relevant targeted Jest tests, typecheck, and strict OpenSpec validation.
+    - Record decisions/pitfalls in notes.md; include archive reflection and memory review.

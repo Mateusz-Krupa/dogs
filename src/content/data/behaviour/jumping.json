@@ -1,0 +1,70 @@
+{
+  "id": "jumping",
+  "sortOrder": 3,
+  "names": {
+    "pl": {
+      "name": "Skakanie na ludzi",
+      "tagline": "Łapy na Tobie to dla niego powitanie"
+    },
+    "en": {
+      "name": "Jumping up on people",
+      "tagline": "Paws on you is how they say hello"
+    }
+  },
+  "recognizes": {
+    "pl": "Pies wystrzeliwuje z łapami na klatkę przy powitaniu — u Ciebie w drzwiach, u gości, u przypadkowych ludzi na ulicy. Często ze skomleniem z ekscytacji.",
+    "en": "The dog launches with paws to the chest at every greeting — at your door, at guests, at strangers on the street. Often whining with excitement."
+  },
+  "urgent": {
+    "pl": "Jeśli skakaniu towarzyszy twardy wzrok i sztywność — behawiorysta. Pies, który mimo tygodni pracy przewraca małe dzieci — trener.",
+    "en": "If the jumping comes with a hard stare and stiffness — behaviourist. A dog who still knocks over small children after weeks of work — a trainer."
+  },
+  "avoid": {
+    "pl": [
+      "Nie odpychaj i nie szturchaj kolanem — fizyczny opór to kontakt, a kontakt to dla skoczka dokładnie to, o co chodzi.",
+      "Nie odwracaj się „na zasadzie ignorowania\" i nie wychodź z pokoju na kwadrans — zdecydowana większość skoczków dostaje uwagę kilka sekund po wylądowaniu i o to wygrywa.",
+      "Nie witaj się z psem w sekundę po wylądowaniu — odczekaj chwilę, żeby kontakt łączył się ze spokojem, nie z przerwaniem skoku."
+    ],
+    "en": [
+      "Do not push off or knee them away — physical resistance is contact, and contact is exactly what a jumper is after.",
+      "Do not “ignore by turning away\" or leave the room for fifteen minutes — almost every jumper gets attention a few seconds after landing, and that is the game they win.",
+      "Do not greet the dog the instant it lands — wait a beat so contact pairs with calm, not with the interruption of a jump."
+    ]
+  },
+  "now": {
+    "pl": [
+      "Bramka albo kojec na czas otwierania drzwi i wpuszczania gości.",
+      "Wejście do domu bez ceremonii: zero kontaktu przez pierwsze dwie–trzy minuty, spokojnie przed wyjściem i po powrocie.",
+      "Zanim miniesz próg z gościem, rzuć zabawkę albo rozsyp garść karmy z dala od drzwi — niech pies ma dokąd iść."
+    ],
+    "en": [
+      "A gate or pen while the door opens and the guest comes in.",
+      "Arrive home without ceremony: no contact for the first two or three minutes, flat before you leave and when you return.",
+      "Before you cross the threshold with a guest, toss a toy or scatter a handful of food away from the door — give the dog somewhere to go."
+    ]
+  },
+  "work": {
+    "pl": [
+      "Cztery łapy na ziemi = kontakt; łapy w górze = kontakt znika, ale to Ty odchodzisz, nie pies jest odpychany.",
+      "Naucz „siad\" na powitanie i każ każdej witającej się osobie go wymagać.",
+      "„Na miejsce\" na dzwonek — pies zyskuje alternatywę, która się opłaca lepiej niż skok.",
+      "Scenki z domownikiem w roli gościa: krótkie, konkretne, z nagrodą za pozycję, zanim gość wyciągnie rękę."
+    ],
+    "en": [
+      "Four feet on the floor equals contact; paws in the air and contact disappears — but you leave, the dog is never pushed.",
+      "Teach “sit\" for greetings and make every greeting person require it.",
+      "“Place\" on the doorbell — the dog gains an alternative that pays better than the jump.",
+      "Drills with a housemate playing guest: short, clear, reward the position before the hand reaches down."
+    ]
+  },
+  "professional": {
+    "pl": "Jeśli pies przewraca małe dzieci albo osoby starsze i intensywność nie spada po kilku tygodniach pracy — trener. Jeśli skakaniu towarzyszy twardy wzrok i sztywność ciała — behawiorysta.",
+    "en": "If the dog knocks over small children or older people and the intensity does not drop after a few weeks of work — a trainer. If the jumping comes with a hard stare and a stiff body — a behaviourist."
+  },
+  "practices": [
+    "sit",
+    "mat",
+    "leave",
+    "look"
+  ]
+}

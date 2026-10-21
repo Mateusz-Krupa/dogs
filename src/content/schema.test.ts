@@ -106,6 +106,56 @@ describe('the validators', () => {
     );
   });
 
+  it('pass a step’s diagram overrides through to the seed', () => {
+    const seed = parseExercise(
+      exerciseFixture({
+        steps: [{ ordinal: 1, motion: 'return', pose: 'stand', sound: true, pl: STEP, en: STEP }],
+      }),
+      'sit.json',
+    );
+    expect(seed.steps[0]).toMatchObject({ motion: 'return', pose: 'stand', sound: true });
+  });
+
+  it('leave diagram fields off a step that does not need them', () => {
+    const seed = parseExercise(exerciseFixture(), 'sit.json');
+    expect(seed.steps[0]).not.toHaveProperty('motion');
+    expect(seed.steps[0]).not.toHaveProperty('pose');
+    expect(seed.steps[0]).not.toHaveProperty('sound');
+  });
+
+  it('reject a diagram motion the drawings cannot render', () => {
+    expectInvalid(
+      () => parseExercise(
+        exerciseFixture({ steps: [{ ordinal: 1, motion: 'backflip', pl: STEP, en: STEP }] }),
+        'sit.json',
+      ),
+      'sit.json',
+      'steps[0].motion',
+    );
+  });
+
+  it('reject a diagram pose no silhouette exists for', () => {
+    expectInvalid(
+      () => parseExercise(
+        exerciseFixture({ steps: [{ ordinal: 1, pose: 'rollover', pl: STEP, en: STEP }] }),
+        'sit.json',
+      ),
+      'sit.json',
+      'steps[0].pose',
+    );
+  });
+
+  it('reject a sound flag that is not true or false', () => {
+    expectInvalid(
+      () => parseExercise(
+        exerciseFixture({ steps: [{ ordinal: 1, sound: 'yes', pl: STEP, en: STEP }] }),
+        'sit.json',
+      ),
+      'sit.json',
+      'steps[0].sound',
+    );
+  });
+
   it('reject an empty criterion rather than shipping a blank instruction', () => {
     expectInvalid(
       () => parseExercise(exerciseFixture({

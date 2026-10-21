@@ -24,6 +24,7 @@
   "steps": [
     {
       "ordinal": 1,
+      "motion": "up",
       "pl": {
         "title": "",
         "instruction": "Płacisz za wyciągniętą szyję, nie za siad.",
@@ -57,6 +58,7 @@
     },
     {
       "ordinal": 2,
+      "motion": "up",
       "pl": {
         "title": "",
         "instruction": "To samo, dłużej — i płać wcześniej, jeśli kolana się ugną.",
@@ -90,6 +92,7 @@
     },
     {
       "ordinal": 3,
+      "motion": "up",
       "pl": {
         "title": "",
         "instruction": "Osiem sekund. Jeśli za długo, podziel różnicę.",
@@ -123,6 +126,7 @@
     },
     {
       "ordinal": 4,
+      "motion": "up",
       "pl": {
         "title": "",
         "instruction": "Teraz liczy się moment — płać dokładnie w ugięciu.",
@@ -156,6 +160,7 @@
     },
     {
       "ordinal": 5,
+      "motion": "up",
       "pl": {
         "title": "",
         "instruction": "Czekaj na pełny siad — zad na ziemi.",
@@ -189,6 +194,7 @@
     },
     {
       "ordinal": 6,
+      "motion": "up",
       "pl": {
         "title": "",
         "instruction": "Pusta ręka prowadzi, nagroda przychodzi z drugiej.",
@@ -222,6 +228,7 @@
     },
     {
       "ordinal": 7,
+      "motion": "up",
       "pl": {
         "title": "",
         "instruction": "Zmniejsz gest — to od teraz Twój sygnał ręką.",
@@ -253,6 +260,8 @@
     },
     {
       "ordinal": 8,
+      "motion": "up",
+      "sound": true,
       "pl": {
         "title": "",
         "instruction": "Dopiero teraz wchodzi słowo — zawsze przed gestem.",
@@ -286,6 +295,7 @@
     },
     {
       "ordinal": 9,
+      "motion": "up",
       "pl": {
         "title": "",
         "instruction": "Samo słowo. Siad po geście nie liczy się jako trafienie.",
@@ -317,6 +327,7 @@
     },
     {
       "ordinal": 10,
+      "motion": "up",
       "pl": {
         "title": "",
         "instruction": "Zmień swoją pozycję — Twoja sylwetka jest częścią komendy.",

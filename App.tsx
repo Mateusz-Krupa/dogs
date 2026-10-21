@@ -3,13 +3,15 @@ import { Pressable, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 import { CATALOGUE, exerciseById } from './src/content/catalogue';
+import { behaviourById } from './src/content/behaviour';
 import { ENVIRONMENTS, STARTING_ENVIRONMENT_ID } from './src/content/environments';
 import { mistakesFor } from './src/content/mistakes';
 import { noseworkById } from './src/content/nosework';
 import { NoseworkScreen } from './src/features/nosework/NoseworkScreen';
 import { ExerciseList, type ExerciseProgress } from './src/features/catalogue/ExerciseList';
+import { ProblemScreen } from './src/features/problems/ProblemScreen';
 import { SetScreen } from './src/features/session/SetScreen';
-import { getLocale } from './src/i18n';
+import { getLocale, t } from './src/i18n';
 import { initialSetState, setReducer } from './src/features/session/setMachine';
 import { type RepOutcome } from './src/domain/verdict';
 import { move, nextEnvironment, previousEnvironment } from './src/domain/progression';
@@ -24,6 +26,7 @@ import { move, nextEnvironment, previousEnvironment } from './src/domain/progres
 export default function App() {
   const [openId, setOpenId] = useState<string | null>(null);
   const [openNoseId, setOpenNoseId] = useState<string | null>(null);
+  const [openProblemId, setOpenProblemId] = useState<string | null>(null);
   const [progress, setProgress] = useState<Record<string, ExerciseProgress>>({});
   const [nosework, setNosework] = useState<Record<string, number>>({});
   const [placeChange, setPlaceChange] = useState<'harder' | 'easier' | null>(null);
@@ -32,22 +35,32 @@ export default function App() {
   const locale = getLocale();
   const entry = openId ? exerciseById(openId) : undefined;
   const activity = openNoseId ? noseworkById(openNoseId) : undefined;
+  const problem = openProblemId ? behaviourById(openProblemId) : undefined;
 
   const open = useCallback((id: string) => {
     setPlaceChange(null);
     setOpenId(id);
     setOpenNoseId(null);
+    setOpenProblemId(null);
     dispatch({ type: 'reset' });
   }, []);
 
   const openNose = useCallback((id: string) => {
     setOpenNoseId(id);
     setOpenId(null);
+    setOpenProblemId(null);
+  }, []);
+
+  const openProblem = useCallback((id: string) => {
+    setOpenProblemId(id);
+    setOpenId(null);
+    setOpenNoseId(null);
   }, []);
 
   const close = useCallback(() => {
     setOpenId(null);
     setOpenNoseId(null);
+    setOpenProblemId(null);
     dispatch({ type: 'reset' });
   }, []);
 
@@ -85,7 +98,7 @@ export default function App() {
         <View style={styles.bar}>
           <Pressable accessibilityRole="button" onPress={close} style={styles.barBack}>
             <Text style={styles.barBackText}>
-              {locale === 'en' ? '‹ All exercises' : '‹ Wszystkie ćwiczenia'}
+              {t('common.allExercises')}
             </Text>
           </Pressable>
         </View>
@@ -105,6 +118,22 @@ export default function App() {
     );
   }
 
+  if (problem) {
+    return (
+      <SafeAreaView style={styles.safe}>
+        <View style={styles.bar}>
+          <Pressable accessibilityRole="button" onPress={close} style={styles.barBack}>
+            <Text style={styles.barBackText}>
+              {t('common.allExercises')}
+            </Text>
+          </Pressable>
+        </View>
+        <ProblemScreen issue={problem} onOpenExercise={open} />
+        <StatusBar style="auto" />
+      </SafeAreaView>
+    );
+  }
+
   if (!entry) {
     const firstUntouched = CATALOGUE.find((candidate) => progress[candidate.id] === undefined);
     return (
@@ -114,6 +143,7 @@ export default function App() {
           noseworkProgress={nosework}
           onOpen={open}
           onOpenNosework={openNose}
+          onOpenProblem={openProblem}
           progress={progress}
           recommendedId={firstUntouched?.id ?? CATALOGUE[0]!.id}
         />
@@ -139,7 +169,7 @@ export default function App() {
     <SafeAreaView style={styles.safe}>
       <View style={styles.bar}>
         <Pressable accessibilityRole="button" onPress={close} style={styles.barBack}>
-          <Text style={styles.barBackText}>{locale === 'en' ? '‹ All exercises' : '‹ Wszystkie ćwiczenia'}</Text>
+          <Text style={styles.barBackText}>{t('common.allExercises')}</Text>
         </Pressable>
         <Text style={styles.barTitle}>{names.name}</Text>
         <Text style={styles.barMeta}>
@@ -163,9 +193,12 @@ export default function App() {
         stepCount={entry.steps.length}
         stepCriterion={text.criterion}
         stepInstruction={text.instruction}
+        stepMotion={step.motion}
         stepNote={text.note}
+        stepPose={step.pose}
         stepReps={text.reps}
         stepSetup={text.setup}
+        stepSound={step.sound}
         stepOrdinal={stepOrdinal}
       />
 

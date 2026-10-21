@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import { SET_SIZE, type RepOutcome, type Verdict } from '../../domain/verdict';
 import type { Mistake } from '../../content/mistakes';
+import type { StepMotion } from '../../content/schema';
 import { GearRow } from '../../ui/GearRow';
 import type { GearId } from '../../ui/Gear';
 import { MOTION_BY_EXERCISE, StepDiagram } from '../../ui/StepDiagram';
@@ -38,6 +39,12 @@ export interface SetScreenProps {
   readonly stepNote?: string;
   /** What counts as a correct rep. Localised by the caller. */
   readonly stepCriterion: string;
+  /** Per-step diagram override: what this step actually acts on. */
+  readonly stepMotion?: StepMotion;
+  /** Per-step pose override, e.g. a step practised while the dog is sniffing. */
+  readonly stepPose?: Pose;
+  /** Whether the owner's voice belongs to this step. Verbal stages imply it. */
+  readonly stepSound?: boolean;
   readonly state: SetState;
   readonly onRecord: (outcome: RepOutcome) => void;
   readonly onUndo: () => void;
@@ -101,6 +108,9 @@ export function SetScreen({
   stepReps,
   stepNote,
   stepCriterion,
+  stepMotion,
+  stepPose,
+  stepSound,
   state,
   onRecord,
   onUndo,
@@ -114,7 +124,8 @@ export function SetScreen({
   const full = state.reps.length >= SET_SIZE;
   const verdict = state.verdict;
   const locale = getLocale();
-  const motion = MOTION_BY_EXERCISE[exerciseId] ?? 'up';
+  const motion = stepMotion ?? MOTION_BY_EXERCISE[exerciseId] ?? 'up';
+  const dogPose = stepPose ?? pose;
   // The food fades out as the ladder progresses — held, then gone, then the
   // word alone. Showing a treat on a verbal step would contradict the
   // instruction printed right below it.
@@ -138,7 +149,7 @@ export function SetScreen({
 
         <View style={styles.card}>
           <View style={styles.art}>
-            <StepDiagram motion={motion} pose={pose} size={150} stage={stage} />
+            <StepDiagram motion={motion} pose={dogPose} size={150} sound={stepSound} stage={stage} />
           </View>
           <Text style={styles.instruction}>{stepInstruction}</Text>
         </View>

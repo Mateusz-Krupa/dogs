@@ -79,6 +79,17 @@ export function expectNumber(value: unknown, source: string, path: string): numb
   return value;
 }
 
+/** Optional flag: absent means “let the defaults decide“, anything else is a typo. */
+export function expectOptionalBoolean(
+  value: unknown,
+  source: string,
+  path: string,
+): boolean | undefined {
+  if (value === undefined) return undefined;
+  if (typeof value !== 'boolean') throw contentError(source, path, 'must be true or false');
+  return value;
+}
+
 export function expectInteger(value: unknown, source: string, path: string): number {
   const parsed = expectNumber(value, source, path);
   if (!Number.isInteger(parsed)) throw contentError(source, path, 'must be a whole number');
@@ -167,6 +178,34 @@ const POSES: Record<Pose, true> = {
 
 export const GEAR_IDS_LIST: readonly GearId[] = Object.keys(GEAR_IDS) as GearId[];
 export const POSE_IDS: readonly Pose[] = Object.keys(POSES) as Pose[];
+
+/**
+ * The step-diagram vocabulary: what a step's picture draws. Defined from one
+ * `as const` list so the type and the validator can never drift apart; the
+ * drawings live in `ui/StepDiagram`.
+ */
+export const MOTION_IDS = [
+  'up', // treat above the nose, dog folds into a sit
+  'down', // nose to floor, straight in front of the paws
+  'draw', // down to the floor and drawn toward the handler
+  'hold', // nothing moves; the handler and the dog both stay put
+  'away', // the dog travels toward the hand held up in front
+  'leg', // the treat arrives low, at the handler's leg
+  'refuse', // a forbidden item on the ground, crossed out
+  'deny', // the same item offered at muzzle height, crossed out
+  'swap', // a better piece at the nose, the held item dropping to the floor
+  'contact', // a hand rests on the dog's back
+  'touchPaw', // a hand reaches down to a front paw
+  'lift', // a paw goes up and comes back down
+  'face', // the muzzle is lifted and inspected
+  'return', // the handler steps away from the held dog and comes back
+  'collar', // a hand closes on the collar and lets go
+  'door', // a door, and the gap being opened
+  'bowl', // a food bowl lowered, lifted back when the dog moves
+  'toss', // a treat tossed in an arc onto the mat
+] as const;
+
+export type StepMotion = (typeof MOTION_IDS)[number];
 
 /** Gear ids, checked against the union the icons are actually drawn from. */
 export function expectGearList(value: unknown, source: string, path: string): readonly GearId[] {

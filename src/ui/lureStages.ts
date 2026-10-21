@@ -12,13 +12,15 @@ export type LureStage = 'lure' | 'empty-hand' | 'verbal';
 /**
  * Where each exercise stops luring with food, and where the hand drops out.
  *
- * Exercises missing from this table never fade a lure in the first place —
- * recall, loose lead and handling are food-led the whole way through — so they
- * stay on `lure` and simply show where the food is.
+ * Steps whose copy still works *with* the hand — the empty-hand gesture paired
+ * with the word — stay on `empty-hand` even once the word is in play, and say
+ * so with their own `sound` flag. Exercises missing from this table never fade
+ * a lure in the first place — recall, loose lead and handling are food-led the
+ * whole way through — so they stay on `lure` and simply show where the food is.
  */
 const BOUNDARIES: Readonly<Record<string, { readonly lureUntil: number; readonly handUntil: number }>> = {
-  sit: { lureUntil: 5, handUntil: 7 },
-  down: { lureUntil: 3, handUntil: 4 },
+  sit: { lureUntil: 5, handUntil: 8 },
+  down: { lureUntil: 3, handUntil: 5 },
   look: { lureUntil: 2, handUntil: 3 },
   mat: { lureUntil: 2, handUntil: 3 },
   leave: { lureUntil: 4, handUntil: 4 },

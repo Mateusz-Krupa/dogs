@@ -7,6 +7,7 @@ export const pl = {
     appName: 'pettrainer',
     cancel: 'Anuluj',
     back: 'Wstecz',
+    allExercises: '‹ Wszystkie ćwiczenia',
     next: 'Dalej',
     done: 'Gotowe',
     retry: 'Spróbuj ponownie',
@@ -68,6 +69,19 @@ export const pl = {
     done: 'Zrobione',
     notScored:
       'Tu nie ma trafień i pudeł. Węszenie nagradza się samo, a ocenianie go kusi, żeby psu pomagać — a cała wartość jest w tym, że rozwiązuje to sam.',
+  },
+  problems: {
+    stop: 'Stop — zanim zaczniesz',
+    title: 'Problemy',
+    subtitle: 'Gdy chodzi o zachowanie, nie o komendę',
+    recognizes: 'Skąd wiesz, że to to',
+    dont: 'Nie rób tego',
+    now: 'Zacznij dziś',
+    work: 'Jak nad tym pracować',
+    practices: 'Co się przyda z treningu',
+    professional: 'Kiedy do specjalisty',
+    sudden:
+      'Nagła zmiana zachowania u psa, któremu wcześniej wszystko było dobrze — zacznij od weterynarza. Ból potrafi wyglądać jak nieposłuszeństwo.',
   },
   verdict: {
     push: {

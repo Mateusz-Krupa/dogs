@@ -9,6 +9,7 @@ export const en: LocaleCatalogue = {
     appName: 'pettrainer',
     cancel: 'Cancel',
     back: 'Back',
+    allExercises: '‹ All exercises',
     next: 'Next',
     done: 'Done',
     retry: 'Try again',
@@ -70,6 +71,19 @@ export const en: LocaleCatalogue = {
     done: 'Done',
     notScored:
       'No hits and misses here. Sniffing pays for itself, and scoring it tempts you to help — and the whole value is that the dog works it out alone.',
+  },
+  problems: {
+    stop: 'Stop — before you start',
+    title: 'Problems',
+    subtitle: 'When it is behaviour, not a cue',
+    recognizes: 'How you recognise it',
+    dont: 'Do not do this',
+    now: 'Start today',
+    work: 'How to work on it',
+    practices: 'What helps from training',
+    professional: 'When to see a professional',
+    sudden:
+      'A sudden behaviour change in a dog that was fine before — start with the vet. Pain can look like disobedience.',
   },
   verdict: {
     push: {

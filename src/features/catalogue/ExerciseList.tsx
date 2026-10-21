@@ -2,6 +2,7 @@ import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import { CATALOGUE, type CatalogueEntry } from '../../content/catalogue';
 import { ENVIRONMENTS } from '../../content/environments';
+import { BEHAVIOUR } from '../../content/behaviour';
 import { NOSEWORK } from '../../content/nosework';
 import { isFullyGeneralized, isLadderComplete, rungsCleared } from '../../domain/progression';
 import { DogPose } from '../../ui/DogPose';
@@ -32,6 +33,8 @@ export interface ExerciseListProps {
   readonly recommendedId: string;
   readonly onOpen: (exerciseId: string) => void;
   readonly onOpenNosework: (activityId: string) => void;
+  /** Opens a behaviour problem card. */
+  readonly onOpenProblem: (issueId: string) => void;
 }
 
 /** Prerequisites that are not yet started, for the advisory note. */
@@ -166,6 +169,7 @@ export function ExerciseList({
   recommendedId,
   onOpen,
   onOpenNosework,
+  onOpenProblem,
 }: ExerciseListProps) {
   const locale = getLocale();
 
@@ -230,6 +234,33 @@ export function ExerciseList({
                   />
                 </View>
               </View>
+            </Pressable>
+          );
+        })}
+      </View>
+      <View style={styles.sectionHead}>
+        <Text style={styles.sectionTitle}>{t('problems.title')}</Text>
+        <Text style={styles.sectionSub}>{t('problems.subtitle')}</Text>
+      </View>
+
+      <View style={styles.list}>
+        {BEHAVIOUR.map((issue) => {
+          const names = locale === 'en' ? issue.names.en : issue.names.pl;
+          return (
+            <Pressable
+              accessibilityLabel={names.name}
+              accessibilityRole="button"
+              key={issue.id}
+              onPress={() => onOpenProblem(issue.id)}
+              style={({ pressed }) => [styles.card, pressed && styles.cardPressed]}
+            >
+              <View style={styles.body}>
+                <Text style={styles.name}>{names.name}</Text>
+                <Text numberOfLines={1} style={styles.tagline}>
+                  {names.tagline}
+                </Text>
+              </View>
+              <Text style={styles.chevron}>›</Text>
             </Pressable>
           );
         })}
@@ -309,6 +340,11 @@ const styles = StyleSheet.create({
   },
   cardPressed: {
     opacity: 0.75,
+  },
+  chevron: {
+    fontSize: 22,
+    color: '#b9c2ba',
+    paddingHorizontal: 4,
   },
   art: {
     width: 84,

@@ -10,12 +10,14 @@
 import type { CatalogueEntry, ExerciseSeed, StepCopy, StepSeed } from '../schema';
 import {
   CATEGORIES,
+  MOTION_IDS,
   POSE_IDS,
   contentError,
   expectGearList,
   expectInteger,
   expectLocales,
   expectOneOf,
+  expectOptionalBoolean,
   expectOptionalList,
   expectOrdinal,
   expectRecord,
@@ -46,8 +48,20 @@ function parseStepCopy(value: unknown, source: string, path: string): StepCopy {
 
 function parseStep(value: unknown, source: string, path: string, index: number): StepSeed {
   const record = expectRecord(value, source, path);
+  const motion =
+    record.motion === undefined
+      ? undefined
+      : expectOneOf(record.motion, MOTION_IDS, source, fieldPath(path, 'motion'));
+  const pose =
+    record.pose === undefined
+      ? undefined
+      : expectOneOf(record.pose, POSE_IDS, source, fieldPath(path, 'pose'));
+  const sound = expectOptionalBoolean(record.sound, source, fieldPath(path, 'sound'));
   return {
     ordinal: expectOrdinal(record.ordinal, source, fieldPath(path, 'ordinal'), index),
+    ...(motion === undefined ? {} : { motion }),
+    ...(pose === undefined ? {} : { pose }),
+    ...(sound === undefined ? {} : { sound }),
     pl: parseStepCopy(record.pl, source, fieldPath(path, 'pl')),
     en: parseStepCopy(record.en, source, fieldPath(path, 'en')),
   };

@@ -16,6 +16,7 @@
  */
 
 import type { ExerciseCategory } from '../db/schema';
+import type { StepMotion } from './schema/checks';
 import type { GearId } from '../ui/Gear';
 import type { Pose } from '../ui/DogPose';
 
@@ -34,11 +35,24 @@ export interface StepCopy {
   /** Heading for the step. Not written yet — blank in the JSON means unwritten. */
   readonly title?: string;
 }
-
 /** One micro-step on the installation ladder. */
 export interface StepSeed {
   /** 1-based position in the ladder. */
   readonly ordinal: number;
+  /**
+   * What the diagram draws for this step. Defaults to the exercise's motion;
+   * a step that practises something else — stepping away, the collar grab —
+   * names its own motion so the picture cannot drift from the instruction.
+   */
+  readonly motion?: StepMotion;
+  /** Pose override for steps that practise the behaviour in a different stance. */
+  readonly pose?: Pose;
+  /**
+   * Whether the owner's voice is part of this step. Drives the sound mark in
+   * the diagram; verbal ladder stages imply it, so it is only set where food
+   * is still in play and the word rides alongside it.
+   */
+  readonly sound?: boolean;
   readonly pl: StepCopy;
   readonly en: StepCopy;
 }
@@ -142,7 +156,42 @@ export interface Mistake {
   readonly en: Mistake['pl'];
 }
 
+/**
+ * An everyday behaviour problem — barking, fear, jumping — written as an
+ * owner finds it: mid-chaos, without vocabulary. `avoid` is welfare first:
+ * every item names the thing that makes it worse and why, because a bare
+ * prohibition gets argued with. `now` is management (what to change today,
+ * before any training), `work` is the training itself, and `professional`
+ * is the welfare line where this app stops and a vet or behaviourist
+ * starts. `practices` links to exercise ids; they are advisory and must
+ * always resolve.
+ */
+export interface BehaviourIssue {
+  readonly id: string;
+  readonly sortOrder: number;
+  readonly names: {
+    readonly pl: { readonly name: string; readonly tagline: string };
+    readonly en: { readonly name: string; readonly tagline: string };
+  };
+  readonly recognizes: { readonly pl: string; readonly en: string };
+  /**
+   * The red-flag stop line: the conditions under which this card's training
+   * is the wrong answer and a vet or behaviourist is the right one. Rendered
+   * above the training sections, so an owner reading a bite or a panic cannot
+   * scroll past it on the way to a protocol.
+   */
+  readonly urgent: { readonly pl: string; readonly en: string };
+  readonly avoid: { readonly pl: readonly string[]; readonly en: readonly string[] };
+  readonly now: { readonly pl: readonly string[]; readonly en: readonly string[] };
+  readonly work: { readonly pl: readonly string[]; readonly en: readonly string[] };
+  readonly professional: { readonly pl: string; readonly en: string };
+  readonly practices: readonly string[];
+}
+
 export { parseCatalogueEntry, parseExercise } from './schema/exercise';
 export { parseEnvironments, parseEnvironmentSet } from './schema/environments';
 export { parseMistakes } from './schema/mistakes';
 export { parseNoseworkActivity } from './schema/nosework';
+export { parseBehaviourIssue } from './schema/behaviour';
+
+export type { StepMotion };

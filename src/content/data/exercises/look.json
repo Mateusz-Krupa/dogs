@@ -24,6 +24,7 @@
   "steps": [
     {
       "ordinal": 1,
+      "motion": "up",
       "pl": {
         "title": "",
         "instruction": "Nagroda ma być przy Twoim oku, nie przy psim nosie.",
@@ -57,6 +58,7 @@
     },
     {
       "ordinal": 2,
+      "motion": "up",
       "pl": {
         "title": "",
         "instruction": "Dwie sekundy nieprzerwanego kontaktu.",
@@ -86,6 +88,7 @@
     },
     {
       "ordinal": 3,
+      "motion": "hold",
       "pl": {
         "title": "",
         "instruction": "Smakołyk do kieszeni — czekasz, aż pies sam spojrzy.",
@@ -119,6 +122,7 @@
     },
     {
       "ordinal": 4,
+      "motion": "hold",
       "pl": {
         "title": "",
         "instruction": "Słowo wchodzi na gotowe zachowanie.",
@@ -150,6 +154,8 @@
     },
     {
       "ordinal": 5,
+      "motion": "hold",
+      "pose": "sniff",
       "pl": {
         "title": "",
         "instruction": "Poproś o „patrz\", gdy pies jest czymś zajęty.",

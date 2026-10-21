@@ -28,53 +28,137 @@
   "steps": [
     {
       "ordinal": 1,
+      "motion": "door",
       "pl": {
         "title": "",
-        "instruction": "Przy zamkniętych drzwiach poproś o siad i zacznij powoli naciskać klamkę. Gdy pies wstanie — puść klamkę bez słowa. Gdy zostanie — otwórz na centymetr i nagródź.",
+        "instruction": "Klamka w dół tylko na centymetr — i tylko wtedy, gdy pies zostaje.",
+        "setup": [
+          "Zamknięte drzwi, za nimi pusto",
+          "Smakołyki w ręce"
+        ],
+        "reps": [
+          "Poproś o siad przy drzwiach",
+          "Zacznij powoli naciskać klamkę",
+          "Pies wstaje — puść klamkę bez słowa",
+          "Pies zostaje — otwórz na centymetr i nagródź"
+        ],
         "criterion": "Pies zostaje w siadzie, gdy dotykasz klamki."
       },
       "en": {
         "title": "",
-        "instruction": "At a closed door, ask for a sit and slowly start pressing the handle. If the dog gets up, let go without a word. If they hold, open a centimetre and pay.",
+        "instruction": "The handle goes down a centimetre — and only while the dog stays.",
+        "setup": [
+          "A closed door, nothing behind it right now",
+          "Treats in your hand"
+        ],
+        "reps": [
+          "Ask for a sit at the door",
+          "Start pressing the handle slowly",
+          "If the dog rises, let go without a word",
+          "If they hold, open a centimetre and pay"
+        ],
         "criterion": "The dog stays sitting while you touch the handle."
       }
     },
     {
       "ordinal": 2,
+      "motion": "door",
       "pl": {
         "title": "",
-        "instruction": "Uchyl drzwi na dłoń. Każde wstanie zamyka drzwi — bez komentarza, bez „nie\".",
+        "instruction": "Drzwi uchylone na dłoń. Każde wstanie je zamyka — bez komentarza i bez „nie\".",
+        "setup": [
+          "Te same drzwi",
+          "Nagroda po stronie drzwi"
+        ],
+        "reps": [
+          "Poproś o siad i uchyl drzwi na szerokość dłoni",
+          "Pies wstaje — cicho zamknij",
+          "Pies zostaje — nagródź i otwórz ponownie"
+        ],
+        "note": "Nie powtarzaj komendy ani nie mów „nie\". Zamykające się drzwi są całą informacją, a Twój głos tylko ją zagłusza.",
         "criterion": "Pies zostaje przy drzwiach uchylonych na szerokość dłoni."
       },
       "en": {
         "title": "",
-        "instruction": "Open the door a hand’s width. Any getting up closes it again — no comment, no “no”.",
-        "criterion": "The dog holds with the door open a hand’s width."
+        "instruction": "The door open a hand's width. Every rise closes it — no comment, no “no”.",
+        "setup": [
+          "The same door",
+          "Reward on the door side"
+        ],
+        "reps": [
+          "Ask for a sit and open the door a hand's width",
+          "If the dog rises, close it quietly",
+          "If they hold, pay and open it again"
+        ],
+        "note": "Do not repeat the cue or say “no”. The closing door is the entire message; your voice only drowns it out.",
+        "criterion": "The dog holds with the door open a hand's width."
       }
     },
     {
       "ordinal": 3,
+      "motion": "door",
       "pl": {
         "title": "",
-        "instruction": "Otwórz całe drzwi. Dopiero po chwili zwolnij psa słowem „koniec\" i pozwól wyjść.",
+        "instruction": "Całe drzwi otwarte — pies wychodzi dopiero na „koniec\".",
+        "setup": [
+          "Za drzwiami nic się nie dzieje",
+          "Smakołyki w zasięgu"
+        ],
+        "reps": [
+          "Poproś o siad i otwórz drzwi całkowicie",
+          "Odczekaj chwilę w ciszy",
+          "Zwolnij słowem „koniec\" i pozwól wyjść"
+        ],
         "criterion": "Pies czeka przy całkowicie otwartych drzwiach do zwolnienia."
       },
       "en": {
         "title": "",
-        "instruction": "Open the door fully. After a beat, release with “okay” and let them through.",
+        "instruction": "The door fully open — the dog goes through only on “okay”.",
+        "setup": [
+          "Nothing happening behind the door",
+          "Treats within reach"
+        ],
+        "reps": [
+          "Ask for a sit and open the door fully",
+          "Wait a beat in silence",
+          "Release with “okay” and let them through"
+        ],
         "criterion": "The dog waits at a fully open door until released."
       }
     },
     {
       "ordinal": 4,
+      "motion": "bowl",
       "pl": {
         "title": "",
-        "instruction": "To samo z miską: trzymaj ją w rękach i opuszczaj powoli. Ruch psa w stronę miski podnosi ją z powrotem.",
+        "instruction": "To samo z miską: ruch psa w jej stronę podnosi miskę z powrotem.",
+        "setup": [
+          "Miska z karmą w rękach",
+          "Pies przy Tobie, nie przy podłodze"
+        ],
+        "reps": [
+          "Zacznij powoli opuszczać miskę",
+          "Pies rusza w jej stronę — podnieś miskę z powrotem",
+          "Pies zostaje — opuszczaj dalej",
+          "Miska na podłodze — zwolnij słowem „koniec\""
+        ],
+        "note": "Ta sama zasada co przy drzwiach: dostęp zdobywa się zostaniem, nie rzuceniem się. Miska nigdy nie frunie w psi pysk w geście frustracji.",
         "criterion": "Miska dotyka podłogi, a pies nie rusza się, dopóki nie pozwolisz."
       },
       "en": {
         "title": "",
-        "instruction": "The same with a food bowl: hold it and lower it slowly. Any move toward it lifts the bowl back up.",
+        "instruction": "The same with the food bowl: any move toward it lifts it back up.",
+        "setup": [
+          "The filled bowl in your hands",
+          "The dog at your side, not at the floor"
+        ],
+        "reps": [
+          "Start lowering the bowl slowly",
+          "The dog moves toward it — lift the bowl back up",
+          "The dog holds — keep lowering",
+          "Bowl on the floor — release with “okay”"
+        ],
+        "note": "The same rule as at the door: access is earned by staying, not by lunging. The bowl never flies forward in a moment of frustration.",
         "criterion": "The bowl reaches the floor and the dog does not move until released."
       }
     }
