@@ -1,0 +1,84 @@
+{
+  "id": "track",
+  "pose": "search",
+  "sortOrder": 6,
+  "names": {
+    "pl": {
+      "name": "pierwszy ślad",
+      "description": "Pies idzie po śladzie Twoich stóp. Najbardziej zaawansowana rzecz w tej kategorii i jednocześnie najprostsza do zrobienia w ogrodzie. To wstęp do tropienia, które w Polsce jest osobną dyscypliną — ale na tym poziomie to po prostu bardzo dobra zabawa."
+    },
+    "en": {
+      "name": "first track",
+      "description": "The dog follows the trail of your footsteps. The most advanced thing in this category and also the easiest to set up in a garden. It is the start of tracking as a sport — but at this level it is simply a very good game."
+    }
+  },
+  "tagline": {
+    "pl": "Pies idzie Twoim śladem",
+    "en": "Following your footsteps"
+  },
+  "levels": [
+    {
+      "ordinal": 1,
+      "minutes": 5,
+      "gear": [
+        "treats",
+        "grass",
+        "helper"
+      ],
+      "pl": {
+        "title": "Dziesięć kroków w trawie",
+        "setup": "Wilgotna trawa trzyma zapach najlepiej — rano albo po deszczu. Pies czeka przywiązany albo z drugą osobą.",
+        "how": "Przejdź dziesięć kroków w linii prostej, przydeptując trawę. Na końcu połóż garść karmy. Wróć **tą samą drogą**. Przyprowadź psa na start i powiedz „szukaj\".",
+        "watchFor": "Pies idzie z nosem przy ziemi wzdłuż śladu. Jeśli idzie górnym wiatrem na skróty — ślad jest za świeży albo za krótki."
+      },
+      "en": {
+        "title": "Ten paces in grass",
+        "setup": "Damp grass holds scent best — early morning or after rain. The dog waits tied or with a second person.",
+        "how": "Walk ten paces in a straight line, treading the grass down. Drop a handful of kibble at the end. Return **along the same line**. Bring the dog to the start and say “find it”.",
+        "watchFor": "Nose down, following the line. Cutting across on the wind means the track is too fresh or too short."
+      }
+    },
+    {
+      "ordinal": 2,
+      "minutes": 8,
+      "gear": [
+        "treats",
+        "grass",
+        "helper"
+      ],
+      "pl": {
+        "title": "Dwadzieścia kroków, odczekane",
+        "setup": "Ten sam układ, ale po położeniu śladu odczekaj dziesięć minut.",
+        "how": "Starszy ślad jest trudniejszy, bo zapach słabnie i rozwiewa się. Dłuższe odczekanie to główna oś trudności w tropieniu.",
+        "watchFor": "Wolniejsza, dokładniejsza praca. Zgubienie śladu i odnalezienie go to sukces, nie porażka."
+      },
+      "en": {
+        "title": "Twenty paces, aged",
+        "setup": "The same setup, but wait ten minutes after laying the track.",
+        "how": "An older track is harder because the scent fades and drifts. Ageing is the main difficulty axis in tracking.",
+        "watchFor": "Slower, more careful work. Losing the line and recovering it is a success, not a failure."
+      }
+    },
+    {
+      "ordinal": 3,
+      "minutes": 10,
+      "gear": [
+        "treats",
+        "grass",
+        "helper"
+      ],
+      "pl": {
+        "title": "Ślad z zakrętem",
+        "setup": "Trzydzieści kroków z jednym zakrętem pod kątem prostym. Karma w kilku miejscach wzdłuż trasy, nie tylko na końcu.",
+        "how": "Zakręt jest realnym wyzwaniem — pies zwykle przestrzeliwuje i musi sam się cofnąć.",
+        "watchFor": "Pies przestrzeliwuje zakręt, zatrzymuje się i wraca. To najlepszy moment w całej kategorii: widać, jak pies myśli."
+      },
+      "en": {
+        "title": "A track with a corner",
+        "setup": "Thirty paces with one right-angle turn. Kibble at a few points along the way, not only at the end.",
+        "how": "The corner is the real challenge — most dogs overshoot and have to work their way back.",
+        "watchFor": "They overshoot, stop and come back. This is the best moment in the whole category: you can watch the dog think."
+      }
+    }
+  ]
+}

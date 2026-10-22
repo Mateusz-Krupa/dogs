@@ -1,0 +1,26 @@
+[
+  {
+    "pl": {
+      "symptom": "Pies przestał reagować na imię",
+      "why": "Najczęściej dlatego, że imię zaczęło zapowiadać koniec zabawy, kąpiel albo upomnienie. Pies nie ignoruje — nauczył się, że to się nie opłaca.",
+      "fix": "Przez dwa tygodnie używaj imienia wyłącznie wtedy, gdy masz czym nagrodzić. Do upominania nie używaj imienia nigdy."
+    },
+    "en": {
+      "symptom": "The dog stopped responding to their name",
+      "why": "Usually because the name started predicting the end of fun, a bath or a telling-off. They are not ignoring you — they learned it does not pay.",
+      "fix": "For two weeks use the name only when you have something to pay with. Never use it to scold."
+    }
+  },
+  {
+    "pl": {
+      "symptom": "Powtarzam imię po kilka razy",
+      "why": "Każde powtórzenie uczy psa, że pierwsze wywołanie nie ma znaczenia. Imię zamienia się w tło.",
+      "fix": "Jedno wywołanie. Brak reakcji — odczekaj, podejdź bliżej, zmniejsz rozproszenia i spróbuj za minutę."
+    },
+    "en": {
+      "symptom": "I end up calling the name several times",
+      "why": "Each repeat teaches the dog the first call does not matter. The name becomes background noise.",
+      "fix": "One call. No response means wait, move closer, lower the distractions and try again in a minute."
+    }
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "id": "alone",
+  "sortOrder": 10,
+  "names": {
+    "pl": {
+      "name": "Zostawanie samemu: skomlenie i niszczenie",
+      "tagline": "To nie złośliwość, to panika"
+    },
+    "en": {
+      "name": "Home alone: whining and wrecking",
+      "tagline": "Not spite, panic"
+    }
+  },
+  "recognizes": {
+    "pl": "Pies zaczyna nerwowo krążyć już przy sięganiu po kurtkę. Zniszczenia skupione przy wyjściu — framugi, parapety, smycz wisząca na klamce; ślady śliny, załatwienie się w domu mimo zupełnej czystości, jednotonowe wycie lub szczekanie od pierwszej minuty nieobecności.",
+    "en": "The dog starts pacing the moment your hand goes for the jacket. Damage clustered at the exit — door frames, windowsills, the lead pulled off the hook; drool marks, house-soiling despite being clean, one-toned howling or barking from the first minute of absence."
+  },
+  "urgent": {
+    "pl": "Sprawdź najpierw, co naprawdę widzisz. Wycie od pierwszej minuty, ślina na drzwiach, załatwianie się mimo zupełnej czystości, rany przy wyjściu — to panika separacyjna. Nie naprawisz jej ćwiczeniami z tej aplikacji: potrzebujesz weterynarza (leczenie bywa podporą pracy) i behawiorysty. Trening poniżej jest wyłącznie dla psa, który marudzi z nudów, ale na nagraniu w domu jest spokojny.",
+    "en": "First check what you are actually seeing. Howling from minute one, drool on the door, house-soiling despite being clean, wounds at the exit — that is separation panic. This app cannot fix it: you need a vet (medication is often the floor the work stands on) and a behaviourist. The training below is only for a dog who whines from boredom yet is calm at home on the recording."
+  },
+  "avoid": {
+    "pl": [
+      "Nie zostawiaj „żeby się wypłakał\" — panika nie mija, ona zamiera i wraca silniejsza.",
+      "Nie karz po powrocie za zniszczone buty — pies nie łączy bałaganu z Twoją nieobecnością, widzi tylko wracającego, groźnego człowieka.",
+      "Nie dramatyzuj pożegnań ani powrotów — początek i koniec wyjścia muszą być najnudniejszą częścią dnia.",
+      "Nie nagrywaj i nie podglądaj przez aplikację, żeby się denerwować — nagranie jest po to, by znać dokładną sekundę, w której zaczyna się narastanie."
+    ],
+    "en": [
+      "Do not leave him “to cry it out\" — panic does not pass, it freezes and comes back stronger.",
+      "Do not punish destroyed shoes after the fact — the dog cannot link the mess to your absence; he only sees a returning, dangerous human.",
+      "Do not dramatise hellos and goodbyes — the start and end of every exit must be the dullest part of the day.",
+      "Do not run the camera app to work yourself up — the recording is for finding the exact second the build-up starts."
+    ]
+  },
+  "now": {
+    "pl": [
+      "Przed nieobecnością: spacer z węszeniem i coś do żucia, wydawane w momencie wyjścia i zabierane w momencie powrotu.",
+      "Wyjście bez ceremonii: kurtka na grzbiet krzesła zamiast na wieszak, klucze bez grzechotania, drzwi bez pożegnania.",
+      "Trenuj nieobecność także w domu: bramka między wami, jesteś w zasięgu, ale nie w kontakcie.",
+      "Zapisz godzinę wyjścia i stan pokoju po powrocie — dane mówią więcej niż przeczucia."
+    ],
+    "en": [
+      "Before an absence: a sniffing walk and something to chew, given at the moment you leave and taken away the moment you return.",
+      "Exit without ceremony: jacket over the chair back instead of on the hook, keys without jingling, door without a goodbye.",
+      "Practise absence inside the house too: a gate between you, in reach but not in contact.",
+      "Log the leaving time and the room's condition on return — data says more than gut feeling."
+    ]
+  },
+  "work": {
+    "pl": [
+      "Odczulaj sekwencje wyjścia: klucze w dłoń i siadasz z powrotem; kurtka na grzbiet i na kanapę. Pies musi przestać czytać z tego scenariusz.",
+      "Sekundy, nie godziny: drzwi zamknięte, poczekaj, wejdź z powrotem nim cokolwiek zacznie się budować. Progi rosną dniami.",
+      "Wracaj wcześniej, niż pies się niepokoi, nie później — trening, który kończy się paniką, trenuje panikę.",
+      "Nudzi się, ale na nagraniu jest spokojny? Zostaw mu zadanie do żucia na wyjście. Wycie, ślina i rany — przerwij trening i zadzwoń do behawiorysty."
+    ],
+    "en": [
+      "Desensitise the exit sequence: keys in hand and sit back down; jacket on and straight to the sofa. The dog must stop reading a script in these cues.",
+      "Seconds, not hours: door closed, wait, back inside before anything starts building. Thresholds grow by days.",
+      "Return before the dog worries, not after — a session that ends in panic has trained panic.",
+      "Bored but calm on the recording? Leave a chew job for the departure. Howling, drool and wounds — stop the training and call a behaviourist."
+    ]
+  },
+  "professional": {
+    "pl": "Nagłe niszczenie u dorosłego psa, który do tej pory zostawał dobrze — weterynarz, szukaj bólu. Poza tym panika separacyjna to zawsze praca z behawiorystą, nie z aplikacją.",
+    "en": "Sudden destruction in an adult dog who used to stay fine — vet, look for pain. Otherwise, separation panic is always behaviourist work, not app work."
+  },
+  "practices": [
+    "wait",
+    "mat",
+    "sit",
+    "down"
+  ]
+}

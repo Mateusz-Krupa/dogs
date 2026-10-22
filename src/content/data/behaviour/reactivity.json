@@ -21,7 +21,7 @@
   },
   "avoid": {
     "pl": [
-      "Nie szarp smyczą i nie zakładaj kolczatki ani elektroobroży — ból skojarzy psu widok innego psa, a nie Twoje szarpnięcie. Reaktywność urośnie, a ostatnie ostrzeżenie zniknie tuż przed ugryzieniem.",
+      "Nie szarp smyczą i nie zakładaj kolczatki ani elektroobroży — pies skojarzy ból z widokiem drugiego psa, a nie z Twoim szarpnięciem. Reaktywność urośnie, a ostatnie ostrzeżenie zniknie tuż przed ugryzieniem.",
       "Nie ciągnij do powitania „żeby się poznał i oswoił\" — przymusowy kontakt pogłębia dystres.",
       "Nie pozwalaj obcym zagadywać i głaskać psa w szczycie pobudzenia — odbierasz sobie całą pracę za darmo."
     ],
@@ -36,7 +36,7 @@
       "Trzymaj dystans, przy którym pies jest w stanie odwrócić od psa głowę. To punkt startu treningu, nie kompromis.",
       "Zmieniaj ulicę bez wahania — trasa spaceru jest Twoim narzędziem, nie porażką.",
       "Pojawia się pies = pada deszcz smakołyków, zanim jeszcze pies zareaguje.",
-      "Kalec koszykowy przy jakimkolwiek kłapnięciu zębami — bezpieczeństwo na spacerze to nie wstyd, tylko sprzęt."
+      "Kaganiec koszykowy przy pierwszym kłapnięciu zębami — bezpieczeństwo na spacerze to nie wstyd, tylko sprzęt."
     ],
     "en": [
       "Keep the distance at which the dog can still turn its head away from the other dog. That is the starting line of training, not a compromise.",
@@ -48,19 +48,19 @@
   "work": {
     "pl": [
       "„Patrz\" w bezpiecznym dystansie, codziennie, krótko.",
-      "Zajmij i odłącz: nagradzaj każde samoistne spojrzenie odpuszczone z psa na Ciebie.",
+      "Gdy pies sam oderwie wzrok od drugiego psa i spojrzy na Ciebie — natychmiast nagródź.",
       "Awaryjny obrót: jedno słowo, smakołyk przed nosem, zwrot o sto osiemdziesiąt — ratuje sytuacje, których nie dało się przewidzieć.",
       "Nie trenuj przy psich ogrodzeniach i oknach — to najgorsze możliwe sale ćwiczeń, karmią frustrację."
     ],
     "en": [
       "“Look\" at a safe distance, daily, in short doses.",
-      "Engage and disengage: pay every head the dog chooses to take off the other dog and bring to you.",
+      "When the dog looks away from the other dog on its own and turns to you — pay at once.",
       "Emergency U-turn: one word, a treat at the nose, a hundred and eighty degrees — it saves the encounters you could not foresee.",
       "Do not train at dog fences and windows — the worst possible gyms, they feed frustration."
     ]
   },
   "professional": {
-    "pl": "Ugryzienia i ich próby, pies niezdolny przyjąć smakołyku na żadnym dystansie, w grę wchodzą suki w cieczce — pracuj z behawiorystą. Nagły skok reaktywności u psa, który taki nie był — najpierw weterynarz, szukaj bólu.",
+    "pl": "Ugryzienia i ich próby, pies, który nie przyjmie smakołyku na żadnym dystansie, albo suki w cieczce w pobliżu — pracuj z behawiorystą. Nagły skok reaktywności u psa, który taki nie był — najpierw weterynarz, szukaj bólu.",
     "en": "Bites and attempted bites, a dog that cannot take food at any distance, bitches in heat in the mix — work with a behaviourist. A sudden spike in reactivity in a dog that was not like this — vet first, look for pain."
   },
   "practices": [

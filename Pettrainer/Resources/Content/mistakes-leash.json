@@ -1,0 +1,26 @@
+[
+  {
+    "pl": {
+      "symptom": "Pies ciągnie przez cały spacer",
+      "why": "Ciągnięcie działa: pies ciągnie, idziecie dalej, czyli zachowanie zostaje nagrodzone kilkaset razy dziennie.",
+      "fix": "Zatrzymuj się przy każdym napięciu smyczy. Pierwsze spacery będą krótkie i nudne — to normalne i to działa."
+    },
+    "en": {
+      "symptom": "The dog pulls for the whole walk",
+      "why": "Pulling works: the dog pulls, you keep walking, and the behaviour gets paid a few hundred times a day.",
+      "fix": "Stop every time the lead goes tight. The first walks will be short and boring — that is normal and it works."
+    }
+  },
+  {
+    "pl": {
+      "symptom": "Pies ciągnie tylko na początku spaceru",
+      "why": "Początek to szczyt pobudzenia. To nie jest problem treningowy, tylko stan psa.",
+      "fix": "Zacznij od minuty wąchania przy domu, zanim ruszycie. Obniżenie pobudzenia robi więcej niż kolejne powtórzenia."
+    },
+    "en": {
+      "symptom": "The dog only pulls at the start of the walk",
+      "why": "The start is peak arousal. This is not a training gap, it is the dog’s state.",
+      "fix": "Spend a minute sniffing near the house before you set off. Lowering arousal does more than more repetitions."
+    }
+  }
+]

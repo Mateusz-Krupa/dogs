@@ -32,7 +32,7 @@
       "sound": true,
       "pl": {
         "title": "",
-        "instruction": "Powrót ma się zawsze opłacać — wołaj wesoło, płać hojnie i puść psa wolno.",
+        "instruction": "Powrót ma się zawsze opłacać — wołaj wesoło, płać hojnie i pozwól psu wrócić do zabawy.",
         "setup": [
           "W domu, cicho",
           "Dwa kroki od psa"
@@ -40,7 +40,7 @@
         "reps": [
           "Powiedz imię psa i „do mnie\" radosnym tonem",
           "Gdy przyjdzie — nagródź hojnie",
-          "Pozwól mu odejść z powrotem do swoich spraw"
+          "Pozwól mu wrócić do swoich spraw"
         ],
         "note": "To, że pies wraca, nie może nigdy kosztować go niczego przykrego. Jeśli wołasz, by zakończyć zabawę albo skończyć spacer, następnym razem pies przemyśli, czy warto.",
         "criterion": "Pies przychodzi w ciągu trzech sekund."
@@ -145,7 +145,7 @@
           "Powiedz imię i „do mnie\" raz",
           "Brak reakcji — nie powtarzaj komendy i nie zwijaj linki: podejdź do psa, pokaż nagrodę i przywołaj ponownie z bliska"
         ],
-        "note": "Przywołanie bez reakcji uczy, że „do mnie\" jest opcjonalne. Linka daje bezpieczeństwo, ale nie ciągnij psa po niej — następnym razem wołaj z dystansu, który kończy się sukcesem.",
+        "note": "Przywołanie bez reakcji uczy, że „do mnie\" jest opcjonalne. Linka daje bezpieczeństwo, ale nie ciągnij psa po niej — następnym razem wołaj z takiego dystansu, który kończy się sukcesem.",
         "criterion": "Pies przybiega z pięciu metrów na lince."
       },
       "en": {

@@ -1,0 +1,189 @@
+{
+  "id": "look",
+  "category": "foundation",
+  "sortOrder": 2,
+  "pose": "look",
+  "requires": [],
+  "gear": [
+    "treats"
+  ],
+  "names": {
+    "pl": {
+      "name": "patrz",
+      "description": "Pies nawiązuje i utrzymuje kontakt wzrokowy na prośbę. Brzmi błaho, a jest najbardziej użyteczną rzeczą na spacerze: pies, który patrzy na Ciebie, nie patrzy na tamtego psa po drugiej stronie ulicy."
+    },
+    "en": {
+      "name": "look at me",
+      "description": "The dog makes and holds eye contact on request. It sounds trivial and it is the most useful thing you own outdoors: a dog looking at you is not looking at the other dog across the road."
+    }
+  },
+  "tagline": {
+    "pl": "Uwaga na Ciebie, nie na psa obok",
+    "en": "Eyes on you, not the other dog"
+  },
+  "steps": [
+    {
+      "ordinal": 1,
+      "motion": "up",
+      "pl": {
+        "title": "",
+        "instruction": "Nagroda ma być przy Twoim oku, nie przy psim nosie.",
+        "setup": [
+          "Pies przed Tobą, swobodnie",
+          "Smakołyk między palcami"
+        ],
+        "reps": [
+          "Podnieś smakołyk do swojego oka",
+          "Czekaj, aż pies spojrzy Ci w oczy",
+          "Chwal i nagródź"
+        ],
+        "note": "Nie mów jeszcze nic. Słowo wejdzie dopiero w kroku 4, gdy patrzenie samo w sobie będzie już pewne.",
+        "criterion": "Pies przenosi wzrok ze smakołyka na Twoje oczy."
+      },
+      "en": {
+        "title": "",
+        "instruction": "The reward goes beside your eye, not under their nose.",
+        "setup": [
+          "The dog loose in front of you",
+          "A treat between your fingers"
+        ],
+        "reps": [
+          "Raise the treat to your own eye",
+          "Wait until they meet your eyes",
+          "Praise and pay"
+        ],
+        "note": "Say nothing yet. The word arrives at step 4, once looking is already reliable on its own.",
+        "criterion": "The dog shifts their gaze from the treat to your eyes."
+      }
+    },
+    {
+      "ordinal": 2,
+      "motion": "up",
+      "pl": {
+        "title": "",
+        "instruction": "Dwie sekundy nieprzerwanego kontaktu.",
+        "setup": [
+          "To samo ustawienie"
+        ],
+        "reps": [
+          "Podnieś smakołyk do oka",
+          "Policz do dwóch, patrząc psu w oczy",
+          "Nagródź, gdy kontakt wciąż trwa"
+        ],
+        "criterion": "Dwie sekundy nieprzerwanego kontaktu wzrokowego."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Two unbroken seconds.",
+        "setup": [
+          "The same setup"
+        ],
+        "reps": [
+          "Raise the treat to your eye",
+          "Count to two while holding their gaze",
+          "Pay while contact is still held"
+        ],
+        "criterion": "Two unbroken seconds of eye contact."
+      }
+    },
+    {
+      "ordinal": 3,
+      "motion": "hold",
+      "pl": {
+        "title": "",
+        "instruction": "Smakołyk do kieszeni — czekasz, aż pies sam spojrzy.",
+        "setup": [
+          "Smakołyki w kieszeni, ręce opuszczone",
+          "Stań spokojnie i nic nie rób"
+        ],
+        "reps": [
+          "Czekaj w bezruchu",
+          "Pies prędzej czy później spojrzy Ci w oczy",
+          "W tej sekundzie chwal i nagródź"
+        ],
+        "note": "To jest moment, w którym patrzenie na Ciebie przestaje być Twoim pomysłem, a staje się psim. Bywa, że pierwsze spojrzenie trwa pół minuty — czekaj.",
+        "criterion": "Pies sam nawiązuje kontakt wzrokowy, bez smakołyka w polu widzenia."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Treat in the pocket — you wait for them to offer it.",
+        "setup": [
+          "Treats in your pocket, hands down",
+          "Stand still and do nothing"
+        ],
+        "reps": [
+          "Wait, completely still",
+          "Sooner or later they will look at your eyes",
+          "Praise and pay in that second"
+        ],
+        "note": "This is where looking at you stops being your idea and becomes theirs. The first offer can take half a minute — wait it out.",
+        "criterion": "The dog offers eye contact with no treat in sight."
+      }
+    },
+    {
+      "ordinal": 4,
+      "motion": "hold",
+      "pl": {
+        "title": "",
+        "instruction": "Słowo wchodzi na gotowe zachowanie.",
+        "setup": [
+          "Smakołyki w kieszeni"
+        ],
+        "reps": [
+          "Obserwuj psa i wyczuj moment, gdy zaraz spojrzy",
+          "Powiedz „patrz\" tuż przed tym",
+          "Nagródź spojrzenie"
+        ],
+        "note": "Mówisz słowo tuż przed czymś, co i tak się wydarzy. Pies kojarzy je z zachowaniem, zamiast uczyć się go w próżni.",
+        "criterion": "Pies patrzy w ciągu dwóch sekund po słowie."
+      },
+      "en": {
+        "title": "",
+        "instruction": "The word attaches to a behaviour that already exists.",
+        "setup": [
+          "Treats in your pocket"
+        ],
+        "reps": [
+          "Watch them and sense when a look is coming",
+          "Say “look” just before it",
+          "Pay the look"
+        ],
+        "note": "You are saying the word just before something that was going to happen anyway. The dog pairs it with the behaviour instead of learning it in a vacuum.",
+        "criterion": "The dog looks within two seconds of the word."
+      }
+    },
+    {
+      "ordinal": 5,
+      "motion": "hold",
+      "pose": "sniff",
+      "pl": {
+        "title": "",
+        "instruction": "Poproś o „patrz\", gdy pies jest czymś zajęty.",
+        "setup": [
+          "Pies węszy albo się rozgląda",
+          "Smakołyki gotowe"
+        ],
+        "reps": [
+          "Powiedz „patrz\" — raz",
+          "Czekaj dwie sekundy",
+          "Nagródź oderwanie się i spojrzenie"
+        ],
+        "criterion": "Pies odrywa się od tego, co robił, i patrzy."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Ask for “look” while they are busy with something.",
+        "setup": [
+          "The dog sniffing or glancing around",
+          "Treats ready"
+        ],
+        "reps": [
+          "Say “look” — once",
+          "Wait two seconds",
+          "Pay the disengagement and the look"
+        ],
+        "criterion": "The dog disengages from what they were doing and looks."
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "noise",
+  "sortOrder": 9,
+  "names": {
+    "pl": {
+      "name": "Strach przed hałasem: fajerwerki i burza",
+      "tagline": "Najpierw nie pogarszaj"
+    },
+    "en": {
+      "name": "Noise fear: fireworks and storms",
+      "tagline": "First, do no worse"
+    }
+  },
+  "recognizes": {
+    "pl": "Pies nasłuchuje od pierwszego grzmotu albo petardy odpalonej kilometr dalej. Chowa się w łazience, za kanapą albo w szafie, płytko oddycha, ślini się i nie przyjmuje nagrody. W noc sylwestrową nie wyjdzie na spacer.",
+    "en": "The dog is on alert from the first thunderclap or a firecracker a kilometre away. He hides in the bathroom, behind the sofa or inside the wardrobe, breathes fast, drools and refuses food. On New Year's Eve he will not go for a walk."
+  },
+  "urgent": {
+    "pl": "Pies, który w panice tłucze szyby, wychodzi przez okno albo rani się sam — weterynarz, zanim zaczniesz cokolwiek z tego poniżej.",
+    "en": "A dog that smashes glass, exits through windows or injures itself in panic — vet, before anything below."
+  },
+  "avoid": {
+    "pl": [
+      "Nie wychodź w noc fajerwerków na „spacer oswajający\" — to praca na panicznym psie, która nic nie oswaja. Spaceruj wcześnie rano albo późno w nocy.",
+      "Nie karz za panikę i nie wyciągaj siłą z kryjówki — kryjówka jest jedynym schronieniem, jakie pies ma.",
+      "Nie zamykaj dostępu do „niedozwolonych\" miejsc w burzę — otwarta szafa to prawo, nie przywilej."
+    ],
+    "en": [
+      "Do not take a “desensitising walk\" through the fireworks — working a panicking dog desensitises nothing. Walk early morning or very late.",
+      "Do not punish panic or drag the dog out of hiding — the hiding place is the only shelter the dog has.",
+      "Do not block off “forbidden\" spots during a storm — an open wardrobe is a right, not a privilege."
+    ]
+  },
+  "now": {
+    "pl": [
+      "Na burzę i sylwestra: woda, pełny dostęp do mieszkania, legowisko tam, gdzie podłoga się nie ślizga.",
+      "Telewizor, radio albo biały szum zamykają połowę tego, co dochodzi z ulicy.",
+      "Maty chłonne przy drzwiach — stres załatwia pęcherz nawet u całkowicie czystego psa.",
+      "Zadanie dla pyska na wieczór: lizanka, długi gryz albo rolowany ręcznik z karmą — lizanie i żucie uspokajają."
+    ],
+    "en": [
+      "For storms and New Year's: water, full run of the flat, a bed on a floor that is not slippery.",
+      "TV, radio or white noise close off half of what comes in from the street.",
+      "Absorbent mats by the door — stress empties bladders even in a fully clean dog.",
+      "A job for the mouth that evening: a lickimat, a long chew or a rolled towel with food — licking and chewing calm."
+    ]
+  },
+  "work": {
+    "pl": [
+      "Zbuduj bezpieczną budę: koszyk z kokonem dostępny codziennie przez cały rok, żeby pies znał ją na pamięć.",
+      "Nagrania burzy i petard zaczynają się od szeptu w tle posiłku i tylko dopóki ciało psa jest luźne — to protokół na miesiące, nie na weekend.",
+      "Noc sylwestrowa to zarządzanie, nie egzamin. Nie sprawdzaj postępów przy odpalonych racach."
+    ],
+    "en": [
+      "Build a safe den: a covered bed available every day all year, so the dog knows it by heart.",
+      "Storm and firecracker recordings start at a whisper under meals and only while the dog's body stays loose — this is a protocol of months, not of a weekend.",
+      "New Year's Eve is management, not an exam. Do not test progress while real rockets fly."
+    ]
+  },
+  "professional": {
+    "pl": "Pies, który w panice tłucze szyby, wychodzi przez okno, rani się, albo lęk rozlał się z burz na zwykłe spacery — idź do weterynarza. Leki dobierane przez lekarza mogą obniżyć lęk na tyle, żeby pies był w ogóle zdolny do uczenia się; o leczeniu decyduje weterynarz.",
+    "en": "The dog smashes glass, exits through windows, injures itself, or the fear has spread from storms to ordinary walks — go to the vet. Medication prescribed by the vet can lower the anxiety far enough for learning to be possible at all; the vet decides on treatment."
+  },
+  "practices": [
+    "mat",
+    "down",
+    "name"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "id": "name",
+  "category": "foundation",
+  "sortOrder": 0,
+  "pose": "look",
+  "requires": [],
+  "gear": [
+    "treats"
+  ],
+  "names": {
+    "pl": {
+      "name": "imię",
+      "description": "Pies odwraca się do Ciebie, słysząc swoje imię. To fundament pod wszystko inne — bez tego każda komenda zaczyna się od walki o uwagę. Imię to prośba o spojrzenie, nie nagana; jeśli używasz go przy upominaniu, przestaje działać."
+    },
+    "en": {
+      "name": "name",
+      "description": "The dog turns to you on hearing their name. Everything else is built on it. A name is a request for attention, never a telling-off — use it to scold and it stops working."
+    }
+  },
+  "tagline": {
+    "pl": "Fundament pod wszystko",
+    "en": "Everything is built on it"
+  },
+  "steps": [
+    {
+      "ordinal": 1,
+      "motion": "hold",
+      "pl": {
+        "title": "",
+        "instruction": "Imię jest prośbą o spojrzenie, nie wezwaniem.",
+        "setup": [
+          "Cichy pokój",
+          "Pies spokojny i zajęty czymś swoim"
+        ],
+        "reps": [
+          "Powiedz imię psa — raz, pogodnym tonem",
+          "Czekaj, aż odwróci głowę",
+          "Nagródź natychmiast"
+        ],
+        "note": "Jeśli pies nie zareaguje, nie powtarzaj. Każde kolejne wywołanie uczy, że pierwsze nic nie znaczyło — odczekaj chwilę i spróbuj później.",
+        "criterion": "Pies odwraca głowę w Twoją stronę po jednym wypowiedzeniu imienia."
+      },
+      "en": {
+        "title": "",
+        "instruction": "A name is a request for attention, not a summons.",
+        "setup": [
+          "A quiet room",
+          "The dog calm and busy with their own thing"
+        ],
+        "reps": [
+          "Say the dog’s name — once, in a bright tone",
+          "Wait for the head to turn",
+          "Pay immediately"
+        ],
+        "note": "If nothing happens, do not repeat it. Every extra call teaches that the first one meant nothing — wait and try again later.",
+        "criterion": "The dog turns their head toward you after one call."
+      }
+    },
+    {
+      "ordinal": 2,
+      "motion": "hold",
+      "pose": "sniff",
+      "pl": {
+        "title": "",
+        "instruction": "To samo, gdy pies jest lekko czymś zajęty.",
+        "setup": [
+          "Ten sam pokój",
+          "Poczekaj, aż pies zacznie coś wąchać albo oglądać"
+        ],
+        "reps": [
+          "Powiedz imię — raz",
+          "Czekaj na odwrócenie się",
+          "Nagródź i pozwól wrócić do swojego zajęcia"
+        ],
+        "note": "Puszczenie psa z powrotem do tego, co robił, jest częścią nagrody. Inaczej imię zacznie zapowiadać koniec zabawy.",
+        "criterion": "Pies odrywa się od zajęcia i patrzy po jednym wypowiedzeniu imienia."
+      },
+      "en": {
+        "title": "",
+        "instruction": "The same while the dog is mildly busy.",
+        "setup": [
+          "The same room",
+          "Wait until they start sniffing or watching something"
+        ],
+        "reps": [
+          "Say the name — once",
+          "Wait for them to turn",
+          "Pay, then let them go back to it"
+        ],
+        "note": "Letting them return to what they were doing is part of the reward. Otherwise the name starts to predict the end of the fun.",
+        "criterion": "The dog disengages and looks after one call."
+      }
+    },
+    {
+      "ordinal": 3,
+      "motion": "hold",
+      "pl": {
+        "title": "",
+        "instruction": "Z innego pokoju, poza zasięgiem wzroku.",
+        "setup": [
+          "Drzwi otwarte",
+          "Smakołyk gotowy w ręce, zanim zawołasz"
+        ],
+        "reps": [
+          "Wyjdź do drugiego pokoju",
+          "Powiedz imię — raz",
+          "Nagródź, gdy pies przyjdzie albo wyraźnie zareaguje"
+        ],
+        "criterion": "Pies przychodzi lub wyraźnie reaguje, nie widząc Cię."
+      },
+      "en": {
+        "title": "",
+        "instruction": "From another room, out of sight.",
+        "setup": [
+          "Doors open",
+          "The treat ready in your hand before you call"
+        ],
+        "reps": [
+          "Step into the next room",
+          "Say the name — once",
+          "Pay when they come or clearly respond"
+        ],
+        "criterion": "The dog comes or clearly responds without seeing you."
+      }
+    },
+    {
+      "ordinal": 4,
+      "motion": "hold",
+      "pose": "sniff",
+      "pl": {
+        "title": "",
+        "instruction": "Na dworze, gdzie jest co wąchać.",
+        "setup": [
+          "Ogród albo spokojna ulica",
+          "Smakołyki lepsze niż zwykle"
+        ],
+        "reps": [
+          "Pozwól psu chwilę powęszyć",
+          "Powiedz imię — raz",
+          "Nagródź hojnie i pozwól wrócić do węszenia"
+        ],
+        "note": "Na dworze konkurencja dla Ciebie jest dużo silniejsza niż w domu. To moment na najlepsze smakołyki, jakie masz, nie na suchą karmę.",
+        "criterion": "Pies odwraca się po jednym wypowiedzeniu imienia na dworze."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Outdoors, where there is something to smell.",
+        "setup": [
+          "The garden or a quiet street",
+          "Better treats than usual"
+        ],
+        "reps": [
+          "Let them sniff for a moment",
+          "Say the name — once",
+          "Pay generously and let them go back to sniffing"
+        ],
+        "note": "Outdoors the competition for their attention is far stronger than indoors. This is the moment for the best food you have, not kibble.",
+        "criterion": "The dog turns after one call outdoors."
+      }
+    }
+  ]
+}

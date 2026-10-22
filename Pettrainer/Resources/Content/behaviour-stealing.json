@@ -1,0 +1,72 @@
+{
+  "id": "stealing",
+  "sortOrder": 5,
+  "names": {
+    "pl": {
+      "name": "Kradzież jedzenia z blatu",
+      "tagline": "Kuchnia trenuje go lepiej niż Ty"
+    },
+    "en": {
+      "name": "Food stealing and counters",
+      "tagline": "The kitchen trains him better than you do"
+    }
+  },
+  "recognizes": {
+    "pl": "Pies czyści blat, kosz i stół w chwili, gdy odwracasz głowę. Zdobycz znosi w kąt i tam ją zjada — albo stroszy się nad nią, gdy podchodzisz.",
+    "en": "The dog clears counters, bins and tables in the second your back is turned. The haul gets carried to a corner and eaten there — or guarded when you come near."
+  },
+  "urgent": {
+    "pl": "Warczenie, sztywnienie albo kłapanie zębami nad skradzionym, miską czy zabawką — nie testuj i nie karz: behawiorysta. Nagła zmiana u psa spokojnego — weterynarz.",
+    "en": "Growling, stiffening or teeth snapping over stolen items, bowls or toys — do not test it, do not punish it: behaviourist. A sudden change in an easy dog — vet."
+  },
+  "avoid": {
+    "pl": [
+      "Nie gonij za skradzionym — berka z człowiekiem to dla psa wygrana na loterii.",
+      "Nie karz za przyniesienie ciasta do Ciebie — pies, który boi się oddać, zaczyna połykać w biegu albo pilnować łupu zębami.",
+      "Nie zostawiaj jedzenia na blacie „żeby trenować silną wolę\" — trenujesz wtedy rekordy w sprzątaniu."
+    ],
+    "en": [
+      "Do not chase for the stolen item — keep-away with a human is a jackpot.",
+      "Do not punish bringing the stolen food to you — a dog afraid to give it up starts swallowing on the run or guarding with teeth.",
+      "Do not leave food on the counter “to train willpower\" — you are training cleaning records."
+    ]
+  },
+  "now": {
+    "pl": [
+      "Kosz z pokrywą i jedzenie w zamkniętej szafce — to nie tymczasowe, to stałe warunki umowy. Zarządzanie środowiskiem to dziewięćdziesiąt procent wyniku.",
+      "Nic jadalnego na blatach i stole. Nigdy. Przez cały okres pracy.",
+      "Regularne posiłki i pełna miska przed gotowaniem — syty pies traci zainteresowanie blatem.",
+      "Bramka do kuchni na czas gotowania, dopóki pies nie ma swojego miejsca na te sytuacje."
+    ],
+    "en": [
+      "A lidded bin and food inside closed cupboards — permanent house terms, not temporary. Environment management is ninety percent of the result.",
+      "Nothing edible on counters or tables. Ever. For the entire period of the work.",
+      "Regular meals and a full bowl before you cook — a fed dog loses interest in the counter.",
+      "A gate to the kitchen while cooking, until the dog has a place of his own for these moments."
+    ]
+  },
+  "work": {
+    "pl": [
+      "„Zostaw\" od pięści do podłogi z hojną wypłatą z drugiej ręki — jest w ćwiczeniach.",
+      "„Puść\" na wymianie, nigdy siłowe wyciąganie — jest w ćwiczeniach.",
+      "„Na miejsce\" na czas przygotowania posiłku; pies na macie nie skacze do blatu.",
+      "Na gorącym uczynku: spokojnie otwórz psu drogę ucieczki z kąta i wymień zdobycz na lepszy kęs. Oddanie musi się opłacać."
+    ],
+    "en": [
+      "“Leave it\" from fist to floor with generous pay from the other hand — it is in the exercises.",
+      "“Drop it\" by trading, never by prising — it is in the exercises.",
+      "“Place\" while you prepare the meal; a dog on a mat is not on the counter.",
+      "Caught in the act: calmly open the dog an escape route out of the corner and trade the haul up for a better bite. Giving it up has to pay."
+    ]
+  },
+  "professional": {
+    "pl": "Warczenie, sztywnienie albo kłapanie zębami nad skradzionym, miską czy zabawką — nie testuj, nie karz, idź do behawiorysty. Eskalacja albo nagła zmiana u spokojnego do tej pory psa — najpierw weterynarz.",
+    "en": "Growling, stiffening or teeth snapping over stolen items, bowls or toys — do not test it, do not punish it, go to a behaviourist. Escalation, or a sudden change in a previously easy dog — vet first."
+  },
+  "practices": [
+    "leave",
+    "drop",
+    "mat",
+    "wait"
+  ]
+}

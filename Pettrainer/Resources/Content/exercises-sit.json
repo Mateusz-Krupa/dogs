@@ -1,0 +1,363 @@
+{
+  "id": "sit",
+  "category": "foundation",
+  "sortOrder": 1,
+  "pose": "sit",
+  "requires": [],
+  "gear": [
+    "treats"
+  ],
+  "names": {
+    "pl": {
+      "name": "siad",
+      "description": "Pies siada i zostaje w siadzie, dopóki go nie zwolnisz. Najprostsza rzecz, jakiej możesz go nauczyć, i zastępuje połowę kłopotów: skakanie na ludzi, szarpanie przy drzwiach, żebranie przy stole."
+    },
+    "en": {
+      "name": "sit",
+      "description": "The dog sits and stays sitting until you release them. The simplest thing you can teach, and it replaces half of the everyday nuisances: jumping on people, barging through doors, begging at the table."
+    }
+  },
+  "tagline": {
+    "pl": "Od tego się zaczyna",
+    "en": "Where everyone starts"
+  },
+  "steps": [
+    {
+      "ordinal": 1,
+      "motion": "up",
+      "pl": {
+        "title": "",
+        "instruction": "Płacisz za wyciągniętą szyję, nie za siad.",
+        "setup": [
+          "Dziesięć małych smakołyków do jednej ręki",
+          "Pies swobodnie stoi przed Tobą"
+        ],
+        "reps": [
+          "Trzymaj smakołyk tuż nad nosem psa",
+          "Policz do dwóch, ręka nieruchomo",
+          "Daj smakołyk, gdy szyja jest wciąż wyciągnięta"
+        ],
+        "note": "Nie podnoś ręki wyżej niż na szerokość dłoni nad nosem. Pies idzie za nosem — jeśli nos musi iść za wysoko, ciało pójdzie za nim i pies podskoczy zamiast usiąść.",
+        "criterion": "Pies przez dwie sekundy sięga nosem w górę, nie podskakując i nie odchodząc."
+      },
+      "en": {
+        "title": "",
+        "instruction": "You are paying for the stretch, not for a sit.",
+        "setup": [
+          "Ten small treats in one hand",
+          "The dog standing loosely in front of you"
+        ],
+        "reps": [
+          "Hold a treat just above the dog’s nose",
+          "Count to two, hand completely still",
+          "Feed while the neck is still stretched up"
+        ],
+        "note": "Keep your hand no more than a palm’s width above the nose. The dog follows their nose — if the nose has to travel too high, the body follows it and you get a jump instead of a sit.",
+        "criterion": "The dog reaches up with their nose for two seconds without jumping or walking off."
+      }
+    },
+    {
+      "ordinal": 2,
+      "motion": "up",
+      "pl": {
+        "title": "",
+        "instruction": "To samo, dłużej — i płać wcześniej, jeśli kolana się ugną.",
+        "setup": [
+          "To samo miejsce co w kroku 1",
+          "Smakołyki wciąż w jednej ręce"
+        ],
+        "reps": [
+          "Trzymaj smakołyk nad nosem jak poprzednio",
+          "Licz do czterech",
+          "Zobaczysz ugięcie tylnych nóg — płać natychmiast, nie dokańczaj liczenia"
+        ],
+        "note": "Każde ugięcie kolan jest cenniejsze niż pełne odliczenie. Nagradzasz ruch w stronę siadu, a nie cierpliwość.",
+        "criterion": "Cztery sekundy wyciągniętej szyi albo wcześniejsze ugięcie kolan."
+      },
+      "en": {
+        "title": "",
+        "instruction": "The same, held longer — and pay early if the knees fold.",
+        "setup": [
+          "The same place as step 1",
+          "Treats still in one hand"
+        ],
+        "reps": [
+          "Hold the treat above the nose as before",
+          "Count to four",
+          "If the back legs start to fold, pay at once — do not finish the count"
+        ],
+        "note": "Any bend of the knees is worth more than a completed count. You are rewarding movement toward the sit, not patience.",
+        "criterion": "Four seconds of reaching up, or an earlier bend of the knees."
+      }
+    },
+    {
+      "ordinal": 3,
+      "motion": "up",
+      "pl": {
+        "title": "",
+        "instruction": "Osiem sekund. Jeśli za długo, podziel różnicę.",
+        "setup": [
+          "To samo miejsce",
+          "Zaplanuj sesję na nie więcej niż dwie minuty"
+        ],
+        "reps": [
+          "Trzymaj smakołyk nad nosem",
+          "Licz do ośmiu",
+          "Płać za ugięcie kolan albo na koniec odliczania"
+        ],
+        "note": "Jeśli pies rezygnuje i odchodzi, osiem jest za dużo. Wróć do sześciu, zrób pięć na pięć, dopiero potem spróbuj ośmiu ponownie — to nie jest porażka, tylko podział kroku na dwa.",
+        "criterion": "Osiem sekund wyciągniętej szyi albo ugięcie kolan."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Eight seconds. If that is too long, split the difference.",
+        "setup": [
+          "The same place",
+          "Plan a session of no more than two minutes"
+        ],
+        "reps": [
+          "Hold the treat above the nose",
+          "Count to eight",
+          "Pay for a knee bend or at the end of the count"
+        ],
+        "note": "If the dog gives up and walks off, eight is too much. Drop to six, get five out of five, then try eight again — that is not a failure, it is splitting one step into two.",
+        "criterion": "Eight seconds of reaching up, or a bend of the knees."
+      }
+    },
+    {
+      "ordinal": 4,
+      "motion": "up",
+      "pl": {
+        "title": "",
+        "instruction": "Teraz liczy się moment — płać dokładnie w ugięciu.",
+        "setup": [
+          "Smakołyki w ręce, druga ręka wolna",
+          "Patrz na tylne nogi psa, nie na jego pysk"
+        ],
+        "reps": [
+          "Powtórz grę ze smakołykiem nad nosem",
+          "Czekaj na wyraźniejsze ugięcie tylnych nóg",
+          "Daj smakołyk dokładnie w momencie ugięcia"
+        ],
+        "note": "Nagroda spóźniona o sekundę uczy czegoś innego, niż chciałeś — pies łączy smakołyk z tym, co robił w chwili nagrody, a nie z tym, co zrobił wcześniej.",
+        "criterion": "Tylne nogi wyraźnie się uginają, a smakołyk pada w momencie ugięcia."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Now timing is the whole exercise — pay exactly at the fold.",
+        "setup": [
+          "Treats in one hand, the other hand free",
+          "Watch the back legs, not the face"
+        ],
+        "reps": [
+          "Repeat the treat-above-the-nose game",
+          "Wait for a clearer fold of the back legs",
+          "Feed exactly as the fold happens"
+        ],
+        "note": "A reward a second late teaches something other than what you intended — the dog connects the treat to whatever they were doing at the moment it arrived, not to what came before.",
+        "criterion": "The back legs clearly fold, and the treat lands at the moment they do."
+      }
+    },
+    {
+      "ordinal": 5,
+      "motion": "up",
+      "pl": {
+        "title": "",
+        "instruction": "Czekaj na pełny siad — zad na ziemi.",
+        "setup": [
+          "To samo miejsce",
+          "Podłoże, na którym pies się nie ślizga"
+        ],
+        "reps": [
+          "Trzymaj smakołyk nad nosem",
+          "Czekaj, aż zad dotknie ziemi",
+          "Chwal i daj smakołyk, gdy pies wciąż siedzi"
+        ],
+        "note": "Jeśli pies podskakuje albo się cofa, zabierz smakołyk bez słowa i zacznij powtórzenie od nowa. Nie powtarzaj wtedy nic na głos — cisza niesie informację, komentarz nie.",
+        "criterion": "Zad dotyka ziemi, przednie łapy zostają na miejscu."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Hold out for a full sit — rear on the ground.",
+        "setup": [
+          "The same place",
+          "A surface the dog does not slip on"
+        ],
+        "reps": [
+          "Hold the treat above the nose",
+          "Wait until the rear touches the ground",
+          "Praise and feed while they are still sitting"
+        ],
+        "note": "If the dog jumps or backs up, take the treat away without a word and restart the repetition. Say nothing — the silence carries the information, a comment does not.",
+        "criterion": "The rear touches the ground and the front feet stay where they were."
+      }
+    },
+    {
+      "ordinal": 6,
+      "motion": "up",
+      "pl": {
+        "title": "",
+        "instruction": "Pusta ręka prowadzi, nagroda przychodzi z drugiej.",
+        "setup": [
+          "Smakołyki przełóż do drugiej ręki",
+          "Tę rękę schowaj za plecami"
+        ],
+        "reps": [
+          "Zrób ten sam ruch nad nosem — pustą ręką",
+          "Gdy pies usiądzie, pochwal",
+          "Nagródź z ręki zza pleców, tak żeby pies zjadł w siadzie"
+        ],
+        "note": "Karmienie w pozycji to nie drobiazg. Pies, który wstaje po nagrodę, uczy się, że siad kończy się wstaniem — a Ty chcesz, żeby kończył się zwolnieniem.",
+        "criterion": "Pies siada na ruch pustej ręki i zjada nagrodę, nie wstając."
+      },
+      "en": {
+        "title": "",
+        "instruction": "The empty hand leads; the reward comes from the other one.",
+        "setup": [
+          "Move the treats to your other hand",
+          "Keep that hand behind your back"
+        ],
+        "reps": [
+          "Make the same motion above the nose — with the empty hand",
+          "Praise the moment they sit",
+          "Feed from behind your back so they eat while still sitting"
+        ],
+        "note": "Feeding in position is not a detail. A dog that stands up to collect the reward learns that a sit ends by standing — and you want it to end with a release.",
+        "criterion": "The dog sits to the empty-hand motion and eats without standing up."
+      }
+    },
+    {
+      "ordinal": 7,
+      "motion": "up",
+      "pl": {
+        "title": "",
+        "instruction": "Zmniejsz gest — to od teraz Twój sygnał ręką.",
+        "setup": [
+          "Nagroda wciąż w drugiej ręce, za plecami"
+        ],
+        "reps": [
+          "Zrób ruch szybciej i mniejszy",
+          "Pochwal, gdy pies usiądzie",
+          "Nagródź w pozycji"
+        ],
+        "note": "Gest ma być na tyle wyraźny, żeby dało się go zrobić w rękawicy i z drugiego końca pokoju. Zbyt subtelny sygnał przestanie działać na dworze.",
+        "criterion": "Pies siada na wyraźny, krótki gest ręką."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Shrink the motion — this is now your hand signal.",
+        "setup": [
+          "The reward still in the other hand, behind your back"
+        ],
+        "reps": [
+          "Make the motion faster and smaller",
+          "Praise as they sit",
+          "Feed in position"
+        ],
+        "note": "The signal should be clear enough to give with gloves on, from across a room. A signal that is too subtle will stop working outdoors.",
+        "criterion": "The dog sits to a short, distinct hand signal."
+      }
+    },
+    {
+      "ordinal": 8,
+      "motion": "up",
+      "sound": true,
+      "pl": {
+        "title": "",
+        "instruction": "Dopiero teraz wchodzi słowo — zawsze przed gestem.",
+        "setup": [
+          "To samo ustawienie co w kroku 7",
+          "Przygotuj się mówić tylko raz"
+        ],
+        "reps": [
+          "Powiedz „siad\" — raz",
+          "Odczekaj całą sekundę w ciszy",
+          "Dopiero teraz zrób gest, pochwal i nagródź"
+        ],
+        "note": "Kolejność jest nienegocjowalna: słowo, pauza, gest. Nigdy w trakcie gestu i nigdy po nim. Jeśli słowo pada razem z ruchem ręki, pies nauczy się patrzeć na rękę i nigdy nie usłyszy komendy.",
+        "criterion": "Pies siada po sekwencji słowo-pauza-gest. Liczy się każdy siad, także ten po geście."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Only now does the word come in — always before the signal.",
+        "setup": [
+          "The same setup as step 7",
+          "Be ready to say it exactly once"
+        ],
+        "reps": [
+          "Say “sit” — once",
+          "Wait a full second in silence",
+          "Only then give the signal, praise and feed"
+        ],
+        "note": "The order is not negotiable: word, pause, signal. Never during the signal and never after it. If the word lands together with the hand, the dog learns to watch the hand and never hears the cue.",
+        "criterion": "The dog sits after the word-pause-signal sequence. Any sit counts, including one that needed the signal."
+      }
+    },
+    {
+      "ordinal": 9,
+      "motion": "up",
+      "pl": {
+        "title": "",
+        "instruction": "Samo słowo. Siad po geście nie liczy się jako trafienie.",
+        "setup": [
+          "Ręce opuszczone swobodnie wzdłuż ciała"
+        ],
+        "reps": [
+          "Powiedz „siad\" i czekaj trzy sekundy bez gestu",
+          "Usiadł — nagródź hojnie",
+          "Nie usiadł — zrób gest, pochwal, ale nie dawaj smakołyka"
+        ],
+        "note": "To jest krok, w którym pies naprawdę uczy się słowa. Nagradzanie siadu po geście cofa Cię do kroku 7, bo utrwala czytanie ręki zamiast słuchania.",
+        "criterion": "Pies siada w ciągu trzech sekund po samym słowie. Siad po geście liczy się jako pudło."
+      },
+      "en": {
+        "title": "",
+        "instruction": "The word alone. A sit that needed the signal does not count.",
+        "setup": [
+          "Hands hanging loosely at your sides"
+        ],
+        "reps": [
+          "Say “sit” and wait three seconds with no signal",
+          "If they sit, pay generously",
+          "If not, give the signal and praise — but no treat this time"
+        ],
+        "note": "This is the step where the dog actually learns the word. Paying a sit that needed the signal puts you back at step 7, because it rehearses reading the hand instead of listening.",
+        "criterion": "The dog sits within three seconds of the word alone. A sit that needed the signal counts as a miss."
+      }
+    },
+    {
+      "ordinal": 10,
+      "motion": "up",
+      "pl": {
+        "title": "",
+        "instruction": "Zmień swoją pozycję — Twoja sylwetka jest częścią komendy.",
+        "setup": [
+          "Krzesło w zasięgu",
+          "Ten sam cichy pokój"
+        ],
+        "reps": [
+          "Powiedz „siad\", siedząc na krześle",
+          "Powtórz, kucając",
+          "Powtórz, stojąc bokiem do psa"
+        ],
+        "note": "Dla psa Twoja sylwetka jest częścią komendy. Dopóki tego nie przećwiczycie, „siad\" znaczy „siad, gdy stoisz przede mną na wprost\" — i rozsypie się przy pierwszej okazji, gdy kucniesz albo odwrócisz się bokiem.",
+        "criterion": "Pies siada na samo słowo przy zmienionej pozycji Twojego ciała."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Change your own posture — your silhouette is part of the cue.",
+        "setup": [
+          "A chair within reach",
+          "The same quiet room"
+        ],
+        "reps": [
+          "Say “sit” while sitting on a chair",
+          "Repeat while crouching",
+          "Repeat while turned sideways to the dog"
+        ],
+        "note": "To a dog your silhouette is part of the cue. Until you practise this, “sit” means “sit while you stand squarely in front of me” — and it will fall apart the first time you crouch or turn away.",
+        "criterion": "The dog sits to the word alone while your body position is different."
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "bed",
+  "sortOrder": 11,
+  "names": {
+    "pl": {
+      "name": "Spanie w łóżku",
+      "tagline": "Zmiana zasad bez dramatu"
+    },
+    "en": {
+      "name": "Sleeping in your bed",
+      "tagline": "Changing the rule without drama"
+    }
+  },
+  "recognizes": {
+    "pl": "Pies śpi w łóżku — raz zaproszony, raz „tylko na chwilę”, i już został. Problem zaczyna się nie w samym łóżku, tylko w niekonsekwencji: raz wolno, raz nie, oraz w porannym rytuale budzenia Cię o piątej.",
+    "en": "The dog sleeps in your bed — once invited, once “just for a moment”, and it stayed. The problem is not the bed itself: it is the yes-on-Sunday, no-on-Monday inconsistency and the nightly ritual of being woken at five."
+  },
+  "urgent": {
+    "pl": "Jeśli pies pilnuje łóżka — warczy, kłapie lub pokazuje zęby, gdy zbliżasz się, kiedy on leży — to narastająca obrona zasobu, nie upór: nie wyciągaj go siłą i zadzwoń do behawiorysty. Nigdy nie zrywaj śpiącego psa z posłania: to najkrótsza droga do ugryzienia.",
+    "en": "If the dog guards the bed — growling, snapping, teeth bared when you approach while he lies there — that is escalating resource guarding, not stubbornness: do not pull him off by force, call a behaviour professional. Never pull a sleeping dog out of bed: it is the shortest road to a bite."
+  },
+  "avoid": {
+    "pl": [
+      "Nie wypychaj, nie zrywaj kołdry, nie krzycz o szóstej rano — budzenie śpiącego psa to proszenie się o kłapnięcie",
+      "Nie zmieniaj reguły w zależności od dnia: „tylko w niedzielę” uczy psa, że warto próbować codziennie",
+      "Nie zostawiaj reguły na pół otwarta: rozmyte „może jednak tak” uczy psa prób, a nie granicy"
+    ],
+    "en": [
+      "Do not shove, pull the duvet off, or shout at six in the morning — waking a sleeping dog asks for a snap",
+      "Do not change the rule by mood: “only on Sundays” teaches the dog to try every day",
+      "Do not leave the rule half-open: a blurred “maybe after all” teaches the dog to keep trying, not the boundary"
+    ]
+  },
+  "now": {
+    "pl": [
+      "Zamknij dostęp fizycznie: drzwi sypialni albo bariera — wieczór i noc konsekwentnie; wyjątek to tylko realna potrzeba (wyjście na siusiu, ból, lek), nie humor dnia",
+      "Przygotuj alternatywę: legowisko lub mata i Twoja znoszona koszulka — Twój zapach i bliskość bez łóżka",
+      "Co wieczór zapraszaj psa na jego własne miejsce i płać za pobyt hojnie — a co jakiś czas wyjątkowo hojnie — aż pies sam zacznie je wybierać"
+    ],
+    "en": [
+      "Close off access physically: bedroom door or a barrier — evening and night held consistently; the only exception is a real need (toilet break, pain, medication), not the mood of the day",
+      "Build the alternative: a dog bed or mat plus your worn t-shirt — your scent and closeness without the bed",
+      "Invite the dog to its own place every evening and pay richly for staying — every so often exceptionally well — and it will start choosing the spot on its own"
+    ]
+  },
+  "work": {
+    "pl": [
+      "Naucz „na matę” jako osobne ćwiczenie: pies sam wybiera legowisko za nagrodę, idąc za smakołykiem, a nie za palcem",
+      "Przesuwaj legowisko etapami: przy łóżku → pod drzwiami → w docelowe miejsce; etap zmieniaj tylko dopóki pies jest przy tym spokojny — przy dyskomforcie wróć o etap",
+      "Wieczorem podejdź kilka razy i podrzuć jedzenie, gdy pies leży na własnym miejscu i jest na jawie — śpiącego psa nie tykaj i nie budź",
+      "Gdy pies stoi przy łóżku o czwartej: najpierw potrzeby — czy musi na siusiu, czy coś go nie boli; potrzebę zaspokój bez wpuszczania na łóżko i cicho odprowadź na matę — płaci tylko własne miejsce; nocny lęk to nie negocjacja — idzie do behawiorysty"
+    ],
+    "en": [
+      "Teach “go to mat” as its own exercise: the dog picks the bed for reward, not for a pointing finger",
+      "Slide the bed in stages: at the bedside → by the door → to its final spot; advance only while the dog stays relaxed, and go back one stage if discomfort appears",
+      "In the evening, walk over a few times and drop food while the dog is awake and aware of you on its own place — never touch or wake a sleeping dog",
+      "If the dog stands at the bed at four a.m.: check needs first — a toilet break, pain; meet the need without the bed and walk the dog quietly back to the mat — only the mat pays; night-time fear is not bargaining, it goes to a behaviour professional"
+    ]
+  },
+  "professional": {
+    "pl": "Warczenie przy łóżku, kłapnięcia, pilnowanie jedzenia lub zabawek na łóżku, oraz sytuacja, w której zmiana zasad eskaluje zamiast gasnąć — obrony zasobu nie naprawia się solo: behawiorysta lub behawiorysta weterynaryjny. Nocny lęk i protest przy zmianie zasad to nie upór — to materiał dla behawiorysty, nie test Twojej konsekwencji.",
+    "en": "Growling at the bed, snapping, food or toy guarding on the bed, or a rule change that escalates instead of fades — resource guarding is not a solo project: a certified behaviour professional or veterinary behaviourist. Night-time fear and protest over a rule change are not stubbornness — they are material for a behaviour professional, not a test of your consistency."
+  },
+  "practices": [
+    "mat",
+    "down",
+    "stay"
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "pl": {
+      "symptom": "Pies wstaje, gdy tylko się odwrócę",
+      "why": "Podniosłeś dwie osie naraz — dystans i czas. Przy zmianie jednej, druga musi spaść.",
+      "fix": "Wróć do trzech sekund i jednego kroku. Rośnij tylko po jednej osi, nigdy po dwóch jednocześnie."
+    },
+    "en": {
+      "symptom": "The dog gets up the moment I turn away",
+      "why": "You raised two axes at once — distance and duration. When one goes up, the other has to come down.",
+      "fix": "Go back to three seconds and one step. Grow one axis at a time, never both."
+    }
+  },
+  {
+    "pl": {
+      "symptom": "Pies podpełza w moją stronę",
+      "why": "Nagroda przychodzi po powrocie, więc pies uczy się, że skracanie dystansu przyspiesza wypłatę.",
+      "fix": "Wracaj do psa i nagradzaj go dokładnie tam, gdzie został, zanim go zwolnisz."
+    },
+    "en": {
+      "symptom": "The dog creeps toward me",
+      "why": "The reward arrives after you come back, so closing the gap looks like it speeds up payday.",
+      "fix": "Walk back and pay the dog exactly where they stayed, before you release them."
+    }
+  }
+]

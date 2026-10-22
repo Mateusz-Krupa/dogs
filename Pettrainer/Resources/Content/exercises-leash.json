@@ -1,0 +1,167 @@
+{
+  "id": "leash",
+  "category": "impulse_control",
+  "sortOrder": 9,
+  "pose": "come",
+  "requires": [
+    "name"
+  ],
+  "gear": [
+    "treats",
+    "lead"
+  ],
+  "names": {
+    "pl": {
+      "name": "luźna smycz",
+      "description": "Smycz wisi luźno w kształcie litery U. To nie jest „noga\" — pies nie musi iść w konkretnej pozycji, ma tylko nie ciągnąć. Jedyna reguła: ciągnięcie nigdy nie może zadziałać, bo jeśli raz zadziała, uczy się na całe życie."
+    },
+    "en": {
+      "name": "loose lead",
+      "description": "The lead hangs in a U. This is not heel — the dog need not hold a position, only stop pulling. One rule: pulling must never work, because a single success teaches it for good."
+    }
+  },
+  "tagline": {
+    "pl": "Spacer bez ciągnięcia",
+    "en": "A walk without the pulling"
+  },
+  "steps": [
+    {
+      "ordinal": 1,
+      "motion": "leg",
+      "pl": {
+        "title": "",
+        "instruction": "Trzy kroki w domu — nagroda zawsze przy Twojej nodze.",
+        "setup": [
+          "Dom, pies na smyczy",
+          "Smakołyki w ręce po stronie psa"
+        ],
+        "reps": [
+          "Zrób kilka kroków",
+          "Gdy smycz wisi luźno — nagródź",
+          "Podaj smakołyk przy swojej nodze"
+        ],
+        "note": "Nagroda przy nodze mówi psu, gdzie jest miejsce, w którym się płaci. Smakołyk podawany przed psem wysyła go do przodu — czyli tam, skąd ciągnie.",
+        "criterion": "Trzy kroki z luźną smyczą."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Three steps indoors — the treat always arrives at your leg.",
+        "setup": [
+          "Indoors, the dog on the lead",
+          "Treats in the hand on the dog's side"
+        ],
+        "reps": [
+          "Take a few steps",
+          "While the lead hangs loose, pay",
+          "Deliver the treat at your leg"
+        ],
+        "note": "A treat at the leg tells the dog where the paying spot is. Feeding out in front sends the dog forward — exactly where pulling starts.",
+        "criterion": "Three steps with a loose lead."
+      }
+    },
+    {
+      "ordinal": 2,
+      "motion": "hold",
+      "pose": "stand",
+      "pl": {
+        "title": "",
+        "instruction": "Smycz się napina — stajesz. Ruszasz dopiero, gdy znów zwisa.",
+        "setup": [
+          "Idziecie w domu"
+        ],
+        "reps": [
+          "Gdy smycz się napnie — zatrzymaj się w miejscu",
+          "Stój bez szarpania i bez słowa",
+          "Smycz zwiotczała — pochwal i idźcie dalej",
+          "Nagródź przy nodze"
+        ],
+        "note": "Nie szarp i nie ciągnij psa do siebie. Czekanie jest całą interwencją: napięcie smyczy przestaje działać, a luźna smycz zaczyna.",
+        "criterion": "Pies sam rozluźnia smycz i ruszacie dalej."
+      },
+      "en": {
+        "title": "",
+        "instruction": "The lead goes tight — you stop. You move only when it hangs again.",
+        "setup": [
+          "Walking indoors"
+        ],
+        "reps": [
+          "When the lead tightens, stop in place",
+          "Stand still — no jerking, no words",
+          "The moment it slackens, praise and walk on",
+          "Pay at your leg"
+        ],
+        "note": "Do not jerk and do not reel the dog in. The stop is the whole intervention: tension stops working, looseness starts working.",
+        "criterion": "The dog releases the tension themselves and you move on."
+      }
+    },
+    {
+      "ordinal": 3,
+      "motion": "leg",
+      "pl": {
+        "title": "",
+        "instruction": "Dziesięć kroków w ogrodzie albo na podjeździe — te same zasady co w domu.",
+        "setup": [
+          "Ogród albo podjazd",
+          "Pies na smyczy"
+        ],
+        "reps": [
+          "Zacznijcie iść",
+          "Napięta smycz — stój",
+          "Luźna — dalej",
+          "Nagradzaj co kilka kroków przy nodze"
+        ],
+        "criterion": "Dziesięć kroków bez napięcia smyczy."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Ten steps in the garden or on the driveway — same rules as indoors.",
+        "setup": [
+          "The garden or the driveway",
+          "The dog on the lead"
+        ],
+        "reps": [
+          "Start walking",
+          "Tight lead — stop",
+          "Loose lead — go on",
+          "Pay every few steps at your leg"
+        ],
+        "criterion": "Ten steps with no tension on the lead."
+      }
+    },
+    {
+      "ordinal": 4,
+      "motion": "leg",
+      "pose": "sniff",
+      "pl": {
+        "title": "",
+        "instruction": "Spokojna ulica, krótki odcinek. Wąchanie jest nagrodą, nie przerywnikiem.",
+        "setup": [
+          "Krótki odcinek spokojnej ulicy",
+          "Więcej czasu niż w domu"
+        ],
+        "reps": [
+          "Idźcie z luźną smyczą",
+          "Nagradzaj przy nodze co kilka kroków",
+          "Dojdźcie do interesującego miejsca i pozwól psu powąchać"
+        ],
+        "note": "Spacer bez wąchania to dla psa kara. Jeśli używasz węchu jako nagrody, pies uczy się, że ładna smycz prowadzi do kolejnych miejsc do obwąchania.",
+        "criterion": "Dwadzieścia kroków na ulicy z luźną smyczą."
+      },
+      "en": {
+        "title": "",
+        "instruction": "A quiet street, a short stretch. Sniffing is the reward, not a break from the drill.",
+        "setup": [
+          "A short stretch of quiet street",
+          "More time than you needed indoors"
+        ],
+        "reps": [
+          "Walk with a loose lead",
+          "Pay at your leg every few steps",
+          "Reach something interesting and let the dog sniff"
+        ],
+        "note": "A walk without sniffing is a punishment from the dog's side. Use the nose as the reward and the loose lead starts to earn the dog the next smell.",
+        "criterion": "Twenty steps on the street with a loose lead."
+      }
+    }
+  ]
+}

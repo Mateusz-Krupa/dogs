@@ -1,0 +1,254 @@
+{
+  "id": "down",
+  "category": "foundation",
+  "sortOrder": 3,
+  "pose": "down",
+  "requires": [
+    "sit"
+  ],
+  "gear": [
+    "treats",
+    "mat"
+  ],
+  "names": {
+    "pl": {
+      "name": "leżeć",
+      "description": "Pies kładzie się łokciami i klatką na ziemi i zostaje, dopóki go nie zwolnisz. W sporcie i na egzaminach ZKwP ta sama komenda brzmi „waruj\" — to ta sama pozycja, inne słowo."
+    },
+    "en": {
+      "name": "down",
+      "description": "Elbows and chest on the ground, held until released. The position a dog can actually hold for a long time, which makes it the one worth having in a café or a waiting room."
+    }
+  },
+  "tagline": {
+    "pl": "Pozycja na dłużej",
+    "en": "The one they can hold"
+  },
+  "steps": [
+    {
+      "ordinal": 1,
+      "motion": "down",
+      "pl": {
+        "title": "",
+        "instruction": "Smakołyk prosto w dół, między przednie łapy.",
+        "setup": [
+          "Pies w siadzie",
+          "Dywan albo koc — nie zimny kafelek"
+        ],
+        "reps": [
+          "Przyłóż smakołyk do nosa",
+          "Poprowadź go prosto w dół do podłogi",
+          "Płać za każde wyraźne opuszczenie głowy"
+        ],
+        "note": "Zimne lub śliskie podłoże to najczęstszy prawdziwy powód, dla którego pies nie chce się położyć. Sprawdź dywan, zanim uznasz to za upór.",
+        "criterion": "Głowa schodzi wyraźnie w dół za smakołykiem."
+      },
+      "en": {
+        "title": "",
+        "instruction": "The treat goes straight down, between the front paws.",
+        "setup": [
+          "The dog sitting",
+          "A rug or blanket — not cold tile"
+        ],
+        "reps": [
+          "Put the treat to their nose",
+          "Draw it straight down to the floor",
+          "Pay any clear lowering of the head"
+        ],
+        "note": "Cold or slippery flooring is the most common real reason a dog will not lie down. Try a rug before you call it stubbornness.",
+        "criterion": "The head follows the treat clearly downward."
+      }
+    },
+    {
+      "ordinal": 2,
+      "motion": "draw",
+      "pl": {
+        "title": "",
+        "instruction": "Po dojściu do podłogi — powoli do siebie.",
+        "setup": [
+          "To samo miękkie podłoże"
+        ],
+        "reps": [
+          "Poprowadź smakołyk w dół jak poprzednio",
+          "Przy podłodze ciągnij go powoli do siebie",
+          "Płać, gdy łokieć dotknie ziemi"
+        ],
+        "note": "Jeśli pies kuca, ale łokcie zostają w górze, smakołyk idzie w dół, ale nie do przodu — klatka nie ma powodu iść za nim.",
+        "criterion": "Co najmniej jeden łokieć dotyka podłogi."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Once at the floor — slowly toward you.",
+        "setup": [
+          "The same soft surface"
+        ],
+        "reps": [
+          "Draw the treat down as before",
+          "At the floor, draw it slowly toward you",
+          "Pay when an elbow touches down"
+        ],
+        "note": "If they crouch but the elbows stay up, the treat went down but not forward — the chest has no reason to follow.",
+        "criterion": "At least one elbow touches the floor."
+      }
+    },
+    {
+      "ordinal": 3,
+      "motion": "draw",
+      "pl": {
+        "title": "",
+        "instruction": "Pełne położenie — łokcie i klatka na ziemi.",
+        "setup": [
+          "To samo miejsce"
+        ],
+        "reps": [
+          "Zrób pełny ruch w dół i do siebie",
+          "Czekaj na łokcie i klatkę na ziemi",
+          "Chwal i nagródź w pozycji leżącej"
+        ],
+        "note": "Jeśli pies wstaje, zabierz smakołyk bez słowa i zacznij od nowa. Żadnego komentarza — cisza niesie informację.",
+        "criterion": "Łokcie i klatka na ziemi."
+      },
+      "en": {
+        "title": "",
+        "instruction": "The full down — elbows and chest on the ground.",
+        "setup": [
+          "The same place"
+        ],
+        "reps": [
+          "Make the full down-and-toward motion",
+          "Wait for elbows and chest to land",
+          "Praise and feed while they are down"
+        ],
+        "note": "If they stand up, take the treat away without a word and restart. No comment — silence carries the information.",
+        "criterion": "Elbows and chest on the ground."
+      }
+    },
+    {
+      "ordinal": 4,
+      "motion": "draw",
+      "pl": {
+        "title": "",
+        "instruction": "Pusta ręka prowadzi, nagroda z drugiej.",
+        "setup": [
+          "Smakołyki przełóż do drugiej ręki, za plecy"
+        ],
+        "reps": [
+          "Zrób ten sam ruch pustą ręką",
+          "Czekaj na pełne położenie",
+          "Nagródź z ręki zza pleców, pies zjada leżąc"
+        ],
+        "criterion": "Pies kładzie się na ruch pustej ręki."
+      },
+      "en": {
+        "title": "",
+        "instruction": "The empty hand leads, the reward comes from the other.",
+        "setup": [
+          "Treats moved to the other hand, behind your back"
+        ],
+        "reps": [
+          "Make the same motion with the empty hand",
+          "Wait for the full down",
+          "Feed from behind your back, eaten lying down"
+        ],
+        "criterion": "The dog lies down to the empty-hand motion."
+      }
+    },
+    {
+      "ordinal": 5,
+      "motion": "draw",
+      "sound": true,
+      "pl": {
+        "title": "",
+        "instruction": "Słowo, pauza, gest — zawsze w tej kolejności.",
+        "setup": [
+          "Nagroda w drugiej ręce"
+        ],
+        "reps": [
+          "Powiedz „leżeć\" — raz",
+          "Odczekaj sekundę w ciszy",
+          "Zrób gest, pochwal, nagródź"
+        ],
+        "note": "Nigdy w trakcie gestu i nigdy po nim. Słowo razem z ruchem ręki uczy psa patrzeć na rękę i nie słuchać.",
+        "criterion": "Pies kładzie się po sekwencji słowo-pauza-gest."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Word, pause, signal — always in that order.",
+        "setup": [
+          "The reward in your other hand"
+        ],
+        "reps": [
+          "Say “down” — once",
+          "Wait a second in silence",
+          "Give the signal, praise, pay"
+        ],
+        "note": "Never during the signal and never after it. The word landing with the hand teaches the dog to watch and not listen.",
+        "criterion": "The dog lies down after the word-pause-signal sequence."
+      }
+    },
+    {
+      "ordinal": 6,
+      "motion": "down",
+      "pl": {
+        "title": "",
+        "instruction": "Samo słowo. Położenie po geście to pudło.",
+        "setup": [
+          "Ręce opuszczone wzdłuż ciała"
+        ],
+        "reps": [
+          "Powiedz „leżeć\" i czekaj trzy sekundy",
+          "Położył się — nagródź hojnie",
+          "Nie położył się — zrób gest, pochwal, bez smakołyka"
+        ],
+        "criterion": "Pies kładzie się po samym słowie, w ciągu trzech sekund."
+      },
+      "en": {
+        "title": "",
+        "instruction": "The word alone. A down that needed the signal is a miss.",
+        "setup": [
+          "Hands at your sides"
+        ],
+        "reps": [
+          "Say “down” and wait three seconds",
+          "If they go down, pay generously",
+          "If not, signal and praise — no treat"
+        ],
+        "criterion": "The dog lies down to the word alone, within three seconds."
+      }
+    },
+    {
+      "ordinal": 7,
+      "motion": "down",
+      "pl": {
+        "title": "",
+        "instruction": "Sprawdź dwa różne podłoża.",
+        "setup": [
+          "Jedno miękkie podłoże i jedno twarde",
+          "Ten sam pokój, żeby zmieniać tylko jedną rzecz"
+        ],
+        "reps": [
+          "Poproś o „leżeć\" na dywanie",
+          "Przejdź na podłogę i poproś ponownie",
+          "Nagradzaj obie wersje tak samo"
+        ],
+        "note": "Jeśli na dywanie idzie, a na kuchennej podłodze nie, to nie jest nieposłuszeństwo. Zimno i śliskość są realnym powodem — nie przepychaj, znajdź matę.",
+        "criterion": "Pies kładzie się na samo słowo na dwóch różnych podłożach."
+      },
+      "en": {
+        "title": "",
+        "instruction": "Try two different surfaces.",
+        "setup": [
+          "One soft surface and one hard",
+          "The same room, so only one thing changes"
+        ],
+        "reps": [
+          "Ask for a down on the rug",
+          "Move to the floor and ask again",
+          "Pay both the same"
+        ],
+        "note": "If it works on the rug and fails on the kitchen floor, that is not disobedience. Cold and slippery are real reasons — do not push, find a mat.",
+        "criterion": "The dog lies down to the word alone on two different surfaces."
+      }
+    }
+  ]
+}

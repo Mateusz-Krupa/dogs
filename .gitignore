@@ -42,3 +42,14 @@ yarn-error.*
 # local tool state, not project workflow
 .claude/settings.local.json
 .claude/launch.json
+
+# Native Xcode local state
+xcuserdata/
+DerivedData/
+build-native/
+*.xcuserstate
+
+# Distribution artifacts (local archives/IPAs)
+build-archive/
+build-archive-dd/
+build/

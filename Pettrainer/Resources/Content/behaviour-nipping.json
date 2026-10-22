@@ -1,0 +1,72 @@
+{
+  "id": "nipping",
+  "sortOrder": 4,
+  "names": {
+    "pl": {
+      "name": "Gryzienie kostek i rąk",
+      "tagline": "Zęby to na razie jedyne jego narzędzie"
+    },
+    "en": {
+      "name": "Ankle and hand nipping",
+      "tagline": "Teeth are the only tool they have so far"
+    }
+  },
+  "recognizes": {
+    "pl": "Pies chwyta zębami poruszające się kostki, nadgarstki i materiał — przy biegających dzieciach, wieczorem, po spacerze. U szczeniąt i psów ras pasterskich klasyczny obraz, czasem z poganianiem i kółkami.",
+    "en": "The dog grabs moving ankles, wrists and fabric with its teeth — around running children, in the evening, after a walk. Classic in puppies and herding breeds, sometimes with driving and circles."
+  },
+  "urgent": {
+    "pl": "Gryzienie, które przerywa skórę, albo skok bez wcześniejszego warczenia — behawiorysta. Nagłe gryzienie przy dotknięciu — najpierw weterynarz, to może być ból.",
+    "en": "Mouthing that breaks skin, or a bite with no earlier growl warning — behaviourist. Sudden biting when touched — vet first, it can be pain."
+  },
+  "avoid": {
+    "pl": [
+      "Nie machaj ręką ani stopą „żeby się odczepił\" — poruszająca się zdobycz to nagroda za skok, dokładnie tego pies chce.",
+      "Nie piszcz i nie klapsnij — pisk udaje zdobycz, klaps podnosi pobudzenie, a gryzienie wraca mocniej.",
+      "Nie karz szczenięcia za samo gryzienie bez pokazania zamiennika — szczeniak nie ma jeszcze innego sposobu badania świata."
+    ],
+    "en": [
+      "Do not wave your hand or foot “to get it off\" — a wiggling target is the reward for the bite, exactly what the dog is playing for.",
+      "Do not squeal or smack — squealing imitates prey and smacking raises arousal, so the mouthing comes back harder.",
+      "Do not punish a puppy for mouthing without showing the substitute — it has no other way to investigate the world yet."
+    ]
+  },
+  "now": {
+    "pl": [
+      "Gdy pies gryzie: zatrzymaj ruch i podaj zabawkę — gryzienie musi mieć adres.",
+      "Zmęcz go inaczej przed wieczornym szczytem: węszenie, żucie, mata węchowa. Samo bieganie nie wystarcza.",
+      "Drzemki to nie luksus: niedospane szczenię gryzie więcej. Bramka przy biurku i wymuszone przerwy.",
+      "Dzieci biegają — pies za bramką. To zasada domu, nie kara."
+    ],
+    "en": [
+      "When the bite lands: freeze the movement and offer a toy — mouthing needs an address.",
+      "Tire the dog differently before the evening peak: sniffing, chewing, a snuffle mat. Running alone is not enough.",
+      "Naps are not a luxury: an over-tired puppy mouths more. Gate by the desk and enforce breaks.",
+      "Children running means the dog behind the gate. A house rule, not a punishment."
+    ]
+  },
+  "work": {
+    "pl": [
+      "Nagradzaj gryzienie w zabawkę: przeciąganka i aport jako główne zabawy, ręce zawsze poza zasięgiem zębów.",
+      "Rozpocznij „puść\" na zabawkach — przyda się szybciej, niż myślisz.",
+      "Chwal za samo leżenie przy Tobie bez gryzienia — brak gryzienia też jest zachowaniem.",
+      "Smakołyki jedzone z płaskiej dłoni na otwartych palcach — ręce przestają być zdobyczą."
+    ],
+    "en": [
+      "Pay the bite on the toy: tug and fetch as the main games, hands always out of teeth range.",
+      "Start “drop it\" on toys — you will need it sooner than you think.",
+      "Praise plain resting beside you with no teeth involved — the absence of biting is a behaviour.",
+      "Food eaten from a flat palm over open fingers — hands stop being prey."
+    ]
+  },
+  "professional": {
+    "pl": "Gryzienie u dorosłego psa, które przerywa skórę, albo gryzienie bez wcześniejszego ostrzegania warczeniem — behawiorysta. Nagłe gryzienie przy dotknięciu — najpierw weterynarz, to może być ból.",
+    "en": "Nipping that breaks skin in an adult dog, or biting with no prior growl warning — behaviourist. Sudden biting when touched — vet first, it can be pain."
+  },
+  "practices": [
+    "drop",
+    "look",
+    "mat",
+    "sit"
+  ]
+}
