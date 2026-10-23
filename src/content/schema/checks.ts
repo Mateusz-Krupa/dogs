@@ -161,6 +161,11 @@ const GEAR_IDS: Record<GearId, true> = {
   door: true,
   grass: true,
   nothing: true,
+  'brush': true,
+  'toothbrush': true,
+  'dog-toothpaste': true,
+  'dog-shampoo': true,
+  'styptic': true,
 };
 
 const POSES: Record<Pose, true> = {

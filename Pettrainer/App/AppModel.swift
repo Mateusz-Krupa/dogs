@@ -29,14 +29,22 @@ final class AppModel: ObservableObject {
     @Published private(set) var positions: [String: Position] = [:]
     @Published private(set) var mastery: [String: [String: Int]] = [:]
     @Published private(set) var noseworkLevels: [String: Int] = [:]
+    /// Furthest stage *tried* per hygiene routine, 0 = untouched. Deliberately
+    /// not called a level or a score: care records attempts, never achievement.
+    @Published private(set) var careStages: [String: Int] = [:]
 
+    private var testDatabaseURL: URL?
     private var database: SQLiteDatabase?
     private var progress: ProgressRepository?
     private var sessions: SessionRepository?
     private var nosework: NoseworkRepository?
+    private var care: CareRecording?
     private(set) var dogId: String = ProgressRepository.defaultDogId
 
-    init(bundle: Bundle = .main) {
+    /// `databaseURL` exists for tests only: it points the model at a temporary
+    /// file so a unit test never touches the owner's progress database.
+    init(bundle: Bundle = .main, databaseURL: URL? = nil) {
+        testDatabaseURL = databaseURL
         let storedLanguage = LanguageStore.load()
         language = storedLanguage
         ContentLocale.override = storedLanguage.contentOverride
@@ -69,6 +77,24 @@ final class AppModel: ObservableObject {
         content.catalogue.first { positions[$0.id] == nil }?.id ?? content.catalogue[0].id
     }
 
+    /// Test seam: install a store that fails on purpose so the
+    /// commit-before-publish rule and the retry path are observable (V-7).
+    /// Never called by the app itself.
+    func installCareStoreForTests(_ store: CareRecording) {
+        care = store
+        reloadCareState()
+    }
+
+    private func reloadCareState() {
+        guard let care else { return }
+        var stages: [String: Int] = [:]
+        for routine in content.care {
+            let furthest = (try? care.highestStageTried(dogId: dogId, routineId: routine.id)) ?? 0
+            if furthest > 0 { stages[routine.id] = furthest }
+        }
+        careStages = stages
+    }
+
     func retryStorage() {
         guard case .storageUnavailable = state else { return }
         openStorage()
@@ -76,12 +102,14 @@ final class AppModel: ObservableObject {
 
     private func openStorage() {
         do {
-            let db = try AppDatabase.open(url: try AppDatabase.defaultURL(), content: content)
+            let db = try AppDatabase.open(url: testDatabaseURL ?? AppDatabase.defaultURL(),
+                                           content: content)
             let progress = ProgressRepository(db: db)
             database = db
             self.progress = progress
             sessions = SessionRepository(db: db, progress: progress)
             nosework = NoseworkRepository(db: db)
+            care = CareRepository(db: db, knownRoutineIds: Set(content.care.map(\.id)))
             dogId = try progress.ensureDefaultDog()
             try reload()
             state = .ready
@@ -90,12 +118,13 @@ final class AppModel: ObservableObject {
             progress = nil
             sessions = nil
             nosework = nil
+            care = nil
             state = .storageUnavailable(String(describing: error))
         }
     }
 
     func reload() throws {
-        guard let progress, let nosework else { return }
+        guard let progress, let nosework, let care else { return }
         positions = try progress.allPositions(dogId: dogId)
         mastery = try progress.mastery(dogId: dogId)
         var levels: [String: Int] = [:]
@@ -104,6 +133,12 @@ final class AppModel: ObservableObject {
             if highest > 0 { levels[activity.id] = highest }
         }
         noseworkLevels = levels
+        var stages: [String: Int] = [:]
+        for routine in content.care {
+            let furthest = try care.highestStageTried(dogId: dogId, routineId: routine.id)
+            if furthest > 0 { stages[routine.id] = furthest }
+        }
+        careStages = stages
     }
 
     // MARK: Session flows
@@ -120,6 +155,28 @@ final class AppModel: ObservableObject {
             environmentId: position.environmentId, stepId: stepId) else { return nil }
         return SetModel(entry: entry, position: position, stored: stored,
                         dogId: dogId, model: self, progress: progress, sessions: sessions)
+    }
+
+    /// Record that the owner tried a stage. Returns false when the write
+    /// failed, in which case nothing is published: the screen keeps showing
+    /// the last committed maximum and offers the localized retry. The dog
+    /// declining contact is still an attempt, so it is recorded too.
+    @discardableResult
+    func recordCareStageTried(routineId: String, stageOrdinal: Int) -> Bool {
+        guard let care else { return false }
+        let previous = careStages[routineId] ?? 0
+        let committed: Int
+        do {
+            try care.recordStageTried(dogId: dogId, routineId: routineId,
+                                      stageOrdinal: stageOrdinal)
+            committed = max(previous, stageOrdinal)
+        } catch {
+            return false
+        }
+        if careStages[routineId] != committed {
+            careStages[routineId] = committed
+        }
+        return true
     }
 
     func recordNoseworkCompletion(activityId: String, levelOrdinal: Int) {

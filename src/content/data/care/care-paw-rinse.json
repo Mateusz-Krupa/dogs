@@ -1,0 +1,110 @@
+{
+  "id": "care-paw-rinse",
+  "pose": "stand",
+  "sortOrder": 1,
+  "names": {
+    "pl": {
+      "name": "Mycie łap",
+      "description": "Łapy po spacerze bez szarpaniny: pies sam wchodzi na swoje miejsce, sam podaje łapę i wie, że może przystanąć."
+    },
+    "en": {
+      "name": "Paw rinsing",
+      "description": "Paws cleaned after a walk without a fight: the dog comes to the spot, offers the paw and knows it may stop."
+    }
+  },
+  "tagline": {
+    "pl": "Letnia woda, nie kara",
+    "en": "Lukewarm water, not a punishment"
+  },
+  "urgent": {
+    "pl": "Kulawizna, ból, pęknięta opuszka, coś między palcami albo nagła niechęć do dotyku — zatrzymaj się i zadzwoń do weterynarza. Wycofanie, sztywnienie czy odsunięcie się psa też jest stopem: puszczasz łapę i kończysz na dziś.",
+    "en": "Limping, pain, a cracked pad, something wedged between the toes, or a sudden dislike of being touched — stop and call your veterinarian. A dog that withdraws, stiffens or moves away is also a stop: release the paw and end the session today."
+  },
+  "professional": {
+    "pl": "Rana, pęknięcie, sączący się palec, zmiany skórne albo warczenie przy dotyku — to weterynarz, a przy lęku także behawiorysta. Pilną potrzebę higieny wykonuje specjalista, nie dalszy trening zgody.",
+    "en": "A wound, a crack, a weeping toe, skin changes or a growl at touch — that is a veterinarian, and fear is a behaviour professional too. Urgent hygiene is done by a professional, not by pushing consent training further."
+  },
+  "practices": [
+    "handling",
+    "mat"
+  ],
+  "sources": [
+    {
+      "title": "Every Dog Austin: Handling and Cooperative Care",
+      "url": "https://www.everydogaustin.org/handouts/handling-and-cooperative-care"
+    },
+    {
+      "title": "Sit Pretty: A start-button behaviour for cooperative care",
+      "url": "https://www.sit-pretty.ca/blog/start-button-behavior-for-cooperative-nail-trims"
+    },
+    {
+      "title": "VCA: Grooming and Coat Care for Your Dog",
+      "url": "https://vcahospitals.com/know-your-pet/grooming-and-coat-care-for-your-dog"
+    }
+  ],
+  "stages": [
+    {
+      "ordinal": 1,
+      "gear": [
+        "treats",
+        "mat"
+      ],
+      "pl": {
+        "title": "Stanowisko, na które pies wchodzi sam",
+        "setup": "Ręcznik na podłodze przy drzwiach, smakołyki w zasięgu ręki; podłoga, na której łapy się nie rozjeżdżają.",
+        "how": "Zaproś psa na ręcznik i nagradzaj za stanie. Nie bierz jeszcze łapy i nie zaczynaj mycia.",
+        "watchFor": "Pies wchodzi chętnie i zostaje. Odejście, ziewnięcie czy otrząśnięcie się oznaczają, że zaczęliśmy za ostro.",
+        "stop": "Stop przy kulawiźnie, bólu albo sztywnieniu. Mycie nie jest celem tego etapu."
+      },
+      "en": {
+        "title": "A spot the dog walks onto by itself",
+        "setup": "A towel on the floor by the door, treats within reach; a floor where paws do not slide.",
+        "how": "Invite the dog onto the towel and pay for standing there. Do not take a paw yet, do not start washing.",
+        "watchFor": "The dog steps up gladly and stays. Walking off, yawning or shaking off means we started too hard.",
+        "stop": "Stop for limping, pain or stiffness. Washing is not the goal of this stage."
+      }
+    },
+    {
+      "ordinal": 2,
+      "gear": [
+        "treats",
+        "towel"
+      ],
+      "pl": {
+        "title": "Wilgotny dotyk, jeszcze bez wody",
+        "setup": "Miska z letnią wodą i ręcznik obok; pies stoi na swoim stanowisku.",
+        "how": "Dotknij mokrym ręcznikiem najpierw barku, potem przedramienia, na końcu łapy — za każdy dotyk nagroda. Kończ etap, gdy pies jest jeszcze spokojny.",
+        "watchFor": "Niżej jest trudniej: na palcach pies czuje mocniej niż na barku. Napięcie ciała = wracamy wyżej.",
+        "stop": "Stop, gdy pies wysuwa łapę lub napina się. Nie przytrzymujemy siłą."
+      },
+      "en": {
+        "title": "A damp touch, still no water",
+        "setup": "A bowl of lukewarm water and a towel beside you; the dog is on its spot.",
+        "how": "Touch first the shoulder, then the forearm, last the paw with the damp towel — pay every touch. End the stage while the dog is still calm.",
+        "watchFor": "Lower is harder: the toes feel more than the shoulder. Tension means we go back up the leg.",
+        "stop": "Stop if the dog pulls the paw out or tenses. We do not hold it in place."
+      }
+    },
+    {
+      "ordinal": 3,
+      "gear": [
+        "towel",
+        "bowl"
+      ],
+      "pl": {
+        "title": "Krótkie płukanie i dokładne osuszenie",
+        "setup": "Letnia woda z kranu o niskim strumieniu albo z naczynia; suchy ręcznik w zasięgu.",
+        "how": "Delikatnie zdejmij brud suchym ręcznikiem, potem wypłucz krótko letnią wodą i wytrzyj do sucha, także między palcami. Płać hojnie za stanie i za samo osuszanie.",
+        "watchFor": "Pies zostaje z własnej woli i daje się osuszyć. Nerwowe oblizywanie się albo zejście ze stanowiska = kończysz kontakt teraz; łatwiej poćwiczysz następnym razem.",
+        "stop": "Stop przy pękniętej opuszce, strupkach, bólu albo świądzie, który nie mija — weterynarz, nie dłuższe płukanie."
+      },
+      "en": {
+        "title": "A short rinse and drying off properly",
+        "setup": "Lukewarm water from a low tap or a jug; a dry towel within reach.",
+        "how": "Lift the dirt off gently with a dry towel, then rinse briefly with lukewarm water and dry thoroughly, between the toes too. Pay generously for standing and for being dried.",
+        "watchFor": "The dog stays by choice and lets itself be dried. Frantic licking or stepping off the spot = contact ends now; practise easier next time.",
+        "stop": "Stop for a cracked pad, scabs, pain or itch that will not pass — veterinarian, not a longer rinse."
+      }
+    }
+  ]
+}

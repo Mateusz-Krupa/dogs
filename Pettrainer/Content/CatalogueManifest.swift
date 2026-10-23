@@ -46,6 +46,15 @@ enum CatalogueManifest {
         folder: "behaviour"
     )
 
+    /// Hygiene routines, in browse order: the wet walk first, the rare bath
+    /// last. A separate family — these never join `catalogue`, because care is
+    /// participation and carries no verdict (spec: freely accessible care).
+    static let care: [ContentResource] = names(
+        ["care-paw-rinse", "care-nails", "care-coat", "care-checks",
+         "care-teeth", "care-towel", "care-bath"],
+        folder: "care"
+    )
+
     static let environments = ContentResource(source: "environments.json", resourceName: "environments")
 
     private static func names(_ ids: [String], folder: String) -> [ContentResource] {

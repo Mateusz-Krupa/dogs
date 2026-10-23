@@ -101,3 +101,35 @@ Disclosure interactions to port: `showAbout` toggle; `openMistake` one-at-a-time
   machine right now; update-in-place and any real legacy storage must be checked
   at tasks 8.3/8.4 gates. If a legacy store is ever found, the F-3 classification
   table applies and raw reps are never rewritten.
+
+## Approved extension: hygiene care (add-hygiene-care-section, 2026-10-23)
+
+The 41-file JS snapshot above is frozen provenance and is **not** rewritten by
+this section: care did not exist in the 2021 JS baseline, so it is registered as
+an approved additive extension rather than as parity evidence.
+
+- **Seven** new resources, registered as `care/<id>.json` in
+  `parity-data.json → files` and shipped as
+  `Pettrainer/Resources/Content/care-care-<id>.json`:
+  `care-paw-rinse`, `care-nails`, `care-coat`, `care-checks`, `care-teeth`,
+  `care-towel`, `care-bath`.
+- `parity-data.json → care` records the same inventory, the owning change and
+  the provenance limit: these hashes prove canonical↔bundle agreement, **not**
+  2021 JS equivalence.
+- **Native-only** UI strings under the approved native-first scope: nine
+  `care.*` keys and five `gear.*` labels in
+  `Pettrainer/Resources/Localizable.xcstrings`. They are exercised by
+  `CareFlowUITests`, which asserts the Polish and English disclaimer, stop line
+  and participation wording in place. `StringsTableTests` was not extended and
+  is not claimed as coverage for them. The JS catalogues carry no `care.*` keys.
+- **Parity coverage, stated exactly.** `ContentLoaderTests` compares the
+  **bundled** bytes of all 50 registered resources against
+  `PettrainerTests/ContentChecksums.swift`; it cannot read `src/`, so by itself
+  it would not notice an edit to the canonical copy.
+  `baseline/verify_parity.py` closes that gap: it checks canonical↔bundled
+  bytes, missing files on either side, and agreement of every digest with both
+  `parity-data.json` and `ContentChecksums.swift`. Both checks are run and
+  reported during verification.
+- All 43 pre-existing resource hashes are unchanged (50 registered in total:
+  43 original + 7 care). The behaviour cards added on 2026-10-22 remain
+  registered as documented above.

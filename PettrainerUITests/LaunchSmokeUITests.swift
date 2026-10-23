@@ -97,18 +97,17 @@ final class LaunchSmokeUITests: XCTestCase {
         // Visual proof of the problem-row thumbnails (task 6.6); attached
         // to the xcresult, not asserted: a11y-hidden Canvas is invisible to
         // queries by design.
-        for _ in 0..<12 where !alone.isHittable {
-            app.swipeUp()
-        }
+        XCTAssertTrue(UITestScroll.fullyVisible(alone, in: app),
+                      "problem row never scrolled fully into view")
         let attachment = XCTAttachment(screenshot: XCUIScreen.main.screenshot())
         attachment.lifetime = .keepAlways
         add(attachment)
-        XCTAssertTrue(alone.isHittable, "problem row never scrolled into view")
+
         alone.tap()
         // Welfare stop-line leads the actionable sections in both languages.
         XCTAssertTrue(app.staticTexts.matching(NSPredicate(
             format: "label CONTAINS[cd] %@", "stop")
-        ).firstMatch.waitForExistence(timeout: 4), "stop section missing")
+        ).firstMatch.waitForExistence(timeout: 6), "stop section missing")
     }
 
     func testLanguageSwitchAppliesWithoutRestart() throws {

@@ -57,6 +57,11 @@ export const pl = {
     door: 'Drzwi',
     grass: 'Trawa',
     nothing: 'Nic poza psem',
+    'brush': 'Szczotka',
+    'toothbrush': 'Szczoteczka do zębów',
+    'dog-toothpaste': 'Pasta do zębów dla psów',
+    'dog-shampoo': 'Szampon dla psów',
+    'styptic': 'Proszek tamujący krwawienie',
   },
   nosework: {
     title: 'Praca nosem',

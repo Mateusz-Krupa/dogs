@@ -6,4 +6,5 @@ enum Route: Hashable {
     case exercise(exerciseId: String)
     case nosework(activityId: String)
     case problem(issueId: String)
+    case care(routineId: String)
 }

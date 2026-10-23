@@ -1,0 +1,107 @@
+{
+  "id": "care-bath",
+  "pose": "stand",
+  "sortOrder": 7,
+  "names": {
+    "pl": {
+      "name": "Kąpiel",
+      "description": "Zdrowy pies nie potrzebuje kąpieli co tydzień — kąpiel to sytuacja, nie rytuał. Trening sprawia, że kiedy już jest potrzebna, nikt nie musi trzymać psa na siłę."
+    },
+    "en": {
+      "name": "Bathing",
+      "description": "A healthy dog does not need a weekly bath — bathing is a situation, not a ritual. Training means that when it is needed, nobody has to hold the dog down."
+    }
+  },
+  "tagline": {
+    "pl": "Rzadko, ciepło, bez pośpiechu",
+    "en": "Rarely, warm, unhurried"
+  },
+  "urgent": {
+    "pl": "Rana, świeży szew, zapalenie skóry, ucha albo oka — nie myj na własną rękę, zadzwoń do weterynarza. Szampon dla ludzi, nawet dziecięcy, jest za ostry dla psiej skóry, a zimny wąż to częsty powód, dla którego pies zaczyna nienawidzić kąpieli. Wycofanie, sztywnienie albo odejście psa oznaczają koniec kontaktu w tej chwili: puszczasz, dajesz przestrzeń, wracasz do łatwiejszego ćwiczenia innego dnia.",
+    "en": "A wound, fresh stitches, inflamed skin, ear or eye — do not bathe on your own, call the veterinarian. Human shampoo, even baby shampoo, is too harsh for dog skin, and a cold hose is a common reason a dog comes to hate bathing. A dog that withdraws, stiffens or walks away ends the contact right now: let go, give space, and return to an easier practice on another day."
+  },
+  "professional": {
+    "pl": "Jeżeli kąpiel jest potrzebna, a pies nie daje się dotknąć — plan ustala weterynarz, czasem przy leku uspokajającym; nie siła. Szampon leczniczy i czas jego trzymania na skórze ustala weterynarz. Warczenie, kłapnięcie albo historia pogryzienia — nie naprawiaj tego sam: behawiorysta, najpierw weterynarz przy nagłej zmianie.",
+    "en": "If a bath is necessary and the dog will not allow touch, the veterinarian sets the plan, sometimes with calming medication; not force. A medicated shampoo and how long it stays on the skin are the veterinarian’s call. Growling, a teeth-snap or any bite history is not a DIY repair: a behaviour professional, and a veterinarian first if the change was sudden."
+  },
+  "practices": [
+    "mat",
+    "handling"
+  ],
+  "sources": [
+    {
+      "title": "VCA: Grooming and Coat Care for Your Dog",
+      "url": "https://vcahospitals.com/know-your-pet/grooming-and-coat-care-for-your-dog"
+    },
+    {
+      "title": "Every Dog Austin: Handling and Cooperative Care",
+      "url": "https://www.everydogaustin.org/handouts/handling-and-cooperative-care"
+    }
+  ],
+  "stages": [
+    {
+      "ordinal": 1,
+      "gear": [
+        "treats",
+        "mat"
+      ],
+      "pl": {
+        "title": "Stanowisko bez wody",
+        "setup": "Mata antypoślizgowa albo ręcznik, na którym łapy się nie ślizgają — w łazience albo w kabinie prysznica; smakołyki w zasięgu.",
+        "how": "Zaproś psa na stanowisko i nagradzaj za stanie, potem za położenie się. Woda jeszcze nie leci.",
+        "watchFor": "Pies wchodzi sam. Wahanie na progu — skracamy sesję i wracamy do samego wchodzenia.",
+        "stop": "Poślizgnięcie albo panika — koniec na dziś; mata antypoślizgowa nie jest dodatkiem, jest warunkiem."
+      },
+      "en": {
+        "title": "A station with no water",
+        "setup": "A non-slip mat or towel in the bathroom or the shower stall; treats within reach.",
+        "how": "Invite the dog onto the station and pay for standing, then for lying down. The water stays off.",
+        "watchFor": "The dog walks on by itself. Hesitation at the threshold — shorten the session and go back to walking on alone.",
+        "stop": "A slip or panic — done for today; the non-slip mat is not an extra, it is the condition."
+      }
+    },
+    {
+      "ordinal": 2,
+      "gear": [
+        "treats",
+        "towel"
+      ],
+      "pl": {
+        "title": "Dźwięk wody i strumień osobno",
+        "setup": "Letnia woda na małym strumieniu; ręcznik i smakołyki obok.",
+        "how": "Odkręć wodę na chwilę i zamknij, zanim cokolwiek dotknie psa — nagródź. Potem zmocz tylko łapę, potem bok. Kończ, zanim pies zacznie się niepokoić.",
+        "watchFor": "Otrząśnięcie się suchego psa to znak stresu, nie śmiechu. Cofamy się o krok.",
+        "stop": "Woda leje się do ucha albo pies panikuje pod strumieniem — zakręć i przerwij."
+      },
+      "en": {
+        "title": "The sound of water and the stream, separately",
+        "setup": "Lukewarm water at a low flow; a towel and treats beside you.",
+        "how": "Turn the water on briefly and off again before anything touches the dog — pay. Then wet only a paw, then a side. End before the dog starts to worry.",
+        "watchFor": "A dry dog shaking off is a stress sign, not laughter. We step back one stage.",
+        "stop": "Water running into the ear, or panic under the stream — turn it off and stop."
+      }
+    },
+    {
+      "ordinal": 3,
+      "gear": [
+        "dog-shampoo",
+        "towel",
+        "mat"
+      ],
+      "pl": {
+        "title": "Konieczna kąpiel: mycie i spłukanie",
+        "setup": "Szampon dla psów, letnia woda, suchy ręcznik w zasięgu; kołtuny rozczesane PRZED kąpielą.",
+        "how": "Krótkie mycie od łap ku grzbietowi, potem dokładne spłukanie — do momentu, gdy woda spływa czysta. Na koniec ręcznik.",
+        "watchFor": "Pies bierze udział do końca z własnej woli i daje się wytrzeć. Wycofanie, sztywnienie albo szukanie wyjścia = zakręcasz wodę i kończysz, nawet jeśli nie wszystko zostało spłukane — dokańczasz przy pomocy fachowca, nie przez trzymanie psa.",
+        "stop": "Nie kąpiesz „na zapas” przy zmianach na skórze — częstotliwość ustala weterynarz. Czerwona skóra albo świąd po kąpieli to powód do wizyty, nie do kolejnej kąpieli."
+      },
+      "en": {
+        "title": "A necessary bath: washing and rinsing",
+        "setup": "Dog shampoo, lukewarm water, a dry towel within reach; mats combed out BEFORE the bath.",
+        "how": "Wash briefly from the paws toward the back, then rinse thoroughly — until the water runs clear. Finish with the towel.",
+        "watchFor": "The dog takes part to the end by choice and lets itself be dried. Withdrawal, stiffening or looking for an exit = you turn the water off and stop, even if not everything is rinsed — the rest is finished with professional help, not by holding the dog.",
+        "stop": "Do not bathe \"preemptively\" over a skin change — frequency is the veterinarian’s call. Red skin or itch after a bath means a visit, not another bath."
+      }
+    }
+  ]
+}

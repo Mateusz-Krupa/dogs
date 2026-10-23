@@ -59,6 +59,11 @@ export const en: LocaleCatalogue = {
     door: 'A door',
     grass: 'Grass',
     nothing: 'Nothing but the dog',
+    'brush': 'Brush',
+    'toothbrush': 'Toothbrush',
+    'dog-toothpaste': 'Dog toothpaste',
+    'dog-shampoo': 'Dog shampoo',
+    'styptic': 'Styptic powder',
   },
   nosework: {
     title: 'Nosework',

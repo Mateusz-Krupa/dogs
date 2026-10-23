@@ -151,6 +151,60 @@ export interface NoseworkActivity {
   readonly levels: readonly NoseworkLevel[];
 }
 
+/**
+ * A cited page behind a care routine's advice. It exists so the app can say
+ * where a claim came from without ever needing the network; opening it is
+ * never required to follow the routine.
+ */
+export interface CareSource {
+  readonly title: string;
+  /** Absolute `https://` address; the validator rejects anything else. */
+  readonly url: string;
+}
+
+/**
+ * One invitation in a hygiene routine. It deliberately carries no criterion,
+ * repetition target or pass condition: the owner never scores the dog, and a
+ * stage that ends without contact is still a stage the dog chose.
+ */
+export interface CareStage {
+  readonly ordinal: number;
+  readonly gear: readonly GearId[];
+  readonly pl: {
+    readonly title: string;
+    readonly setup: string;
+    readonly how: string;
+    readonly watchFor: string;
+    /** This stage's own hazard line, rendered before the instructions. */
+    readonly stop: string;
+  };
+  readonly en: CareStage['pl'];
+}
+
+/**
+ * A hygiene routine (paws, nails, coat, checks, teeth, towel, bath) trained as
+ * cooperative care. Participation is tracked, mastery never is — the app
+ * records the furthest stage an owner tried, not a skill the dog earned.
+ */
+export interface CareRoutine {
+  readonly id: string;
+  readonly pose: Pose;
+  readonly sortOrder: number;
+  readonly names: {
+    readonly pl: { readonly name: string; readonly description: string };
+    readonly en: { readonly name: string; readonly description: string };
+  };
+  readonly tagline: { readonly pl: string; readonly en: string };
+  /** Safety boundary shown before anything else on the screen. */
+  readonly urgent: { readonly pl: string; readonly en: string };
+  /** Where professional help takes over; never a suggestion to keep going. */
+  readonly professional: { readonly pl: string; readonly en: string };
+  /** Advisory exercise ids. Recommendations, never prerequisites. */
+  readonly practices: readonly string[];
+  readonly sources: readonly CareSource[];
+  readonly stages: readonly CareStage[];
+}
+
 export interface Mistake {
   readonly pl: { readonly symptom: string; readonly why: string; readonly fix: string };
   readonly en: Mistake['pl'];
@@ -193,5 +247,6 @@ export { parseEnvironments, parseEnvironmentSet } from './schema/environments';
 export { parseMistakes } from './schema/mistakes';
 export { parseNoseworkActivity } from './schema/nosework';
 export { parseBehaviourIssue } from './schema/behaviour';
+export { parseCareRoutine } from './schema/care';
 
 export type { StepMotion };

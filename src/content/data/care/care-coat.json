@@ -1,0 +1,107 @@
+{
+  "id": "care-coat",
+  "pose": "stand",
+  "sortOrder": 3,
+  "names": {
+    "pl": {
+      "name": "Czesanie",
+      "description": "Krótka, codzienna rutyna: pies znosi szczotkę tak samo dobrze na barku, jak za uchem i w pachwinie."
+    },
+    "en": {
+      "name": "Brushing",
+      "description": "A short daily habit: the brush is equally welcome on the shoulder as behind the ear or in the groin."
+    }
+  },
+  "tagline": {
+    "pl": "Chwila dziennie zamiast walki",
+    "en": "A minute a day instead of a fight"
+  },
+  "urgent": {
+    "pl": "Ból przy dotyku, zaczerwieniona albo sącząca skóra, gorąca w dotyku skóra — weterynarz, zanim weźmiesz szczotkę. Zbitych filców nie rozczesujemy na siłę i nigdy nie tniemy nożyczkami przy skórze. Wycofanie, sztywnienie albo odejście psa oznaczają koniec kontaktu w tej chwili: puszczasz, dajesz przestrzeń, wracasz do łatwiejszego ćwiczenia innego dnia.",
+    "en": "Pain at touch, red or weeping skin, a hot spot — veterinarian before the brush. Severe mats are not combated by force and never cut with scissors at the skin. A dog that withdraws, stiffens or walks away ends the contact right now: let go, give space, and return to an easier practice on another day."
+  },
+  "professional": {
+    "pl": "Mocno zbite kołtuny, filc przy samej skórze, zmiana zapachu lub wyglądu skóry — groomer albo weterynarz. Matowa, łysiejąca sierść bywa objawem choroby, nie brakiem czesania. Warczenie, kłapnięcie albo historia pogryzienia — nie naprawiaj tego sam: behawiorysta, najpierw weterynarz przy nagłej zmianie.",
+    "en": "Tight matting, felted hair at the skin, a change in smell or skin — a groomer or a veterinarian. A dull or thinning coat can be a sign of illness, not missed brushing. Growling, a teeth-snap or any bite history is not a DIY repair: a behaviour professional, and a veterinarian first if the change was sudden."
+  },
+  "practices": [
+    "handling",
+    "mat"
+  ],
+  "sources": [
+    {
+      "title": "VCA: Grooming and Coat Care for Your Dog",
+      "url": "https://vcahospitals.com/know-your-pet/grooming-and-coat-care-for-your-dog"
+    },
+    {
+      "title": "Every Dog Austin: Handling and Cooperative Care",
+      "url": "https://www.everydogaustin.org/handouts/handling-and-cooperative-care"
+    }
+  ],
+  "stages": [
+    {
+      "ordinal": 1,
+      "gear": [
+        "treats",
+        "brush"
+      ],
+      "pl": {
+        "title": "Szczotka jako zapowiedź czegoś dobrego",
+        "setup": "Szczotka w jednej ręce, smakołyki w drugiej; pies swobodnie stoi lub leży.",
+        "how": "Pokaż szczotkę, odłóż, nagródź. Następnie dotknij nią barku i nagródź — bez ciągnięcia.",
+        "watchFor": "Pies zostaje albo sam się przysuwa na widok szczotki. Odwrót, napięcie ciała — cofamy się o krok.",
+        "stop": "Stop, gdy pies ucieka przed szczotką; nie gonimy psa szczotką po całym pokoju."
+      },
+      "en": {
+        "title": "The brush predicts something good",
+        "setup": "Brush in one hand, treats in the other; the dog stands or lies freely.",
+        "how": "Show the brush, put it away, pay. Then touch the shoulder with it and pay — without pulling.",
+        "watchFor": "The dog stays or comes closer at the sight of the brush. Retreat or tension — one step back.",
+        "stop": "Stop if the dog flees the brush; we do not chase it around the room with the brush."
+      }
+    },
+    {
+      "ordinal": 2,
+      "gear": [
+        "treats",
+        "brush"
+      ],
+      "pl": {
+        "title": "Jedno pociągnięcie",
+        "setup": "To samo miejsce; szczotka sucha, sierść bez kołtunów.",
+        "how": "Wykonaj jedno, długie pociągnięcie w kierunku wzrostu włosa i natychmiast nagródź. Na dziś wystarczy.",
+        "watchFor": "Skóra pod szczotką jest luźna, pies nie napina mięśni. Podnoszenie grzbietu, pies ociera się pyskiem o szczotkę — etap za trudny.",
+        "stop": "Stop przy ciągnięciu za kołtun: nie szarp, tylko przerwij i sprawdź, co się zaplątało."
+      },
+      "en": {
+        "title": "One single stroke",
+        "setup": "The same place; a dry brush, coat free of fresh tangles.",
+        "how": "Make one long stroke in the direction of hair growth and pay immediately. For today, that is enough.",
+        "watchFor": "The skin moves loosely under the brush, no muscle tension. A lifting topline or mouth nudging — the stage is too hard.",
+        "stop": "Stop when you feel a snag: do not pull it out, stop and look at what got tangled."
+      }
+    },
+    {
+      "ordinal": 3,
+      "gear": [
+        "treats",
+        "brush",
+        "mat"
+      ],
+      "pl": {
+        "title": "Krótkie czesanie na jednym odcinku",
+        "setup": "Mata albo ręcznik pod łapami; smakołyki w zasięgu.",
+        "how": "Przeczesz krótki fragment, o ile pies bierze udział dobrowolnie: grzbiet, potem boki, a miejsca newralgiczne — pachy, pachwiny, za uszami — dopiero w kolejnych dniach. Przy okazji zobacz, co jest pod sierścią.",
+        "watchFor": "Pies sam zostaje i nie odchodzi. Odwrócenie głowy, odejście, sztywnienie = kończysz kontakt teraz, nie „dokańczasz odcinek”; łatwiej poćwiczesz jutro.",
+        "stop": "Stop przy bólu lub narastającym napięciu — koniec na dziś. Zbitych kołtunów i filców nie rozczesujesz sam: zostaw je groomerowi; skóra pod nimi zmieniona — weterynarz."
+      },
+      "en": {
+        "title": "A short brush over one section",
+        "setup": "A mat or a towel under the paws; treats within reach.",
+        "how": "Brush a short section only while the dog takes part by choice: the back, then the sides; the sensitive spots — armpits, groin, behind the ears — come on later days. While you are there, look at what is under the coat.",
+        "watchFor": "The dog stays on its own and does not leave. Head turned away, walking off, stiffening = contact ends now, not “finish this section first”; practise easier tomorrow.",
+        "stop": "Stop at pain or rising tension — that is the end for today. Do not work out tight mats or felted hair yourself: leave them to a groomer; skin changed under them — veterinarian."
+      }
+    }
+  ]
+}

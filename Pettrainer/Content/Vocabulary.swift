@@ -59,6 +59,11 @@ enum GearId: String, CaseIterable {
     case door
     case grass
     case nothing
+    case brush
+    case toothbrush
+    case dogToothpaste = "dog-toothpaste"
+    case dogShampoo = "dog-shampoo"
+    case styptic
 }
 
 /// What a step diagram draws (port of `MOTION_IDS` in `schema/checks.ts`).

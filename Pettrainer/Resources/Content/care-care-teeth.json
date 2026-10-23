@@ -1,0 +1,105 @@
+{
+  "id": "care-teeth",
+  "pose": "sit",
+  "sortOrder": 5,
+  "names": {
+    "pl": {
+      "name": "Mycie zębów",
+      "description": "Pies daje dotknąć pyska, unieść wargę i zajrzeć do środka — to połowa sukcesu przy kontroli u weterynarza."
+    },
+    "en": {
+      "name": "Tooth brushing",
+      "description": "A dog that lets you touch the muzzle, lift the lip and look inside is half way to a calm veterinary dental check."
+    }
+  },
+  "tagline": {
+    "pl": "Pasta tylko dla psów",
+    "en": "Dog toothpaste only"
+  },
+  "urgent": {
+    "pl": "Nigdy pasta dla ludzi — część z nich zawiera ksylitol, który jest dla psów toksyczny. Ból, krwawiące dziąsła, nieświeży oddech, kamień albo niechęć do dotyku pyska — najpierw weterynarz, nie szczotkowanie. Wycofanie, sztywnienie albo odejście psa oznaczają koniec kontaktu w tej chwili: puszczasz, dajesz przestrzeń, wracasz do łatwiejszego ćwiczenia innego dnia.",
+    "en": "Never human toothpaste — some of them contain xylitol, which is toxic to dogs. Pain, a bleeding gum, stale breath, tartar or a dog that will not allow muzzle touch — veterinarian first, not brushing. A dog that withdraws, stiffens or walks away ends the contact right now: let go, give space, and return to an easier practice on another day."
+  },
+  "professional": {
+    "pl": "Krwawienie z dziąseł, ruchomy ząb, guzek w pysku, ból przy jedzeniu — weterynarz. Jakiego środka użyć i jak często myć — zapytaj weterynarza przy kontroli pyska. Warczenie, kłapnięcie albo historia pogryzienia — nie naprawiaj tego sam: behawiorysta, najpierw weterynarz przy nagłej zmianie.",
+    "en": "Bleeding gums, a loose tooth, a lump in the mouth, pain while eating — veterinarian. Which product to use and how often to brush: ask your veterinarian at a mouth check. Growling, a teeth-snap or any bite history is not a DIY repair: a behaviour professional, and a veterinarian first if the change was sudden."
+  },
+  "practices": [
+    "handling",
+    "leave"
+  ],
+  "sources": [
+    {
+      "title": "Pet Poison Helpline: Xylitol",
+      "url": "https://www.petpoisonhelpline.com/poison/xylitol/"
+    },
+    {
+      "title": "Every Dog Austin: Handling and Cooperative Care",
+      "url": "https://www.everydogaustin.org/handouts/handling-and-cooperative-care"
+    }
+  ],
+  "stages": [
+    {
+      "ordinal": 1,
+      "gear": [
+        "treats",
+        "dog-toothpaste"
+      ],
+      "pl": {
+        "title": "Smak pasty dla psów",
+        "setup": "Odrobina pasty przeznaczonej dla psów na wierzchu dłoni; pies swobodnie stoi lub siedzi.",
+        "how": "Pozwól zlizać odrobinę z dłoni i nagródź. Kilka takich prób, każda krótka.",
+        "watchFor": "Pies sam podchodzi do pasty albo przynajmniej nie odsuwa się. Odwrócenie głowy — następnym razem jeszcze mniejsza ilość.",
+        "stop": "Stop, jeśli pies nie chce zlizać pasty nawet za nagrodę: nie używamy jej na siłę i nie sięgamy po pastę dla ludzi."
+      },
+      "en": {
+        "title": "The taste of dog toothpaste",
+        "setup": "A smear of toothpaste made for dogs on the back of your hand; the dog stands or sits freely.",
+        "how": "Let the dog lick the smear from your hand and pay. A few trials, each one short.",
+        "watchFor": "The dog goes for the smell or at least does not back away. Head turned away — use even less next time.",
+        "stop": "Stop if the paste appeals less than nothing: we never force it, and we never use human paste."
+      }
+    },
+    {
+      "ordinal": 2,
+      "gear": [
+        "treats"
+      ],
+      "pl": {
+        "title": "Uniesienie wargi, bez szczotkowania",
+        "setup": "Ten sam spokojny moment; ręce suche.",
+        "how": "Unieś wargę z boku pyska na sekundę, zobacz dziąsło i ząb, nagródź, puść. Druga strona — następnym razem.",
+        "watchFor": "Cel tego etapu: pies spokojnie znosi lekko uniesioną wargę przy zamkniętym pysku.",
+        "stop": "Jęk, zamknięcie pyska na Twojej ręce, cofnięcie głowy — odsuwasz rękę i kończysz. Jeśli dziąsła krwawią przy dotyku — zadzwoń do weterynarza."
+      },
+      "en": {
+        "title": "Lifting the lip, brushing nothing",
+        "setup": "The same calm moment; dry hands.",
+        "how": "Lift the lip at one side of the muzzle for a second, look at gum and tooth, pay, release. The other side is for next time.",
+        "watchFor": "The goal here is a dog that accepts a lifted lip with its teeth closed and its lips working calmly.",
+        "stop": "A yelp, a mouth closing on your hand, a withdrawn head — you move the hand away and stop. If gums bleed at touch — call the veterinarian."
+      }
+    },
+    {
+      "ordinal": 3,
+      "gear": [
+        "treats",
+        "toothbrush"
+      ],
+      "pl": {
+        "title": "Kilka pociągnięć po zewnętrznej stronie",
+        "setup": "Mokry palec; szczoteczka dla psów tylko wtedy, jeśli pies poznał ją osobno — wcześniej, bez wkładania jej do pyska. To nie warunek wejścia w ten etap.",
+        "how": "Wykonaj kilka krótkich pociągnięć po zewnętrznej stronie kłów i przednich zębów. Nie wchodź głęboko w pysk; na koniec hojna nagroda.",
+        "watchFor": "Pies zostaje do końca i nie gryzie palca ani szczoteczki. Krwawienie, brzydki zapach albo ruchomy ząb — zatrzymaj się i zadzwoń.",
+        "stop": "Nie szczotkujemy przez ból ani przez protest — to zepsuje cały trening. Uraz pyska leczy weterynarz."
+      },
+      "en": {
+        "title": "A few strokes on the outer surface",
+        "setup": "A wet finger; a dog toothbrush only if the dog met it separately first — shown and rewarded, never put in the mouth. That meeting is not a gate for entering this stage.",
+        "how": "Make a few short strokes over the outer side of the canines and front teeth. Do not go deep into the mouth; end with a generous reward.",
+        "watchFor": "The dog stays to the end and does not bite the finger or the brush. Bleeding, a bad smell or a loose tooth — stop and call.",
+        "stop": "We never brush through pain or through protest — that ruins the whole training. A mouth injury is treated by the veterinarian."
+      }
+    }
+  ]
+}

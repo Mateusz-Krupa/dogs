@@ -29,6 +29,20 @@ enum ContentChecksums {
             "3d6a99a171df96541df0b185e6f778b8b1bb6ca323605cdce3ba1daa85185426",
         "behaviour/traffic.json":
             "093934a2c1c55395b91541290da56814ca5ebee140742fc8f6fee36fb8cbcf60",
+        "care/care-paw-rinse.json":
+            "8cd1764cff2395f72b7849c7bf114261fba15c675ee4c2ff921f9806e38e077b",
+        "care/care-nails.json":
+            "778d56086e8047f33a1265a5a819c56e52f867c4ca16fb356d03cec416657c94",
+        "care/care-coat.json":
+            "1ccb33b8fad489c5bae22ef8de079d431b405d2ae56a8dfa4cd2b09c1124104a",
+        "care/care-checks.json":
+            "6016e19401457a249cf81da17b25cd4fbb7a4870ad8bd8b8cce0d9b24bfa7b81",
+        "care/care-teeth.json":
+            "ef56677b6c2ab634f8cb37fb12ed7aec53f09b2d6d88fffe09af58f7093269cf",
+        "care/care-towel.json":
+            "bac63af13bb5c5a2102dff0c688e506c78dd4db7e2f2c9f71d1e7a6801347829",
+        "care/care-bath.json":
+            "f411abf3b250ad2272bd937ba99007f57cd340697f6aaecb056a9a12309216bf",
         "environments.json":
             "15bff6cb65aa9d7a0dff2e7050c504bd46f897e886c600af54d60f77105dd08f",
         "exercises/come.json":

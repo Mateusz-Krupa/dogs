@@ -21,6 +21,7 @@ struct CatalogueView: View {
                     .foregroundStyle(Theme.muted)
 
                 exerciseSection
+                careSection
                 noseworkSection
                 problemsSection
             }
@@ -48,6 +49,11 @@ struct CatalogueView: View {
                     Divider()
                     // Explains why chrome text may lag content after a switch.
                     Text("language.nextLaunch")
+                        .font(.system(size: 11))
+                    Divider()
+                    // Supplementary surface for the same statement the care
+                    // screens carry in full.
+                    Text("care.disclaimer")
                         .font(.system(size: 11))
                 } label: {
                     Image(systemName: "globe")
@@ -84,6 +90,21 @@ struct CatalogueView: View {
             sectionHeader("nosework.title", "nosework.subtitle")
             ForEach(model.content.nosework, id: \.id) { activity in
                 NoseworkCardRow(activity: activity)
+            }
+        }
+    }
+
+    private var careSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            sectionHeader("care.title", "care.subtitle")
+            // The not-veterinary-advice statement is mandatory at the section
+            // level, not only inside each routine, so it is never one tap away.
+            Text("care.disclaimer")
+                .font(.system(size: 12))
+                .foregroundStyle(Theme.muted)
+                .fixedSize(horizontal: false, vertical: true)
+            ForEach(model.content.care, id: \.id) { routine in
+                CareCardRow(routine: routine)
             }
         }
     }

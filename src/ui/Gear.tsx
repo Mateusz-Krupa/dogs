@@ -24,6 +24,11 @@ export type GearId =
   | 'helper'
   | 'door'
   | 'grass'
+  | 'brush'
+  | 'toothbrush'
+  | 'dog-toothpaste'
+  | 'dog-shampoo'
+  | 'styptic'
   | 'nothing';
 
 export interface GearIconProps {
@@ -149,6 +154,46 @@ export function GearIcon({ gear, size = 28, color = INK }: GearIconProps) {
         </G>
       )}
 
+      {gear === 'brush' && (
+        <>
+          <Rect x={7} y={8} width={18} height={7} rx={3.5} {...s} />
+          <Path d="M 9 15 L 9 22" {...s} />
+          <Path d="M 13 15 L 13 23" {...s} />
+          <Path d="M 16 15 L 16 23" {...s} />
+          <Path d="M 19 15 L 19 23" {...s} />
+          <Path d="M 23 15 L 23 22" {...s} />
+        </>
+      )}
+      {gear === 'toothbrush' && (
+        <>
+          <Path d="M 6 26 L 17 15" {...s} />
+          <Path d="M 17 15 Q 21 11 25 7" {...s} />
+          <Path d="M 18 11 L 21 14" {...s} strokeOpacity={0.6} />
+          <Path d="M 21 8 L 24 11" {...s} strokeOpacity={0.6} />
+        </>
+      )}
+      {gear === 'dog-toothpaste' && (
+        <>
+          <Path d="M 12 8 L 20 8" {...s} />
+          <Path d="M 12 8 L 12 18 Q 16 23 20 18 L 20 8" {...s} />
+          <Circle cx={16} cy={25} r={2} fill={color} />
+        </>
+      )}
+      {gear === 'dog-shampoo' && (
+        <>
+          <Rect x={12} y={13} width={9} height={13} rx={3} {...s} />
+          <Path d="M 15 13 L 15 10 L 19 10 L 19 13" {...s} />
+          <Path d="M 17 10 L 17 6 L 22 6" {...s} />
+        </>
+      )}
+      {gear === 'styptic' && (
+        <>
+          <Rect x={11} y={13} width={11} height={12} rx={2} {...s} />
+          <Rect x={12} y={9} width={9} height={4} rx={1.5} {...s} />
+          <Path d="M 16.5 16 L 16.5 22" {...s} />
+          <Path d="M 13.5 19 L 19.5 19" {...s} />
+        </>
+      )}
       {gear === 'nothing' && (
         <G>
           <Circle cx={16} cy={16} r={11} {...s} strokeOpacity={0.5} />

@@ -43,7 +43,14 @@
     "mistakes/handling.json": "7b38cbc4f76121ef9697e8a8121a771a4b273c46802f71643f57ac9d8ff98b83",
     "environments.json": "15bff6cb65aa9d7a0dff2e7050c504bd46f897e886c600af54d60f77105dd08f",
     "behaviour/mounting.json": "ebbd2e027b7450b5becbc8677bd53dad4eecf58b081e79a031cb701f4c9eb7f7",
-    "behaviour/bed.json": "95ce3a57cf3b2bb909004bf127f95077d180e7903bd6c5862159c31c323df126"
+    "behaviour/bed.json": "95ce3a57cf3b2bb909004bf127f95077d180e7903bd6c5862159c31c323df126",
+    "care/care-paw-rinse.json": "8cd1764cff2395f72b7849c7bf114261fba15c675ee4c2ff921f9806e38e077b",
+    "care/care-nails.json": "778d56086e8047f33a1265a5a819c56e52f867c4ca16fb356d03cec416657c94",
+    "care/care-coat.json": "1ccb33b8fad489c5bae22ef8de079d431b405d2ae56a8dfa4cd2b09c1124104a",
+    "care/care-checks.json": "6016e19401457a249cf81da17b25cd4fbb7a4870ad8bd8b8cce0d9b24bfa7b81",
+    "care/care-teeth.json": "ef56677b6c2ab634f8cb37fb12ed7aec53f09b2d6d88fffe09af58f7093269cf",
+    "care/care-towel.json": "bac63af13bb5c5a2102dff0c688e506c78dd4db7e2f2c9f71d1e7a6801347829",
+    "care/care-bath.json": "f411abf3b250ad2272bd937ba99007f57cd340697f6aaecb056a9a12309216bf"
   },
   "order": {
     "exercises": [
@@ -2705,5 +2712,18 @@
       "treats"
     ],
     "lure_stages": "/**\n * Which version of the movement a given step is actually practising.\n *\n * The ladder changes what your hand is doing three times: first it holds food\n * the dog follows, then it makes the same shape empty, and finally it does\n * nothing at all while the word carries the cue. Playing the food lure on step\n * nine would contradict the instruction printed directly underneath it.\n */\n\nexport type LureStage = 'lure' | 'empty-hand' | 'verbal';\n\n/**\n * Where each exercise stops luring with food, and where the hand drops out.\n *\n * Steps whose copy still works *with* the hand — the empty-hand gesture paired\n * with the word — stay on `empty-hand` even once the word is in play, and say\n * so with their own `sound` flag. Exercises missing from this table never fade\n * a lure in the first place — recall, loose lead and handling are food-led the\n * whole way through — so they stay on `lure` and simply show where the food is.\n */\nconst BOUNDARIES: Readonly<Record<string, { readonly lureUntil: number; readonly handUntil: number }>> = {\n  sit: { lureUntil: 5, handUntil: 8 },\n  down: { lureUntil: 3, handUntil: 5 },\n  look: { lureUntil: 2, handUntil: 3 },\n  mat: { lureUntil: 2, handUntil: 3 },\n  leave: { lureUntil: 4, handUntil: 4 },\n  name: { lureUntil: 0, handUntil: 0 },\n  stay: { lureUntil: 0, handUntil: 0 },\n  wait: { lureUntil: 0, handUntil: 0 },\n};\n\n/** The stage a step is at. Exercises with no fade stay on `lure`. */\nexport function lureStageFor(exerciseId: string, stepOrdinal: number): LureStage {\n  const bounds = BOUNDARIES[exerciseId];\n  if (!bounds) return 'lure';\n  if (stepOrdinal <= bounds.lureUntil) return 'lure';\n  if (stepOrdinal <= bounds.handUntil) return 'empty-hand';\n  return 'verbal';\n}\n"
+  },
+  "care": {
+    "ids": [
+      "care-paw-rinse",
+      "care-nails",
+      "care-coat",
+      "care-checks",
+      "care-teeth",
+      "care-towel",
+      "care-bath"
+    ],
+    "addedBy": "add-hygiene-care-section",
+    "note": "Approved extension of the frozen 2021 JS snapshot: care did not exist in the original app and is not part of the byte-for-byte JS parity; it is registered here so the reviewed checksum inventory stays complete."
   }
 }

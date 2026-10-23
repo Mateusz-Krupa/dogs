@@ -33,6 +33,8 @@ struct RootView: View {
             NoseworkView(activityId: id)
         case .problem(let id):
             ProblemView(issueId: id)
+        case .care(let id):
+            CareView(routineId: id)
         }
     }
 }

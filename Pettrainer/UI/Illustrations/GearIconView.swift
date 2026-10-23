@@ -82,6 +82,31 @@ struct GearIconView: View {
             stroked("M 12 26 Q 13 14 17 10")
             stroked("M 19 26 Q 20 15 24 12")
             stroked("M 25 26 Q 26 19 28 16")
+        case .brush: // pad with bristles
+            context.stroke(context.roundedRect(x: 7, y: 8, w: 18, h: 7, radius: 3.5), color, width: 2)
+            stroked("M 9 15 L 9 22")
+            stroked("M 13 15 L 13 23")
+            stroked("M 16 15 L 16 23")
+            stroked("M 19 15 L 19 23")
+            stroked("M 23 15 L 23 22")
+        case .toothbrush: // handle angled up to a small head
+            stroked("M 6 26 L 17 15")
+            stroked("M 17 15 Q 21 11 25 7")
+            stroked("M 18 11 L 21 14", opacity: 0.6)
+            stroked("M 21 8 L 24 11", opacity: 0.6)
+        case .dogToothpaste: // tube, crimped at the top, paste at the nozzle
+            stroked("M 12 8 L 20 8")
+            stroked("M 12 8 L 12 18 Q 16 23 20 18 L 20 8")
+            filled(16, 25, 2)
+        case .dogShampoo: // bottle with a pump
+            context.stroke(context.roundedRect(x: 12, y: 13, w: 9, h: 13, radius: 3), color, width: 2)
+            stroked("M 15 13 L 15 10 L 19 10 L 19 13")
+            stroked("M 17 10 L 17 6 L 22 6")
+        case .styptic: // jar marked with a cross
+            context.stroke(context.roundedRect(x: 11, y: 13, w: 11, h: 12, radius: 2), color, width: 2)
+            context.stroke(context.roundedRect(x: 12, y: 9, w: 9, h: 4, radius: 1.5), color, width: 2)
+            stroked("M 16.5 16 L 16.5 22")
+            stroked("M 13.5 19 L 19.5 19")
         case .nothing:
             outlined(16, 16, 11, opacity: 0.5)
             stroked("M 9 23 L 23 9", opacity: 0.5)

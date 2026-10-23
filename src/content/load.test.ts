@@ -37,6 +37,11 @@ const GEAR_UNION: Record<GearId, true> = {
   helper: true,
   door: true,
   grass: true,
+  brush: true,
+  toothbrush: true,
+  'dog-toothpaste': true,
+  'dog-shampoo': true,
+  styptic: true,
   nothing: true,
 };
 const GEAR_IDS = Object.keys(GEAR_UNION);

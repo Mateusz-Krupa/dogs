@@ -95,7 +95,8 @@ final class ContentLoaderTests: XCTestCase {
         // baseline. Files are byte-identical; only their bundle names carry a
         // family prefix (exercises-sit.json) to dodge the sit/sit collision.
         let all = CatalogueManifest.exercises + CatalogueManifest.nosework
-            + CatalogueManifest.behaviour + CatalogueManifest.mistakes.map(\.resource)
+            + CatalogueManifest.behaviour + CatalogueManifest.care
+            + CatalogueManifest.mistakes.map(\.resource)
             + [CatalogueManifest.environments]
         var expected: [String: String] = [:]
         for resource in all { expected[resource.source] = ContentChecksums.sha256[resource.source] }
