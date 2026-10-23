@@ -157,11 +157,12 @@ The approved Polish copy audit (`openspec/reviews/2026-10-23-polish-copy-audit.m
 approved by the user with „spoko popraw wszytko") owns wording in the same files this change
 rewrote: `care-*.json` and `Localizable.xcstrings`. A mechanical disposition check of all 126 rows
 against the live tree is recorded in
-`openspec/changes/correct-approved-polish-copy/implementation-notes.md`: **103 rows are NOT
-APPLIED** (audited sentence still shipping) and **23 rows are CONFLICT/PAUSED** (the field was
+`openspec/changes/correct-approved-polish-copy/implementation-notes.md`: **108 rows are NOT
+APPLIED** (audited sentence still shipping) and **18 rows are CONFLICT/PAUSED** (the field was
 rewritten, by the earlier copy round or by hygiene V-1…V-6, in wording that differs from the text
 the user approved). Of the care block 081–110, thirteen rows are still untouched:
-082, 084, 086, 088, 089, 090, 091, 093, 096, 097, 098, 099, 109.
+082, 084, 086, 088, 089, 090, 091, 093, 096, 097, 098, 099, 109. (Numbers corrected after a
+probe-length bug in the first count; the ledger records the method and both figures.)
 
 Consequences, stated rather than glossed:
 

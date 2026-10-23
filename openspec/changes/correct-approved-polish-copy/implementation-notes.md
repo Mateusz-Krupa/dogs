@@ -1,40 +1,66 @@
 # Implementation ledger — audit IDs 001–126 against the live tree
 
-Built mechanically on 2026-10-23 from the working tree (JS canon `src/content/data/`,
-native bundle `Pettrainer/Resources/Content/`, both locale catalogues, 103 corpus files).
-Method per row: the quoted `Obecnie` sentence and the `Propozycja` sentence are normalised
-(quote marks, whitespace, JSON escapes) and searched as a 55-character probe.
+Built mechanically on 2026-10-23 across **162 live-copy files**: JS content canon
+`src/content/data/`, native bundle `Pettrainer/Resources/Content/`, both UI catalogues
+(`src/i18n/locales/*.ts`, `Pettrainer/Resources/Localizable.xcstrings` with escapes decoded), the
+JS components that hold inline copy (`src/features/**/*.tsx`, `src/ui/*.tsx`) and Swift sources.
+Method per row: the quoted `Obecnie` and `Propozycja` sentences are normalised (quote marks,
+backslashes, whitespace); sentences of 20+ characters are probed by their first 60 characters,
+shorter ones by their whole normalised text, case-sensitively.
 
-Matcher soundness was verified, not assumed:
-- a known earlier fix is visible in the corpus (`Kalec` absent, `Kaganiec` present in
-  `reactivity.json`) → the matcher detects applied work;
-- row 096 `Obecnie` text is still literally in `care-nails.json` line 99 in both runtimes →
-  NOT APPLIED is true, not a miss;
-- row 094: audited sentence is gone and the approved sentence is absent → the hygiene change
-  rewrote that field, so CONFLICT/PAUSED is the correct state, per the spec scenario "Live
-  content changed during another feature";
-- no `Propozycja` probe matches anywhere → 0 IDs are implemented verbatim.
+## A method bug in the first pass, corrected here
+
+The first run required a probe of at least 14 characters, which silently dropped short audited
+sentences. Row 001 (`Nie zaliczone`, 13 characters) was reported as „wording gone” while
+`session.miss` still ships `Nie zaliczone` in **both** catalogues. Removing the floor — and
+widening the corpus after row 004 turned out to be inline in
+`src/features/catalogue/ExerciseList.tsx` — moved 5 rows from CONFLICT/PAUSED into NOT APPLIED:
+**103/23 → 108/18**. The superseded figure is named because `add-hygiene-care-section/notes.md`
+quoted it.
+
+## Matcher soundness, verified rather than assumed
+
+- **Positive control**: an earlier fix is detectable (`Kalec` absent, `Kaganiec` present in
+  `reactivity.json`) → applied work is found by the probe.
+- **Literal controls**: 096’s audited sentence is still at `care-nails.json` line 99 in both
+  runtimes, and `ściąga łapę` (093), `wiór` (091), `napina mięśni` (090), `sącząca` (088),
+  `może przystanąć` (097), `Wilgotny dotyk` (099) survive verbatim in shipped JSON.
+- **Negative control**: no `Propozycja` probe matches anywhere → 0 IDs adopted verbatim.
+- **Apparent one-tree divergence, dismissed**: 012, 014 and 015 name native-only keys
+  (`catalogue.levelsCount`, `care.furthestTried`, `care.subtitle`), so the JS catalogue never
+  carried that string; no row is a fix stranded in the runtime being retired.
 
 ## State summary
 
-- **103 rows NOT APPLIED** — approved wording never landed; outstanding work.
-- **{} rows CONFLICT/PAUSED** — the live field was rewritten by `add-hygiene-care-section`
-  (welfare review V-1…V-6) with different wording than approved. The spec requires recording
-  the conflict and pausing the row; it does **not** authorise overwriting the hygiene copy.
-- **0 rows applied verbatim.** The earlier copy round fixed ~23 fields in its own words
-  (for example `Kalec` → `Kaganiec`), which is why those land in CONFLICT/PAUSED rather than
-  done: the sentence differs from the text the user approved.
+| State | Rows | Meaning |
+| --- | --- | --- |
+| APPLIED VERBATIM | 0 | the approved sentence is in the product |
+| REWORDED (conflict/paused) | 18 | the audited sentence is gone, but replaced by other wording |
+| **NOT APPLIED** | **108** | the audited sentence is still shipped |
+
+Care block 081–110: 13 still not applied (082, 084, 086, 088, 089, 090, 091, 093, 096, 097, 098, 099, 109); 17 reworded by the hygiene welfare review.
+
+## Why „we already fixed the Polish” and „0 of 126 applied” are both true
+
+The earlier Polish round (commit `324b81b`, TestFlight build 5) corrected real defects: `Kalec` →
+`Kaganiec`, `adresatka` → `adresówka`, `absencja` → `brak gryzienia`, `rozjedzie` → `rozjeżdża`,
+leftover `monting`/`wspinalnie`, the gender-safe prerequisite hint, the `Kroków: %1$lld` plural
+and several calques. **None of those strings appears in this audit** (`grep -c` in the audit for
+`Kalec`, `adresatka`, `absencja`, `rozjedzie`, `monting`, `wspinalnie`, `prereqHint`: 0 each).
+That work came from a different review trail and discharges none of these 126 rows. All 18
+REWORDED rows are from today’s hygiene review (V-1…V-6).
 
 ## Consequences for the approval gate
 
-The recorded approval was of *these* proposals. Half the corpus therefore does not yet
-contain what was approved, and a third of the remainder contains something else. This change
-cannot be completed, archived, or shipped as "approved copy applied" until either:
+The recorded approval was of *these* proposals. So:
 
-1. the 103 NOT APPLIED rows are implemented as written, and
-2. a decision is made for each CONFLICT/PAUSED row: keep the hygiene wording (and amend the
-   audit entry so the record matches the shipped product) or restore the approved wording
-   where it is welfare-equivalent.
+1. 108 rows must still be implemented as approved, and
+2. for each of the 18 REWORDED rows someone must decide: keep the hygiene wording and amend the
+   audit record, or restore the approved wording where it is welfare-equivalent.
+
+This change cannot be completed, archived, or described as „approved copy shipped” before both.
+Build 5 already ships copy from a tree where these corrections had not landed: that is an
+approval-trail fact, not a regression introduced by the care work.
 
 ## Ledger
 
@@ -64,7 +90,7 @@ cannot be completed, archived, or shipped as "approved copy applied" until eithe
 | 022 | NOT APPLIED | ``down.json`, krok 7, `note`.` | [J/S] Leżenie: żargon i niejasne „przepychanie” |
 | 023 | NOT APPLIED | ``drop.json`, krok 2, `note`.` | [M] Oddawanie: jeden błąd nie przekreśla nauki |
 | 024 | NOT APPLIED | ``drop.json`, krok 4, `criterion`; instrukcja każe podsunąć smakołyk.` | [M] Oddawanie: instrukcja i kryterium nie opisują tego samego |
-| 025 | CONFLICT/PAUSED | ``handling.json`, `names.pl.name`.` | [J/S] Nazwa ćwiczenia dotyku |
+| 025 | NOT APPLIED | ``handling.json`, `names.pl.name`.` | [J/S] Nazwa ćwiczenia dotyku |
 | 026 | NOT APPLIED | ``handling.json`, `tagline.pl`.` | [J] Nie weterynarz jest walką |
 | 027 | NOT APPLIED | ``handling.json`, krok 3, `instruction`.` | [J] Błędna odmiana |
 | 028 | NOT APPLIED | ``handling.json`, krok 3, `note`.` | [J] „Porywanie łapy w locie” |
@@ -89,7 +115,7 @@ cannot be completed, archived, or shipped as "approved copy applied" until eithe
 | 047 | NOT APPLIED | ``leave.json`, druga podpowiedź, `fix`.` | [J/S] Zostaw: zarządzaj czym? |
 | 048 | NOT APPLIED | ``stay.json`, pierwsza podpowiedź, `fix`.` | [J] Zostań: osie nie rosną wraz z człowiekiem |
 | 049 | NOT APPLIED | ``alone.json`, pierwsze trzy zdania `urgent.pl`.` | [J/M] Samotność: objawy nie są samodzielną diagnozą |
-| 050 | CONFLICT/PAUSED | ``alone.json`, pierwszy punkt `avoid.pl`.` | [J/M] Samotność: niezrozumiałe „zamieranie paniki” |
+| 050 | NOT APPLIED | ``alone.json`, pierwszy punkt `avoid.pl`.` | [J/M] Samotność: niezrozumiałe „zamieranie paniki” |
 | 051 | NOT APPLIED | ``alone.json`, czwarty punkt `avoid.pl`.` | [J] Samotność: co zaczyna narastać? |
 | 052 | NOT APPLIED | ``alone.json`, drugi punkt `work.pl`.` | [J] Samotność: nienaturalna instrukcja |
 | 053 | NOT APPLIED | ``bark-door.json`, `recognizes.pl`.` | [J] Dzwonek: emocje nie „opadają z psa” |
@@ -101,7 +127,7 @@ cannot be completed, archived, or shipped as "approved copy applied" until eithe
 | 059 | NOT APPLIED | ``bed.json`, pierwszy punkt `work.pl`.` | [J/M] Łóżko: inna komenda niż w katalogu i sprzeczny opis samodzielności |
 | 060 | NOT APPLIED | ``bed.json`, drugi punkt `work.pl`.` | [J] Łóżko: „tylko dopóki” zamiast warunku przejścia |
 | 061 | NOT APPLIED | ``bolting.json`, `urgent.pl`.` | [J/M] Drzwi: GPS nie jest barierą fizyczną |
-| 062 | CONFLICT/PAUSED | ``jumping.json`, drugi punkt `avoid.pl`.` | [J] Skakanie: błąd „i o to wygrywa” |
+| 062 | NOT APPLIED | ``jumping.json`, drugi punkt `avoid.pl`.` | [J] Skakanie: błąd „i o to wygrywa” |
 | 063 | NOT APPLIED | ``jumping.json`, drugi punkt `work.pl`.` | [J] Skakanie: nie każda osoba ma siadać |
 | 064 | NOT APPLIED | ``mounting.json`, pierwszy punkt `now.pl`.` | [J] „Montowanie” to kalka z angielskiego |
 | 065 | NOT APPLIED | ``mounting.json`, drugi punkt `now.pl`.` | [J] „Węchowanie” i wchodzenie ekscytacji w interakcję |
@@ -110,7 +136,7 @@ cannot be completed, archived, or shipped as "approved copy applied" until eithe
 | 068 | NOT APPLIED | ``nipping.json`, `urgent.pl` i `professional.pl` — dwa obecne warianty.` | [J/M] Gryzienie: nie „przerywa skóry” i nie musi być poprzedzone warczeniem |
 | 069 | NOT APPLIED | ``nipping.json`, drugi punkt `avoid.pl`.` | [J] Błąd pisowni i prostszy zakaz przemocy |
 | 070 | NOT APPLIED | ``nipping.json`, pierwszy punkt `work.pl`.` | [J] Gryzienie zabawki |
-| 071 | CONFLICT/PAUSED | ``noise.json`, pierwszy punkt `avoid.pl`.` | [M] Hałas: „późno w nocy” nie gwarantuje ciszy |
+| 071 | NOT APPLIED | ``noise.json`, pierwszy punkt `avoid.pl`.` | [M] Hałas: „późno w nocy” nie gwarantuje ciszy |
 | 072 | NOT APPLIED | ``noise.json`, drugi punkt `now.pl`.` | [M] Hałas: nieuzasadniona liczba |
 | 073 | NOT APPLIED | ``noise.json`, trzeci punkt `now.pl`.` | [J] Hałas: „stres załatwia pęcherz” |
 | 074 | NOT APPLIED | ``noise.json`, pierwszy punkt `work.pl`.` | [J] Hałas: buda, koszyk i kokon mieszają się w jednym zdaniu |
@@ -163,7 +189,7 @@ cannot be completed, archived, or shipped as "approved copy applied" until eithe
 | 121 | NOT APPLIED | ``track.json`, poziom 2, `title`.` | [J] Ślad: niezrozumiałe „odczekane” |
 | 122 | NOT APPLIED | ``environments.json`, ósme środowisko, `names.pl`.` | [J] Otoczenie: „podłożone rozproszenia” |
 | 123 | NOT APPLIED | ``environments.json`, ostatnie środowisko, `names.pl`.` | [J] Otoczenie: urwany opis |
-| 124 | CONFLICT/PAUSED | `—` | [J] Polskie cudzysłowy |
+| 124 | NOT APPLIED | `—` | [J] Polskie cudzysłowy |
 | 125 | NOT APPLIED | `—` | [S] „Płać” i „wypłata” → jasne nazwanie nagrody |
 | 126 | NOT APPLIED | `—` | [J/M] Kłapnięcie, próba ugryzienia i ugryzienie — trzy różne opisy |
 
@@ -171,36 +197,41 @@ cannot be completed, archived, or shipped as "approved copy applied" until eithe
 
 | ID | State | What the hygiene change did instead |
 | --- | --- | --- |
-| 081 | CONFLICT/PAUSED | V-3 renamed the mat „mata antypoślizgowa” (same safety rule, different noun). |
-| 082 | NOT APPLIED | not touched by the hygiene change |
-| 083 | CONFLICT/PAUSED | V-3 rewrote `watchFor`: withdrawal turns the water off, no endurance framing. |
-| 084 | NOT APPLIED | not touched by the hygiene change |
-| 085 | CONFLICT/PAUSED | V-4 retitled the stage „Przewidywalne podejście, które pies może odrzucić”. |
-| 086 | NOT APPLIED | not touched by the hygiene change |
-| 087 | CONFLICT/PAUSED | V-4 narrowed the final stage to a look-over; the hand sweep was removed. |
-| 088 | NOT APPLIED | not touched by the hygiene change |
-| 089 | NOT APPLIED | not touched by the hygiene change |
-| 090 | NOT APPLIED | not touched by the hygiene change |
-| 091 | NOT APPLIED | not touched by the hygiene change |
-| 092 | CONFLICT/PAUSED | V-1 kept „plan ustala weterynarz”, dropped „a nie siła”, and added „nikogo nie prosimy”. |
-| 093 | NOT APPLIED | not touched by the hygiene change |
-| 094 | CONFLICT/PAUSED | V-1 removed the invented dark-dot recipe and routed technique to the veterinarian. |
-| 095 | CONFLICT/PAUSED | V-1/V-3 rewrote the criterion around voluntary participation and your own doubt. |
-| 096 | NOT APPLIED | not touched by the hygiene change |
-| 097 | NOT APPLIED | not touched by the hygiene change |
-| 098 | NOT APPLIED | not touched by the hygiene change |
-| 099 | NOT APPLIED | not touched by the hygiene change |
-| 100 | CONFLICT/PAUSED | V-3 replaced the literal calque with „delikatnie zdejmij brud ręcznikiem”. |
-| 101 | CONFLICT/PAUSED | V-5 narrowed the claim to „część z nich zawiera ksylitol” (verified fact). |
-| 102 | CONFLICT/PAUSED | V-6 „sam podchodzi do pasty” instead of „sięga po zapach”. |
-| 103 | CONFLICT/PAUSED | V-6 „nie chce zlizać pasty nawet za nagrodę” instead of „smakuje psu mniej niż nic”. |
-| 104 | CONFLICT/PAUSED | V-6 „lekko uniesioną wargę” instead of „otwarta warga”. |
-| 105 | CONFLICT/PAUSED | V-6 „zadzwoń do weterynarza” instead of „idą do weterynarza”. |
-| 106 | CONFLICT/PAUSED | V-5 makes the brush a separate meeting and explicitly not a gate for the stage. |
-| 107 | CONFLICT/PAUSED | V-2/V-6 „pozwala delikatnie osuszyć sierść” instead of „odklepać”. |
-| 108 | CONFLICT/PAUSED | V-6 „tuż po kąpieli” instead of „świeżo po łazience”. |
-| 109 | NOT APPLIED | not touched by the hygiene change |
-| 110 | CONFLICT/PAUSED | V-2 removed the invented „mokre buty” cue entirely. |
+| 081 | CONFLICT/PAUSED | V-3: the mat is „mata antypoślizgowa” — same safety rule, different noun. |
+| 082 | NOT APPLIED | audited wording untouched |
+| 083 | CONFLICT/PAUSED | V-3: `watchFor` rewritten — withdrawal turns the water off; no endurance framing. |
+| 084 | NOT APPLIED | audited wording untouched |
+| 085 | CONFLICT/PAUSED | V-4: stage retitled „Przewidywalne podejście, które pies może odrzucić”. |
+| 086 | NOT APPLIED | audited wording untouched |
+| 087 | CONFLICT/PAUSED | V-4: final stage narrowed to a look-over; the roaming hand sweep was removed. |
+| 088 | NOT APPLIED | audited wording untouched |
+| 089 | NOT APPLIED | audited wording untouched |
+| 090 | NOT APPLIED | audited wording untouched |
+| 091 | NOT APPLIED | audited wording untouched |
+| 092 | CONFLICT/PAUSED | V-1: keeps „plan ustala weterynarz”, drops „a nie siła”, adds „nikogo nie prosimy”. |
+| 093 | NOT APPLIED | audited wording untouched |
+| 094 | CONFLICT/PAUSED | V-1: invented dark-dot recipe deleted; technique and limit routed to the veterinarian. |
+| 095 | CONFLICT/PAUSED | V-1/V-3: criterion rewritten around voluntary offering and the owner’s own doubt. |
+| 096 | NOT APPLIED | audited wording untouched |
+| 097 | NOT APPLIED | audited wording untouched |
+| 098 | NOT APPLIED | audited wording untouched |
+| 099 | NOT APPLIED | audited wording untouched |
+| 100 | CONFLICT/PAUSED | V-3: literal calque replaced by „delikatnie zdejmij brud ręcznikiem”. |
+| 101 | CONFLICT/PAUSED | V-5: claim narrowed to „część z nich zawiera ksylitol” (the verified fact). |
+| 102 | CONFLICT/PAUSED | V-6: „sam podchodzi do pasty” instead of „sięga po zapach”. |
+| 103 | CONFLICT/PAUSED | V-6: „nie chce zlizać pasty nawet za nagrodę” instead of „smakuje psu mniej niż nic”. |
+| 104 | CONFLICT/PAUSED | V-6: „lekko uniesioną wargę” instead of „otwarta warga”. |
+| 105 | CONFLICT/PAUSED | V-6: „zadzwoń do weterynarza” instead of „idą do weterynarza”. |
+| 106 | CONFLICT/PAUSED | V-5: the brush is its own earlier meeting and explicitly not a gate for the stage. |
+| 107 | CONFLICT/PAUSED | V-2/V-6: „pozwala delikatnie osuszyć sierść” instead of „odklepać”. |
+| 108 | CONFLICT/PAUSED | V-6: „tuż po kąpieli” instead of „świeżo po łazience”. |
+| 109 | NOT APPLIED | audited wording untouched |
+| 110 | CONFLICT/PAUSED | V-2: the invented „mokre buty” cue was removed altogether. |
 
-Rows 082, 084, 086, 088, 089, 090, 091, 093, 096, 097, 098, 099, 109 are still the audited
-wording: welfare-relevant, approved by the user, and unimplemented in both runtimes.
+## Not checked
+
+- English-side equivalence for each of the 126 rows (the audit is Polish-led; EN was compared
+  only where the finding named it).
+- Rows whose audited field was renamed or moved since the audit was written: a probe cannot
+  distinguish "renamed field" from "not applied"; each of the 108 NOT APPLIED rows is confirmed
+  only by the literal spot checks listed above plus the per-file table in `ledger2.tsv`.
