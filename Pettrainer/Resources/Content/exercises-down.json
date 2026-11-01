@@ -13,7 +13,7 @@
   "names": {
     "pl": {
       "name": "leżeć",
-      "description": "Pies kładzie się łokciami i klatką na ziemi i zostaje, dopóki go nie zwolnisz. W sporcie i na egzaminach ZKwP ta sama komenda brzmi „waruj\" — to ta sama pozycja, inne słowo."
+      "description": "Pies kładzie się łokciami i klatką na ziemi i zostaje, dopóki go nie zwolnisz. W sporcie i na egzaminach ZKwP ta sama komenda brzmi „waruj” — to ta sama pozycja, inne słowo."
     },
     "en": {
       "name": "down",
@@ -40,7 +40,7 @@
           "Poprowadź go prosto w dół do podłogi",
           "Płać za każde wyraźne opuszczenie głowy"
         ],
-        "note": "Zimne lub śliskie podłoże to najczęstszy prawdziwy powód, dla którego pies nie chce się położyć. Sprawdź dywan, zanim uznasz to za upór.",
+        "note": "Zimne lub śliskie podłoże może zniechęcać psa do położenia się. Sprawdź dywan, zanim uznasz to za upór.",
         "criterion": "Głowa schodzi wyraźnie w dół za smakołykiem."
       },
       "en": {
@@ -70,7 +70,7 @@
         ],
         "reps": [
           "Poprowadź smakołyk w dół jak poprzednio",
-          "Przy podłodze ciągnij go powoli do siebie",
+          "Tuż nad podłogą przesuwaj smakołyk powoli w swoją stronę.",
           "Płać, gdy łokieć dotknie ziemi"
         ],
         "note": "Jeśli pies kuca, ale łokcie zostają w górze, smakołyk idzie w dół, ale nie do przodu — klatka nie ma powodu iść za nim.",
@@ -164,7 +164,7 @@
           "Nagroda w drugiej ręce"
         ],
         "reps": [
-          "Powiedz „leżeć\" — raz",
+          "Powiedz „leżeć” — raz",
           "Odczekaj sekundę w ciszy",
           "Zrób gest, pochwal, nagródź"
         ],
@@ -196,7 +196,7 @@
           "Ręce opuszczone wzdłuż ciała"
         ],
         "reps": [
-          "Powiedz „leżeć\" i czekaj trzy sekundy",
+          "Powiedz „leżeć” i czekaj trzy sekundy",
           "Położył się — nagródź hojnie",
           "Nie położył się — zrób gest, pochwal, bez smakołyka"
         ],
@@ -227,11 +227,11 @@
           "Ten sam pokój, żeby zmieniać tylko jedną rzecz"
         ],
         "reps": [
-          "Poproś o „leżeć\" na dywanie",
+          "Poproś o „leżeć” na dywanie",
           "Przejdź na podłogę i poproś ponownie",
           "Nagradzaj obie wersje tak samo"
         ],
-        "note": "Jeśli na dywanie idzie, a na kuchennej podłodze nie, to nie jest nieposłuszeństwo. Zimno i śliskość są realnym powodem — nie przepychaj, znajdź matę.",
+        "note": "Jeśli na dywanie idzie, a na kuchennej podłodze nie, to nie jest nieposłuszeństwo. Jeśli podłoga jest zimna lub śliska, nie zmuszaj psa do położenia się — rozłóż matę.",
         "criterion": "Pies kładzie się na samo słowo na dwóch różnych podłożach."
       },
       "en": {

@@ -1,0 +1,103 @@
+{
+  "id": "puppy-first-exercises",
+  "pose": "sit",
+  "sortOrder": 4,
+  "names": {
+    "pl": {
+      "name": "Pierwsze krótkie ćwiczenia",
+      "description": "Trening to dodatek do codziennej opieki, nie jej warunek."
+    },
+    "en": {
+      "name": "First short exercises",
+      "description": "Training is an addition to daily care, never its price."
+    }
+  },
+  "urgent": {
+    "pl": "Jeśli pies nie przyjmuje nagród, odwraca się albo zastyga — to nie czas na ćwiczenia. Trening nie zastępuje snu, jedzenia, wyjścia na potrzeby fizjologiczne ani wizyty u lekarza weterynarii. Agresja z historią pogryzień, nasilające się pilnowanie zasobów albo panika przy zostawaniu samemu wymagają lekarza weterynarii i behawiorysty, nie sesji treningowych. Połknięcie czegoś potencjalnie toksycznego albo grożącego zatkaniem (lekarstwa, trucizna, surowe ciasto drożdżowe, gotowane kości, baterie, sznurek) oraz podejrzenie zadławienia to natychmiastowy kontakt z lekarzem weterynarii, nie zadanie treningowe. Warczenie, sztywnienie albo kłapanie zębami nad przedmiotem oznacza: nie sprawdzaj tego na własną rękę, nie karz i przerwij ćwiczenia z przedmiotami — najpierw lekarz weterynarii, potem behawiorysta.",
+    "en": "If the dog will not take rewards, turns away or freezes — this is not training time. Exercise never replaces sleep, food, a toilet break or a veterinary visit. Aggression with a bite history, escalating resource guarding, or distressing panic when left alone call for a veterinarian and a behaviour professional, not training sets. Swallowing something potentially toxic or obstructing (medication, poison, raw yeast dough, cooked bones, batteries, string) or a suspected choking episode means calling a veterinarian right away — that is not a training task. Growling, stiffening or teeth snapping over an item means: do not test that yourself, do not punish it, and stop item practice — veterinarian first, then a behaviour professional."
+  },
+  "avoid": {
+    "pl": [
+      "Nie wymagaj siadu za jedzenie, wyjście na potrzeby fizjologiczne ani dostęp do miejsca odpoczynku — podstawowe potrzeby są bezwarunkowe",
+      "Nie ćwicz w szczycie pobudzenia — samo siedzenie w bezruchu nie znaczy, że pies czuje się spokojnie",
+      "Nie przerywaj psu odpoczynku, żeby nadrobić zaległą sesję",
+      "Nie karz za żucie i nie wyciągaj przedmiotów z pyska na siłę — kara robi więcej szkody niż pożytku, a oddawanie musi się psu opłacać",
+      "Nie ćwicz na zagrożeniach: pomoce do ćwiczeń to bezpieczne, duże przedmioty przeznaczone dla psa, nigdy lekarstwa, śmieci, ostre przedmioty ani toksyczne jedzenie"
+    ],
+    "en": [
+      "Do not demand a sit in exchange for food, a toilet break or access to a resting place — basic needs stay unconditional",
+      "Do not train at the peak of arousal — sitting still does not mean the dog feels calm",
+      "Do not interrupt the dog's rest to catch up on a missed session",
+      "Do not punish chewing and do not take items out of the dog's mouth by force — punishment does more harm than good, and giving things up has to pay off",
+      "Do not practise on hazards: training props are safe, large dog items, never medication, rubbish, sharp objects or toxic food"
+    ]
+  },
+  "actions": {
+    "pl": [
+      "Wybieraj chwile, w których pies swobodnie korzysta z jedzenia i kontaktu; nagradzaj to, co już wychodzi mu łatwo",
+      "Trzymaj serie krótkie — pięć powtórzeń to cały zestaw; niepełny też jest wartościową informacją, nie porażką psa",
+      "Nowe miejsce dodawaj dopiero, gdy stare wychodzi pewnie — trudniejsze otoczenie to inny trening, nie ten sam na maksa",
+      "Gdy w domu coś spadnie: spokojnie to sprzątnij, a dostęp do jedzenia zabezpieczaj zwłaszcza podczas gotowania; zostaw psu własne legalne zajęcia, żeby miał co robić z pyskiem",
+      "Rozdziel „zostaw” (zanim pies coś podniesie) od „puść” (gdy już trzyma w pysku) — przez wymianę na coś lepszego, z nagrodą podawaną z Twojej ręki; bezpieczną zabawkę treningową po wymianie oddaj z powrotem, a niebezpiecznego znaleziska nigdy nie zwracaj",
+      "Na dworze zaczynaj w spokojnym, łatwym miejscu i zwiększaj pokusę dopiero wtedy, gdy psu to wychodzi; to, co działa w kuchni, samo nie przenosi się na chodnik"
+    ],
+    "en": [
+      "Pick moments when the dog comfortably takes food and contact; pay what already comes easy",
+      "Keep sets short — five reps make a set; an unfinished one is information, not the dog's failure",
+      "Add a new place only once the old one is solid — harder surroundings are different training, not more of the same",
+      "When something edible falls at home: calmly pick it up, and keep food out of reach, especially while cooking; leave the dog its own legal activities so its mouth has something to do",
+      "Separate “leave it” (before the dog picks something up) from “drop it” (when it is already held) — trade for something better, paid from your own hand; hand the safe practice toy straight back after the trade, and never return a dangerous find",
+      "Outdoors, start in a quiet, easy place and raise the temptation only while the dog keeps succeeding; what works in the kitchen does not transfer to the pavement by itself"
+    ]
+  },
+  "observe": {
+    "pl": [
+      "Pies sam proponuje znany ruch — siad albo spojrzenie — i możesz dodać jedno małe rozproszenie",
+      "Jeśli próba nie wychodzi, od razu uprość zadanie albo zakończ sesję i sprawdź potrzeby psa — nie zakładaj uporu",
+      "Jeśli przy przedmiocie na ziemi pies ma luźne ciało i wraca do Ciebie po nagrodę, to jest to sytuacja do trenowania; jeśli połyka w biegu, ucieka ze zdobyczą albo nad nią warczy — to nie jest zwykły upór",
+      "Gdy pies regularnie podnosi niejadalne rzeczy albo takie zjadanie pojawiło się nagle, najpierw skontaktuj się z lekarzem weterynarii, a potem trenuj"
+    ],
+    "en": [
+      "The dog offers the known behaviour on its own — a sit, a look — and you can add one small distraction",
+      "If an attempt does not work, simplify the task straight away or end the session and check the dog's needs — do not assume stubbornness",
+      "If the dog stays loose around a floor item and comes back for the reward, this is trainable; if it swallows on the run, runs off with the find or growls over it, that is not ordinary stubbornness",
+      "If the dog regularly picks up inedible items, or this eating of found things started suddenly, contact a veterinarian first and train afterwards"
+    ]
+  },
+  "professional": {
+    "pl": "Trening nie posuwa się mimo obniżania wymagań albo pies wyraźnie cierpi — poproś o wskazówki instruktora stosującego metody oparte na nagradzaniu i skonsultuj lekarza weterynarii; ćwiczenia nie leczą lęku.",
+    "en": "Training stalls despite lowered criteria, or the dog looks distressed — ask a reward-based instructor and consult a veterinarian; exercises do not treat fear."
+  },
+  "practices": [
+    "name",
+    "look",
+    "mat",
+    "leave",
+    "drop"
+  ],
+  "evidence": {
+    "verifiedOn": "2026-10-29",
+    "sources": [
+      {
+        "title": "AVSAB — Position Statements: Humane Dog Training",
+        "url": "https://avsab.org/resources/position-statements/"
+      },
+      {
+        "title": "Dogs Trust — Introducing your puppy to the world around them",
+        "url": "https://www.dogstrust.org.uk/dog-advice/puppy/puppy-socialisation-introduction"
+      },
+      {
+        "title": "Dogs Trust — Teach your dog to leave it",
+        "url": "https://www.dogstrust.org.uk/dog-advice/training/basics/leave-training"
+      },
+      {
+        "title": "RSPCA Australia — My puppy is chewing everything, what should I do?",
+        "url": "https://kb.rspca.org.au/categories/companion-animals/dogs/behaviour/my-puppy-is-chewing-everything-what-should-i-do"
+      },
+      {
+        "title": "RSPCA Australia — Common household dangers for pets",
+        "url": "https://kb.rspca.org.au/categories/companion-animals/household-and-garden-dangers/what-are-common-household-dangers-for-pets"
+      }
+    ]
+  }
+}

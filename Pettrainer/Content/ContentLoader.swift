@@ -12,6 +12,8 @@ struct TrainingContent {
     let behaviour: [BehaviourIssue]
     /// Hygiene routines. Deliberately NOT part of `catalogue`.
     let care: [CareRoutine]
+    /// Puppy-start guides. Same exclusion as care: education, not scored work.
+    let puppyGuides: [PuppyGuide]
     let mistakesByExerciseId: [String: [Mistake]]
     let environmentSet: EnvironmentSet
 
@@ -19,37 +21,42 @@ struct TrainingContent {
     private let noseworkById: [String: NoseworkActivity]
     private let behaviourById: [String: BehaviourIssue]
     private let careById: [String: CareRoutine]
+    private let puppyGuidesById: [String: PuppyGuide]
 
     init(environmentSet: EnvironmentSet, catalogue: [CatalogueEntry], nosework: [NoseworkActivity],
          mistakesByExerciseId: [String: [Mistake]], behaviour: [BehaviourIssue],
-         care: [CareRoutine]) {
+         care: [CareRoutine], puppyGuides: [PuppyGuide] = []) {
         self.environmentSet = environmentSet
         self.catalogue = catalogue
         self.nosework = nosework
         self.mistakesByExerciseId = mistakesByExerciseId
         self.behaviour = behaviour
         self.care = care
+        self.puppyGuides = puppyGuides
         self.exercisesById = Self.index(catalogue, by: \.id)
         self.noseworkById = Self.index(nosework, by: \.id)
         self.behaviourById = Self.index(behaviour, by: \.id)
         self.careById = Self.index(care, by: \.id)
+        self.puppyGuidesById = Self.index(puppyGuides, by: \.id)
 
         // Care ids are namespaced, and that namespace is the only thing
         // keeping a care file from shadowing an exercise or a scent game.
         // Assert it instead of trusting the prefix convention.
         var collisions = Self.idCollisions(
             exercises: catalogue.map(\.id), nosework: nosework.map(\.id),
-            behaviour: behaviour.map(\.id), care: care.map(\.id))
+            behaviour: behaviour.map(\.id), care: care.map(\.id), puppy: puppyGuides.map(\.id))
         // Same rule for care as for behaviour cards: an advisory chip must
         // name a real exercise, or it is a broken promise rather than a link.
         collisions += Self.careProblems(care: care, knownExerciseIds: Set(exercisesById.keys))
+        collisions += Self.puppyProblems(
+            puppy: puppyGuides, knownExerciseIds: Set(exercisesById.keys))
 
         // Fail at load, naming both sides of the broken reference: every
         // `practices` id on a behaviour card must name a real exercise — a
         // broken chip is a broken promise, not a soft link.
         let problems = Self.practicesProblems(
             behaviour: behaviour, knownExerciseIds: Set(catalogue.map(\.id))
-        ) + collisions
+        ) + Self.guidanceRequirementsProblems(behaviour: behaviour) + collisions
         if !problems.isEmpty {
             fatalError("content: \(problems.joined(separator: "; "))")
         }
@@ -68,6 +75,7 @@ struct TrainingContent {
     func noseworkActivity(id: String) -> NoseworkActivity? { noseworkById[id] }
     func behaviourIssue(id: String) -> BehaviourIssue? { behaviourById[id] }
     func careRoutine(id: String) -> CareRoutine? { careById[id] }
+    func puppyGuide(id: String) -> PuppyGuide? { puppyGuidesById[id] }
     /// Mistakes for one exercise, or an empty list. No entry means no section.
     func mistakes(for exerciseId: String) -> [Mistake] { mistakesByExerciseId[exerciseId] ?? [] }
 
@@ -84,9 +92,10 @@ struct TrainingContent {
     /// row be read as exercise progress, which is exactly the confusion this
     /// feature must never allow.
     static func idCollisions(exercises: [String], nosework: [String], behaviour: [String],
-                             care: [String]) -> [String] {
+                             care: [String], puppy: [String] = []) -> [String] {
         let families: [(String, [String])] = [
-            ("exercise", exercises), ("nosework", nosework), ("behaviour", behaviour), ("care", care),
+            ("exercise", exercises), ("nosework", nosework), ("behaviour", behaviour),
+            ("care", care), ("puppy", puppy),
         ]
         var seen: [String: String] = [:]
         var problems: [String] = []
@@ -109,6 +118,38 @@ struct TrainingContent {
                 knownExerciseIds.contains(practice) ? nil
                     : "care/\(routine.id) points at unknown exercise '\(practice)'"
             }
+        }
+    }
+
+        /// A puppy guide's optional practice chips must name real exercises —
+    /// a broken chip is a broken promise, not a soft link. (The hub's
+    /// behaviour cross-links live in the view, pinned by UI tests.)
+    static func puppyProblems(puppy: [PuppyGuide],
+                              knownExerciseIds: Set<String>) -> [String] {
+        puppy.flatMap { guide in
+            guide.practices.compactMap { practice in
+                knownExerciseIds.contains(practice) ? nil
+                    : "puppy/\(guide.id) points at unknown exercise '\(practice)'"
+            }
+        }
+    }
+
+    /// Two behaviour cards are canonical for the puppy hub and a reviewed pair
+    /// gained evidence; the spec requires those fields to actually be present
+    /// so the hub never links to a card missing the section it promised.
+    static func guidanceRequirementsProblems(behaviour: [BehaviourIssue]) -> [String] {
+        let requireObserveAndEvidence: Set<String> = ["overarousal", "fear-withdrawal"]
+        let requireEvidence: Set<String> = ["nipping", "mounting"]
+        return behaviour.flatMap { issue in
+            var problems: [String] = []
+            if requireObserveAndEvidence.contains(issue.id), issue.observe == nil {
+                problems.append("behaviour/\(issue.id) must carry observation guidance")
+            }
+            if (requireObserveAndEvidence.union(requireEvidence).contains(issue.id)),
+               issue.evidence == nil {
+                problems.append("behaviour/\(issue.id) must carry evidence")
+            }
+            return problems
         }
     }
 
@@ -146,6 +187,9 @@ enum ContentLoader {
         let care = try CatalogueManifest.care.map {
             try CareValidator.parseRoutine(json($0, bundle: bundle), source: $0.source)
         }
+        let puppyGuides = try CatalogueManifest.puppy.map {
+            try PuppyGuideValidator.parseGuide(json($0, bundle: bundle), source: $0.source)
+        }
         let environments = try EnvironmentValidator.parseEnvironmentSet(
             json(CatalogueManifest.environments, bundle: bundle),
             source: CatalogueManifest.environments.source
@@ -156,7 +200,8 @@ enum ContentLoader {
             nosework: nosework,
             mistakesByExerciseId: mistakesByExerciseId,
             behaviour: behaviour,
-            care: care
+            care: care,
+            puppyGuides: puppyGuides
         )
     }
 

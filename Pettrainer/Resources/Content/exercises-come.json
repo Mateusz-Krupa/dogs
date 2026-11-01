@@ -14,7 +14,7 @@
   "names": {
     "pl": {
       "name": "do mnie",
-      "description": "Pies biegnie do Ciebie na wezwanie. Jedyna komenda, która ratuje życie — i jedyna, którą najłatwiej zepsuć na zawsze. Zasada bez wyjątku: powrót nigdy nie może skończyć się czymś nieprzyjemnym."
+      "description": "Pies biegnie do Ciebie na wezwanie. Przywołanie może uratować psu życie, dlatego warto dbać o dobre skojarzenia z powrotem do Ciebie. Zasada bez wyjątku: powrót nigdy nie może skończyć się czymś nieprzyjemnym."
     },
     "en": {
       "name": "come",
@@ -38,11 +38,11 @@
           "Dwa kroki od psa"
         ],
         "reps": [
-          "Powiedz imię psa i „do mnie\" radosnym tonem",
+          "Powiedz imię psa i „do mnie” radosnym tonem",
           "Gdy przyjdzie — nagródź hojnie",
           "Pozwól mu wrócić do swoich spraw"
         ],
-        "note": "To, że pies wraca, nie może nigdy kosztować go niczego przykrego. Jeśli wołasz, by zakończyć zabawę albo skończyć spacer, następnym razem pies przemyśli, czy warto.",
+        "note": "Nie karz psa za powrót, nawet jeśli wcześniej długo nie reagował na wołanie. Jeśli wołasz, by zakończyć zabawę albo skończyć spacer, następnym razem pies przemyśli, czy warto.",
         "criterion": "Pies przychodzi w ciągu trzech sekund."
       },
       "en": {
@@ -73,7 +73,7 @@
           "Pies zajmuje się sobą"
         ],
         "reps": [
-          "Powiedz imię i „do mnie\" radosnym tonem",
+          "Powiedz imię i „do mnie” radosnym tonem",
           "Gdy przybiegnie — nagródź hojnie",
           "Znowu pozwól mu odejść"
         ],
@@ -110,7 +110,7 @@
           "Przy nagradzaniu złap lekko za obrożę",
           "Od razu puść"
         ],
-        "note": "Pies musi nauczyć się, że sięgnięcie po obrożę nie oznacza końca zabawy. Bez tego każde wołanie kończy się ucieczką przed ręką.",
+        "note": "Pies musi nauczyć się, że sięgnięcie po obrożę nie oznacza końca zabawy. Dzięki temu pies ma mniejszy powód, żeby unikać ręki sięgającej do obroży.",
         "criterion": "Pies przychodzi i spokojnie znosi dotknięcie obroży."
       },
       "en": {
@@ -135,17 +135,17 @@
       "sound": true,
       "pl": {
         "title": "",
-        "instruction": "Ogród na lince. Nie wołaj, jeśli nie masz jak dokończyć.",
+        "instruction": "Ćwicz w ogrodzie z psem na długiej lince. Wołaj z takiej odległości, z jakiej pies już potrafi do Ciebie wrócić.",
         "setup": [
           "Ogród, pies na długiej lince",
           "Linka rozwinięta, o nic nie zaczepiona"
         ],
         "reps": [
           "Daj psu zajęcie — niech węszy",
-          "Powiedz imię i „do mnie\" raz",
+          "Powiedz imię i „do mnie” raz",
           "Brak reakcji — nie powtarzaj komendy i nie zwijaj linki: podejdź do psa, pokaż nagrodę i przywołaj ponownie z bliska"
         ],
-        "note": "Przywołanie bez reakcji uczy, że „do mnie\" jest opcjonalne. Linka daje bezpieczeństwo, ale nie ciągnij psa po niej — następnym razem wołaj z takiego dystansu, który kończy się sukcesem.",
+        "note": "Przywołanie bez reakcji uczy, że „do mnie” jest opcjonalne. Linka daje bezpieczeństwo, ale nie ciągnij psa po niej — następnym razem wołaj z takiego dystansu, który kończy się sukcesem.",
         "criterion": "Pies przybiega z pięciu metrów na lince."
       },
       "en": {

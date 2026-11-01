@@ -1,0 +1,73 @@
+{
+  "id": "puppy-rest",
+  "pose": "mat",
+  "sortOrder": 1,
+  "names": {
+    "pl": {
+      "name": "Odpoczynek i spokojne miejsce",
+      "description": "Przemęczone szczenię może łatwiej się pobudzać — odpoczynek jest częścią codziennej opieki."
+    },
+    "en": {
+      "name": "Rest and a quiet place",
+      "description": "An overtired puppy may become aroused more easily — rest is part of daily care."
+    }
+  },
+  "urgent": {
+    "pl": "Nagłe problemy z oddychaniem lub snem, pies, który nie odpoczywa mimo ciszy, albo gwałtowna zmiana zachowania — najpierw lekarz weterynarii.",
+    "en": "Sudden breathing or sleep trouble, a dog that cannot rest despite the quiet, or a sharp change in behaviour — veterinarian first."
+  },
+  "avoid": {
+    "pl": [
+      "Nie budź i nie głaszcz psa w jego miejscu odpoczynku — ma być naprawdę spokojne",
+      "Nie wyznaczaj sztywnych norm godzin snu i nie porównuj szczeniąt — potrzeby są różne",
+      "Nie używaj kojca ani bramki jako kary i nie zamykaj psa w sposób, który wywołuje niepokój — jego miejsce odpoczynku ma kojarzyć się z bezpieczeństwem"
+    ],
+    "en": [
+      "Do not wake or pet the dog in its resting place — it must be genuinely quiet",
+      "Do not enforce rigid sleep-hour quotas or compare puppies — needs differ",
+      "Do not use a pen or gate as punishment or confine the dog in a way that causes distress — its resting place should feel safe"
+    ]
+  },
+  "actions": {
+    "pl": [
+      "Przygotuj ciche, wygodne miejsce z dala od ruchu domowników i poproś wszystkich, żeby tam nie przeszkadzać",
+      "Ułóż dzień w rytmie: aktywność, jedzenie, węszenie, sen — pies wycisza się łatwiej, gdy wie, co nastąpi",
+      "Gdy szczenię robi się marudne i ostre zębami, zaproś je do miejsca odpoczynku zamiast dokładać bodźców"
+    ],
+    "en": [
+      "Set up a quiet, comfortable place away from household traffic and ask everyone not to disturb the dog there",
+      "Keep the day in a rhythm: activity, food, sniffing, sleep — a puppy settles easier when it knows what comes next",
+      "When the puppy turns whiny and sharp-toothed, invite it to its rest spot instead of adding more input"
+    ]
+  },
+  "observe": {
+    "pl": [
+      "Zapisuj, czy po odpoczynku pies łatwiej nawiązuje kontakt",
+      "Wieczorne wybuchy powtarzają się o tej samej porze? Zapisz godzinę i spróbuj przesunąć odpoczynek wcześniej"
+    ],
+    "en": [
+      "Record whether the dog engages more easily after rest",
+      "Evening explosions at the same hour every day? Note the time and try moving rest earlier"
+    ]
+  },
+  "professional": {
+    "pl": "Pomimo spokojnego miejsca pies nie potrafi odpocząć, śpi nienaturalnie długo albo zmienia się z dnia na dzień — porozmawiaj z lekarzem weterynarii.",
+    "en": "If the dog cannot rest despite having a quiet place, sleeps unusually long, or its behaviour changes from day to day, talk to your veterinarian."
+  },
+  "practices": [
+    "mat"
+  ],
+  "evidence": {
+    "verifiedOn": "2026-10-24",
+    "sources": [
+      {
+        "title": "PDSA — Dogs and sleep: Our top tips for your furry friend",
+        "url": "https://www.pdsa.org.uk/what-we-do/blog/dogs-and-sleep-our-top-tips-for-your-furry-friend"
+      },
+      {
+        "title": "Blue Cross — Puppy biting and mouthing",
+        "url": "https://www.bluecross.org.uk/advice/dog/behaviour-and-training/puppy-biting-and-mouthing"
+      }
+    ]
+  }
+}

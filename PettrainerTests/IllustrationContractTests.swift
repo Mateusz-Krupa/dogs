@@ -48,10 +48,13 @@ final class IllustrationContractTests: XCTestCase {
         XCTAssertNil(MotionByExercise.motion(forExerciseId: "ghost"))
     }
 
-    func testProblemScenesCoverAllTenCards() {
+    func testProblemScenesCoverEveryCard() {
+        // Every shipped welfare card renders a thumbnail in its row (6.6 rule);
+        // the puppy-start cards joined the set, so the list is every id.
         let ids = ["bark-door", "bark-window", "jumping", "nipping", "stealing",
-                   "bolting", "reactivity", "traffic", "noise", "alone"]
-        for id in ids { XCTAssertTrue(ProblemScene.exists(id: id)) }
+                   "bolting", "reactivity", "traffic", "noise", "alone",
+                   "mounting", "bed", "overarousal", "fear-withdrawal"]
+        for id in ids { XCTAssertTrue(ProblemScene.exists(id: id), "missing scene: \(id)") }
         XCTAssertFalse(ProblemScene.exists(id: "unknown"))
     }
 

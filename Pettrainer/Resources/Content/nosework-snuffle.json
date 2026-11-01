@@ -13,7 +13,7 @@
     }
   },
   "tagline": {
-    "pl": "Dziesięć minut i pies śpi",
+    "pl": "Spokojne zajęcie na pracę nosem",
     "en": "Ten minutes and they sleep"
   },
   "levels": [
@@ -67,14 +67,14 @@
       "pl": {
         "title": "Pudło z gazetami",
         "setup": "Karton, kilka zgniecionych gazet, karma schowana między nimi.",
-        "how": "Postaw i odejdź. Bałagan jest częścią ćwiczenia — posprzątasz potem.",
-        "watchFor": "Pies wyciąga gazety i szuka pod spodem. Jeśli od razu je gazety, wróć do ręcznika."
+        "how": "Postaw karton i pozwól psu szukać samodzielnie, pozostając w pobliżu. Pilnuj, żeby nie połykał papieru ani kawałków kartonu.",
+        "watchFor": "Pies wyciąga papier i szuka karmy pod spodem. Jeśli próbuje zjadać papier lub karton, przerwij i wybierz zabawę bez materiałów, które mógłby połknąć."
       },
       "en": {
         "title": "A box of newspaper",
         "setup": "A cardboard box, a few crumpled sheets of newspaper, kibble tucked between them.",
-        "how": "Put it down and walk away. The mess is part of the exercise — tidy up afterwards.",
-        "watchFor": "The dog pulls paper out and searches underneath. If they just eat the paper, go back to the towel."
+        "how": "Set the box down and let the dog search on their own while you stay nearby. Watch that they do not swallow paper or cardboard.",
+        "watchFor": "The dog pulls the paper out and finds the food underneath. If they try to eat paper or cardboard, stop and choose a game without swallowable materials."
       }
     }
   ]

@@ -52,7 +52,7 @@ final class BehaviourWelfareCopyTests: XCTestCase {
         let card = issue("bed")
         XCTAssertTrue(card.work.pl[3].contains("siusiu"), "R-2: night-time needs first (PL)")
         XCTAssertTrue(card.work.en[3].lowercased().contains("toilet break"), "R-2: needs first (EN)")
-        XCTAssertTrue(card.work.pl[1].contains("wróć o etap"), "R-2: demotion when the dog struggles (PL)")
+        XCTAssertTrue(card.work.pl[1].contains("wróć do poprzedniego ustawienia"), "R-2: demotion when the dog struggles (PL)")
         XCTAssertTrue(card.work.en[1].lowercased().contains("go back one stage"), "R-2: demotion (EN)")
         XCTAssertTrue(card.work.pl[3].contains("nie negocjacja"),
                       "R-2: night-time fear framed as a signal, not bargaining (PL)")
@@ -65,7 +65,7 @@ final class BehaviourWelfareCopyTests: XCTestCase {
         let card = issue("bed")
         XCTAssertTrue(card.urgent.pl.contains("behawioryst")
                        && card.urgent.en.lowercased().contains("behaviour professional"))
-        XCTAssertTrue(card.urgent.pl.contains("nie wyciągaj go siłą")
+        XCTAssertTrue(card.urgent.pl.contains("nie próbuj zdejmować go siłą")
                        && card.urgent.en.lowercased().contains("do not pull"),
                       "guarding must never be met with force")
         XCTAssertTrue(card.professional.pl.contains(" Nocny lęk")

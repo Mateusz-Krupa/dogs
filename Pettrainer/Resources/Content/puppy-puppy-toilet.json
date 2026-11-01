@@ -1,0 +1,251 @@
+{
+  "id": "puppy-toilet",
+  "pose": "stand",
+  "sortOrder": 5,
+  "names": {
+    "pl": {
+      "name": "Nauka czystości — sikanie w domu",
+      "description": "Co robić, gdy pies sika w domu, i jak spokojnie uczyć go załatwiania na zewnątrz."
+    },
+    "en": {
+      "name": "Toilet training — indoor accidents",
+      "description": "What to do when the dog pees indoors, and how to calmly teach toileting outside."
+    }
+  },
+  "urgent": {
+    "pl": "Jeśli pies mocno się napina, a mimo to nie może oddać moczu albo wypuszczają się tylko pojedyncze krople — to może być stan nagły: skontaktuj się z lekarzem weterynarii natychmiast, nie zwlekaj. Tego samego dnia skonsultuj też: ból lub piszczenie przy sikaniu, krew w moczu, wyraźnie częstsze sikanie, zmianę pragnienia albo nagłą utratę czystości u psa, który wcześniej był czysty. To nie upór ani złośliwość.",
+    "en": "If your dog strains hard but cannot pass urine, or only single drops come out — this can be an emergency: contact a veterinarian immediately, do not delay. Also contact one the same day for: pain or whining while urinating, blood in the urine, clearly more frequent urination, a change in thirst, or a sudden loss of cleanliness in a dog that was previously clean. This is not stubbornness or spite."
+  },
+  "avoid": {
+    "pl": [
+      "Nie karz i nie krzycz po fakcie — pies nie połączy Twojej reakcji z sikaniem sprzed kilku minut; nauczy się tylko bać Twojego powrotu.",
+      "Nie wcieraj nosa w mocz, nie uderzaj i nie przeciągaj do drzwi w trakcie sikania.",
+      "Nie buduj treningu na strachu — pies skarcony za sikanie przy ludziach uczy się zwykle jednego: nie sikaj, gdy ktoś patrzy. Wtedy załatwia się ukradkiem, a nie na dworze.",
+      "Nie ograniczaj wody jako metody treningowej; każdą zmianę pragnienia i sikania omów z lekarzem weterynarii.",
+      "Nie wypuszczaj szczenięcia samego na podwórko „żeby się samo załatwiło” — na początku potrzebuje Cię przy sobie.",
+      "Nie zamieniaj treningu w wielogodzinne czekanie na dworze w upale, deszczu czy mrozie — lepiej działają krótkie spokojne okazje i bliski nadzór w domu."
+    ],
+    "en": [
+      "Do not punish or shout after the fact — the dog cannot connect your reaction with a pee from a few minutes ago; it only learns to fear your return home.",
+      "Never rub a nose in urine, never strike, and never drag the dog to the door mid-stream.",
+      "Do not build training on fear — a dog scolded for peeing near people usually learns one thing: never toilet when someone is watching. It then eliminates in secret, not outside.",
+      "Do not restrict water as a training method; discuss any change in thirst or urination with your veterinarian.",
+      "Do not send the puppy out into the yard alone “to sort itself out” — early on it needs you beside it.",
+      "Do not turn training into hours of waiting outside in heat, rain or frost — short, calm opportunities plus close supervision at home work better."
+    ]
+  },
+  "actions": {
+    "pl": [
+      "Widzisz znaki — węszy, kręci się w kółko, nie może znaleźć miejsca? Spokojnie i od razu idź z psem na stałe miejsce i poczekaj.",
+      "Pies już sika w domu? Nie krzycz, nie klaskaj, nie podnoś w trakcie — pozwól skończyć. Przerwanie strumienia nie uczy miejsca, a potrafi nauczyć strachu przed Tobą.",
+      "Znalazłeś kałużę po fakcie? Wycieraj spokojnie, bez słowa i miny. Pies nie rozumie kary sprzed kilku minut, a nerwowe powitania nasilają sikanie ze stresu.",
+      "Gdy pies skończy sikać na właściwym miejscu na zewnątrz, pochwal go od razu, spokojnie, i podaj smakołyk, jeszcze stojąc przy tym miejscu.",
+      "Cokolwiek Cię niepokoi zdrowotnie — zacznij od lekarza weterynarii, nie od kolejnego planu treningowego."
+    ],
+    "en": [
+      "Spot the signs — sniffing, turning in circles, searching for a spot? Calmly go right away with the dog to the usual spot and wait.",
+      "Is the dog already peeing indoors? Do not shout, clap, or lift it mid-stream — let it finish. Interrupting the stream does not teach a place; it can teach fear of you.",
+      "Found a puddle afterwards? Clean it quietly, without a word or a look. The dog cannot connect punishment with something from minutes ago, and tense greetings make stress peeing worse.",
+      "When the dog finishes peeing in the right place outside, praise immediately and calmly and give a treat while you are still standing at the spot.",
+      "Anything that worries you health-wise — start with a veterinarian, not another training plan."
+    ]
+  },
+  "observe": {
+    "pl": [
+      "Młode szczenięta sygnalizują krótko i ledwo zauważalnie: nagła przerwa w zabawie, powąchanie podłogi, obrót, kierunek ku drzwiom.",
+      "Mocz na pionowych powierzchniach może wiązać się ze znaczeniem. Sam wygląd wpadki nie pozwala ustalić przyczyny — zwłaszcza nagłą zmianę omów z lekarzem weterynarii.",
+      "Sikanie przy powitaniu albo dużej ekscytacji nie jest nieposłuszeństwem ani zemstą — pies ma wtedy mały świadomy wpływ.",
+      "Wpadki tylko pod Twoją nieobecność z niepokojem, wokalizowaniem albo niszczeniem mogą wskazywać na lęk separacyjny — potrzebna jest ocena i pomoc weterynaryjna oraz behawioralna, nie surowszy plan. Jeśli przy sprzątaniu albo wyprowadzaniu pojawia się agresja lub było już ugryzienie — zatrzymaj samodzielne działania i szukaj pomocy fachowej."
+    ],
+    "en": [
+      "Young puppies signal briefly and barely noticeably: play stops, floor sniffing, a turn, a drift toward the door.",
+      "Urine on vertical surfaces can be linked to marking. How an accident looks does not establish the cause — discuss any change, especially a sudden one, with your veterinarian.",
+      "Peeing during greetings or high excitement is not disobedience or spite — the dog has little deliberate control in that moment.",
+      "Accidents only during your absence with restlessness, vocalising or destruction may point to separation-related distress — they need veterinary and behavioural assessment and help, not a stricter plan. If aggression appears around cleaning or taking the dog out, or there has already been a bite — stop handling it yourself and seek professional help."
+    ]
+  },
+  "professional": {
+    "pl": "Gdy wpadki nie ustępują mimo regularnych wyjść i bliskiego nadzoru — poproś lekarza weterynarii o diagnozę, badanie moczu często bywa kluczowe, i o skierowanie do sprawdzonego behawiorysty. Sikanie ze strachu, ekscytacji albo tylko przy samotności wymaga planu ze specjalistą, nie surowszego treningu.",
+    "en": "If accidents persist despite regular outings and close supervision — ask your veterinarian for a diagnosis, a urine test is often the key step, and a referral to a qualified behaviour professional. Urination driven by fear, excitement, or being home alone needs a professional plan, not stricter training."
+  },
+  "practices": [],
+  "evidence": {
+    "verifiedOn": "2026-10-31",
+    "sources": [
+      {
+        "title": "Dogs Trust — How to toilet or house train your dog",
+        "url": "https://www.dogstrust.org.uk/dog-advice/training/basics/house-or-toilet-training"
+      },
+      {
+        "title": "VCA — House Training for Puppies and Dogs",
+        "url": "https://vcahospitals.com/know-your-pet/house-training-your-puppy"
+      },
+      {
+        "title": "VCA — Dog Behavior Problems: House Soiling",
+        "url": "https://vcahospitals.com/know-your-pet/dog-behavior-problems-house-soiling"
+      },
+      {
+        "title": "VCA — Urinary Tract Infections (UTIs) in Dogs",
+        "url": "https://vcahospitals.com/know-your-pet/urinary-tract-infections-utis-in-dogs"
+      },
+      {
+        "title": "VCA — Dog Behavior Problems: Marking Behavior",
+        "url": "https://vcahospitals.com/know-your-pet/dog-behavior-problems-marking-behavior"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "id": "how-learning-works",
+      "title": {
+        "pl": "Czego pies właściwie uczy się o czystości",
+        "en": "What the dog actually learns about being clean"
+      },
+      "paragraphs": {
+        "pl": [
+          "To dwie osobne umiejętności: poczekać z oddaniem moczu, dopóki pies nie znajdzie miejsca, oraz wiedzieć, gdzie to miejsce jest. Kontrola nad pęcherzem i jelitami dojrzewa stopniowo — zbyt młode szczenię fizycznie nie jest w stanie czekać długo.",
+          "Pies uczy się przez skojarzenie: miejsce, podłoże, nagroda. Samo oddanie pełnego pęcherza przynosi ulgę, więc wpadka „opłaca się” psu nawet wtedy, gdy wcale jej nie zauważysz.",
+          "Wpadka nie jest dowodem złośliwości. Możliwych przyczyn jest kilka: niedojrzała jeszcze kontrola pęcherza, niezrozumiane miejsce, sprawa zdrowotna albo emocje — nie da się ich rozstrzygnąć po samej kałuży."
+        ],
+        "en": [
+          "These are two separate skills: waiting to urinate until it finds a spot, and knowing where that spot is. Bladder and bowel control matures slowly — a young puppy physically cannot wait long.",
+          "Dogs learn by association: place, surface, reward. Emptying a full bladder brings relief, so an accident pays off for the dog even when you never notice it.",
+          "An accident is not proof of spite. Possible causes include immature bladder control, a place the dog has not understood yet, a health issue, or emotions — an accident alone does not tell them apart."
+        ]
+      }
+    },
+    {
+      "id": "outdoor-routine",
+      "title": {
+        "pl": "Spokojna rutyna wyjść",
+        "en": "A calm outing routine"
+      },
+      "paragraphs": {
+        "pl": [
+          "Wybierz jedno spokojne, dostępne miejsce na załatwianie i wychodź tam zawsze tymi samymi drzwiami, mając smakołyki już w kieszeni. Na początku wyprowadzaj psa na smyczy i bądź przy nim — sam wypad na podwórko kończy się zwykle tym, że szczenię wraca do Ciebie z pełnym pęcherzem.",
+          "Dawaj okazje, gdy pęcherz pracuje najintensywniej: zaraz po przebudzeniu, po jedzeniu i po dużej ilości picia, po zabawie i po gościach, a na koniec dnia przed snem. Pomiędzy wyjściami trzymaj psa w zasięgu wzroku albo przy nodze na smyczy — bez nadzoru łatwo minąć się z krótkimi sygnałami szczenięcia.",
+          "Jeśli pies nie ukończył jeszcze szczepień, zapytaj lekarza weterynarii, gdzie na zewnątrz jest bezpiecznie; do tej rozmowy wybieraj miejsca poza ścieżkami nieznanych psów."
+        ],
+        "en": [
+          "Pick one quiet, reachable spot and always leave through the same door, treats already in your pocket. Initially, take the dog out on a lead and stay with it — a solo yard trip usually ends with the puppy back at your feet, bladder still full.",
+          "Offer chances when the bladder works hardest: right after waking, after food and a big drink, after play and after visitors, and last of all before bed. Between outings keep the dog in sight or tethered at your leg — without supervision it is easy to miss a puppy's brief signals.",
+          "If your dog has not finished vaccinations, ask the veterinarian where outdoors is safe; until that conversation choose spots away from unknown dogs' paths."
+        ]
+      }
+    },
+    {
+      "id": "reward-and-cue",
+      "title": {
+        "pl": "Nagroda i ciche hasło",
+        "en": "Reward and a quiet cue"
+      },
+      "paragraphs": {
+        "pl": [
+          "Nagroda ma trafić do psa zaraz po zakończeniu sikania, gdy jeszcze stoi na właściwym miejscu — chwal spokojnie i podaj coś naprawdę dobrego. Smakołyk dopiero po wejściu do domu łączy się z powrotem, nie z sikaniem.",
+          "Zabawę, bieganie i wielkie „fajnie na dworze!” zostaw na po załatwieniu sprawy — pies, który na dworze wpada w tryb festynu, łatwo zapomina, po co wyszedł.",
+          "Gdy dobrze znasz rytuał swojego psa, możesz dodać krótkie, stałe słowo (takie jak „siusiu”), wypowiedziane w chwili, gdy pies właśnie zaczyna. Po wielu powtórzeniach samo słowo bywa pomocne w pośpiechu albo w nowym miejscu — nie powtarzaj go jednak bez przerwy i nie wymagaj sikania na zawołanie."
+        ],
+        "en": [
+          "The reward must land right after the dog finishes, while it is still standing at the right spot — praise calmly and give something genuinely good. A treat only after coming back inside pairs with returning, not with peeing.",
+          "Save the games, the running and the big “outside is fun!” for after business is done — a puppy that enters party mode outside easily forgets why it came.",
+          "Once you know your dog's ritual well, you can add a short, fixed word (such as “go potty”), spoken at the moment the dog is starting. After many pairings the word itself can help in a hurry or in a new place — do not repeat it endlessly or demand toileting on command."
+        ]
+      }
+    },
+    {
+      "id": "no-toilet-outside",
+      "title": {
+        "pl": "Nic nie zrobił na dworze — a kałuża w domu",
+        "en": "Nothing outside — a puddle inside"
+      },
+      "paragraphs": {
+        "pl": [
+          "Na miejscu daj kilka minut spokoju: powolne chodzenie tam i z powrotem i pozwalanie na wąchanie pobudzają potrzebę. Ekscytujące zabawy przed sukcesem działają odwrotnie.",
+          "Nic nie padło? Wróć spokojnie do domu, trzymaj psa blisko przy nodze i wyjdź ponownie wkrótce — a od razu, gdy pokaże sygnały potrzeby. Na początku takich podejść bywa kilka, zanim przyjdzie pierwszy sukces z nagrodą.",
+          "Jeśli pies regularnie „nie może” na dworze, a sika zaraz po wejściu — spróbuj spokojniejszego kąta, innej pory, krótszej drogi do miejsca załatwiania. Strach i rozproszenie potrafią zahamować potrzebę na zewnątrz; to nie upór."
+        ],
+        "en": [
+          "At the spot, give a few quiet minutes: slow pacing back and forth and allowed sniffing stimulate the need. Exciting games before success do the opposite.",
+          "Nothing happened? Return home calmly, keep the dog tethered close, and go out again soon — and right away the moment it shows signs of need. At first it can take several such attempts before the first success and reward.",
+          "If the dog reliably “cannot” outside and pees right after coming back in — try a quieter corner, a different time, a shorter route to the toileting spot. Fear and distraction can inhibit elimination outdoors; it is not stubbornness."
+        ]
+      }
+    },
+    {
+      "id": "signals-and-freedom",
+      "title": {
+        "pl": "Sygnały psa i coraz więcej swobody",
+        "en": "Your dog's signals and slowly more freedom"
+      },
+      "paragraphs": {
+        "pl": [
+          "Czytaj ciało: nagłe wyjście z zabawy, powąchanie kilku miejsc, obrót, podejście do drzwi albo ciche spojrzenie. Z czasem pies zacznie prosić świadomie — przyjdzie, popatrzy, naprowadzi do drzwi. Nie wymagaj tego jednak jak gwarancji zbyt wcześnie: najpierw musi fizycznie umieć poczekać.",
+          "Swobodę zwiększaj stopniowo: najpierw krótkie chwile poza zasięgiem wzroku, potem coraz dłuższe przerwy w pilnowaniu. W pierwszych okresach poza zasięgiem monitor dla dzieci może pomóc zauważyć pierwsze sygnały. Jeśli pies zaczyna znowu robić w domu — to znak, że swoboda rosła za szybko.",
+          "Zwykłe potknięcie w nauce nie oznacza kary ani mocniejszego trzymania — cofnij się wtedy do łatwiejszego poziomu: bliższego nadzoru i częstszych wyjść. Natomiast nagła utrata czystości u psa, który już był czysty, to sprawa dla lekarza weterynarii, nie dla zaostrzonego planu. Regres to informacja o planie albo o zdrowiu, nie o psie."
+        ],
+        "en": [
+          "Read the body: play stops suddenly, several spots get sniffed, a turn, a drift toward the door, a quiet look. Over time the dog starts asking deliberately — comes, looks, leads you to the door. Do not demand it as a guarantee too early: first it must physically be able to wait.",
+          "Increase freedom gradually: first short moments out of sight, then longer and longer gaps in supervision. In the first out-of-sight periods a baby monitor can help you catch the early signals. If the dog starts having accidents at home again, that is information that freedom grew too fast.",
+          "An ordinary learning slip does not mean punishment or stricter holding — step back to the easier level: closer supervision and more frequent outings. But a sudden loss of cleanliness in a dog that was already clean is a matter for a veterinarian, not for a stricter plan. A regression is information about the plan or about health, not about the dog."
+        ]
+      }
+    },
+    {
+      "id": "nights-and-absence",
+      "title": {
+        "pl": "Noce i wyjścia domowników",
+        "en": "Nights and the household being away"
+      },
+      "paragraphs": {
+        "pl": [
+          "Wieczorem jedno spokojne wyjście tuż przed snem. Małe szczenięta mogą potrzebować nocnych wyjść przez pierwsze tygodnie i miesiące — to fizjologia, nie kaprys. Gdy budzą się w nocy, wstawaj bez zabawy i rozmów: siku i od razu z powrotem do legowiska.",
+          "Nie zostawiaj szczenięcia samego na dłużej, niż jego pęcherz wytrzyma — zaplanuj wtedy czyjeś wyjście z psem albo dostęp do maty w wygodnie urządzonym miejscu odpoczynku. Świadome zostawienie psa bez żadnej możliwości załatwienia się nie jest treningiem czystości.",
+          "Budzisz się regularnie do mokrego posłania? Wypróbuj budzik: wyjście trochę przed porą, w której wpadka zwykle się zdarza, pozwala uprzedzić potrzebę. Jeśli mimo tego pies nie daje rady, pogadaj o tym z lekarzem weterynarii."
+        ],
+        "en": [
+          "In the evening, one calm outing right before bed. Young puppies may need night outings for the first weeks and months — that is physiology, not a whim. When they wake at night, get up without play or conversation: pee, then straight back to the bed.",
+          "Do not leave a puppy alone longer than its bladder can manage — arrange a person for an outing or access to a pad in a comfortably set-up resting space. Knowingly leaving a dog with no way to eliminate at all is not toilet training.",
+          "Waking regularly to a wet bed? Try an alarm clock: an outing a little before the hour when the accident usually happens lets you beat the need. If the dog still cannot manage despite that, talk it over with the veterinarian."
+        ]
+      }
+    },
+    {
+      "id": "pads-to-outdoors",
+      "title": {
+        "pl": "Mata w domu a cel na dworze",
+        "en": "Indoor pads and the outdoor goal"
+      },
+      "paragraphs": {
+        "pl": [
+          "Mata albo tacka z podłożem w domu to narzędzie, nie porażka: pies uczy się wtedy, że załatwianie ma swoje konkretne miejsce i podłoże — tak samo jak na trawniku.",
+          "Przejście na sam dwór planuj jak naukę nowego miejsca: wyprowadzaj w porach, w których pies zwykle korzysta z maty, chwal i nagradzaj za każdy sukces na zewnątrz, a mata zostaje dostępna tak długo, jak długo wyjścia na dwór nie pokrywają potrzeb psa.",
+          "Przy wielogodzinnych nieobecnościach mata bywa po prostu uczciwszym planem niż samotne czekanie psa — to wybór logistyczny, nie wyrok dla treningu."
+        ],
+        "en": [
+          "A pad or tray indoors is a tool, not a failure: the dog learns that toileting has one concrete place and surface — exactly like on the lawn.",
+          "Plan the move to outdoors-only like teaching a new place: take the dog out at the times it usually uses the pad, praise and reward every outdoor success, and keep the pad available for as long as outdoor trips do not yet cover the dog's needs.",
+          "During long absences a pad can simply be the fairer plan than a puppy waiting alone — a logistics choice, not a verdict on training."
+        ]
+      }
+    },
+    {
+      "id": "cleanup-and-setbacks",
+      "title": {
+        "pl": "Sprzątanie i nagłe zmiany",
+        "en": "Cleaning and sudden changes"
+      },
+      "paragraphs": {
+        "pl": [
+          "Wycieraj preparatem enzymatycznym przeznaczonym do moczu zwierząt, zgodnie z etykietą i możliwościami czyszczonej powierzchni, a psa na czas sprzątania wyprowadź albo zostaw w innym pokoju. Dla psa zapach moczu to znak „tu jest toaleta” — dopóki czuje go wyraźnie, zachęta do powtórki zostaje.",
+          "Zapisuj na kartce, kiedy, gdzie i na jakim podłożu pies się załatwił — po kilku dniach często widać rytm (pora, podłoże, pobudka, goście), którego w ferworze nie da się zauważyć, a bywa on pierwszym tropem dla lekarza weterynarii.",
+          "Każdą nagłą zmianę u psa, który już był czysty, konsultuj najpierw z lekarzem weterynarii, zamiast zaostrzać trening — infekcja pęcherza i inne sprawy zdrowotne potrafią stać za „niewytłumaczalnymi” wpadkami. Dalsze postępowanie dostosuj do jego oceny, a na co dzień nadal dawaj po prostu częste okazje i łagodną opiekę."
+        ],
+        "en": [
+          "Clean with an enzymatic product made for pet urine, following the label and what the surface can take, and keep the dog out of the room while you clean. For the dog the smell of urine is a “this is the toilet” sign — while it smells it clearly, the invitation to repeat stays open.",
+          "Note on paper when, where and on what surface the dog eliminated — after a few days a rhythm (time of day, substrate, waking, visitors) often shows that is impossible to see in the rush, and it may be the first clue for the veterinarian.",
+          "Discuss any sudden change in a dog that was already clean with a veterinarian first, instead of tightening the training — bladder infections and other health issues can stand behind “unexplained” accidents. Follow the veterinarian's assessment, and in the meantime keep simply offering frequent opportunities and gentle care."
+        ]
+      }
+    }
+  ]
+}

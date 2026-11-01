@@ -46,15 +46,10 @@ struct CatalogueView: View {
                     } label: {
                         Text("language.title")
                     }
-                    Divider()
-                    // Explains why chrome text may lag content after a switch.
-                    Text("language.nextLaunch")
-                        .font(.system(size: 11))
-                    Divider()
-                    // Supplementary surface for the same statement the care
-                    // screens carry in full.
-                    Text("care.disclaimer")
-                        .font(.system(size: 11))
+                    // The menu is ONLY the language switch. The switch-off
+                    // notice and the non-veterinary statement live on the
+                    // content screens that need them (care section, puppy
+                    // hub and every guide), not in the picker chrome.
                 } label: {
                     Image(systemName: "globe")
                         .foregroundStyle(Theme.green)
@@ -66,6 +61,7 @@ struct CatalogueView: View {
 
     private var exerciseSection: some View {
         VStack(spacing: 10) {
+            PuppyStartEntryRow()
             ForEach(model.content.catalogue, id: \.id) { entry in
                 NavigationLink(value: Route.exercise(exerciseId: entry.id)) {
                     ExerciseCardView(

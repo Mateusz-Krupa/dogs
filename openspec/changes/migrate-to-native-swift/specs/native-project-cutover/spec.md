@@ -21,6 +21,22 @@ The old implementation SHALL remain frozen as a reference until parity tests, of
 - **WHEN** cleanup is proposed
 - **THEN** an explicit file allowlist and parity evidence are reviewed and user approval is recorded before deletion; unknown untracked `build/` is not removed.
 
+#### Scenario: An active change still edits legacy sources
+- **WHEN** approved copy or care work still owns changes in both legacy sources and native resources
+- **THEN** cleanup waits for a stable owner handoff with relevant implementation/review checks complete, current source/native parity and approved content-delta/checksum evidence; it preserves unfamiliar work and does not require those changes to be archived.
+
+#### Scenario: The deletion inventory predates new source files
+- **WHEN** tracked care files or a newly created JS test are absent from the old deletion list
+- **THEN** the list is refreshed and independently reviewed before explicit user approval; unknown untracked files are protected, no directory-wide delete is inferred, and `.nvmrc` remains available for repository tooling without making Node an application runtime requirement.
+
+#### Scenario: Current approved copy differs from the historical snapshot
+- **WHEN** approved content corrections have changed resource bytes since the original migration capture
+- **THEN** current source/native parity and native-only checks use the reviewed content deltas and current checksum expectations, while the historical snapshot remains unchanged and cannot be regenerated merely to make checks pass.
+
+#### Scenario: A required pre-cleanup check is unavailable
+- **WHEN** visual/device/update verification or independent review is missing or cannot run
+- **THEN** the result remains blocked or not-run, TestFlight or simulator evidence is not substituted for device/update checks, and source deletion does not start solely because the user approved addressing the findings.
+
 #### Scenario: Final review and handoff
 - **WHEN** native cutover is complete
 - **THEN** an independent reviewer examines the final diff and verification evidence, findings have stable numeric IDs, only user-selected fixes are applied, and any unavailable device/signing checks are reported as blockers rather than passed tests.

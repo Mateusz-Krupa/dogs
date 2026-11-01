@@ -26,7 +26,19 @@ enum BehaviourValidator {
         }
     }
 
-    static func parseIssue(_ value: JSONValue, source: String) throws -> BehaviourIssue {
+    /// Observation guidance is optional for compatibility, but a card that
+    /// carries it must carry both locales non-empty — a half-translated
+    /// "what to watch" section is the drift this project has been bitten by.
+    private static func parseOptionalTextList(
+        _ value: JSONValue?, source: String, path: String
+    ) throws -> Localized<[String]>? {
+        guard value != nil else { return nil }
+        return try parseTextList(value, source: source, path: path)
+    }
+
+    static func parseIssue(
+        _ value: JSONValue, source: String, today: String? = nil
+    ) throws -> BehaviourIssue {
         let record = try Checks.expectRecord(value, source: source, path: "")
         let names: Localized<IssueNames> = try Checks.expectLocales(
             record["names"], source: source, path: "names"
@@ -59,7 +71,11 @@ enum BehaviourValidator {
             work: try parseTextList(record["work"], source: source, path: "work"),
             professional: try parseText(
                 record["professional"], source: source, path: "professional"),
-            practices: practices
+            practices: practices,
+            observe: try parseOptionalTextList(
+                record["observe"], source: source, path: "observe"),
+            evidence: try GuidanceEvidenceValidator.parseOptionalEvidence(
+                record["evidence"], source: source, today: today)
         )
     }
 }

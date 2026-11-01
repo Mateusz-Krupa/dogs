@@ -57,10 +57,24 @@ final class VisualAuditUITests: XCTestCase {
                       message)
     }
 
+    /// Scrolls until the element is fully on screen with a bottom margin.
+    /// `isHittable` is true for a row clipped at the screen bottom whose
+    /// center is still off-screen, and the tap then misses — the deterministic
+    /// welfare-card failures were exactly this.
+    private func scrollIntoView(_ element: XCUIElement, in app: XCUIApplication, margin: CGFloat = 140) {
+        for _ in 0..<20 {
+            guard element.exists else { return }
+            let frame = element.frame
+            if frame.minY >= 0, frame.maxY <= app.frame.height - margin { return }
+            if frame.maxY > app.frame.height - margin { app.swipeUp() } else { app.swipeDown() }
+        }
+    }
+
     private func openExercise(_ id: String, in app: XCUIApplication) {
         let card = app.buttons["exercise-link-\(id)"]
         XCTAssertTrue(card.waitForExistence(timeout: timeout), "exercise card \(id) missing")
-        for _ in 0..<10 where !card.isHittable { app.swipeUp() }
+        scrollIntoView(card, in: app)
+        XCTAssertTrue(card.isHittable, "exercise card \(id) never became hittable")
         card.tap()
     }
 
@@ -76,12 +90,16 @@ final class VisualAuditUITests: XCTestCase {
         start.press(forDuration: 0.05, thenDragTo: finish)
     }
 
-    /// Five hits, then the "+1" choice ("Następny krok"). False when the
-    /// ladder cannot advance further.
+    /// Five hits, then the "+1" choice. False when the ladder cannot advance
+    /// further. The completed set has no separate header: the verdict card
+    /// (label "Push"/"Podnieś poprzeczkę") is the state marker. The suggested
+    /// choice carries "— Suggested" in its accessibility label, so choices are
+    /// matched by containment, not exact equality.
     private func advanceOneStep(in app: XCUIApplication) -> Bool {
-        for _ in 0..<setSize { _ = tap(button(matching: ["Got it", "Zaliczone"], in: app)) }
-        expectText(["Seria zakończona", "Set complete"], in: app, "verdict card did not appear")
-        return tap(button(matching: ["Następny krok", "Next step"], in: app))
+        for _ in 0..<setSize { XCTAssertTrue(tap(button(matching: ["Got it", "Zaliczone"], in: app)),
+                                             "hit button not tappable during advance") }
+        expectText(["Push", "Podnieś poprzeczkę"], in: app, "push verdict card did not appear")
+        return tap(button(containing: ["Następny krok", "Next step"], in: app))
     }
 
     /// The dock's undo control reuses "Wstecz" and is marked by the ↺ glyph,
@@ -115,21 +133,23 @@ final class VisualAuditUITests: XCTestCase {
         XCTAssertTrue(tapUndo(app), "undo control missing")
         attach("05-set-after-undo-one-rep")
 
-        // Finish the set: 5/5 shows the push verdict, then advance a step.
+        // Finish the set: the undo above left one rep, so four more hits make
+        // 5/5 and the push verdict card; then advance a step.
         XCTAssertTrue(tap(button(matching: ["Got it", "Zaliczone"], in: app)))
         XCTAssertTrue(tap(button(matching: ["Got it", "Zaliczone"], in: app)))
         XCTAssertTrue(tap(button(matching: ["Got it", "Zaliczone"], in: app)))
-        expectText(["Seria zakończona", "Set complete"], in: app, "completed set header missing")
+        XCTAssertTrue(tap(button(matching: ["Got it", "Zaliczone"], in: app)))
+        expectText(["Push", "Podnieś poprzeczkę"], in: app, "completed-set push verdict card missing")
         attach("06-set-complete-verdict-push")
-        XCTAssertTrue(tap(button(matching: ["Następny krok", "Next step"], in: app)),
+        XCTAssertTrue(tap(button(containing: ["Następny krok", "Next step"], in: app)),
                       "push choice missing after 5/5")
         attach("07-after-push-next-step")
 
         // The drop branch: a set of misses offers the easier choice.
-        for _ in 0..<setSize { XCTAssertTrue(tap(button(matching: ["Nie zaliczone", "Missed"], in: app))) }
+        for _ in 0..<setSize { XCTAssertTrue(tap(button(matching: ["Niezaliczone", "Missed"], in: app))) }
         attach("08-verdict-drop-choices")
-        XCTAssertTrue(tap(button(matching: ["Łatwiejszy krok", "Easier step"], in: app))
-                        || tap(button(matching: ["Łatwiejsze miejsce", "Easier place"], in: app)),
+        XCTAssertTrue(tap(button(containing: ["Łatwiejszy krok", "Easier step"], in: app))
+                        || tap(button(containing: ["Łatwiejsze miejsce", "Easier place"], in: app)),
                       "no easier choice offered after a drop verdict")
         attach("09-easier-choice-applied")
 
@@ -148,6 +168,8 @@ final class VisualAuditUITests: XCTestCase {
         attach("11-after-abandon-fresh-set")
 
         // Language menu copy in its own language (it is the switching surface).
+        // The globe lives in the catalogue bar, so leave the exercise first.
+        leaveToPrevious(app)
         XCTAssertTrue(tap(button(containing: ["język", "language"], in: app), timeout: 4),
                       "language menu not reachable for the audit")
         attach("12-language-menu")
@@ -198,17 +220,29 @@ final class VisualAuditUITests: XCTestCase {
 
     // MARK: 3. all welfare cards, both languages
 
+    /// Opens one problem card with the element fully on screen, then confirms
+    /// by the stop-section title. A genuinely missing section still fails the
+    /// caller's expectText afterwards.
+    private func openProblem(_ id: String, in app: XCUIApplication) {
+        let card = app.buttons["problem-link-\(id)"]
+        XCTAssertTrue(card.waitForExistence(timeout: timeout), "problem card \(id) missing")
+        let stopSeen = app.staticTexts.matching(
+            NSPredicate(format: "label CONTAINS[cd] %@", "stop")).firstMatch
+        for _ in 1...3 {
+            scrollIntoView(card, in: app)
+            XCTAssertTrue(card.isHittable, "problem card \(id) never became hittable")
+            card.tap()
+            if stopSeen.waitForExistence(timeout: 3) { return }
+        }
+    }
+
     private func auditWelfareCards(lang: String) {
         let app = makeApp(lang: lang, dbName: "uitest-audit-problems-\(lang)-\(UUID().uuidString).sqlite")
         app.launch()
         let ids = ["bark-door", "bark-window", "jumping", "nipping", "stealing", "bolting",
                    "reactivity", "traffic", "noise", "mounting", "bed", "alone"]
         for id in ids {
-            let card = app.buttons["problem-link-\(id)"]
-            XCTAssertTrue(card.waitForExistence(timeout: timeout), "problem card \(id) missing")
-            for _ in 0..<14 where !card.isHittable { app.swipeUp() }
-            XCTAssertTrue(card.isHittable, "problem card \(id) never became hittable")
-            card.tap()
+            openProblem(id, in: app)
             expectText(["stop"], in: app, "stop section missing on \(id)")
             attach("welfare-\(id)-top")
             for _ in 0..<4 { app.swipeUp() }
@@ -220,6 +254,62 @@ final class VisualAuditUITests: XCTestCase {
 
     func testVisualAuditWelfareCardsEnglish() { auditWelfareCards(lang: "en") }
     func testVisualAuditWelfareCardsPolish() { auditWelfareCards(lang: "pl") }
+
+    // MARK: 4. unscored families: puppy hub, guides, care (8.2 late families)
+
+    /// Opens a row by identifier with the suite's converging scroll (rows below
+    /// the fold exist but are not hittable; `UITestScroll` is the established
+    /// fix, same pattern as PuppyFlowUITests.openHub).
+    private func openRow(identifier: String, in app: XCUIApplication, _ what: String) {
+        let row = app.buttons[identifier]
+        XCTAssertTrue(row.waitForExistence(timeout: timeout), "\(what) missing")
+        XCTAssertTrue(UITestScroll.fullyVisible(row, in: app), "\(what) never became visible")
+        row.tap()
+    }
+
+    private func auditUnscoredFamilies(lang: String) {
+        let db = "uitest-audit-unscored-\(lang)-\(UUID().uuidString).sqlite"
+        let app = makeApp(lang: lang, dbName: db)
+        app.launch()
+        expectText(["plan treningu", "training plan"], in: app, "catalogue did not load", timeout: timeout)
+        openRow(identifier: "puppy-link", in: app, "puppy entry")
+        attach("15-puppy-hub")                       // thumbnails + help-now block visible
+
+        // Each foundation guide, then the guidance→scored bridge from the
+        // first-exercises guide: opening a never-seen exercise from a guide
+        // must look like the ordinary step-1 dock.
+        for guideId in ["puppy-rest", "puppy-world", "puppy-play", "puppy-first-exercises"] {
+            openRow(identifier: "puppy-guide-link-\(guideId)", in: app, "guide \(guideId)")
+            attach("16-puppy-guide-\(guideId)")
+            if guideId == "puppy-first-exercises" {
+                let practice = app.buttons.matching(NSPredicate(
+                    format: "identifier CONTAINS[cd] %@", "puppy-practice-link-")).firstMatch
+                if practice.waitForExistence(timeout: 3) {
+                    practice.tap()
+                    attach("17-puppy-guide-exercise-bridge")
+                    leaveToPrevious(app)             // back to the guide
+                }
+            }
+            leaveToPrevious(app)                     // back to the hub
+        }
+
+        // The two new welfare cards from the hub's help block.
+        for issueId in ["overarousal", "fear-withdrawal"] {
+            openRow(identifier: "puppy-help-link-\(issueId)", in: app, "help card \(issueId)")
+            attach("18-welfare-card-\(issueId)")     // stop-first + sources visible
+            leaveToPrevious(app)
+        }
+        leaveToPrevious(app)                         // hub -> catalogue
+
+        // One care routine screen (tried-state writes are exercised
+        // functionally in CareFlowUITests).
+        openRow(identifier: "care-link-care-coat", in: app, "care routine care-coat")
+        attach("19-care-routine-screen")
+        app.terminate()
+    }
+
+    func testVisualAuditUnscoredFamiliesEnglish() { auditUnscoredFamilies(lang: "en") }
+    func testVisualAuditUnscoredFamiliesPolish() { auditUnscoredFamilies(lang: "pl") }
 
     // MARK: 4. storage failure screen
 

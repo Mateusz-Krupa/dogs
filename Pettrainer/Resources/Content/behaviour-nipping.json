@@ -16,18 +16,18 @@
     "en": "The dog grabs moving ankles, wrists and fabric with its teeth — around running children, in the evening, after a walk. Classic in puppies and herding breeds, sometimes with driving and circles."
   },
   "urgent": {
-    "pl": "Gryzienie, które przerywa skórę, albo skok bez wcześniejszego warczenia — behawiorysta. Nagłe gryzienie przy dotknięciu — najpierw weterynarz, to może być ból.",
-    "en": "Mouthing that breaks skin, or a bite with no earlier growl warning — behaviourist. Sudden biting when touched — vet first, it can be pain."
+    "pl": "Jeśli pies ugryzł do krwi, próbuje ugryźć człowieka albo gryzienie się nasila, zadbaj o bezpieczeństwo i skontaktuj się z wykwalifikowanym behawiorystą. Nagłe gryzienie przy dotyku wymaga najpierw konsultacji z lekarzem weterynarii, ponieważ przyczyną może być ból.",
+    "en": "If the dog has bitten and drawn blood, attempts to bite a person, or the mouthing escalates, keep everyone safe and contact a qualified behaviour professional. Sudden biting when touched calls for a veterinarian first, because pain may be the cause."
   },
   "avoid": {
     "pl": [
-      "Nie machaj ręką ani stopą „żeby się odczepił\" — poruszająca się zdobycz to nagroda za skok, dokładnie tego pies chce.",
-      "Nie piszcz i nie klapsnij — pisk udaje zdobycz, klaps podnosi pobudzenie, a gryzienie wraca mocniej.",
+      "Nie machaj ręką ani stopą „żeby się odczepił” — poruszająca się zdobycz to nagroda za skok, dokładnie tego pies chce.",
+      "Nie piszcz i nie uderzaj psa. Pisk może dodatkowo go pobudzić, a uderzenie może nasilić problem.",
       "Nie karz szczenięcia za samo gryzienie bez pokazania zamiennika — szczeniak nie ma jeszcze innego sposobu badania świata."
     ],
     "en": [
-      "Do not wave your hand or foot “to get it off\" — a wiggling target is the reward for the bite, exactly what the dog is playing for.",
-      "Do not squeal or smack — squealing imitates prey and smacking raises arousal, so the mouthing comes back harder.",
+      "Do not wave your hand or foot “to get it off” — a wiggling target is the reward for the bite, exactly what the dog is playing for.",
+      "Do not squeal or hit the dog. Squealing may increase arousal, and hitting may worsen the problem.",
       "Do not punish a puppy for mouthing without showing the substitute — it has no other way to investigate the world yet."
     ]
   },
@@ -47,26 +47,39 @@
   },
   "work": {
     "pl": [
-      "Nagradzaj gryzienie w zabawkę: przeciąganka i aport jako główne zabawy, ręce zawsze poza zasięgiem zębów.",
-      "Rozpocznij „puść\" na zabawkach — przyda się szybciej, niż myślisz.",
+      "Zachęcaj psa do gryzienia zabawki zamiast rąk. Podczas przeciągania lub aportowania trzymaj dłonie z dala od jego zębów.",
+      "Rozpocznij „puść” na zabawkach — przyda się szybciej, niż myślisz.",
       "Chwal za samo leżenie przy Tobie bez gryzienia — brak gryzienia też jest zachowaniem.",
       "Smakołyki jedzone z płaskiej dłoni na otwartych palcach — ręce przestają być zdobyczą."
     ],
     "en": [
-      "Pay the bite on the toy: tug and fetch as the main games, hands always out of teeth range.",
-      "Start “drop it\" on toys — you will need it sooner than you think.",
+      "Encourage the dog to bite a toy rather than hands. During tug or fetch, keep your hands away from its teeth.",
+      "Start “drop it” on toys — you will need it sooner than you think.",
       "Praise plain resting beside you with no teeth involved — the absence of biting is a behaviour.",
       "Food eaten from a flat palm over open fingers — hands stop being prey."
     ]
   },
   "professional": {
-    "pl": "Gryzienie u dorosłego psa, które przerywa skórę, albo gryzienie bez wcześniejszego ostrzegania warczeniem — behawiorysta. Nagłe gryzienie przy dotknięciu — najpierw weterynarz, to może być ból.",
-    "en": "Nipping that breaks skin in an adult dog, or biting with no prior growl warning — behaviourist. Sudden biting when touched — vet first, it can be pain."
+    "pl": "Jeśli pies ugryzł do krwi, próbuje ugryźć człowieka albo gryzienie się nasila, zadbaj o bezpieczeństwo i skontaktuj się z wykwalifikowanym behawiorystą. Nagłe gryzienie przy dotyku wymaga najpierw konsultacji z lekarzem weterynarii, ponieważ przyczyną może być ból.",
+    "en": "If the dog has bitten and drawn blood, attempts to bite a person, or the mouthing escalates, keep everyone safe and contact a qualified behaviour professional. Sudden biting when touched calls for a veterinarian first, because pain may be the cause."
   },
   "practices": [
     "drop",
     "look",
     "mat",
     "sit"
-  ]
+  ],
+  "evidence": {
+    "verifiedOn": "2026-10-24",
+    "sources": [
+      {
+        "title": "Blue Cross — Puppy biting and mouthing",
+        "url": "https://www.bluecross.org.uk/advice/dog/behaviour-and-training/puppy-biting-and-mouthing"
+      },
+      {
+        "title": "AVSAB — Position Statements: Humane Dog Training",
+        "url": "https://avsab.org/resources/position-statements/"
+      }
+    ]
+  }
 }

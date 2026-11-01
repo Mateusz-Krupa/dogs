@@ -3,7 +3,7 @@
     "pl": {
       "symptom": "Pies wstaje, gdy tylko się odwrócę",
       "why": "Podniosłeś dwie osie naraz — dystans i czas. Przy zmianie jednej, druga musi spaść.",
-      "fix": "Wróć do trzech sekund i jednego kroku. Rośnij tylko po jednej osi, nigdy po dwóch jednocześnie."
+      "fix": "Wróć do trzech sekund i jednego kroku. Wydłużaj czas albo zwiększaj odległość — nie utrudniaj obu rzeczy jednocześnie."
     },
     "en": {
       "symptom": "The dog gets up the moment I turn away",

@@ -5,7 +5,7 @@
   "names": {
     "pl": {
       "name": "Kontrola uszu, oczu i opuszek",
-      "description": "Codzienne zobaczenie, nie badanie: patrzysz, wąchasz, dotykasz przelotem i dzięki temu wyłapujesz zmianę wcześniej."
+      "description": "Krótka codzienna kontrola pomaga zauważyć zmiany: oglądasz psa, zwracasz uwagę na zapach i delikatnie go dotykasz. Nie zastępuje to badania u lekarza weterynarii."
     },
     "en": {
       "name": "Ear, eye and paw-pad checks",
@@ -49,7 +49,7 @@
         "treats"
       ],
       "pl": {
-        "title": "Przewidywalne podejście, które pies może odrzucić",
+        "title": "Spokojne podejście i krótki dotyk",
         "setup": "Spokojna chwila w domu, smakołyki w kieszeni.",
         "how": "Zapowiedz się: powiedz imię, pokaż ręce, dotknij grzbietu i zatrzymaj dłoń przy głowie; nie dotykaj jeszcze ucha ani oka. Nagródź i odejdź. Pies może podejść albo zostać — obie odpowiedzi są dobre.",
         "watchFor": "Pies zostaje i nie napina się. Odwrócenie głowy, otrząśnięcie — wracamy do zwykłego głaskania.",
@@ -71,8 +71,8 @@
       "pl": {
         "title": "Krótkie spojrzenia, każde osobno",
         "setup": "Ta sama spokojna chwila; dobre światło.",
-        "how": "Unieś małżowinę i tylko spójrz — bez wsuwania czegokolwiek do środka. Osobno: czy oko otwiera się swobodnie i czy jest jasne. Potem krótkie dotknięcie opuszki.",
-        "watchFor": "Ucho czyste i bez zapachu, oko jasne, bez wypływu, opuszki gładkie, bez pęknięć.",
+        "how": "Delikatnie unieś małżowinę uszną i zajrzyj do środka, niczego nie wkładając do ucha. Osobno sprawdź, czy pies swobodnie otwiera oko i czy nie widać zaczerwienienia ani wydzieliny. Na końcu krótko dotknij opuszki.",
+        "watchFor": "Zwróć uwagę, czy nie pojawiły się nietypowy zapach lub wydzielina z ucha, zaczerwienienie lub wydzielina z oka albo pęknięcia opuszek.",
         "stop": "Zapach, wydzielina, zaczerwienienie, mrużenie albo pęknięta opuszka — koniec sprawdzania i telefon do weterynarza."
       },
       "en": {
@@ -92,7 +92,7 @@
       "pl": {
         "title": "Krótki przegląd wzrokiem, okolica po okolicy",
         "setup": "Mata albo ręcznik pod łapami; smakołyki w zasięgu.",
-        "how": "Oglądamy tylko oczami, z zewnątrz, okolica po okolicy: sierść i skóra po grzbiecie i bokach, za uszami, pachy, pachwiny, łapy i opuszki. Niczego nie badamy w środku ucha ani pod powieką; jeśli chcesz sprawdzić coś, co widać, a pies nie daje — przerywasz i dzwonisz.",
+        "how": "Delikatnie przesuwaj dłonią od głowy w stronę ogona. Osobno obejrzyj okolice za uszami, pachy, pachwiny, opuszki i przestrzenie między palcami. Nie przytrzymuj psa na siłę.",
         "watchFor": "Widzisz: zgrubienie, strupek, łysinkę, zaczerwienienie, nieświeży oddech, kulawiznę albo ból przy samym zbliżeniu ręki? To nie temat do „sprawdzania dokładniej” — to materiał na wizytę.",
         "stop": "Natrafisz na ból, gorącą skórę albo zmianę — nie „sprawdzaj dokładniej”, tylko zadzwoń do weterynarza."
       },

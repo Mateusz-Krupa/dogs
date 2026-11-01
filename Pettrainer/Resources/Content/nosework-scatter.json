@@ -5,7 +5,7 @@
   "names": {
     "pl": {
       "name": "rozsypka",
-      "description": "Garść karmy rozrzucona w trawie albo na dywanie. Najprostsza gra węchowa, jaka istnieje, i zarazem ta, od której wszystkie inne się zaczynają. Działa od pierwszego dnia w domu, nie wymaga niczego oprócz jedzenia i nie da się jej zrobić źle."
+      "description": "Garść karmy rozrzucona w trawie albo na dywanie. Najprostsza gra węchowa, jaka istnieje, i zarazem ta, od której wszystkie inne się zaczynają. Możesz zacząć od prostej wersji z niewielką ilością karmy, dobranej do możliwości psa i bezpiecznego miejsca."
     },
     "en": {
       "name": "scatter",
@@ -26,8 +26,8 @@
       ],
       "pl": {
         "title": "Na dywanie",
-        "setup": "Odlicz garść karmy z dziennej porcji. Wybierz dywan albo matę — na gładkiej podłodze karma rozjeżdża się i jest za łatwo.",
-        "how": "Rozrzuć karmę na powierzchni mniej więcej metr na metr, powiedz „szukaj\" i odejdź. Nie pokazuj, nie podpowiadaj, nie poprawiaj.",
+        "setup": "Odłóż niewielką część dziennej porcji karmy. Wybierz dywan albo matę — na gładkiej podłodze karma rozjeżdża się i jest za łatwo.",
+        "how": "Rozrzuć karmę na powierzchni mniej więcej metr na metr, powiedz „szukaj” i odejdź. Nie pokazuj, nie podpowiadaj, nie poprawiaj.",
         "watchFor": "Pies opuszcza nos i pracuje systematycznie. Jeśli podnosi głowę i patrzy na Ciebie — to prośba o pomoc; odwróć wzrok i daj mu chwilę, zanim uznasz, że za trudne."
       },
       "en": {
@@ -47,7 +47,7 @@
       "pl": {
         "title": "W trawie",
         "setup": "Kawałek trawy w ogrodzie albo na spokojnym skwerze, wysokość mniej więcej do kostki.",
-        "how": "Ta sama garść, obszar dwa na dwa metry. Trawa chowa zapach i jedzenie, więc trudność rośnie sama.",
+        "how": "Rozsyp podobną ilość karmy na obszarze około dwóch na dwa metry. Trawa zasłania kawałki jedzenia, więc pies musi bardziej polegać na węchu.",
         "watchFor": "Dłuższa praca niż na dywanie i wyraźnie wolniejsze tempo. To jest cel, nie problem."
       },
       "en": {
@@ -68,7 +68,7 @@
         "title": "Po spacerze, na wyciszenie",
         "setup": "Przygotuj rozsypkę przed wyjściem, żeby po powrocie nie było przerwy.",
         "how": "Wracacie ze spaceru i od razu idzie rozsypka. To zamienia koniec spaceru z pobudzenia w wyciszenie.",
-        "watchFor": "Pies po skończeniu kładzie się sam. Jeśli nadal chodzi po domu — skróć spacer, nie wydłużaj rozsypki."
+        "watchFor": "Po zabawie obserwuj, czy pies się uspokaja. Jeśli nadal chodzi po domu, sprawdź jego potrzeby i poziom pobudzenia, zamiast automatycznie wydłużać zabawę."
       },
       "en": {
         "title": "After a walk, to wind down",

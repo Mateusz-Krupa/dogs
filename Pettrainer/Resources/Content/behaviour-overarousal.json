@@ -1,0 +1,92 @@
+{
+  "id": "overarousal",
+  "sortOrder": 12,
+  "names": {
+    "pl": {
+      "name": "Nakręcenie bez hamulca",
+      "tagline": "Samo pobudzenie nie mówi, co pies czuje"
+    },
+    "en": {
+      "name": "Revved up with no brake",
+      "tagline": "Arousal alone does not tell you what the dog feels"
+    }
+  },
+  "recognizes": {
+    "pl": "Pies gna w kółko, chwyta zębami powietrze i materiał, nie przyjmuje jedzenia i nie wraca do spokojnej zabawy, choć zaczynasz ją od nowa. Poziom kręci się w górę, zamiast opadać — sam ruch nie znaczy, że psu jest dobrze.",
+    "en": "The dog zooms, snaps at air and fabric, will not take food, and cannot return to calm play no matter how often you restart. The level climbs instead of falling — motion on its own does not mean the dog is fine."
+  },
+  "urgent": {
+    "pl": "Nagły skok pobudzenia bez powodu, sztywne ciało, warczenie przy przerwaniu albo ugryzienie — nie diagnozuj sam: najpierw lekarz weterynarii (ból, choroba), potem behawiorysta.",
+    "en": "A sudden arousal jump with no reason, a stiff body, a growl when interrupted, or a bite — do not self-diagnose: veterinarian first (pain, illness), then a behaviour professional."
+  },
+  "avoid": {
+    "pl": [
+      "Nie wybieguj psa do nieprzytomności — dodatkowy wysiłek często podnosi pobudzenie zamiast je obniżać",
+      "Nie zasypuj psa komendami w szczycie — to moment odejmowania bodźców, nie sprawdzian posłuszeństwa",
+      "Nie karz psa za pobudzenie — ogranicz bodźce i wymagania oraz sprawdź jego potrzeby"
+    ],
+    "en": [
+      "Do not run the dog into the ground — extra exercise often lifts arousal instead of lowering it",
+      "Do not bury the dog in cues at the peak — this is the moment to remove input, not to audit obedience",
+      "Do not punish the dog for arousal — reduce input and demands and check its needs"
+    ]
+  },
+  "now": {
+    "pl": [
+      "Odejmij bodźców i wymagań: zatrzymaj scenariusz i przejdź w ciszy w spokojniejsze miejsce",
+      "Przerwij zabawę krótszą serią i kończ ją, zanim pies sam przekroczy próg",
+      "Sprawdź potrzeby: kiedy pies ostatnio odpoczął, jadł, pił i załatwiał się",
+      "Gdy sytuacja powtarza się codziennie o tej samej porze — zaproś do odpoczynku wcześniej, nie trenuj później"
+    ],
+    "en": [
+      "Remove input and demands: stop the scenario and move somewhere quieter in silence",
+      "Cut play to a shorter series and end it before the dog crosses the threshold itself",
+      "Check needs: when did the dog last rest, eat, drink and relieve itself",
+      "If this repeats daily at the same hour — invite rest earlier instead of training later"
+    ]
+  },
+  "work": {
+    "pl": [
+      "Zapisuj kontekst: co działo się w minutę przed eskalacją — szukaj powtarzalnych wyzwalaczy",
+      "Buduj łagodne powitania i spokojne kończenie zabawy w cichych momentach dnia",
+      "Ćwicz leżenie na macie i „zostaw” — to przyszłe narzędzia, nie ratunek w trakcie eskalacji"
+    ],
+    "en": [
+      "Log the context: what happened in the minute before the climb — look for repeating triggers",
+      "Build gentle greetings and calm play endings in the quiet hours of the day",
+      "Train the settle on the mat and “leave it” — these are future tools, not rescue during an escalation"
+    ]
+  },
+  "observe": {
+    "pl": [
+      "Sprawdzaj, co skraca powrót do równowagi: drzemka, węszenie, ciche pomieszczenie",
+      "O jakiej porze dnia pies ma najtrudniej i czy po nocnym śnie jest lepiej"
+    ],
+    "en": [
+      "Track what shortens the recovery: a nap, sniffing, a quiet room",
+      "Which hour of the day is hardest, and whether a night of sleep changes it"
+    ]
+  },
+  "professional": {
+    "pl": "Pobudzenie, które nie słabnie mimo spokojnego rytmu dnia albo utrudnia codzienne życie — lekarz weterynarii w celu wykluczenia bólu i choroby, potem behawiorysta. Nie czekaj, aż pies z tego wyrośnie. Agresja z historią pogryzień, nasilające się pilnowanie zasobów albo panika przy zostawaniu samemu — najpierw profesjonaliści, nie poniższe wskazówki.",
+    "en": "Arousal that does not ease despite a calm daily rhythm, or that disrupts daily life — veterinarian to rule out pain and illness, then a behaviour professional. Do not wait for the dog to outgrow it. Aggression with a bite history, escalating resource guarding, or distressing panic when left alone go to professionals first, not to the guidance below."
+  },
+  "practices": ["mat", "leave", "come"],
+  "evidence": {
+    "verifiedOn": "2026-10-24",
+    "sources": [
+      {
+        "title": "PDSA — Dogs and sleep: Our top tips for your furry friend",
+        "url": "https://www.pdsa.org.uk/what-we-do/blog/dogs-and-sleep-our-top-tips-for-your-furry-friend"
+      },
+      {
+        "title": "Blue Cross — Puppy biting and mouthing",
+        "url": "https://www.bluecross.org.uk/advice/dog/behaviour-and-training/puppy-biting-and-mouthing"
+      },
+      {
+        "title": "Dogs Trust — Introducing your puppy to the world around them",
+        "url": "https://www.dogstrust.org.uk/dog-advice/puppy/puppy-socialisation-introduction"
+      }
+    ]
+  }
+}

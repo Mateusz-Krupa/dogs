@@ -193,10 +193,18 @@ final class SessionRepository {
         );
         """, [.text(undone.dogId), .text(undone.environmentId), .text(exerciseId)])
         if let row = rows.first, case .integer(let highest)? = row["top"], highest > 0 {
-            // Never lower a mastery another push still justifies.
-            try progress.earnMasteryPush(
-                dogId: undone.dogId, exerciseId: exerciseId,
-                environmentId: undone.environmentId, stepOrdinal: highest)
+            // Assign the recomputed value exactly. `earnMasteryPush` upserts
+            // with MAX(existing, new) and could never lower the row, so an
+            // undone higher push would leave a mastery the raw history no
+            // longer justifies (reviewer MG-1).
+            try db.run("""
+            INSERT INTO mastery (dog_id, exercise_id, environment_id, highest_step_ordinal, updated_at)
+            VALUES (?, ?, ?, ?, ?)
+            ON CONFLICT(dog_id, exercise_id, environment_id) DO UPDATE SET
+              highest_step_ordinal = excluded.highest_step_ordinal,
+              updated_at = excluded.updated_at;
+            """, [.text(undone.dogId), .text(exerciseId), .text(undone.environmentId),
+                  .integer(highest), .text(now())])
         } else {
             try db.run("""
             DELETE FROM mastery

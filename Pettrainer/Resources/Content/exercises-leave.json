@@ -12,7 +12,7 @@
   "names": {
     "pl": {
       "name": "zostaw",
-      "description": "Pies nie bierze i nie dotyka tego, co wskażesz. Polskie szkoły używają też „nie rusz\" — wybierz jedno słowo i trzymaj się go. To ćwiczenie dotyczy rzeczy, których pies jeszcze nie ma w pysku; na oddanie tego, co już wziął, jest osobna komenda."
+      "description": "Pies nie bierze i nie dotyka tego, co wskażesz. Polskie szkoły używają też „nie rusz” — wybierz jedno słowo i trzymaj się go. To ćwiczenie dotyczy rzeczy, których pies jeszcze nie ma w pysku; na oddanie tego, co już wziął, jest osobna komenda."
     },
     "en": {
       "name": "leave it",
@@ -167,19 +167,19 @@
       "motion": "deny",
       "pl": {
         "title": "",
-        "instruction": "Dopiero teraz słowo — „zostaw\" tuż przed podsunięciem smakołyka.",
+        "instruction": "Dopiero teraz słowo — „zostaw” tuż przed podsunięciem smakołyka.",
         "setup": [
           "Otwarta dłoń i stopa już działają",
           "Smakołyki w obu rękach"
         ],
         "reps": [
-          "Powiedz „zostaw\" — raz",
+          "Powiedz „zostaw” — raz",
           "Sekundę później podsuń otwartą dłoń ze smakołykiem albo stopę nad smakołykiem",
           "Pies się odsunął — pochwal i nagródź",
           "Pies sięgnął — wróć do kroku 3, bez słowa"
         ],
-        "note": "Słowo ma zapowiadać pojawienie się pokusy, nie komentować jej w trakcie. Jeśli padnie, gdy łeb już leci w dół, pies nauczy się ignorować marudzenie.",
-        "criterion": "Pies nie sięga po usłyszeniu „zostaw\"."
+        "note": "Słowo ma zapowiadać pojawienie się pokusy, nie komentować jej w trakcie. Na tym etapie wypowiadaj komendę, zanim pies zacznie sięgać po smakołyk, zamiast powtarzać ją, gdy już próbuje go wziąć.",
+        "criterion": "Pies nie sięga po usłyszeniu „zostaw”."
       },
       "en": {
         "title": "",

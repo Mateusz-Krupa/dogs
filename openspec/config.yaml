@@ -1,12 +1,13 @@
 schema: spec-driven
 
 context: |
-  pettrainer is one phone-first Expo + React Native application repository.
-  Strict TypeScript, npm, Node v22.22.3 from .nvmrc, expo-sqlite for local data,
-  i18n-js and expo-localization for Polish and English. Offline-first, no account.
-  src/domain is pure training logic; src/db owns schema/migrations; src/content
-  owns exercise data/schemas; src/features owns feature orchestration; src/ui
-  owns shared native UI; src/i18n owns UI translations.
+  pettrainer is one phone-first native SwiftUI iOS application repository.
+  Swift, xcodebuild, iOS 16.4 minimum, raw SQLite in Pettrainer/Data for local
+  data, Localizable.xcstrings for Polish and English. Offline-first, no account.
+  Pettrainer/Domain is pure training logic; Pettrainer/Data owns schema/migrations;
+  Pettrainer/Content owns exercise data/models/validation; Pettrainer/Features owns
+  screens; Pettrainer/UI owns shared native UI; Resources holds content and strings.
+  The repository is native-only; there is no JS/Expo runtime.
   Mastery belongs to (dog x exercise x environment), never one completion boolean.
   Progress has installation micro-steps and environment generalization axes.
   Sets have exactly 5 reps. 5/5 = push; 3 or 4/5 = stick; 0 to 2/5 = drop.
@@ -41,5 +42,5 @@ rules:
     - Route planning/review to GPT-6.1 Sol and implementation to Flash Next.
     - Include an independent reviewer gate before implementation and a final review.
     - Require user approval of the proposal and selection of review-driven fixes.
-    - Include relevant targeted Jest tests, typecheck, and strict OpenSpec validation.
+    - Include relevant targeted xcodebuild test runs and strict OpenSpec validation.
     - Record decisions/pitfalls in notes.md; include archive reflection and memory review.

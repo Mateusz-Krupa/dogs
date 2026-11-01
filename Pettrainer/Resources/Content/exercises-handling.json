@@ -10,7 +10,7 @@
   ],
   "names": {
     "pl": {
-      "name": "obsługa",
+      "name": "oswajanie z dotykiem",
       "description": "Pies spokojnie znosi dotykanie łap, uszu, pyska i sierści. Najbardziej niedoceniane ćwiczenie w całym wychowaniu: decyduje o tym, czy wizyta u weterynarza i obcinanie pazurów będą rutyną, czy walką przez następne piętnaście lat."
     },
     "en": {
@@ -19,7 +19,7 @@
     }
   },
   "tagline": {
-    "pl": "Żeby weterynarz nie był walką",
+    "pl": "Spokojniejsza wizyta u weterynarza",
     "en": "So the vet is not a fight"
   },
   "steps": [
@@ -94,7 +94,7 @@
       "motion": "lift",
       "pl": {
         "title": "",
-        "instruction": "Podnieś łapę na sekundę i odłóż — powoli, każda z czterech z osobna.",
+        "instruction": "Podnieś łapę na sekundę i powoli ją odłóż. Każdą z czterech łap ćwicz osobno.",
         "setup": [
           "Dotyk łapy już nie przeszkadza",
           "Stoisz przy psie, nie nad nim"
@@ -105,7 +105,7 @@
           "Odłóż ją tam, gdzie była",
           "Nagródź i przejdź do następnej"
         ],
-        "note": "Odkładaj łapę powoli, nie zrzucaj jej — pies, który porywa własną łapę w locie, uczy się napięcia przy każdym podnoszeniu.",
+        "note": "Powoli opuść łapę na podłoże, zamiast nagle ją puszczać. Dzięki temu ruch będzie dla psa spokojniejszy i bardziej przewidywalny.",
         "criterion": "Pies pozwala podnieść i odłożyć łapę."
       },
       "en": {
@@ -164,7 +164,7 @@
       "motion": "touchPaw",
       "pl": {
         "title": "",
-        "instruction": "Nożyczki dotykają pazura, ale nic nie tną. Narzędzie ma przewidywać coś dobrego.",
+        "instruction": "Nożyczki dotykają pazura, ale nic nie tną. Widok narzędzia ma zapowiadać coś przyjemnego.",
         "setup": [
           "Obcinacz albo nożyczki w ręce",
           "Pies spokojny po poprzednich krokach"
@@ -175,7 +175,7 @@
           "Odłóż narzędzie",
           "Nagródź"
         ],
-        "note": "Cały sens tego kroku: narzędzie samo w sobie ma znaczyć „za chwilę coś dobrego\". Nie obcinaj jeszcze żadnego pazura.",
+        "note": "Cały sens tego kroku: narzędzie samo w sobie ma znaczyć „za chwilę coś dobrego”. Nie obcinaj jeszcze żadnego pazura.",
         "criterion": "Pies spokojnie znosi dotknięcie pazura narzędziem."
       },
       "en": {

@@ -21,7 +21,7 @@
     }
   },
   "tagline": {
-    "pl": "Rozwiązuje gości i obiad",
+    "pl": "Spokojniej przy gościach i podczas posiłków",
     "en": "Solves visitors and dinner"
   },
   "steps": [
@@ -107,7 +107,7 @@
           "Wróć do maty",
           "Nagródź, gdy pies wciąż na niej leży"
         ],
-        "criterion": "Pies zostaje na macie przez jeden Twój krok."
+        "criterion": "Pies pozostaje na macie, gdy robisz krok w tył i wracasz."
       },
       "en": {
         "title": "",
@@ -129,18 +129,18 @@
       "motion": "toss",
       "pl": {
         "title": "",
-        "instruction": "Słowo „na miejsce\" pada w chwili, gdy pies już idzie do maty.",
+        "instruction": "Słowo „na miejsce” pada w chwili, gdy pies już idzie do maty.",
         "setup": [
           "Pies sam chętnie wchodzi na matę",
           "Stoisz kilka kroków dalej"
         ],
         "reps": [
           "Czekaj, aż pies ruszy w stronę maty",
-          "Gdy już idzie — powiedz „na miejsce\"",
+          "Gdy już idzie — powiedz „na miejsce”",
           "Na macie — chwal i nagródź"
         ],
         "note": "Nie wołasz psa na matę słowem. Słowo ma tylko opisać to, co pies właśnie sam zrobił — dzięki temu przykleja się do zachowania, a nie do Twojego wołania.",
-        "criterion": "Pies idzie na matę po usłyszeniu komendy."
+        "criterion": "Pies sam rusza w stronę maty i dociera na nią, a Ty wypowiadasz komendę w trakcie jego podejścia."
       },
       "en": {
         "title": "",
@@ -155,7 +155,7 @@
           "On the mat — praise and pay"
         ],
         "note": "You are not calling the dog to the mat with the word. The word only labels what the dog is already doing — that is what glues it to the behaviour instead of to your calling.",
-        "criterion": "The dog goes to the mat on hearing the cue."
+        "criterion": "The dog starts toward the mat on their own and arrives; you say the cue while they are already heading there."
       }
     }
   ]

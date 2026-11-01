@@ -179,11 +179,21 @@ final class AppModel: ObservableObject {
         return true
     }
 
-    func recordNoseworkCompletion(activityId: String, levelOrdinal: Int) {
-        guard let nosework else { return }
-        try? nosework.recordLevelCompletion(dogId: dogId, activityId: activityId,
-                                            levelOrdinal: levelOrdinal)
+    /// Record finishing a nosework level. Same commit-before-publish contract
+    /// as care (reviewer MG-2): a failed write returns false without
+    /// publishing, so the screen keeps the last committed level and offers the
+    /// localized retry instead of progress that evaporates on relaunch.
+    @discardableResult
+    func recordNoseworkCompletion(activityId: String, levelOrdinal: Int) -> Bool {
+        guard let nosework else { return false }
+        do {
+            try nosework.recordLevelCompletion(dogId: dogId, activityId: activityId,
+                                               levelOrdinal: levelOrdinal)
+        } catch {
+            return false
+        }
         noseworkLevels[activityId] = max(noseworkLevels[activityId] ?? 0, levelOrdinal)
+        return true
     }
 
     func recordChoiceApplied() {

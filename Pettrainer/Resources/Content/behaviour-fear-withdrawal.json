@@ -1,0 +1,90 @@
+{
+  "id": "fear-withdrawal",
+  "sortOrder": 13,
+  "names": {
+    "pl": {
+      "name": "Strach i wycofywanie",
+      "tagline": "Daj psu dystans i możliwość odejścia — nie wymuszaj bliskości"
+    },
+    "en": {
+      "name": "Fear and withdrawal",
+      "tagline": "Give the dog distance and the option to leave — do not force closeness"
+    }
+  },
+  "recognizes": {
+    "pl": "Pies ustępuje kroku, gdy coś się zbliża, kuli się, obwąchuje ziemię, odmawia wejścia na krawężnik albo zastyga w bezruchu. Nie każdy strach ucieka — bywa cichy i wygląda na upór.",
+    "en": "The dog steps back when something approaches, crouches, sniffs the ground, refuses the kerb, or freezes. Not every fear runs away — some is quiet and looks like stubbornness."
+  },
+  "urgent": {
+    "pl": "Panika, gryzienie ze strachu albo odmowa jedzenia poza domem — to pomoc dla lekarza weterynarii i behawiorysty, nie kolejny samodzielny eksperyment. Nagły lęk u psa, który wcześniej był pewny, zaczyna się u lekarza weterynarii: może oznaczać ból. Agresja z historią pogryzień, nasilające się pilnowanie zasobów albo panika przy zostawaniu samemu — najpierw profesjonaliści, nie poniższe wskazówki.",
+    "en": "Panic, fear-biting, or refusing food outside the home calls for a veterinarian and a behaviour professional, not another DIY experiment. Sudden fear in a previously confident dog starts with a veterinarian: pain can be the cause. Aggression with a bite history, escalating resource guarding, or distressing panic when left alone go to professionals first, not to the guidance below."
+  },
+  "avoid": {
+    "pl": [
+      "Nie zmuszaj do kontaktu z tym, czego pies się boi, „bo trzeba” — siłowa konfrontacja pogłębia lęk",
+      "Nie lecz strachu metodami awersyjnymi: kolczatki, szarpnięcia i krzyk dodają psu powodów do panicznego stanu",
+      "Nie tłumacz lęku charakterem — zamarznięty pies nie jest uparty ani dominujący"
+    ],
+    "en": [
+      "Do not force contact with the scary thing “because it must happen” — forced confrontation deepens fear",
+      "Do not treat fear with aversives: prong corrections, leash jerks and shouting only give the dog more to panic about",
+      "Do not file fear under personality — a frozen dog is neither stubborn nor dominant"
+    ]
+  },
+  "now": {
+    "pl": [
+      "Zwiększ dystans albo zakończ sytuację, zanim pies straci zdolność do jedzenia i ruchu w twoją stronę",
+      "Pozwól obserwować z bezpiecznej odległości i nagradzaj samo patrzenie, zamiast ciągnąć do obiektu strachu",
+      "Po każdej ekspozycji wróć do spokojnej bazy i daj psu odpocząć — sprawdzaj, jak długo dochodzi do siebie"
+    ],
+    "en": [
+      "Add distance or end the situation before the dog loses the ability to eat and move toward you",
+      "Let it watch from a safe gap and pay for looking, instead of towing it to the scary thing",
+      "After every exposure, return to the calm base and let the dog rest — track how long recovery takes"
+    ]
+  },
+  "work": {
+    "pl": [
+      "Nowe rzeczy wprowadzaj najpierw w domu i ogrodzie: spokojnie, bokiem, w małych dawkach",
+      "Buduj wartość spojrzenia i leżenia na macie — to przyszłe narzędzia, nie ratunek w trakcie paniki",
+      "Przy powtarzalnych wyzwalaczach szukaj wykwalifikowanego behawiorysty, który dostosuje dystans i tempo pracy do komfortu psa, we współpracy z lekarzem weterynarii"
+    ],
+    "en": [
+      "Introduce new things at home and in the garden first: calmly, sideways, in small doses",
+      "Build the value of the look and the mat settle — future tools, not a rescue during panic",
+      "For repeating triggers, seek a qualified behaviour professional who adapts the distance and pace to the dog's comfort, working with your veterinarian"
+    ]
+  },
+  "observe": {
+    "pl": [
+      "Zapisuj dystans, przy którym pies nadal może jeść i swobodnie się ruszać — to punkt startu, nie porażka",
+      "Śledź, jak szybko pies wraca do siebie po trudnej chwili — skracanie tego czasu to realny postęp"
+    ],
+    "en": [
+      "Record the distance at which the dog can still eat and move freely — that is your starting point, not a failure",
+      "Track how fast the dog recovers after a hard moment — shorter recovery is real progress"
+    ]
+  },
+  "professional": {
+    "pl": "Lęk, który utrzymuje się mimo spokojnego postępowania, albo silna reakcja wyłączająca szczenię z codzienności — behawiorysta i lekarz weterynarii. Nie czekaj, aż pies z tego wyrośnie.",
+    "en": "Fear that persists despite calm handling, or a reaction strong enough to take the puppy out of daily life — a behaviour professional and a veterinarian. Do not wait for the dog to outgrow it."
+  },
+  "practices": ["look", "mat"],
+  "evidence": {
+    "verifiedOn": "2026-10-24",
+    "sources": [
+      {
+        "title": "VCA — Puppy Behavior and Training: Socialization and Fear Prevention",
+        "url": "https://vcahospitals.com/know-your-pet/puppy-behavior-and-training---socialization-and-fear-prevention"
+      },
+      {
+        "title": "Dogs Trust — Introducing your puppy to the world around them",
+        "url": "https://www.dogstrust.org.uk/dog-advice/puppy/puppy-socialisation-introduction"
+      },
+      {
+        "title": "AVSAB — Puppy Socialization Position Statement (Purdue Canine Welfare Science)",
+        "url": "https://caninewelfare.centers.purdue.edu/resource/avsab-puppy-socialization-position-statement/"
+      }
+    ]
+  }
+}

@@ -7,6 +7,10 @@ struct NoseworkView: View {
     @EnvironmentObject private var model: AppModel
     let activityId: String
     @State private var selected: Int = 0
+    /// True after a failed write: the last committed level stays shown and the
+    /// button turns brick with the localized retry line (same contract as
+    /// care; reviewer MG-2).
+    @State private var saveFailed = false
 
     private var activity: NoseworkActivity? { model.content.noseworkActivity(id: activityId) }
 
@@ -52,15 +56,20 @@ struct NoseworkView: View {
                 }
 
                 VStack(spacing: 8) {
+                    if saveFailed {
+                        Text("care.saveFailed")
+                            .font(.system(size: 13))
+                            .foregroundStyle(Theme.brick)
+                    }
                     Button {
-                        model.recordNoseworkCompletion(activityId: activity.id,
-                                                       levelOrdinal: level.ordinal)
+                        saveFailed = !model.recordNoseworkCompletion(activityId: activity.id,
+                                                                     levelOrdinal: level.ordinal)
                     } label: {
                         Text("nosework.done")
                             .font(.system(size: 17, weight: .bold))
                             .foregroundStyle(.white)
                             .frame(maxWidth: .infinity, minHeight: 54)
-                            .background(Theme.blue)
+                            .background(saveFailed ? Theme.brick : Theme.blue)
                             .clipShape(RoundedRectangle(cornerRadius: 14))
                     }
                     .buttonStyle(.plain)

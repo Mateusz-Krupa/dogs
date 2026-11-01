@@ -81,6 +81,21 @@ enum ProblemScene {
             context.fill(context.roundedRect(x: 8, y: 56, w: 5, h: 28, radius: 2.5), color, opacity: 0.3)
             context.fill(context.circle(80, 74, 3), .treat)
         }),
+        "overarousal": (pose: .stand, extras: { context, _, accent in
+            // The zoom loop overhead and the double motion streak say what the
+            // posture cannot: the level keeps climbing, it is not just play.
+            context.stroke(context.svg("M 24 18 Q 48 6 72 16"), accent, width: 3, dash: [6, 5])
+            context.fill(context.svg("M 74 16 L 66 11 L 68 21 Z"), accent)
+            context.stroke(context.svg("M 8 44 Q 18 36 12 28"), accent, width: 3, opacity: 0.8)
+            context.stroke(context.svg("M 16 56 Q 26 48 20 40"), accent, width: 3, opacity: 0.45)
+        }),
+        "fear-withdrawal": (pose: .down, extras: { context, color, accent in
+            // The person stays far right; the gap with the arrow pointing away
+            // is the whole lesson — distance is the tool, not confrontation.
+            person(&context, x: 96, color: color, opacity: 0.7)
+            context.stroke(context.svg("M 52 76 L 66 76"), accent, width: 3, dash: [5, 4])
+            context.fill(context.svg("M 48 76 L 55 72 L 55 80 Z"), accent)
+        }),
     ]
 
     // MARK: Props (verbatim geometry from ProblemScene.tsx)

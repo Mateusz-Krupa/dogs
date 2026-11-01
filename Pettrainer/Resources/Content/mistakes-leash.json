@@ -2,25 +2,61 @@
   {
     "pl": {
       "symptom": "Pies ciągnie przez cały spacer",
-      "why": "Ciągnięcie działa: pies ciągnie, idziecie dalej, czyli zachowanie zostaje nagrodzone kilkaset razy dziennie.",
-      "fix": "Zatrzymuj się przy każdym napięciu smyczy. Pierwsze spacery będą krótkie i nudne — to normalne i to działa."
+      "why": "Ciągnięcie często się opłaca: pies ciągnie, idziecie dalej, czyli cel zostaje osiągnięty. Znaczenie mają też pobudzenie, strach i to, jak trudne jest dla psa dane miejsce.",
+      "fix": "Zacznij w spokojnym, łatwym miejscu i ćwicz krótkie odcinki. Nagradzaj luźną smycz, zanim się napnie. Gdy smycz się napnie — spokojnie stań; jeśli jednak pies próbuje uciec przed czymś, co go przeraża, zwiększ dystans i odejdźcie. Kiedy nic nie wychodzi, wróć do łatwiejszego etapu."
     },
     "en": {
       "symptom": "The dog pulls for the whole walk",
-      "why": "Pulling works: the dog pulls, you keep walking, and the behaviour gets paid a few hundred times a day.",
-      "fix": "Stop every time the lead goes tight. The first walks will be short and boring — that is normal and it works."
+      "why": "Pulling often pays: the dog pulls, you keep moving, and the goal is reached. Arousal, fear and how hard the place is for the dog matter too.",
+      "fix": "Start somewhere quiet and easy and practise in short stretches. Pay the slack lead before it goes tight. When the lead tightens, stand still calmly — but if the dog is trying to get away from something frightening, make distance and leave instead. When nothing works, drop back to an easier stage."
     }
   },
   {
     "pl": {
       "symptom": "Pies ciągnie tylko na początku spaceru",
-      "why": "Początek to szczyt pobudzenia. To nie jest problem treningowy, tylko stan psa.",
-      "fix": "Zacznij od minuty wąchania przy domu, zanim ruszycie. Obniżenie pobudzenia robi więcej niż kolejne powtórzenia."
+      "why": "Początek spaceru bywa szczytem pobudzenia — to częsty powód, ale nie jedyny.",
+      "fix": "Przed pierwszym odcinkiem daj psu chwilę spokojnego węszenia przy domu, potem przejdź do krótkiego ćwiczenia. Jeśli to nie pomaga, szukaj innych przyczyn: trasa, pora spaceru, poziom trudności miejsca."
     },
     "en": {
       "symptom": "The dog only pulls at the start of the walk",
-      "why": "The start is peak arousal. This is not a training gap, it is the dog’s state.",
-      "fix": "Spend a minute sniffing near the house before you set off. Lowering arousal does more than more repetitions."
+      "why": "The start of the walk is often peak arousal — a common reason, not the only one.",
+      "fix": "Before the first stretch, give the dog a moment of calm sniffing near the house, then move into short practice. If that does not help, look for other causes: the route, the time of day, how hard the place is."
+    }
+  },
+  {
+    "pl": {
+      "symptom": "Pies węszy na każdym kroku",
+      "why": "Węszenie to dla psa czytanie świata: zapachy są informacją i zajęciem. Naturalne tempo psa jest mniej więcej dwa razy szybsze niż ludzkie, więc pauza przy zapachu jest normalna.",
+      "fix": "Pozwól powąchać tam, gdzie jest bezpiecznie, i idźcie wolniej albo krócej. Swobodne węszenie przeplataj krótkimi odcinkami ćwiczenia. Możesz dodać hasło „wąchaj”, które mówi psu, że wolno mu iść za nosem — nie wymagaj ciągłego patrzenia na siebie."
+    },
+    "en": {
+      "symptom": "The dog sniffs at every step",
+      "why": "Sniffing is how the dog reads the world: smells are information and an activity of their own. A dog's natural walking pace is roughly twice ours, so pausing at a smell is normal.",
+      "fix": "Let the dog sniff where it is safe and walk slower or shorter. Alternate free sniffing with short training stretches. You can add a cue such as “go sniff” that tells the dog they may follow their nose — do not demand constant eye contact."
+    }
+  },
+  {
+    "pl": {
+      "symptom": "Pies nie chce ruszyć sprzed ciekawego zapachu",
+      "why": "Gdy zapach jest bardzo ciekawy, psu trudno oderwać od niego nos. To znak, że zadanie jest na razie za trudne, a nie że pies się upiera.",
+      "fix": "W spokojnym miejscu powiedz „idziemy” raz, w momencie gdy pies właśnie jest gotów ruszyć, i nagródź, gdy spojrzy na Ciebie albo zrobi kilka kroków z luźną smyczą. Hasło wprowadzaj stopniowo i używaj go dopiero po przećwiczeniu. Jeśli pies nie reaguje, daj mu chwilę albo zejdź do łatwiejszego miejsca — nie ciągnij smyczą i nie powtarzaj komendy."
+    },
+    "en": {
+      "symptom": "The dog will not move on from an interesting smell",
+      "why": "When a smell is very interesting, it is hard for the dog to lift their nose. That means the task is too hard right now, not that the dog is being stubborn.",
+      "fix": "Somewhere calm, say “let's go” once, at the moment the dog is already ready to move, and pay when they check in with you or take a few steps on a slack lead. Build the cue gradually and only use it after practice. If the dog does not respond, give them a moment or drop to an easier place — do not haul on the lead or repeat the cue."
+    }
+  },
+  {
+    "pl": {
+      "symptom": "Pies zastyga, siada albo odmawia iścia",
+      "why": "To coś innego niż spokojne węszenie: odmowa ruchu może oznaczać ból, chorobę, zmęczenie, niewygodny sprzęt albo strach.",
+      "fix": "Nowa, powtarzająca się lub niewyjaśniona odmowa, a także kulawizna, ból czy osowiałość — przerwij trening i skontaktuj się z weterynarzem. Sprawdź też szelki, łapy i pogodę; czasem potrzebny jest odpoczynek albo spokojny powrót do domu. Przy strachu zwiększ dystans lub zawróć — nie przeciągaj psa i nie wab go jedzeniem w stronę tego, czego się boi. Gdy lęk wraca, po ocenie weterynaryjnej poproś o pomoc instruktora pracującego metodami opartymi na nagradzaniu."
+    },
+    "en": {
+      "symptom": "The dog freezes, sits or refuses to walk",
+      "why": "This is different from relaxed sniffing: refusing to move can mean pain, illness, tiredness, uncomfortable equipment or fear.",
+      "fix": "For new, repeated or unexplained refusal — or limping, pain or lethargy — stop training and contact a veterinarian. Also check the harness, the paws and the weather; sometimes the right answer is a rest or a calm way home. With fear, create distance or turn back — do not drag the dog or bait them with food toward the thing they fear. If the fear keeps coming back, after a veterinary check ask a reward-based trainer for help."
     }
   }
 ]

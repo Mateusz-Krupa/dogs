@@ -39,11 +39,22 @@ enum CatalogueManifest {
     }
 
     /// Behaviour problems, in browse order: "the loud things first, the quiet
-    /// suffering of being alone last" (load.ts).
+    /// suffering of being alone last" (load.ts). `overarousal` and
+    /// `fear-withdrawal` join just before `alone` so every actionable card
+    /// still precedes the separation content (spec: canonical situations).
     static let behaviour: [ContentResource] = names(
         ["bark-door", "bark-window", "jumping", "nipping", "stealing", "bolting",
-         "reactivity", "traffic", "noise", "mounting", "bed", "alone"],
+         "reactivity", "traffic", "noise", "mounting", "bed",
+         "overarousal", "fear-withdrawal", "alone"],
         folder: "behaviour"
+    )
+
+    /// Puppy-start foundations, in hub order. Education to read — these never
+    /// join `catalogue`, are never seeded as exercises, and carry no verdict
+    /// (spec: foundations are educational rather than scored activities).
+    static let puppy: [ContentResource] = names(
+        ["puppy-rest", "puppy-world", "puppy-play", "puppy-first-exercises", "puppy-toilet"],
+        folder: "puppy"
     )
 
     /// Hygiene routines, in browse order: the wet walk first, the rare bath

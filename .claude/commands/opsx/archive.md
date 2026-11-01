@@ -163,6 +163,8 @@ Target archive directory already exists.
 ```
 
 **Guardrails**
+- Reflection (step 5) runs before the move and is never skipped silently. If nothing is worth promoting, still write `learnings.md` and report "no project-memory changes".
+- Memory promotion is gated by the user (`Apply? [yes/edit/no]`) — never auto-commit memory changes without showing the diff.
 - Always prompt for change selection if not provided
 - Use artifact graph (openspec status --json) for completion checking
 - Don't block archive on warnings - just inform and confirm

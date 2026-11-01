@@ -101,7 +101,7 @@
           "Pies prędzej czy później spojrzy Ci w oczy",
           "W tej sekundzie chwal i nagródź"
         ],
-        "note": "To jest moment, w którym patrzenie na Ciebie przestaje być Twoim pomysłem, a staje się psim. Bywa, że pierwsze spojrzenie trwa pół minuty — czekaj.",
+        "note": "To jest moment, w którym patrzenie na Ciebie przestaje być Twoim pomysłem, a staje się psim. Na pierwsze samodzielne spojrzenie możesz czekać nawet pół minuty.",
         "criterion": "Pies sam nawiązuje kontakt wzrokowy, bez smakołyka w polu widzenia."
       },
       "en": {
@@ -131,7 +131,7 @@
         ],
         "reps": [
           "Obserwuj psa i wyczuj moment, gdy zaraz spojrzy",
-          "Powiedz „patrz\" tuż przed tym",
+          "Powiedz „patrz” tuż przed tym",
           "Nagródź spojrzenie"
         ],
         "note": "Mówisz słowo tuż przed czymś, co i tak się wydarzy. Pies kojarzy je z zachowaniem, zamiast uczyć się go w próżni.",
@@ -158,13 +158,13 @@
       "pose": "sniff",
       "pl": {
         "title": "",
-        "instruction": "Poproś o „patrz\", gdy pies jest czymś zajęty.",
+        "instruction": "Poproś o „patrz”, gdy pies jest czymś zajęty.",
         "setup": [
           "Pies węszy albo się rozgląda",
           "Smakołyki gotowe"
         ],
         "reps": [
-          "Powiedz „patrz\" — raz",
+          "Powiedz „patrz” — raz",
           "Czekaj dwie sekundy",
           "Nagródź oderwanie się i spojrzenie"
         ],

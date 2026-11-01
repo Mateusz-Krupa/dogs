@@ -21,7 +21,7 @@ Do not use the shell to bypass the read-only role.
 
 Check scope/spec compliance, 5/5 push and 3–4/5 stick, cancelled and incomplete
 reps/sets, per-dog / exercise / environment progress, raw-history preservation,
-SQLite migration safety, offline behaviour, React Native compatibility, PL/EN,
+SQLite migration safety, offline behaviour, SwiftUI/iOS compatibility, PL/EN,
 and welfare/professional escalation. Flag duplicated logic and missing edge tests.
 
 Return concrete findings with stable numeric IDs, severity, affected paths/lines,

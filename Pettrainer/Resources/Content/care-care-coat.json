@@ -17,11 +17,11 @@
     "en": "A minute a day instead of a fight"
   },
   "urgent": {
-    "pl": "Ból przy dotyku, zaczerwieniona albo sącząca skóra, gorąca w dotyku skóra — weterynarz, zanim weźmiesz szczotkę. Zbitych filców nie rozczesujemy na siłę i nigdy nie tniemy nożyczkami przy skórze. Wycofanie, sztywnienie albo odejście psa oznaczają koniec kontaktu w tej chwili: puszczasz, dajesz przestrzeń, wracasz do łatwiejszego ćwiczenia innego dnia.",
+    "pl": "Jeśli dotyk sprawia psu ból albo skóra jest zaczerwieniona, sączy się z niej wydzielina lub jest gorąca w dotyku, skontaktuj się z lekarzem weterynarii, zanim zaczniesz czesanie. Zbitych filców nie rozczesujemy na siłę i nigdy nie tniemy nożyczkami przy skórze. Wycofanie, sztywnienie albo odejście psa oznaczają koniec kontaktu w tej chwili: puszczasz, dajesz przestrzeń, wracasz do łatwiejszego ćwiczenia innego dnia.",
     "en": "Pain at touch, red or weeping skin, a hot spot — veterinarian before the brush. Severe mats are not combated by force and never cut with scissors at the skin. A dog that withdraws, stiffens or walks away ends the contact right now: let go, give space, and return to an easier practice on another day."
   },
   "professional": {
-    "pl": "Mocno zbite kołtuny, filc przy samej skórze, zmiana zapachu lub wyglądu skóry — groomer albo weterynarz. Matowa, łysiejąca sierść bywa objawem choroby, nie brakiem czesania. Warczenie, kłapnięcie albo historia pogryzienia — nie naprawiaj tego sam: behawiorysta, najpierw weterynarz przy nagłej zmianie.",
+    "pl": "Z mocno zbitymi kołtunami zwróć się do groomera. Jeśli skóra boli, zmienił się jej wygląd lub zapach albo nie wiadomo, w jakim jest stanie pod kołtunami, najpierw skonsultuj się z lekarzem weterynarii. Matowa, łysiejąca sierść bywa objawem choroby, nie brakiem czesania. Warczenie, kłapnięcie albo historia pogryzienia — nie naprawiaj tego sam: behawiorysta, najpierw weterynarz przy nagłej zmianie.",
     "en": "Tight matting, felted hair at the skin, a change in smell or skin — a groomer or a veterinarian. A dull or thinning coat can be a sign of illness, not missed brushing. Growling, a teeth-snap or any bite history is not a DIY repair: a behaviour professional, and a veterinarian first if the change was sudden."
   },
   "practices": [
@@ -70,7 +70,7 @@
         "title": "Jedno pociągnięcie",
         "setup": "To samo miejsce; szczotka sucha, sierść bez kołtunów.",
         "how": "Wykonaj jedno, długie pociągnięcie w kierunku wzrostu włosa i natychmiast nagródź. Na dziś wystarczy.",
-        "watchFor": "Skóra pod szczotką jest luźna, pies nie napina mięśni. Podnoszenie grzbietu, pies ociera się pyskiem o szczotkę — etap za trudny.",
+        "watchFor": "Pies pozostaje rozluźniony i nie unika szczotki. Jeśli napina ciało, odsuwa się lub próbuje przerwać dotyk, zakończ próbę i następnym razem ułatw zadanie.",
         "stop": "Stop przy ciągnięciu za kołtun: nie szarp, tylko przerwij i sprawdź, co się zaplątało."
       },
       "en": {

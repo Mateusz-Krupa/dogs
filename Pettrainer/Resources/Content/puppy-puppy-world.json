@@ -1,0 +1,77 @@
+{
+  "id": "puppy-world",
+  "pose": "sniff",
+  "sortOrder": 2,
+  "names": {
+    "pl": {
+      "name": "Poznawanie świata bez presji",
+      "description": "Nowe osoby, psy i miejsca — w tempie szczenięcia, z możliwością odejścia."
+    },
+    "en": {
+      "name": "Exploring the world without pressure",
+      "description": "New people, dogs and places — at the puppy's pace, with the option to leave."
+    }
+  },
+  "urgent": {
+    "pl": "Szczenię, które panicznie ucieka, sztywnieje albo nie chce jeść ani się bawić, potrzebuje pomocy behawiorysty i lekarza weterynarii — nie więcej bodźców.",
+    "en": "A puppy that flees in panic, freezes, or will not eat or play needs behaviour and veterinary help — not more input."
+  },
+  "avoid": {
+    "pl": [
+      "Nie zmuszaj psa do sytuacji, której się boi, „żeby się oswoił” — to może nasilić lęk",
+      "Nie wymagaj powitania z każdą osobą i każdym psem — spokojna obserwacja z dystansu też jest socjalizacją",
+      "Nie oceniaj po zjedzonym smakołyku — pies może przyjąć nagrodę i nadal być przestraszony"
+    ],
+    "en": [
+      "Do not force the dog into a situation it fears “to get used to it” — this can increase fear",
+      "Do not require greetings with every person and every dog — calm watching from a distance is socialisation too",
+      "Do not judge by a taken treat — a dog can accept a reward and still be frightened"
+    ]
+  },
+  "actions": {
+    "pl": [
+      "Zaczynaj z dystansu, z którego pies może obserwować i sam decyduje, czy podejść bliżej",
+      "Pozwól odejść i przerwać kontakt, gdy tylko pies chce — możliwość wyjścia obniża lęk",
+      "O krokach bezpiecznych przy aktualnym stanie szczepień i lokalnym ryzyku zakażeń porozmawiaj z lekarzem weterynarii; do tej rozmowy unikaj miejsc, w których bywają nieznane psy",
+      "Wybieraj krótkie, spokojne okazje do poznawania świata, dopasowane do komfortu szczenięcia, zamiast jednego przeciążającego wyjścia"
+    ],
+    "en": [
+      "Start at a distance from which the dog can watch and decide for itself whether to come closer",
+      "Let it leave and break contact the moment it wants — having an exit lowers fear",
+      "Ask your veterinarian which steps are safe given the puppy's current vaccinations and local infection risks; until that conversation, avoid places where unfamiliar dogs gather",
+      "Choose short, calm opportunities to explore, matched to the puppy's comfort, rather than one overwhelming outing"
+    ]
+  },
+  "observe": {
+    "pl": [
+      "Pies sam skraca dystans i rozluźnia ciało — czytaj te sygnały łącznie, nie jako dowód, że czuje się bezpiecznie",
+      "Unika wzroku, cofa się albo zastyga — zwiększ dystans i skończ wcześniej"
+    ],
+    "en": [
+      "The dog closes the gap on its own and loosens its body — read these signals together, not as proof of feeling safe",
+      "It averts its gaze, backs away, or freezes — add distance and end sooner"
+    ]
+  },
+  "professional": {
+    "pl": "Silny lęk, wycofywanie się albo ucieczka mimo spokojnego wprowadzania — behawiorysta i lekarz weterynarii, zanim zaplanujesz kolejne zetknięcia z tym, czego pies się boi.",
+    "en": "Strong fear, withdrawal or flight despite calm introductions — a behaviour professional and a veterinarian before you plan further encounters with what the dog fears."
+  },
+  "practices": [],
+  "evidence": {
+    "verifiedOn": "2026-10-24",
+    "sources": [
+      {
+        "title": "AVSAB — Puppy Socialization Position Statement (Purdue Canine Welfare Science)",
+        "url": "https://caninewelfare.centers.purdue.edu/resource/avsab-puppy-socialization-position-statement/"
+      },
+      {
+        "title": "Dogs Trust — Introducing your puppy to the world around them",
+        "url": "https://www.dogstrust.org.uk/dog-advice/puppy/puppy-socialisation-introduction"
+      },
+      {
+        "title": "VCA — Puppy Behavior and Training: Socialization and Fear Prevention",
+        "url": "https://vcahospitals.com/know-your-pet/puppy-behavior-and-training---socialization-and-fear-prevention"
+      }
+    ]
+  }
+}

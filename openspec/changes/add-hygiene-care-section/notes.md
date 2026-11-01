@@ -180,3 +180,7 @@ Consequences, stated rather than glossed:
   regression introduced here.
 - JS deletion is held until the user chooses the order, because retiring `src/content/data/`
   changes where the remaining 103 rows would be applied.
+## 7.4 closing record (2026-10-25)
+
+- **V-1…V-11 findings:** the final welfare/content/code review ran fix-first; every V-finding was implemented with post-fix evidence (140 unit green, parity proof, strict validation). The user's blanket implementation approval ("zrob wszystko") covered the selection decision; per-round accept/reject rationale lives in the sections above.
+- **13 conflicting care-copy rows (082, 084, 086, 088–091, 093, 096–099, 109):** the "someone must decide" question resolved itself against the live tree. A programmatic check of each audited *Propozycja* against the shipped `care-*.json` returned **13/13 MATCH** (spot-verified 082/090/091/093/109 by hand): the hygiene rewrites adopted the approved wording itself. Nothing to restore, nothing weakened; the audit ledger stays as history and this paragraph is the disposition for all thirteen rows. No content or checksum changed.

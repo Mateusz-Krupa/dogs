@@ -97,6 +97,25 @@ final class CareIsolationTests: XCTestCase {
         _ = model.careStages["care-coat"]
         try model.reload()
         try assertIdentical(before, snapshot(model))
+
+        // Reviewer 4.4: the store itself is inert too — schema version and the
+        // seeded exercise/step inventory must not move while care writes land.
+        let db = try AppDatabase.open(url: url, content: ContentLoader.load(bundle: .main))
+        func counts() throws -> [String: Int] {
+            var out: [String: Int] = [:]
+            for table in ["exercise", "step"] {
+                let rows = try db.query("SELECT COUNT(*) AS n FROM \(table)")
+                if case .integer(let n)? = rows.first?["n"] { out[table] = n }
+            }
+            out["user_version"] = try db.query("PRAGMA user_version").first?["user_version"]
+                .flatMap { if case .integer(let v) = $0 { v } else { nil } }
+            return out
+        }
+        let beforeCounts = try counts()
+        XCTAssertFalse(beforeCounts.isEmpty)
+        XCTAssertTrue(model.recordCareStageTried(routineId: "care-teeth", stageOrdinal: 2))
+        XCTAssertEqual(try counts(), beforeCounts,
+                       "a care write moved the schema version or the seeded inventory")
     }
 
     /// A care identifier is never reachable as scored content anywhere.

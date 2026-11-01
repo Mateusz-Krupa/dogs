@@ -35,6 +35,10 @@ struct RootView: View {
             ProblemView(issueId: id)
         case .care(let id):
             CareView(routineId: id)
+        case .puppyStart:
+            PuppyStartView()
+        case .puppyGuide(let id):
+            PuppyGuideView(guideId: id)
         }
     }
 }

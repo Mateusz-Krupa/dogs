@@ -5,7 +5,7 @@
   "names": {
     "pl": {
       "name": "Osuszanie ręcznikiem",
-      "description": "Pies po mokrym spacerze zostaje, pozwala delikatnie osuszyć sierść i nie ucieka w drugi pokój."
+      "description": "Po spacerze w deszczu pies spokojnie pozwala osuszyć sierść przez delikatne przykładanie ręcznika, bez uciekania do drugiego pokoju."
     },
     "en": {
       "name": "Towel drying",
@@ -68,7 +68,7 @@
       ],
       "pl": {
         "title": "Delikatne przykładanie, nie tarcie",
-        "setup": "Ten sam ręcznik; pies mokry po deszczu albo tuż po kąpieli.",
+        "setup": "Ten sam ręcznik; pies jest mokry po deszczu lub kąpieli.",
         "how": "Przyłóż ręcznik do mokrego barku, przytrzymaj sekundę, zabierz i nagródź. Schodź niżej: boki, łapy, na końcu opuszki.",
         "watchFor": "Kończ etap, gdy sierść jest tylko wilgotna — nie suszymy do szczętu.",
         "stop": "Stop przy bólu, gorącej skórze i przy uciekaniu przed ręcznikiem."
@@ -90,8 +90,8 @@
       "pl": {
         "title": "Krótkie osuszenie po deszczu",
         "setup": "Mata pod łapami, ręcznik w rękach, smakołyki w kieszeni.",
-        "how": "Oklep łapy, przejdź ręcznikiem po grzbiecie i bokach, na końcu między palcami — krótko i spokojnie, z nagrodą na koniec.",
-        "watchFor": "Pies sam przychodzi przy drzwiach po mokrym spacerze i zostaje do końca. Nerwowe oblizywanie się albo wyrywanie = odsuwasz ręcznik i kończysz teraz.",
+        "how": "Delikatnie przykładaj ręcznik do łap, grzbietu i boków, a na końcu osusz przestrzenie między palcami. Rób to krótko i spokojnie, bez tarcia, a na koniec nagródź psa.",
+        "watchFor": "Po powrocie z mokrego spaceru pies sam podchodzi do ręcznika lub spokojnie czeka przy drzwiach. Jeśli nerwowo się oblizuje albo wyrywa, przerwij i następnym razem skróć osuszanie.",
         "stop": "Zaczerwienienie, strupki albo drapanie bez przerwy — weterynarz, nie dłuższe wycieranie."
       },
       "en": {

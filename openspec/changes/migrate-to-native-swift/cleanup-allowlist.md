@@ -1,14 +1,26 @@
 # Deletion allowlist — retiring the JavaScript runtime (task 9.1)
 
-Status: **proposal, awaiting gate 8.5 (independent pre-cleanup review) and explicit user
-approval.** Nothing here is deleted before both exist. Every entry is `git`-tracked, so
-`git checkout HEAD -- <path>` is the rollback for the whole set while the commit is local.
+Status: **EXECUTED 2026-10-24.** The 130 listed paths were removed with `git rm -f`
+(forced because the byte-identical copies in native Resources were uncommitted — the
+src↔bundle parity was re-proven 50/50 immediately before deletion; nothing else
+uncommitted was touched). Together with `verify_parity.py` earlier that day, 131
+deletions are staged. Untracked caches (`ios/Pods`, `build*`, `node_modules`) and the
+protected `src/content/copy-welfare.test.ts` remain on disk pending separate explicit
+path approval. Rollback: `git checkout HEAD -- <path>` per file while this state is
+uncommitted.
 
-Repository at review time: HEAD `2869749`,
-working tree clean except untracked `openspec/changes/better-views` and
-`openspec/changes/slow-dog-fast-food` (user-owned, never touched here).
+Inventory refresh anchor: HEAD `6dd81b6` on 2026-10-23 (not a claim that independent review
+has run). Working tree still carries the copy-owner's uncommitted edits and checksum changes —
+implementation is now **complete and verified per that change's own artifacts** (byte parity
+50/50, 140/140 Jest, 33/33 native XCTest, FR-001–006 closed); only its archive step remains.
+The safest sequence is a user-approved commit of the copy round before the `git rm` commit;
+do not rely on this snapshot — recheck status and ownership immediately before review and
+deletion.
 
-## Evidence that the native product does not depend on any of this
+## Previously recorded evidence — rerun against the final handoff
+
+The results below were recorded before the current copy work; they are not a new test run
+or proof that physical-device/update gates passed.
 
 | Check | Result |
 | --- | --- |
@@ -17,9 +29,8 @@ working tree clean except untracked `openspec/changes/better-views` and
 | `grep -rln "src/" Pettrainer PettrainerTests PettrainerUITests` | only `// port of src/...` provenance comments in illustration files |
 | `xcodebuild test` with no npm/Metro/Pods running | 140 unit tests green (1 intentional skip) |
 
-## Group A — JS/Expo application runtime (97 paths)
+## Group A — tracked JS/Expo application runtime
 
-- `.nvmrc`
 - `App.tsx`
 - `app.json`
 - `eas.json`
@@ -40,6 +51,13 @@ working tree clean except untracked `openspec/changes/better-views` and
 - `src/content/data/behaviour/reactivity.json`
 - `src/content/data/behaviour/stealing.json`
 - `src/content/data/behaviour/traffic.json`
+- `src/content/data/care/care-bath.json`
+- `src/content/data/care/care-checks.json`
+- `src/content/data/care/care-coat.json`
+- `src/content/data/care/care-nails.json`
+- `src/content/data/care/care-paw-rinse.json`
+- `src/content/data/care/care-teeth.json`
+- `src/content/data/care/care-towel.json`
 - `src/content/data/environments.json`
 - `src/content/data/exercises/come.json`
 - `src/content/data/exercises/down.json`
@@ -84,6 +102,8 @@ working tree clean except untracked `openspec/changes/better-views` and
 - `src/content/schema.ts`
 - `src/content/schema/behaviour.test.ts`
 - `src/content/schema/behaviour.ts`
+- `src/content/schema/care.test.ts`
+- `src/content/schema/care.ts`
 - `src/content/schema/checks.ts`
 - `src/content/schema/environments.ts`
 - `src/content/schema/exercise.ts`
@@ -117,11 +137,11 @@ working tree clean except untracked `openspec/changes/better-views` and
 - `src/ui/lureStages.ts`
 - `tsconfig.json`
 
-The last five entries (`package.json`, `package-lock.json`, `tsconfig.json`, `app.json`,
-`eas.json`) are what makes `npm run test`/`typecheck` and `expo run` exist at all; after this
-group the repository has no Node toolchain, so the AGENTS/OpenSpec command guidance must move
-to native commands in the same pass (task 9.2), or the documentation instructs commands that
-no longer exist.
+The listed manifests (`package.json`, `package-lock.json`, `tsconfig.json`, `app.json`,
+`eas.json`) make `npm run test`/`typecheck` and `expo run` exist. After this group the app has
+no JS/Node runtime or npm build scripts. Repository tooling such as OpenSpec is separate and
+may still use Node; `.nvmrc` is retained for it. AGENTS/OpenSpec application-check guidance
+must move to native commands through task 9.2 in an authorized implementation context.
 
 ## Group B — generated Expo iOS project (19 paths)
 
@@ -167,25 +187,41 @@ is **not** in this group.
 - `build/`, `build-native/`, `node_modules/`, `Pods/` — untracked build output: **not** deleted
   by this change (task 9.1 forbids broad untracked deletion; cache cleanup needs its own
   explicit path approval).
-- `.gitignore`, `.nvmrc` — kept if present as tracked: `.nvmrc tracked`
+- `.gitignore`, `.nvmrc` — retained; `.nvmrc` pins repository tooling, not the native app.
+- `src/content/copy-welfare.test.ts` — was protected pending an owner retirement decision.
+  **2026-10-24: retired by explicit owner order** („usuń to też”). Its welfare stop-line/cue
+  assertions exist natively (`BehaviourWelfareCopyTests` et al.); the JS-only typography sweep
+  was verified once by hand (approved-copy task 5.3: zero `„…"` pairs) and is not re-automated
+  natively — future copy changes rely on the reviewer checklist for quotes.
 
 ## Required order (recoverability)
 
-The seven care canonical files and every other hygiene artefact are still **untracked**. `git rm`
-only protects tracked content, so the hygiene change is committed first (making the canonical
-copies tracked and recoverable), and only then does the deletion land as its own commit. No file
-in Groups A–C may be untracked at the moment of deletion; the deletion commit is therefore
-`git rm`-only and adds nothing.
+The seven care source JSONs and two care schema files are now tracked. Their current copy edits,
+and other uncommitted work, are not protected merely by being tracked. Require the owning copy
+change to finish implementation and verification and record a recoverable handoff, including
+approved before/after content evidence and source/native byte parity. Preserve all unrelated
+changes; do not commit, stash or reset on the user's behalf. Neither archive nor an automatic
+commit is a prerequisite imposed by this plan; committing still needs separate user approval.
+
+Refresh the inventory for newly added tests, review parity and all 8.x gate evidence, and obtain
+independent review plus explicit approval of the exact deletion list. Only then remove listed
+paths in the authorized implementation context. Broad `git rm -r src` or recursive cache
+deletion is not authorized. Any changed ownership or new file invalidates the affected inventory
+until reviewed again. No deletion occurs during planning.
 
 ## Consequences accepted (and why they are safe)
 
-1. **Content canon moves.** 50 JSON files under `src/content/data/` (43 tracked baseline files
-   + 7 care files, currently untracked) are the authored canonical copies today and are
-   byte-identical to the 50 bundled resources
-   (`baseline/verify_parity.py` proves it at the moment of deletion). After Group A the native
-   bundle is the single canonical copy; the recorded digests keep guarding its bytes, and
-   `verify_parity.py` gets its src-side checks retired in the same commit so it degrades to
-   digest-vs-bundle instead of failing.
+1. **Content canon moves.** The inventory comprises 50 source JSON files (43 baseline/extension
+   files plus 7 care files). Do not assume parity while concurrent copy edits are in flight:
+   prove all current source/native pairs match at handoff. Validate approved changes through
+   `approved-content-delta.md` (now under `archive/2026-10-23-correct-approved-polish-copy/`)
+   and current native checksum expectations, without rewriting the historical migration
+   snapshot. After Group A the native resources become the single canonical copy, guarded by
+   the `ContentChecksums.swift` assertions in `ContentLoaderTests` (they run on every test).
+   `verify_parity.py` was **deleted 2026-10-23 by owner decision** (it duplicated the native
+   checksum guard, was unsatisfiable against the deliberately frozen baseline, and its
+   src-side checks died with Group A); resolving PC-002 this way means nothing to retire at
+   deletion time — the native tests are the verifier.
 2. **`baseline/gen_manifest.py` stops working** (it reads `src/content/data/`). It is a
    provenance generator for a snapshot that must never be regenerated from a different runtime
    anyway; it stays in the tree with a header note, unchanged in behaviour.

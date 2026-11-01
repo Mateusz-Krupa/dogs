@@ -1,6 +1,159 @@
 {
   "sourceLanguage": "pl",
   "strings": {
+    "care.disclaimer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This is not veterinary advice. Your dog’s needs may differ. Before using this guidance, it is best to consult your own veterinarian."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To nie jest porada weterynaryjna. Potrzeby Twojego psa mogą być inne. Przed zastosowaniem tych wskazówek najlepiej skonsultować się ze swoim lekarzem weterynarii."
+          }
+        }
+      }
+    },
+    "care.furthestTried": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Furthest stage tried: %1$lld/%2$lld"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Najwyższy wypróbowany etap: %1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "care.markTried": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "We tried this stage"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Próbowaliśmy tego etapu"
+          }
+        }
+      }
+    },
+    "care.saveFailed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not saved. Try again."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie zapisano. Spróbuj ponownie."
+          }
+        }
+      }
+    },
+    "care.stage": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stage %1$lld of %2$lld"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etap %1$lld z %2$lld"
+          }
+        }
+      }
+    },
+    "care.subtitle": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cooperation instead of holding the dog"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Współpraca bez przytrzymywania na siłę"
+          }
+        }
+      }
+    },
+    "care.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hygiene care"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pielęgnacja"
+          }
+        }
+      }
+    },
+    "care.triedNote": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "We only record that you tried it — not whether the dog accepted it."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisujemy tylko to, że spróbowałeś — nie to, czy pies to zaakceptował."
+          }
+        }
+      }
+    },
+    "care.untried": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not tried yet"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie wypróbowano jeszcze żadnego etapu"
+          }
+        }
+      }
+    },
     "catalogue.levelsCount": {
       "extractionState": "stale",
       "localizations": {
@@ -13,7 +166,7 @@
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld poziomy"
+            "value": "Poziomów: %1$lld"
           }
         }
       }
@@ -112,7 +265,7 @@
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Wszystko jest otwarte. Kolejność to podpowiedź, nie zamek."
+            "value": "Możesz wybrać dowolne ćwiczenie. Sugerowana kolejność jest tylko wskazówką — niczego nie blokuje."
           }
         }
       }
@@ -351,6 +504,23 @@
         }
       }
     },
+    "gear.brush": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brush"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szczotka"
+          }
+        }
+      }
+    },
     "gear.clippers": {
       "extractionState": "stale",
       "localizations": {
@@ -381,6 +551,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kilka kubków"
+          }
+        }
+      }
+    },
+    "gear.dog-shampoo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dog shampoo"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szampon dla psów"
+          }
+        }
+      }
+    },
+    "gear.dog-toothpaste": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dog toothpaste"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pasta do zębów dla psów"
           }
         }
       }
@@ -504,6 +708,23 @@
         }
       }
     },
+    "gear.styptic": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Styptic powder"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Proszek tamujący krwawienie"
+          }
+        }
+      }
+    },
     "gear.title": {
       "localizations": {
         "en": {
@@ -516,6 +737,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "Czego potrzebujesz"
+          }
+        }
+      }
+    },
+    "gear.toothbrush": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Toothbrush"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szczoteczka do zębów"
           }
         }
       }
@@ -696,7 +934,7 @@
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tu nie ma trafień i pudeł. Węszenie nagradza się samo, a ocenianie go kusi, żeby psu pomagać — a cała wartość jest w tym, że rozwiązuje to sam."
+            "value": "W tych zabawach nie oceniamy powtórzeń. Pozwól psu samodzielnie szukać, ale ułatw zadanie, jeśli zaczyna się frustrować."
           }
         }
       }
@@ -797,6 +1035,22 @@
         }
       }
     },
+    "problems.observe": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What to watch"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na co patrzeć"
+          }
+        }
+      }
+    },
     "problems.practices": {
       "localizations": {
         "en": {
@@ -846,6 +1100,22 @@
         }
       }
     },
+    "problems.sources": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sources"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Źródła"
+          }
+        }
+      }
+    },
     "problems.stop": {
       "localizations": {
         "en": {
@@ -889,7 +1159,7 @@
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nagła zmiana zachowania u psa, któremu wcześniej wszystko było dobrze — zacznij od weterynarza. Ból potrafi wyglądać jak nieposłuszeństwo."
+            "value": "Jeśli zachowanie psa nagle się zmieniło, zacznij od wizyty u lekarza weterynarii. Ból może wyglądać jak nieposłuszeństwo."
           }
         }
       }
@@ -910,6 +1180,22 @@
         }
       }
     },
+    "problems.verifiedOn": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verified"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprawdzono"
+          }
+        }
+      }
+    },
     "problems.work": {
       "localizations": {
         "en": {
@@ -922,6 +1208,102 @@
           "stringUnit": {
             "state": "translated",
             "value": "Jak nad tym pracować"
+          }
+        }
+      }
+    },
+    "puppy.foundation": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Everyday foundations"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Podstawy na co dzień"
+          }
+        }
+      }
+    },
+    "puppy.foundationSub": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To read, not to drill"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Czytać, nie ćwiczyć na siłę"
+          }
+        }
+      }
+    },
+    "puppy.help": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Help right now"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pomoc teraz"
+          }
+        }
+      }
+    },
+    "puppy.helpSub": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When something is happening this second"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gdy coś trzeba zrobić teraz"
+          }
+        }
+      }
+    },
+    "puppy.subtitle": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Needs, safety and calm come first"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Najpierw potrzeby, bezpieczeństwo i spokój"
+          }
+        }
+      }
+    },
+    "puppy.title": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Puppy — a good start"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szczeniak — dobry start"
           }
         }
       }
@@ -986,7 +1368,7 @@
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Co liczy się jako trafienie"
+            "value": "Kiedy zaliczyć powtórzenie"
           }
         }
       }
@@ -1018,7 +1400,7 @@
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "W prostszym otoczeniu pies radzi sobie z trudniejszym krokiem. To nie cofnięcie się, tylko jedna zmienna mniej."
+            "value": "W spokojniejszym otoczeniu możesz spróbować trudniejszego kroku. Dostosuj poziom do tego, jak pies radzi sobie w tym miejscu."
           }
         }
       }
@@ -1034,7 +1416,7 @@
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Łatwiejsze miejsce — kroki podniesione"
+            "value": "Łatwiejsze miejsce — proponujemy trudniejszy krok"
           }
         }
       }
@@ -1083,7 +1465,7 @@
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Opanowane wszędzie"
+            "value": "Opanowane we wszystkich miejscach treningu"
           }
         }
       }
@@ -1147,7 +1529,7 @@
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nie zaliczone"
+            "value": "Niezaliczone"
           }
         }
       }
@@ -1163,7 +1545,7 @@
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Dla psa ta sama komenda w nowym otoczeniu to w praktyce nowe zadanie. Wracamy kawałek, żeby odbudować ją tutaj — pójdzie szybciej niż za pierwszym razem."
+            "value": "W nowym otoczeniu pies może potrzebować ponownego przećwiczenia znanej komendy. Dlatego proponujemy łatwiejszy krok, żeby pomóc mu wykonać zadanie także tutaj."
           }
         }
       }
@@ -1179,7 +1561,7 @@
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nowe miejsce — kroki cofnięte celowo"
+            "value": "Nowe miejsce — zaczynamy od łatwiejszego kroku"
           }
         }
       }
@@ -1493,7 +1875,7 @@
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "Za trudne. Wróć o krok — to nie porażka, tylko regulacja."
+            "value": "Ten krok jest jeszcze za trudny. Wróć do łatwiejszego — to dostosowanie poziomu, nie porażka."
           }
         }
       }
@@ -1579,244 +1961,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Jeszcze jedna seria"
-          }
-        }
-      }
-    },
-    "gear.brush": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Szczotka"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Brush"
-          }
-        }
-      }
-    },
-    "gear.toothbrush": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Szczoteczka do zębów"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Toothbrush"
-          }
-        }
-      }
-    },
-    "gear.dog-toothpaste": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pasta do zębów dla psów"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dog toothpaste"
-          }
-        }
-      }
-    },
-    "gear.dog-shampoo": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Szampon dla psów"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Dog shampoo"
-          }
-        }
-      }
-    },
-    "gear.styptic": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Proszek tamujący krwawienie"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Styptic powder"
-          }
-        }
-      }
-    },
-    "care.title": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Pielęgnacja"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Hygiene care"
-          }
-        }
-      }
-    },
-    "care.subtitle": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Współpraca zamiast trzymania psa"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Cooperation instead of holding the dog"
-          }
-        }
-      }
-    },
-    "care.disclaimer": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "To nie jest porada weterynaryjna. Potrzeby Twojego psa mogą być inne. Przed zastosowaniem tych wskazówek najlepiej skonsultować się ze swoim lekarzem weterynarii."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "This is not veterinary advice. Your dog’s needs may differ. Before using this guidance, it is best to consult your own veterinarian."
-          }
-        }
-      }
-    },
-    "care.untried": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Jeszcze nie próbowaliśmy"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Not tried yet"
-          }
-        }
-      }
-    },
-    "care.furthestTried": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Najdalszy próbowany etap: %1$lld/%2$lld"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Furthest stage tried: %1$lld/%2$lld"
-          }
-        }
-      }
-    },
-    "care.markTried": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Próbowaliśmy tego etapu"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "We tried this stage"
-          }
-        }
-      }
-    },
-    "care.triedNote": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zapisujemy tylko to, że spróbowałeś — nie to, czy pies to zaakceptował."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "We only record that you tried it — not whether the dog accepted it."
-          }
-        }
-      }
-    },
-    "care.stage": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Etap %1$lld z %2$lld"
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Stage %1$lld of %2$lld"
-          }
-        }
-      }
-    },
-    "care.saveFailed": {
-      "extractionState": "manual",
-      "localizations": {
-        "pl": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Nie zapisano. Spróbuj ponownie."
-          }
-        },
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Not saved. Try again."
           }
         }
       }

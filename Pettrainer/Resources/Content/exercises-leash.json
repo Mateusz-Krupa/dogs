@@ -13,11 +13,11 @@
   "names": {
     "pl": {
       "name": "luźna smycz",
-      "description": "Smycz wisi luźno w kształcie litery U. To nie jest „noga\" — pies nie musi iść w konkretnej pozycji, ma tylko nie ciągnąć. Jedyna reguła: ciągnięcie nigdy nie może zadziałać, bo jeśli raz zadziała, uczy się na całe życie."
+      "description": "Smycz wisi luźno w kształcie litery U. To nie jest „noga” — pies nie musi iść w konkretnej pozycji; może bezpiecznie węszyć i zmieniać pozycję, dopóki smycz pozostaje luźna. Staraj się nie iść dalej, gdy pies ciągnie, ponieważ dotarcie w ten sposób do celu może utrwalać ciągnięcie. Do nauki wybierz zwykłą smycz o stałej długości, około 2 m, oraz wygodne, dobrze dopasowane szelki — długość dopasuj do otoczenia i wielkości psa. Smycz automatyczna utrudnia to ćwiczenie: odblokowany mechanizm utrzymuje napięcie i oddaje więcej taśmy, gdy pies ciągnie, więc sygnał luźnej smyczy robi się nieczytelny. Zablokowana smycz automatyczna może zwisać luźno, ale przy tym treningu zwykła smycz jest prostsza."
     },
     "en": {
       "name": "loose lead",
-      "description": "The lead hangs in a U. This is not heel — the dog need not hold a position, only stop pulling. One rule: pulling must never work, because a single success teaches it for good."
+      "description": "The lead hangs in a U. This is not heel — the dog need not hold a position; it may sniff safely and change position as long as the lead stays slack. Try not to keep walking while the dog pulls, because reaching the goal that way can reinforce pulling. For training, choose a regular fixed-length lead, around 2 m, and a comfortable, well-fitting harness — match the length to the surroundings and the dog's size. A retractable lead makes this exercise harder: unlocked, the reel keeps tension on the lead and gives out more length when the dog pulls, so the slack-lead signal gets muddy. A locked retractable lead can hang slack, but a plain lead keeps this lesson simple."
     }
   },
   "tagline": {
@@ -33,14 +33,16 @@
         "instruction": "Trzy kroki w domu — nagroda zawsze przy Twojej nodze.",
         "setup": [
           "Dom, pies na smyczy",
-          "Smakołyki w ręce po stronie psa"
+          "Smakołyki w ręce po stronie psa",
+          "Zwykła smycz o stałej długości, około 2 m",
+          "Wygodne, dobrze dopasowane szelki"
         ],
         "reps": [
           "Zrób kilka kroków",
           "Gdy smycz wisi luźno — nagródź",
           "Podaj smakołyk przy swojej nodze"
         ],
-        "note": "Nagroda przy nodze mówi psu, gdzie jest miejsce, w którym się płaci. Smakołyk podawany przed psem wysyła go do przodu — czyli tam, skąd ciągnie.",
+        "note": "Nagroda przy nodze mówi psu, gdzie jest miejsce, w którym się płaci. Smakołyk podawany przed psem wysyła go do przodu — czyli tam, skąd ciągnie. W czasie ćwiczenia nagradzasz przy nodze; poza nim pies nie musi cały czas iść przy Tobie.",
         "criterion": "Trzy kroki z luźną smyczą."
       },
       "en": {
@@ -48,14 +50,16 @@
         "instruction": "Three steps indoors — the treat always arrives at your leg.",
         "setup": [
           "Indoors, the dog on the lead",
-          "Treats in the hand on the dog's side"
+          "Treats in the hand on the dog's side",
+          "A regular fixed-length lead, about 2 m",
+          "A comfortable, well-fitting harness"
         ],
         "reps": [
           "Take a few steps",
           "While the lead hangs loose, pay",
           "Deliver the treat at your leg"
         ],
-        "note": "A treat at the leg tells the dog where the paying spot is. Feeding out in front sends the dog forward — exactly where pulling starts.",
+        "note": "A treat at the leg tells the dog where the paying spot is. Feeding out in front sends the dog forward — exactly where pulling starts. During practice you pay at the leg; outside the drill the dog does not have to stay at your side.",
         "criterion": "Three steps with a loose lead."
       }
     },
@@ -75,7 +79,7 @@
           "Smycz zwiotczała — pochwal i idźcie dalej",
           "Nagródź przy nodze"
         ],
-        "note": "Nie szarp i nie ciągnij psa do siebie. Czekanie jest całą interwencją: napięcie smyczy przestaje działać, a luźna smycz zaczyna.",
+        "note": "Nie szarp i nie ciągnij psa do siebie. Gdy pies ciągnie w stronę czegoś nieszkodliwego, spokojnie stój: napięcie przestaje działać, a luźna smycz zaczyna. Jeśli pies próbuje uciec przed czymś, co go przeraża, nie każ mu przy tym stać — zwiększ dystans i pomóż mu spokojnie odejść, a potrenujcie później w łatwiejszym miejscu.",
         "criterion": "Pies sam rozluźnia smycz i ruszacie dalej."
       },
       "en": {
@@ -90,7 +94,7 @@
           "The moment it slackens, praise and walk on",
           "Pay at your leg"
         ],
-        "note": "Do not jerk and do not reel the dog in. The stop is the whole intervention: tension stops working, looseness starts working.",
+        "note": "Do not jerk and do not reel the dog in. When the dog pulls toward something harmless, standing still teaches that tension stops forward motion and looseness starts it. If the dog is trying to get away from something frightening, do not make them stand beside it — create distance, help them leave calmly, and train later in an easier place.",
         "criterion": "The dog releases the tension themselves and you move on."
       }
     },
@@ -134,7 +138,7 @@
       "pose": "sniff",
       "pl": {
         "title": "",
-        "instruction": "Spokojna ulica, krótki odcinek. Wąchanie jest nagrodą, nie przerywnikiem.",
+        "instruction": "Spokojna ulica, krótki odcinek. Przejdźcie kawałek z luźną smyczą, a potem daj psu czas na to, co go interesuje.",
         "setup": [
           "Krótki odcinek spokojnej ulicy",
           "Więcej czasu niż w domu"
@@ -144,12 +148,12 @@
           "Nagradzaj przy nodze co kilka kroków",
           "Dojdźcie do interesującego miejsca i pozwól psu powąchać"
         ],
-        "note": "Spacer bez wąchania to dla psa kara. Jeśli używasz węchu jako nagrody, pies uczy się, że ładna smycz prowadzi do kolejnych miejsc do obwąchania.",
+        "note": "Węszenie jest psu naprawdę potrzebne — nosem czyta świat. Poza ćwiczonym odcinkiem pies może wąchać, kiedy chce; w trakcie niego dotarcie do następnego ciekawego miejsca bywa zapłatą za luźną smycz.",
         "criterion": "Dwadzieścia kroków na ulicy z luźną smyczą."
       },
       "en": {
         "title": "",
-        "instruction": "A quiet street, a short stretch. Sniffing is the reward, not a break from the drill.",
+        "instruction": "A quiet street, a short stretch. Walk a bit on a slack lead, then give the dog time for whatever it stops to smell.",
         "setup": [
           "A short stretch of quiet street",
           "More time than you needed indoors"
@@ -159,7 +163,7 @@
           "Pay at your leg every few steps",
           "Reach something interesting and let the dog sniff"
         ],
-        "note": "A walk without sniffing is a punishment from the dog's side. Use the nose as the reward and the loose lead starts to earn the dog the next smell.",
+        "note": "Sniffing is a genuine need — the nose is how a dog reads the world. Outside the drilled stretch the dog may sniff freely; during it, reaching the next interesting spot can be the pay for a slack lead.",
         "criterion": "Twenty steps on the street with a loose lead."
       }
     }

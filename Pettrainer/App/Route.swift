@@ -7,4 +7,7 @@ enum Route: Hashable {
     case nosework(activityId: String)
     case problem(issueId: String)
     case care(routineId: String)
+    /// The puppy-start hub: one entry, never a scored activity.
+    case puppyStart
+    case puppyGuide(guideId: String)
 }

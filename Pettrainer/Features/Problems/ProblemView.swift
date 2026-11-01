@@ -83,6 +83,13 @@ struct ProblemView: View {
                         sectionBlock(issue, kind)
                     }
 
+                    // Observation guidance is an extension: cards that carry
+                    // it show it after the protocol sections and before the
+                    // chips, so the stop-first order cannot regress.
+                    if let observe = issue.observe {
+                        observeBlock(ContentLocale.value(observe))
+                    }
+
                     practiceChips(issue)
 
                     VStack(alignment: .leading, spacing: 3) {
@@ -104,6 +111,10 @@ struct ProblemView: View {
                     Text("problems.sudden")
                         .font(.system(size: 12.5))
                         .foregroundStyle(Theme.muted)
+
+                    if let evidence = issue.evidence {
+                        GuidanceEvidenceView(evidence: evidence)
+                    }
                 }
                 .frame(maxWidth: Theme.contentWidth)
                 .frame(maxWidth: .infinity)
@@ -114,6 +125,31 @@ struct ProblemView: View {
             .background(Theme.ground)
             .navigationBarTitleDisplayMode(.inline)
         }
+    }
+
+    @ViewBuilder
+    private func observeBlock(_ lines: [String]) -> some View {
+        VStack(alignment: .leading, spacing: 7) {
+            Text("problems.observe")
+                .font(.system(size: 10, weight: .bold))
+                .tracking(1.1)
+                .foregroundStyle(Theme.muted)
+                .textCase(.uppercase)
+            ForEach(Array(lines.enumerated()), id: \.offset) { _, line in
+                HStack(alignment: .top, spacing: 10) {
+                    Text(verbatim: "•")
+                        .font(.system(size: 15))
+                        .foregroundStyle(Theme.muted)
+                        .frame(width: 14, alignment: .center)
+                    Text(line)
+                        .font(.system(size: 14))
+                        .foregroundStyle(Theme.ink)
+                }
+            }
+        }
+        .padding(13)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .cardSurface()
     }
 
     @ViewBuilder

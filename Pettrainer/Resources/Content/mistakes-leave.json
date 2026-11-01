@@ -1,7 +1,7 @@
 [
   {
     "pl": {
-      "symptom": "Mówię „zostaw\" i pies i tak bierze",
+      "symptom": "Mówię „zostaw” i pies i tak bierze",
       "why": "Słowo weszło za wcześnie — zanim samo zachowanie było pewne. Komenda nic wtedy nie znaczy.",
       "fix": "Zdejmij słowo na kilka dni i wróć do płacenia za odsunięcie się. Słowo dołóż dopiero przy pięciu na pięć."
     },
@@ -14,8 +14,8 @@
   {
     "pl": {
       "symptom": "Pies zjada rzeczy znalezione na ulicy",
-      "why": "Jedzenie z ziemi nagradza się samo przy jednej porażce. Jeśli raz uda się połknąć, zignorowanie komendy właśnie dostało jackpota.",
-      "fix": "Na ulicy trzymaj smycz krótko i pracuj od dużego dystansu. Zanim to będzie pewne, zarządzaj — nie testuj."
+      "why": "Zjedzenie znalezionego jedzenia jest dla psa nagrodą i może utrwalać to zachowanie, nawet jeśli wcześniej udawało mu się je zostawiać.",
+      "fix": "Na spacerze zachowuj odległość od znalezionego jedzenia i używaj smyczy, żeby pies nie mógł go dosięgnąć. Ćwicz z daleka, zamiast sprawdzać komendę tuż przy pokusie."
     },
     "en": {
       "symptom": "The dog eats things found on the street",

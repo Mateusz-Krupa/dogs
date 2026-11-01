@@ -12,7 +12,7 @@
     }
   },
   "recognizes": {
-    "pl": "Na dzwonek albo pukanie pies eksploduje szczekaniem, leci do drzwi i nie potrafi opaść z emocji przez kilka minut po wejściu gościa.",
+    "pl": "Na dźwięk dzwonka lub pukania pies zaczyna intensywnie szczekać, biegnie do drzwi i nie potrafi się uspokoić przez kilka minut po wejściu gościa.",
     "en": "At the bell or a knock the dog explodes into barking, bolts to the door and cannot come down for several minutes after the guest is inside."
   },
   "urgent": {
@@ -21,9 +21,9 @@
   },
   "avoid": {
     "pl": [
-      "Nie krzycz „cicho\" — dla psa to Ty szczekasz razem z nim. Hałas podsyci hałas.",
-      "Nie otwieraj drzwi w szczycie burzy — każda taka wizyta to przećwiczone wykonanie wybuchu do końca.",
-      "Nie każ gościom witać się ze skaczącym, szczekającym psem — wejście do domu ma nagradzać ciszę, nie cyrk."
+      "Nie krzycz „cicho” — dla psa to Ty szczekasz razem z nim. Hałas podsyci hałas.",
+      "Przed otwarciem drzwi oddziel bardzo pobudzonego psa bramką lub umieść go w spokojnym pokoju. Nie ćwicz powitania w szczycie pobudzenia.",
+      "Nie proś gości, żeby witali się z psem, który skacze i szczeka. Poczekaj na spokojniejszy moment."
     ],
     "en": [
       "Do not shout “quiet” — to the dog that is you barking along. Noise feeds noise.",

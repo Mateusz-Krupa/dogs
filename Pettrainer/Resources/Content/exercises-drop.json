@@ -13,7 +13,7 @@
   "names": {
     "pl": {
       "name": "puść",
-      "description": "Pies oddaje to, co już ma w pysku. Osobna komenda od „zostaw\" i ważniejsza, niż się wydaje: to ona ratuje psa, który podniósł coś niebezpiecznego. Nigdy nie wyrywaj siłą — od tego zaczyna się pilnowanie zasobów."
+      "description": "Pies oddaje to, co już ma w pysku. Osobna komenda od „zostaw” i ważniejsza, niż się wydaje: to ona ratuje psa, który podniósł coś niebezpiecznego. Nigdy nie wyrywaj siłą — od tego zaczyna się pilnowanie zasobów."
     },
     "en": {
       "name": "drop it",
@@ -77,7 +77,7 @@
           "Oddaj przedmiot z powrotem",
           "Powtórz — za każdym razem, bez wyjątków"
         ],
-        "note": "Pies musi nauczyć się, że „puść\" nie oznacza straty. Jedno nieoddanie w dziesięciu powtórzeniach psuje całą zasadę.",
+        "note": "Podczas ćwiczeń zwracaj psu bezpieczną zabawkę po wymianie, żeby oddawanie nie kojarzyło mu się wyłącznie ze stratą.",
         "criterion": "Pies wypuszcza i od razu chętnie bierze zabawkę ponownie."
       },
       "en": {
@@ -106,10 +106,10 @@
         "instruction": "Teraz słowo — tuż przed podaniem smakołyka.",
         "setup": [
           "Wymianka idzie gładko",
-          "Przygotuj się powiedzieć „puść\" tylko raz"
+          "Przygotuj się powiedzieć „puść” tylko raz"
         ],
         "reps": [
-          "Powiedz „puść\" — raz",
+          "Powiedz „puść” — raz",
           "Zaraz potem podsuń smakołyk do pyska",
           "Gdy pies wypuści — chwal i nagródź",
           "Oddaj zabawkę"
@@ -144,11 +144,11 @@
         ],
         "reps": [
           "Pozwól psu swobodnie trzymać przedmiot",
-          "Powiedz „puść\" i podsuń smakołyk",
+          "Powiedz „puść” i podsuń smakołyk",
           "Wypuścił — nagródź i oddaj przedmiot",
           "Nie wypuścił — nie odrywaj siłą: zakończ serię, pies zachowuje przedmiot, a Ty następnym razem zaczynasz od nudniejszego"
         ],
-        "criterion": "Pies wypuszcza ulubioną zabawkę na samo słowo."
+        "criterion": "Pies wypuszcza ulubioną zabawkę po komendzie i pokazaniu smakołyka."
       },
       "en": {
         "title": "",
@@ -163,7 +163,7 @@
           "Released — pay and give the item back",
           "Held on — do not prise it out: end the series, the dog keeps the item, and next time start with a duller one"
         ],
-        "criterion": "The dog releases a favourite toy on the word alone."
+        "criterion": "The dog releases the favourite toy after the cue and the treat is shown."
       },
       "sound": true
     }

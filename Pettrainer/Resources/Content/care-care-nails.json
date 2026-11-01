@@ -5,7 +5,7 @@
   "names": {
     "pl": {
       "name": "Pielęgnacja pazurów",
-      "description": "Droga od widoku obcinacza do jednego, najcieńszego wióra. Pies uczy się, że narzędzie nic złego nie robi i że nikt nie ciągnie go za łapę."
+      "description": "Stopniowe przyzwyczajanie psa do widoku obcinacza, dotyku łapy i skrócenia samej końcówki pazura. Ćwicz bez ciągnięcia za łapę i przytrzymywania na siłę."
     },
     "en": {
       "name": "Nail care",
@@ -75,7 +75,7 @@
         "setup": "Ta sama podłoga; do ćwiczenia dźwięku słomka do napoju albo wykałaczka.",
         "how": "Schodź w dół od ramienia: bark → łokieć → nadgarstek → łapa → podtrzymanie jednego palca, za każdy krok nagroda. Dźwięk obcinacza ćwicz osobno — na słomce, obok łapy, nigdy na pazurze.",
         "watchFor": "Im niżej, tym trudniej: opuszki mają więcej zakończeń nerwowych niż bark. Dopiero gdy pies znosi dwie ręce na łapie przez dziesięć sekund, bierzemy narzędzie.",
-        "stop": "Stop, gdy pies ściąga łapę. Nie przyspieszamy „bo już prawie”."
+        "stop": "Przerwij, gdy pies cofa lub wyrywa łapę. Nie kontynuuj tylko dlatego, że zostało niewiele do zrobienia."
       },
       "en": {
         "title": "Touch and sound practised separately",
@@ -92,11 +92,11 @@
         "clippers"
       ],
       "pl": {
-        "title": "Jeden najcieńszy wiór",
-        "setup": "Najpierw nauka u weterynarza: gdzie w pazurach Twojego psa przebiega granica i jak obsługiwać Twoje narzędzie. Dziennie tylko jeden pazur.",
+        "title": "Skrócenie samej końcówki jednego pazura",
+        "setup": "Przygotuj się do skrócenia tylko jednego pazura. Jeśli nie masz pewności, gdzie przebiega bezpieczna granica cięcia, zwłaszcza przy ciemnych pazurach, najpierw poproś lekarza weterynarii o pokazanie techniki.",
         "how": "Tylko jeśli pies bierze udział z własnej woli: zetnij jeden, najmniejszy kawałek — i kończ. Hojna nagroda, chwila zabawy, narzędzie odłożone. Reszta pazurów czeka na następne podejście.",
-        "watchFor": "Pies sam podaje łapę albo spokojnie ją zostawia. Twoje własne „czy aby na pewno nie za głęboko” to znak, żeby przerwać, zanim cokolwiek zetniesz.",
-        "stop": "Krwawienie = przerwij. Nie ustaje albo nie wiesz, gdzie jest granica — weterynarz. Nie robimy wszystkich pazurów „na raz”."
+        "watchFor": "Pies dobrowolnie podaje łapę lub spokojnie pozwala ją podtrzymać. Jeśli nie masz pewności, ile można bezpiecznie obciąć, przerwij przed cięciem.",
+        "stop": "Krwawienie = przerwij. Nie ustaje albo nie wiesz, gdzie jest granica — weterynarz. Nie skracaj wszystkich pazurów naraz."
       },
       "en": {
         "title": "One paper-thin shaving",

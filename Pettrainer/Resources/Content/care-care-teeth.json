@@ -49,8 +49,8 @@
         "title": "Smak pasty dla psów",
         "setup": "Odrobina pasty przeznaczonej dla psów na wierzchu dłoni; pies swobodnie stoi lub siedzi.",
         "how": "Pozwól zlizać odrobinę z dłoni i nagródź. Kilka takich prób, każda krótka.",
-        "watchFor": "Pies sam podchodzi do pasty albo przynajmniej nie odsuwa się. Odwrócenie głowy — następnym razem jeszcze mniejsza ilość.",
-        "stop": "Stop, jeśli pies nie chce zlizać pasty nawet za nagrodę: nie używamy jej na siłę i nie sięgamy po pastę dla ludzi."
+        "watchFor": "Pies dobrowolnie obwąchuje pastę lub ją zlizuje. Jeśli odwraca głowę albo się odsuwa, nie podawaj jej na siłę.",
+        "stop": "Przerwij, jeśli pies nie chce pasty. Nie podawaj jej na siłę ani nie zastępuj pastą dla ludzi."
       },
       "en": {
         "title": "The taste of dog toothpaste",
@@ -69,7 +69,7 @@
         "title": "Uniesienie wargi, bez szczotkowania",
         "setup": "Ten sam spokojny moment; ręce suche.",
         "how": "Unieś wargę z boku pyska na sekundę, zobacz dziąsło i ząb, nagródź, puść. Druga strona — następnym razem.",
-        "watchFor": "Cel tego etapu: pies spokojnie znosi lekko uniesioną wargę przy zamkniętym pysku.",
+        "watchFor": "Pies spokojnie pozwala na krótkie uniesienie wargi przy zamkniętym pysku.",
         "stop": "Jęk, zamknięcie pyska na Twojej ręce, cofnięcie głowy — odsuwasz rękę i kończysz. Jeśli dziąsła krwawią przy dotyku — zadzwoń do weterynarza."
       },
       "en": {
@@ -88,7 +88,7 @@
       ],
       "pl": {
         "title": "Kilka pociągnięć po zewnętrznej stronie",
-        "setup": "Mokry palec; szczoteczka dla psów tylko wtedy, jeśli pies poznał ją osobno — wcześniej, bez wkładania jej do pyska. To nie warunek wejścia w ten etap.",
+        "setup": "Przygotuj szczoteczkę przeznaczoną dla psów. Przed szczotkowaniem osobno przyzwyczaj psa do jej widoku i delikatnego dotyku.",
         "how": "Wykonaj kilka krótkich pociągnięć po zewnętrznej stronie kłów i przednich zębów. Nie wchodź głęboko w pysk; na koniec hojna nagroda.",
         "watchFor": "Pies zostaje do końca i nie gryzie palca ani szczoteczki. Krwawienie, brzydki zapach albo ruchomy ząb — zatrzymaj się i zadzwoń.",
         "stop": "Nie szczotkujemy przez ból ani przez protest — to zepsuje cały trening. Uraz pyska leczy weterynarz."

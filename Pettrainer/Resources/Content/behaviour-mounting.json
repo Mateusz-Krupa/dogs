@@ -33,16 +33,16 @@
   },
   "now": {
     "pl": [
-      "Gdy pies montuje: wstań, obróć się tyłem albo cicho wyjdź — zero słowa, zero ręki na psie; przed chwilą zniknęła główna nagroda: uwaga",
-      "Przed powitaniem: najpierw 30 sekund spokojnego chodzenia lub węchowania, potem kontakt — ekscytacja wchodzi w interakcję niżej",
+      "Gdy pies obejmuje Twoją nogę i zaczyna wykonywać ruchy kopulacyjne, spokojnie przerwij kontakt: odwróć się lub odejdź, bez odpychania i krzyku.",
+      "Przed powitaniem daj psu około 30 sekund na spokojne chodzenie lub węszenie. Nawiąż kontakt, gdy będzie mniej pobudzony.",
       "Pokaż, co się opłaca: „siad” przy powitaniu = smakołyk i głaskanie; wspinanie = cisza i brak ruchu",
-      "Daj psu dzienny ruch i główkowanie (mata węchowa, nosework) — pies zmęczony głową montuje mniej niż pies zmęczony tylko nogami"
+      "Zadbaj o codzienny ruch, odpoczynek i spokojne zajęcia węchowe. Samo intensywne bieganie nie musi obniżać pobudzenia."
     ],
     "en": [
-      "When the mount starts: stand up, turn away, or leave the room in silence — no word, no hand on the dog; the main reward, attention, just vanished",
-      "Before the greeting: 30 seconds of calm walking or sniffing first, then contact — the dog enters the greeting from a lower arousal level",
+      "When the dog wraps around your leg and starts mounting, calmly break contact: turn away or walk away, without pushing or shouting.",
+      "Before greeting, give the dog about 30 seconds for calm walking or sniffing. Make contact when it is less aroused.",
       "Show what pays: “sit” at the greeting = treat and pets; mounting = stillness and silence",
-      "Give daily exercise and head work (snuffle mat, nosework) — a dog tired in its head mounts less than a dog tired only in its legs"
+      "Provide daily exercise, rest and calm sniffing activities. Intense running alone does not necessarily reduce arousal."
     ]
   },
   "work": {
@@ -50,22 +50,35 @@
       "Zbuduj wygodną pozycję alternatywną — siad, leżenie na macie albo aport w pysku; nagradzaj ją w powitaniach i przy głaskaniu, ale podstawowe potrzeby (miska, wyjście na siusiu, ruch) zostają bezwarunkowe — „siad za wszystko” nie jest celem",
       "Ćwicz powitania jak scenki: wychodzisz, wchodzisz, czekasz na siad; nie zdążył? Obniż próg — wejdź bokiem, wolniej, bez tonu wysokiego",
       "Daj pyskowi własną robotę: mata do lizania albo zabawka do noszenia wyciągana dokładnie przy powitaniach",
-      "Podnieś codzienny próg pobudzenia: krótsze sesje zabawy z przerwami — wspinanie bierze się zwykle z braku hamulca, nie z zuchwałości"
+      "Dziel zabawę na krótsze sesje i rób przerwy, zanim pies nadmiernie się pobudzi. Takie zachowanie nie jest oznaką zuchwałości."
     ],
     "en": [
       "Build a comfortable alternative behaviour — a sit, a settle on the mat, or a toy in the mouth — and pay it at greetings and petting; keep basic needs (the bowl, a toilet break, movement) unconditional — “sit pays for everything” is not the goal",
       "Rehearse greetings like sketches: leave, come back, wait for the sit; no sit in time? Lower the bar — enter sideways, slower, without the high-tone voice",
       "Give the mouth its own job: a lick mat or a carry-toy brought out exactly at greetings",
-      "Raise the everyday arousal bar: shorter play with breaks — mounting is usually a missing brake, not attitude"
+      "Split play into shorter sessions and take breaks before the dog becomes overaroused. This behaviour is not a sign of defiance."
     ]
   },
   "professional": {
-    "pl": "Nagłe, sztywne albo kompulsywne wspinanie się na nogę; warczenie lub kłapnięcie przy przerwaniu; wspinanie się, które po miesiącach konsekwentnej pracy trzyma pełną moc — najpierw kontrola weterynaryjna, potem behawiorysta.",
-    "en": "Sudden, stiff or compulsive mounting; a growl or snap when interrupted; mounting that holds full force after months of consistent work — vet check first, then a behaviour professional."
+    "pl": "Nagłe, sztywne albo kompulsywne wspinanie się na nogę; warczenie lub kłapnięcie przy przerwaniu; wspinanie się, które utrudnia codzienne życie albo nie słabnie mimo spokojnej, konsekwentnej pracy — najpierw kontrola weterynaryjna, potem behawiorysta.",
+    "en": "Sudden, stiff or compulsive mounting; a growl or snap when interrupted; mounting that disrupts daily life or does not ease despite calm, consistent work — vet check first, then a behaviour professional."
   },
   "practices": [
     "sit",
     "mat",
     "come"
-  ]
+  ],
+  "evidence": {
+    "verifiedOn": "2026-10-24",
+    "sources": [
+      {
+        "title": "ASPCA — Mounting and Masturbation",
+        "url": "https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/mounting-and-masturbation"
+      },
+      {
+        "title": "AVSAB — Position Statements: Humane Dog Training",
+        "url": "https://avsab.org/resources/position-statements/"
+      }
+    ]
+  }
 }

@@ -28,7 +28,7 @@
       "pl": {
         "title": "Dziesięć kroków w trawie",
         "setup": "Wilgotna trawa trzyma zapach najlepiej — rano albo po deszczu. Pies czeka przywiązany albo z drugą osobą.",
-        "how": "Przejdź dziesięć kroków w linii prostej, przydeptując trawę. Na końcu połóż garść karmy. Wróć **tą samą drogą**. Przyprowadź psa na start i powiedz „szukaj\".",
+        "how": "Przejdź dziesięć kroków w linii prostej, przydeptując trawę. Na końcu połóż garść karmy. Wróć **tą samą drogą**. Przyprowadź psa na start i powiedz „szukaj”.",
         "watchFor": "Pies idzie z nosem przy ziemi wzdłuż śladu. Jeśli idzie górnym wiatrem na skróty — ślad jest za świeży albo za krótki."
       },
       "en": {
@@ -47,7 +47,7 @@
         "helper"
       ],
       "pl": {
-        "title": "Dwadzieścia kroków, odczekane",
+        "title": "Dwadzieścia kroków, dziesięć minut przerwy",
         "setup": "Ten sam układ, ale po położeniu śladu odczekaj dziesięć minut.",
         "how": "Starszy ślad jest trudniejszy, bo zapach słabnie i rozwiewa się. Dłuższe odczekanie to główna oś trudności w tropieniu.",
         "watchFor": "Wolniejsza, dokładniejsza praca. Zgubienie śladu i odnalezienie go to sukces, nie porażka."

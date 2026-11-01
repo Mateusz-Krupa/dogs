@@ -96,7 +96,7 @@
       "sortOrder": 8,
       "thresholdMetres": 3,
       "names": {
-        "pl": "Ogród z podłożonymi rozproszeniami",
+        "pl": "Ogród z przygotowanymi bodźcami rozpraszającymi",
         "en": "Garden with distractions you placed"
       }
     },
@@ -261,7 +261,7 @@
       "sortOrder": 23,
       "thresholdMetres": 50,
       "names": {
-        "pl": "Zwierzę w ucieczce — wiewiórka przez ścieżkę",
+        "pl": "Uciekające zwierzę — na przykład wiewiórka przebiegająca przez ścieżkę",
         "en": "An animal bolting — a squirrel across the path"
       }
     }

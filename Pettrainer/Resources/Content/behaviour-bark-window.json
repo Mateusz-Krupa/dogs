@@ -22,8 +22,8 @@
   "avoid": {
     "pl": [
       "Nie karz po fakcie — pies nie łączy krzyku z sąsiadem, który poszedł dwie minuty temu, a pobudzenie zostaje wyższe.",
-      "Nie „pokazuj, kto tu rządzi\" — podniesiony głos to dla psa kolejny pobudzony osobnik w domu, nie autorytet.",
-      "Nie zostawiaj dostępu do okna „żeby mu minęło\" — każde wyszczekane przejście utrwala nawyk i podnosi poprzeczkę."
+      "Nie „pokazuj, kto tu rządzi” — podniesiony głos to dla psa kolejny pobudzony osobnik w domu, nie autorytet.",
+      "Nie zostawiaj dostępu do okna „żeby mu minęło” — każde wyszczekane przejście utrwala nawyk i podnosi poprzeczkę."
     ],
     "en": [
       "Do not punish after the fact — the dog cannot link your shouting to the neighbour who left two minutes ago, and the arousal stays anyway.",
@@ -46,7 +46,7 @@
   "work": {
     "pl": [
       "Zacznij od ruchu za szybą, którego pies jeszcze nie wyszczekuje — samo oderwanie wzroku od okna chwal i nagradzaj.",
-      "Gra „patrz\" przy oknie na niskich obrotach, zanim podniesiesz stawkę.",
+      "Gra „patrz” przy oknie na niskich obrotach, zanim podniesiesz stawkę.",
       "Zachowanie zastępcze: widok za szybą = idź na matę. Sesje po dwie–trzy minuty, w najlepszych porach dnia.",
       "Nie trenuj przy oknie głodnego psa ani zaraz po przebudzeniu — wybieraj momenty, w których pies jest z Tobą."
     ],
@@ -58,7 +58,7 @@
     ]
   },
   "professional": {
-    "pl": "Jeśli pod szczekaniem siedzi strach — niskie ciało, podkulony ogon, cofanie się od okna — albo pies przez szybę warczy i sztywnieje z widoczną gotowością do wyjścia, to rozmowa z behawiorystą, nie playlista nagród.",
+    "pl": "Jeśli szczekaniu towarzyszą oznaki strachu, takie jak obniżona pozycja ciała, podkulony ogon lub cofanie się od okna, skonsultuj się z behawiorystą. Takiej konsultacji wymaga też warczenie i sztywnienie przy szybie z próbami ruszenia w stronę bodźca.",
     "en": "If fear sits under the barking — a low body, a tucked tail, backing away from the glass — or the dog growls and stiffens at the window ready to come out, that is a behaviourist conversation, not a treat playlist."
   },
   "practices": [

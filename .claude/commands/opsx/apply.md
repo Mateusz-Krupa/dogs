@@ -59,7 +59,13 @@ tasks off only after verification. These project rules override generic defaults
    - **spec-driven**: proposal, specs, design, tasks
    - Other schemas: follow the contextFiles from CLI output
 
-5. **Show current progress**
+5. **Retrieve project memory (context pack)** — *requires the `search_memory` tool (qdrant MCP). If that tool is unavailable, skip this step silently.*
+
+   Build a one-line summary of what this change implements (from the artifacts just read) and call `search_memory` with it. Implementation is where pitfalls bite, so prioritize `type: "pitfall"`, then conventions and workflows relevant to the touched areas.
+
+   Keep the top results in-context as constraints while implementing: known traps to avoid, local conventions to follow, procedures to reuse. Budget ≤10 memories (~2–4k tokens). Do NOT copy memory content into code or artifacts — it guides how you work.
+
+6. **Show current progress**
 
    Display:
    - Schema being used
@@ -67,7 +73,7 @@ tasks off only after verification. These project rules override generic defaults
    - Remaining tasks overview
    - Dynamic instruction from CLI
 
-6. **Implement tasks (loop until done or blocked)**
+7. **Implement tasks (loop until done or blocked)**
 
    For each pending task:
    - Show which task is being worked on
@@ -82,7 +88,7 @@ tasks off only after verification. These project rules override generic defaults
    - Error or blocker encountered → report and wait for guidance
    - User interrupts
 
-7. **On completion or pause, show status**
+8. **On completion or pause, show status**
 
    Display:
    - Tasks completed this session

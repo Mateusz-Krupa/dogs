@@ -131,9 +131,59 @@ struct BehaviourIssue {
     let professional: Localized<String>
     /// Exercise ids the card points at.
     let practices: [String]
+    /// What the owner should track between sessions. Optional: cards shipped
+    /// before the puppy-start change parse without it and render unchanged.
+    var observe: Localized<[String]>? = nil
+    /// Provenance for the advice on this card. Optional, same compatibility
+    /// rule as `observe`; malformed evidence is rejected, never ignored.
+    var evidence: GuidanceEvidence? = nil
 }
 
 struct IssueNames {
     let name: String
     let tagline: String
+}
+
+/// Provenance shipped with guidance that touches welfare or health. The app
+/// works fully offline with it: the citations are for the owner to open by
+/// choice, and the date is when a human actually re-read the pages.
+struct GuidanceEvidence {
+    /// 1–5 cited pages, validated like care sources.
+    let sources: [CareSource]
+    /// Real calendar date `YYYY-MM-DD`, never in the future.
+    let verifiedOn: String
+}
+
+/// A titled reading block inside a puppy guide. Structure for the reader
+/// only: the guide family has no stages, no order the dog can climb and no
+/// completion state — a section is a heading with paragraphs, nothing else
+/// (spec: optional foundation sections are validated without breaking older
+/// guides).
+struct PuppyGuideSection {
+    let id: String
+    let title: Localized<String>
+    let paragraphs: Localized<[String]>
+}
+
+/// One puppy-start foundation guide: education to read, never an activity to
+/// score. No reps, stages, timers or completion exist in this shape on
+/// purpose — resting and feeling safe are not trained to a criterion.
+struct PuppyGuide {
+    let id: String
+    let pose: Pose
+    let sortOrder: Int
+    let names: Localized<CueNames>
+    /// Safety boundary, rendered before anything actionable.
+    let urgent: Localized<String>
+    let avoid: Localized<[String]>
+    let actions: Localized<[String]>
+    let observe: Localized<[String]>
+    /// Where professional help takes over; never a nudge to keep going.
+    let professional: Localized<String>
+    /// Optional exercise ids; an empty list is a guide with nothing to drill.
+    let practices: [String]
+    let evidence: GuidanceEvidence
+    /// Optional titled sections; guides written before this field render
+    /// exactly as they did without it.
+    let sections: [PuppyGuideSection]
 }

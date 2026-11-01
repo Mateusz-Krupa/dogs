@@ -25,8 +25,8 @@
       ],
       "pl": {
         "title": "Widoczna, metr dalej",
-        "setup": "Weź zabawkę, którą pies lubi i którą często trzyma w pysku — ta jest już nią nasiąknięta.",
-        "how": "Połóż ją metr dalej, na widoku. Powiedz „szukaj\". Gdy podejdzie — krótka zabawa jako nagroda, nie smakołyk.",
+        "setup": "Wybierz lubianą zabawkę, którą pies często nosi w pysku i której zapach dobrze zna.",
+        "how": "Połóż ją metr dalej, na widoku. Powiedz „szukaj”. Gdy podejdzie — krótka zabawa jako nagroda, nie smakołyk.",
         "watchFor": "Pies idzie do zabawki i bierze ją. Nagrodą jest zabawa, inaczej gra zamienia się w kolejne szukanie karmy."
       },
       "en": {
@@ -45,8 +45,8 @@
       "pl": {
         "title": "Za zasłoną",
         "setup": "Pies poza pokojem. Schowaj zabawkę za kanapą, pod poduszką, za nogą stołu.",
-        "how": "Wprowadź psa i powiedz „szukaj\". Nie patrz w stronę kryjówki — psy czytają kierunek Twojego wzroku lepiej, niż myślisz.",
-        "watchFor": "Pies systematycznie obwąchuje pokój. Chodzenie w kółko bez opuszczania nosa znaczy, że jest za trudno."
+        "how": "Wprowadź psa i powiedz „szukaj”. Nie patrz w stronę kryjówki — psy czytają kierunek Twojego wzroku lepiej, niż myślisz.",
+        "watchFor": "Pies obwąchuje pokój i szuka zabawki. Nie musi cały czas trzymać nosa przy podłodze; jeśli przestaje szukać lub narasta frustracja, wybierz łatwiejszą kryjówkę."
       },
       "en": {
         "title": "Out of sight",

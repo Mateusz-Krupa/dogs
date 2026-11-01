@@ -130,6 +130,6 @@ final class CareFlowUITests: XCTestCase {
         XCTAssertTrue(button(["Próbowaliśmy tego etapu"]).waitForExistence(timeout: 5),
                       "polish mark-tried control missing")
         button(["Próbowaliśmy tego etapu"]).tap()
-        expect(["Najdalszy próbowany etap: 1/3"], "polish participation wording wrong")
+        expect(["Najwyższy wypróbowany etap: 1/3"], "polish participation wording wrong")
     }
 }

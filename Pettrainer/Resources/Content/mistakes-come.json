@@ -2,7 +2,7 @@
   {
     "pl": {
       "symptom": "W domu przychodzi, w parku kompletnie mnie nie słyszy",
-      "why": "To nie nieposłuszeństwo. Pies nie generalizuje kontekstu — „do mnie\" w salonie i „do mnie\" w parku to dla niego dwie różne rzeczy.",
+      "why": "To nie nieposłuszeństwo. Pies nie generalizuje kontekstu — „do mnie” w salonie i „do mnie” w parku to dla niego dwie różne rzeczy.",
       "fix": "Wróć na długą linkę i przejdź całą drabinę środowisk od nowa. Idzie szybciej za drugim razem."
     },
     "en": {
@@ -14,8 +14,8 @@
   {
     "pl": {
       "symptom": "Pies przychodzi wolno albo zatrzymuje się poza zasięgiem",
-      "why": "Powrót kiedyś skończył się czymś nieprzyjemnym — smyczą, kąpielą, końcem spaceru, upomnieniem. To nazywa się zatrute przywołanie.",
-      "fix": "Zmień słowo na nowe i naucz od zera. Starego nie da się naprawić, a każde kolejne użycie pogłębia problem."
+      "why": "Pies może unikać powrotu, jeśli kojarzy mu się on z czymś nieprzyjemnym, na przykład końcem zabawy lub upomnieniem. Warto sprawdzić, jakie skojarzenia ma z obecną komendą.",
+      "fix": "Jeśli obecna komenda wyraźnie źle się psu kojarzy, możesz wybrać nowe słowo i nauczyć go od początku, w łatwych warunkach i z atrakcyjnymi nagrodami."
     },
     "en": {
       "symptom": "The dog comes slowly or stops just out of reach",
@@ -26,8 +26,8 @@
   {
     "pl": {
       "symptom": "Wołam, pies nie reaguje, więc wołam dalej",
-      "why": "Każde wywołanie bez reakcji uczy, że „do mnie\" jest opcjonalne. To najszybszy sposób na zepsucie tej komendy.",
-      "fix": "Nie wołaj, jeśli nie masz jak dokończyć. Masz linkę — użyj jej. Nie masz — podejdź po psa bez wołania."
+      "why": "Każde wywołanie bez reakcji uczy, że „do mnie” jest opcjonalne. To najszybszy sposób na zepsucie tej komendy.",
+      "fix": "Ćwicz z psem zabezpieczonym długą linką, ale nie przyciągaj go nią do siebie. Jeśli nie reaguje, podejdź bliżej i przy kolejnej próbie ułatw zadanie."
     },
     "en": {
       "symptom": "I call, nothing happens, so I keep calling",

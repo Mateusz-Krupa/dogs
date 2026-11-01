@@ -1,7 +1,7 @@
 # pettrainer — Engineering Working Principles (KISS)
 
 A phone-first dog-training app. Offline-first, no account, Polish and English.
-This is one Expo application repository, not a frontend/CMS workspace.
+This is one native SwiftUI iOS application repository, not a frontend/CMS workspace.
 
 ## 1. Product Invariants — Hard Rules
 
@@ -25,7 +25,7 @@ park full of dogs. Dogs do not automatically transfer a behaviour between contex
 
 **Push requires 5/5, never 4/5.** The widely copied 80% version is wrong here.
 Verdicts are **never persisted**; compute them from raw `Rep` rows. Keep the rule
-in `src/domain/`, with one source of truth for UI, recommendations, and history.
+in `Pettrainer/Domain/`, with one source of truth for UI, recommendations, and history.
 
 ### Welfare and training content
 
@@ -68,21 +68,24 @@ Before non-trivial work:
 
 | Path | Responsibility |
 | --- | --- |
-| `App.tsx`, `index.ts` | Application entry and composition |
-| `src/domain/` | Pure training logic and types; no React, SQLite, or I/O |
-| `src/db/` | Local SQLite schema and versioned migrations |
-| `src/content/` | Exercise content, schemas, loading, and environment data |
-| `src/features/` | Feature screens and orchestration (catalogue, session, nosework) |
-| `src/ui/` | Shared native UI and training illustrations |
-| `src/i18n/` | Polish/English UI catalogues and localization setup |
-| `assets/` | Bundled application assets |
+| `Pettrainer/App/` | App entry, root model, routes, language choice |
+| `Pettrainer/Domain/` | Pure training logic and types; no SwiftUI, SQLite, or I/O |
+| `Pettrainer/Data/` | Local SQLite access, versioned migrations, repositories |
+| `Pettrainer/Content/` | Typed content models, validators, loader, catalogue manifest |
+| `Pettrainer/Features/` | Feature screens (catalogue, session, care, nosework, problems) |
+| `Pettrainer/UI/` | Shared native UI and training illustrations |
+| `Pettrainer/Resources/` | Bundled JSON content, `Localizable.xcstrings`, assets |
+| `PettrainerTests/`, `PettrainerUITests/` | XCTest unit and UI test targets |
+| `Pettrainer.xcodeproj/` | The shipping Xcode project (shared scheme `Pettrainer`) |
 | `openspec/` | Requirements, active changes, archives, and durable memory |
 | `.opencode/` | Project agents, OpenSpec commands/skills, and model-routing overlay |
 
-- Stack: Expo + React Native, strict TypeScript, `expo-sqlite`, `i18n-js`,
-  `expo-localization`. npm and `package-lock.json` are the existing package setup.
-- Use the Node version pinned in `.nvmrc`: **v22.22.3**. The system default may be
-  too old for Expo. Activate the pinned runtime before Node-based checks.
+- Stack: Swift + SwiftUI, iOS 16.4 minimum, bundle `com.mateuszkrupa.pettrainer`,
+  raw SQLite, String Catalog for PL/EN. `xcodebuild` is the build/test toolchain.
+- The repository is native-only; the retired Expo/TypeScript runtime was removed
+  2026-10-24 (see `openspec/changes/migrate-to-native-swift/cleanup-allowlist.md`).
+- Node (`.nvmrc` **v22.22.3**) applies to repository tooling such as the OpenSpec
+  CLI only — never to the application build.
 - Do not introduce a backend, CMS, account system, cloud sync, or a network
   dependency for core training without an explicitly approved scope change.
 
@@ -108,19 +111,21 @@ Before non-trivial work:
 - Core training and content must work without connectivity or authentication.
 - Preserve raw reps and history. Never "fix" a migration by deleting the user's
   database, resetting progress, or rewriting old migrations already applied.
-- Make schema changes through versioned migrations, following `src/db/` patterns.
+- Make schema changes through versioned migrations, following `Pettrainer/Data/` patterns.
   Cover upgrades from the previous schema and preservation of existing data.
 - Check interruption/re-entry and failed writes when touching session persistence.
   Keep incomplete sessions distinct from completed sets.
 
-### TypeScript and localization
+### Swift and localization
 
-- Strict TypeScript; no `any` or blanket typecheck suppressions.
-- Named exports; default exports only for components.
-- Two-space indent, single quotes, semicolons; follow surrounding conventions.
-- No hardcoded user-facing UI strings. Update both locale catalogues and preserve
-  interpolation keys. Cue names are localized domain data (`siad` / `sit`), not
-  UI translation keys. Do not turn stable content IDs into translated identifiers.
+- Strict Swift; no `Any` escapes or blanket error suppressions at domain seams.
+- Follow the surrounding four-space Swift style; one focused type/view per file
+  (the 100–250 non-generated line bound is reviewed per change).
+- No hardcoded user-facing UI strings. Update both languages of
+  `Pettrainer/Resources/Localizable.xcstrings` and preserve interpolation keys
+  (`fmt()` keys with positional specifiers). Cue names are localized content data
+  (`siad` / `sit`), not UI translation keys. Do not turn stable content IDs into
+  translated identifiers.
 
 ## 5. OpenSpec Workflow
 
@@ -171,20 +176,26 @@ criteria. Read `openspec/config.yaml` and `openspec/workflow.md` before using it
 
 ## 6. Verification and Definition of Done
 
-- Tests live next to code as `*.test.ts` / `*.test.tsx`.
+- Tests are XCTest in `PettrainerTests/` (unit) and `PettrainerUITests/` (UI).
 - Run targeted tests, not the whole suite by default:
-  `npx jest src/domain/verdict.test.ts --runInBand`.
-- Typecheck application changes with `npm run typecheck`. Do not invent lint,
-  build, or e2e scripts that are absent from `package.json`.
+  `xcodebuild -project Pettrainer.xcodeproj -scheme Pettrainer -destination '<verified simulator id>' -only-testing:PettrainerTests/<Class> CODE_SIGNING_ALLOWED=NO test`.
+- Small cosmetic changes (copy wording, spacing, menu chrome, thumbnail wiring
+  that reuses already-tested primitives) do not earn a test rerun. Inspect them
+  live on the running simulator instead. Re-run the focused suite only when
+  logic, persisted data, content schema/validators, welfare gates, or localised
+  keys actually changed; a full-target run belongs to the end of a whole change,
+  never to an individual tweak.
+- Do not invent lint, build, or e2e scripts absent from the Xcode scheme.
 - For training-rule changes, test all hit counts 0–5, cancelled reps, incomplete
   sets, step/environment boundaries, and isolation of each dog's progress as
   relevant. Test behaviour, not an implementation copied into the assertion.
 - Validate content/schema and locale changes with the relevant nearby tests.
-- For UI work, check changed states at phone size and in PL/EN. A web preview is
-  not evidence that native SQLite, lifecycle, or platform behaviour works on-device.
+- For UI work, check changed states at phone size and in PL/EN on a simulator or
+  device. A simulator run is not evidence that physical-device lifecycle,
+  update-preservation, or on-device signing behaviour works.
 - Validate OpenSpec changes with `openspec validate <change> --strict`.
 - Report exactly what ran, what passed, and what could not be checked. Never claim
-  a device/browser check or successful test without running it.
+  a device/simulator check or successful test without running it.
 - Good work is readable, small, consistent, tested, and traceable to approved scope.
 
 ## 7. Path, Secrets, and Git Safety

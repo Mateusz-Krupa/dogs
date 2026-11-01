@@ -14,7 +14,7 @@
   "names": {
     "pl": {
       "name": "czekaj",
-      "description": "Pies wstrzymuje się przed progiem, miską albo otwartym bagażnikiem, dopóki nie pozwolisz. To nie to samo co „zostań\" — tu chodzi o krótkie wstrzymanie przed czymś, nie o trzymanie pozycji."
+      "description": "Pies wstrzymuje się przed progiem, miską albo otwartym bagażnikiem, dopóki nie pozwolisz. To nie to samo co „zostań” — tu chodzi o krótkie wstrzymanie przed czymś, nie o trzymanie pozycji."
     },
     "en": {
       "name": "wait",
@@ -31,7 +31,7 @@
       "motion": "door",
       "pl": {
         "title": "",
-        "instruction": "Klamka w dół tylko na centymetr — i tylko wtedy, gdy pies zostaje.",
+        "instruction": "Naciśnij klamkę, a potem uchyl drzwi na centymetr — tylko jeśli pies pozostaje w siadzie.",
         "setup": [
           "Zamknięte drzwi, za nimi pusto",
           "Smakołyki w ręce"
@@ -65,7 +65,7 @@
       "motion": "door",
       "pl": {
         "title": "",
-        "instruction": "Drzwi uchylone na dłoń. Każde wstanie je zamyka — bez komentarza i bez „nie\".",
+        "instruction": "Drzwi uchylone na dłoń. Każde wstanie je zamyka — bez komentarza i bez „nie”.",
         "setup": [
           "Te same drzwi",
           "Nagroda po stronie drzwi"
@@ -75,7 +75,7 @@
           "Pies wstaje — cicho zamknij",
           "Pies zostaje — nagródź i otwórz ponownie"
         ],
-        "note": "Nie powtarzaj komendy ani nie mów „nie\". Zamykające się drzwi są całą informacją, a Twój głos tylko ją zagłusza.",
+        "note": "Nie powtarzaj komendy ani nie mów „nie”. Zamykające się drzwi są całą informacją, a Twój głos tylko ją zagłusza.",
         "criterion": "Pies zostaje przy drzwiach uchylonych na szerokość dłoni."
       },
       "en": {
@@ -99,7 +99,7 @@
       "motion": "door",
       "pl": {
         "title": "",
-        "instruction": "Całe drzwi otwarte — pies wychodzi dopiero na „koniec\".",
+        "instruction": "Całe drzwi otwarte — pies wychodzi dopiero na „koniec”.",
         "setup": [
           "Za drzwiami nic się nie dzieje",
           "Smakołyki w zasięgu"
@@ -107,7 +107,7 @@
         "reps": [
           "Poproś o siad i otwórz drzwi całkowicie",
           "Odczekaj chwilę w ciszy",
-          "Zwolnij słowem „koniec\" i pozwól wyjść"
+          "Zwolnij słowem „koniec” i pozwól wyjść"
         ],
         "criterion": "Pies czeka przy całkowicie otwartych drzwiach do zwolnienia."
       },
@@ -134,15 +134,15 @@
         "instruction": "To samo z miską: ruch psa w jej stronę podnosi miskę z powrotem.",
         "setup": [
           "Miska z karmą w rękach",
-          "Pies przy Tobie, nie przy podłodze"
+          "Pies stoi lub siedzi obok Ciebie."
         ],
         "reps": [
           "Zacznij powoli opuszczać miskę",
           "Pies rusza w jej stronę — podnieś miskę z powrotem",
           "Pies zostaje — opuszczaj dalej",
-          "Miska na podłodze — zwolnij słowem „koniec\""
+          "Miska na podłodze — zwolnij słowem „koniec”"
         ],
-        "note": "Ta sama zasada co przy drzwiach: dostęp zdobywa się zostaniem, nie rzuceniem się. Miska nigdy nie frunie w psi pysk w geście frustracji.",
+        "note": "Ta sama zasada co przy drzwiach: dostęp zdobywa się zostaniem, nie rzuceniem się. Jeśli czujesz frustrację, spokojnie przerwij ćwiczenie. Nie uderzaj psa ani nie strasz go miską.",
         "criterion": "Miska dotyka podłogi, a pies nie rusza się, dopóki nie pozwolisz."
       },
       "en": {

@@ -69,7 +69,7 @@ Qdrant is a retrieval index, not a separate place to store unreviewed knowledge.
 - Keep notes factual and free of secrets, credentials, personal dog/owner data,
   and raw tool dumps. Keep unselected reviewer suggestions out of implementation.
 - Mark each task done only after the implementation and relevant checks pass.
-- Validate with targeted Jest files, `npm run typecheck` for app changes, and
+- Validate with targeted `xcodebuild test` runs (unit/UI classes) for app changes, and
   `openspec validate <name> --strict`. Report blockers and checks not performed.
 
 ## 3. Reflect and propose memory — before archive
@@ -115,7 +115,7 @@ Prefer updating/compressing existing knowledge over appending duplicates.
 **Why:** Rationale or the failure this avoids.
 **Evidence:**
 - openspec/changes/archive/YYYY-MM-DD-<change>/learnings.md
-- src/relevant-file.ts
+- Pettrainer/relevant-file.swift
 **Last verified:** YYYY-MM-DD
 ```
 

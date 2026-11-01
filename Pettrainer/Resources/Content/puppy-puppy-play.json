@@ -1,0 +1,74 @@
+{
+  "id": "puppy-play",
+  "pose": "stand",
+  "sortOrder": 3,
+  "names": {
+    "pl": {
+      "name": "Zabawa i spokojne przerwy",
+      "description": "Krótkie serie z przerwami uczą psa włącznika i wyłącznika."
+    },
+    "en": {
+      "name": "Play with calm breaks",
+      "description": "Short series with breaks teach the dog both the on switch and the off switch."
+    }
+  },
+  "urgent": {
+    "pl": "Zabawa z warczeniem przy sztywnym ciele, kłapnięcia albo pies, którego nie da się zaprosić z powrotem — skonsultuj behawiorystę; nagły ból lub zmiana zachowania — najpierw lekarz weterynarii.",
+    "en": "Play with growling in a stiff body, snaps, or a dog that cannot be invited back — see a behaviour professional; sudden pain or a behaviour change — veterinarian first."
+  },
+  "avoid": {
+    "pl": [
+      "Nie próbuj wyciszać psa bieganiem do wyczerpania — dodatkowy wysiłek może jeszcze zwiększyć pobudzenie",
+      "Nie piszcz wysoko i nie krzycz, gdy zęby trafiają w ciało — wysoki dźwięk bywa dla szczenięcia kolejną nagrodą",
+      "Nie zostawiaj dzieci do zabawy ze szczenięciem bez nadzoru dorosłego — to dorosły pilnuje przerw"
+    ],
+    "en": [
+      "Do not try to calm the dog by running it to exhaustion — extra exercise can increase arousal",
+      "Do not squeal or shout when teeth land on skin — a high sound can be another reward for a puppy",
+      "Do not leave children to play with a puppy unsupervised — an adult owns the breaks"
+    ]
+  },
+  "actions": {
+    "pl": [
+      "Prowadź zabawę krótkimi seriami: szarpak, przerwa na lizanie albo węszenie, potem kolejna seria",
+      "Gdy zęby trafiają w ciało: zatrzymaj ruch, podaj zabawkę i spokojnie zakończ serię",
+      "Wieczorem zamiast nowej bieganej aktywności — mata węchowa, żucie, coś do spokojnego gryzienia"
+    ],
+    "en": [
+      "Run play in short series: tug, a break to lick or sniff, then the next series",
+      "When teeth land on skin: freeze the movement, hand over a toy, and end the series calmly",
+      "In the evening, instead of new running games — a snuffle mat, chewing, quiet mouth work"
+    ]
+  },
+  "observe": {
+    "pl": [
+      "Obserwuj, czy po krótkiej serii pies potrafi sam przerwać zabawę i wybrać spokojną czynność",
+      "Podgryzanie rośnie mimo przerw? Sprawdź najpierw, czy szczenię nie jest po prostu przemęczone"
+    ],
+    "en": [
+      "Observe whether the dog can pause after a short play session and choose a quiet activity",
+      "Mouthiness climbing despite the breaks? First check whether the puppy is simply overtired"
+    ]
+  },
+  "professional": {
+    "pl": "Eskalacja mimo spokojnych serii, sztywność, kłapnięcia lub ugryzienia — behawiorysta; nagła zmiana w zabawie — najpierw lekarz weterynarii.",
+    "en": "Escalation despite calm series, stiffness, snapping or bites — a behaviour professional; a sudden change in play — veterinarian first."
+  },
+  "practices": [
+    "drop",
+    "leave"
+  ],
+  "evidence": {
+    "verifiedOn": "2026-10-24",
+    "sources": [
+      {
+        "title": "Blue Cross — Puppy biting and mouthing",
+        "url": "https://www.bluecross.org.uk/advice/dog/behaviour-and-training/puppy-biting-and-mouthing"
+      },
+      {
+        "title": "AVSAB — Position Statements: Humane Dog Training",
+        "url": "https://avsab.org/resources/position-statements/"
+      }
+    ]
+  }
+}

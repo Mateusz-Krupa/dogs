@@ -154,6 +154,61 @@ final class ContentValidatorTests: XCTestCase {
         }
     }
 
+    // MARK: puppy-start extensions (optional, but never half-written)
+
+    private var behaviourCore: String {
+        """
+        {"id":"b","sortOrder":1,
+         "names":{"pl":{"name":"n","tagline":"t"},"en":{"name":"n","tagline":"t"}},
+         "recognizes":{"pl":"r","en":"r"},"urgent":{"pl":"u","en":"u"},
+         "avoid":{"pl":["x"],"en":["y"]},
+         "now":{"pl":["x"],"en":["y"]},"work":{"pl":["x"],"en":["y"]},
+         "professional":{"pl":"p","en":"p"},"practices":["sit"]
+        """
+    }
+
+    private func parseBehaviour(_ tail: String) throws -> BehaviourIssue {
+        try BehaviourValidator.parseIssue(
+            json(behaviourCore + tail + "}"), source: "behaviour/b.json")
+    }
+
+    func testBehaviourWithoutExtensionsStillParses() throws {
+        // The compatibility rule: old cards are untouched by the new fields.
+        let card = try parseBehaviour("")
+        XCTAssertNil(card.observe)
+        XCTAssertNil(card.evidence)
+    }
+
+    func testBehaviourObserveMissingOneLocaleFails() {
+        XCTAssertThrowsError(try parseBehaviour(
+            #","observe":{"pl":["a"]}"#)) { error in
+            XCTAssertTrue("\(error)".contains("observe.en"), "\(error)")
+        }
+    }
+
+    func testBehaviourObserveEmptyListIsAHalfEdit() {
+        XCTAssertThrowsError(try parseBehaviour(
+            #","observe":{"pl":[],"en":[]}"#)) { error in
+            XCTAssertTrue("\(error)".contains("observe.pl must list something"), "\(error)")
+        }
+    }
+
+    func testBehaviourMalformedEvidenceFailsRatherThanIgnored() {
+        XCTAssertThrowsError(try parseBehaviour(
+            #","evidence":{"verifiedOn":"2026-01-01","sources":[{"title":"T","url":"http://x.example/a"}]}"#
+        )) { error in
+            XCTAssertTrue("\(error)".contains("https:// address"), "\(error)")
+        }
+    }
+
+    func testBehaviourCompleteEvidenceParses() throws {
+        let card = try parseBehaviour(
+            #","evidence":{"verifiedOn":"2026-01-01","sources":[{"title":"T","url":"https://x.example/a"}]}"#
+        )
+        XCTAssertEqual(card.evidence?.sources.count, 1)
+        XCTAssertEqual(card.evidence?.verifiedOn, "2026-01-01")
+    }
+
     func testMistakeEntryRequiresAllThreePartsInBothLocales() throws {
         XCTAssertThrowsError(try MistakeValidator.parseMistakes(
             json("""

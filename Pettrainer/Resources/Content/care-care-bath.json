@@ -47,7 +47,7 @@
       ],
       "pl": {
         "title": "Stanowisko bez wody",
-        "setup": "Mata antypoślizgowa albo ręcznik, na którym łapy się nie ślizgają — w łazience albo w kabinie prysznica; smakołyki w zasięgu.",
+        "setup": "Sucha, nieśliska mata lub ręcznik w łazience albo kabinie prysznicowej; smakołyki w zasięgu ręki.",
         "how": "Zaproś psa na stanowisko i nagradzaj za stanie, potem za położenie się. Woda jeszcze nie leci.",
         "watchFor": "Pies wchodzi sam. Wahanie na progu — skracamy sesję i wracamy do samego wchodzenia.",
         "stop": "Poślizgnięcie albo panika — koniec na dziś; mata antypoślizgowa nie jest dodatkiem, jest warunkiem."
@@ -70,7 +70,7 @@
         "title": "Dźwięk wody i strumień osobno",
         "setup": "Letnia woda na małym strumieniu; ręcznik i smakołyki obok.",
         "how": "Odkręć wodę na chwilę i zamknij, zanim cokolwiek dotknie psa — nagródź. Potem zmocz tylko łapę, potem bok. Kończ, zanim pies zacznie się niepokoić.",
-        "watchFor": "Otrząśnięcie się suchego psa to znak stresu, nie śmiechu. Cofamy się o krok.",
+        "watchFor": "Otrząśnięcie się suchego psa może być oznaką napięcia. Obserwuj także jego postawę i w razie niepokoju wróć do łatwiejszego etapu.",
         "stop": "Woda leje się do ucha albo pies panikuje pod strumieniem — zakręć i przerwij."
       },
       "en": {
@@ -92,7 +92,7 @@
         "title": "Konieczna kąpiel: mycie i spłukanie",
         "setup": "Szampon dla psów, letnia woda, suchy ręcznik w zasięgu; kołtuny rozczesane PRZED kąpielą.",
         "how": "Krótkie mycie od łap ku grzbietowi, potem dokładne spłukanie — do momentu, gdy woda spływa czysta. Na koniec ręcznik.",
-        "watchFor": "Pies bierze udział do końca z własnej woli i daje się wytrzeć. Wycofanie, sztywnienie albo szukanie wyjścia = zakręcasz wodę i kończysz, nawet jeśli nie wszystko zostało spłukane — dokańczasz przy pomocy fachowca, nie przez trzymanie psa.",
+        "watchFor": "Pies spokojnie pozwala spłukać szampon i osuszyć sierść. Nie przedłużaj kąpieli ponad potrzebę; jeśli pies nie toleruje koniecznego mycia, skonsultuj bezpieczny sposób postępowania z lekarzem weterynarii.",
         "stop": "Nie kąpiesz „na zapas” przy zmianach na skórze — częstotliwość ustala weterynarz. Czerwona skóra albo świąd po kąpieli to powód do wizyty, nie do kolejnej kąpieli."
       },
       "en": {

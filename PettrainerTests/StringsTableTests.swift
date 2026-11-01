@@ -28,6 +28,18 @@ final class StringsTableTests: XCTestCase {
             .contains("%1$lld"))
     }
 
+    func testCareKeysResolveWithTheirInterpolation() {
+        // Reviewer 5.1: at least one pinned care label per language plus the
+        // furthest-tried placeholder shape, so the catalogue strings cannot
+        // silently drop out of the compiled tables.
+        XCTAssertEqual(StringsTable.string("care.title", language: "pl"), "Pielęgnacja")
+        XCTAssertEqual(StringsTable.string("care.title", language: "en"), "Hygiene care")
+        let furthest = StringsTable.string("care.furthestTried", language: "pl")
+        XCTAssertTrue(furthest.contains("%1$lld") && furthest.contains("%2$lld"), furthest)
+        XCTAssertTrue(StringsTable.string("care.furthestTried", language: "en")
+            .contains("%1$lld/%2$lld"))
+    }
+
     func testUnknownKeyFallsBackToTheKeyItself() {
         XCTAssertEqual(StringsTable.string("no.such.key", language: "pl"), "no.such.key")
     }
