@@ -82,3 +82,15 @@ Not yet verified by full supporting reads: exact urinary emergency wording; vacc
 - F-4: content-review.md stale “pending approval” gate replaced by the final Gate record; task 1.3 checked; learnings.md written.
 - Re-verification: unit combo (PuppyGuideValidatorTests + PuppyContentTests + PuppyIsolationTests + ContentLoaderTests) → **67 tests, 0 failures**; PuppyToiletVisualTests run recorded next (accessibilityL PL+EN). Strict validation valid. One Swift fix needed mid-way (test-only: explicit [String] annotations for a type-check timeout; `section("  ")` call-label fix).
 - F-1 re-run completed: PuppyToiletVisualTests on the final bytes → **3/3 passed** (EN top/sources, PL top/źródła, accessibilityL PL+EN reaching the citation block). Task 4.3 closed with the re-verification recorded here.
+
+## TestFlight release (2026-11-01)
+
+- Whole-tree build `1.0.0 (2)` from pushed `main` (`507c542`), pipeline per `DISTRIBUTION.md`,
+  artifacts outside the repo (`…/T/opencode/toilet-release`); `.p8` referenced by Key ID only.
+- `xcodebuild archive` (generic/platform=iOS, -allowProvisioningUpdates) → ARCHIVE SUCCEEDED;
+  `-exportArchive` (app-store-connect, team G5RD7F6C65) → EXPORT SUCCEEDED (IPA 1 140 910 B);
+  `altool --validate-app` → VERIFY SUCCEEDED; `altool --upload-app` → **UPLOAD SUCCEEDED**,
+  Delivery UUID `645564e9-5e25-4411-babf-ec7fa7dcd624`.
+- Upload ≠ processing: Apple needs ~5–30 min, then the build must be assigned to a test group
+  in App Store Connect (internal = instant; external group needs the one-time Privacy Policy URL,
+  Age Rating and Beta App Review). Not performed from here.
